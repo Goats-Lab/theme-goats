@@ -79,9 +79,53 @@
         "background": "#000000",
         "controls_color": "#ffffff"
       }
+    },
+    "image_with_text_x6jHxF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_He9yCa": {
+          "type": "heading",
+          "settings": {
+            "text": "Coleção - Pandora",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_KRyF78": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Celebre a individualidade com joias que contam histórias. Cada peça da Pandora é pensada para eternizar momentos, expressar sentimentos e refletir sua essência.</p>"
+          }
+        },
+        "button_TriUTP": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "text": "Veja Mais",
+            "url": "",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_He9yCa",
+        "richtext_KRyF78",
+        "button_TriUTP"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/Pandora_a850a3a0-f22b-4bb4-84ae-f67f9f01d786.png",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
     }
   },
   "order": [
-    "slideshow"
+    "slideshow",
+    "image_with_text_x6jHxF"
   ]
 }
