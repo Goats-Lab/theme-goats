@@ -136,7 +136,10 @@
                 {%- endif -%}
 
                 {%- if section.settings.show_accelerated_payment_buttons and additional_checkout_buttons -%}
+                  <div class="additional-checkout-buttons additional-checkout-buttons--vertical">
+                    {{- content_for_additional_checkout_buttons -}}
                   
+                  </div>
                 {% endif %}
 
                 <noscript>
