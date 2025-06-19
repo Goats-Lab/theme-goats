@@ -356,7 +356,7 @@
       "order_note": "Observações",
       "save_note": "Salvar observações",
       "view_cart": "Ver carrinho",
-      "checkout": "Finalizar Pagamento",
+      "checkout": "Finalizar Pedido (cartão e boleto)",
       "we_accept": "Aceitamos"
     },
     "order": {
