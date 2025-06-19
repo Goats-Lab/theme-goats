@@ -391,6 +391,79 @@
         "content_width": "sm",
         "remove_vertical_spacing": true
       }
+    },
+    "collection_list_Qd99kw": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_g4Q9CL": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "tiffany-pulseira",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Ver Coleção",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_WLTNLG": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "tiffany-colar",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Ver Coleção",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_8R6QWW": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "tiffany-anel",
+            "image": "shopify://shop_images/C927C3DF-A158-4126-840B-9ED496E62D37.webp",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Ver Coleção",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_g4Q9CL",
+        "collection_WLTNLG",
+        "collection_8R6QWW"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image_size": "sm",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
     }
   },
   "order": [
@@ -400,6 +473,7 @@
     "shop_the_look_Rj7meD",
     "image_with_text_FicW9t",
     "collection_list_nVz8kJ",
-    "image_with_text_Mr6VPW"
+    "image_with_text_Mr6VPW",
+    "collection_list_Qd99kw"
   ]
 }
