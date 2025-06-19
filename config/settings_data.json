@@ -24,14 +24,6 @@
     "button_letter_spacing": 18,
     "content_for_index": [],
     "blocks": {
-      "17684494136739790357": {
-        "type": "shopify://apps/arrivesby/blocks/cart/b4f15d36-71f0-4a8c-954f-e485b7529360",
-        "disabled": false,
-        "settings": {
-          "date_format": "medium",
-          "cart_text": "Arrives by"
-        }
-      },
       "14082006724220070571": {
         "type": "shopify://apps/savepay-pix-com-desconto/blocks/trigger_body/10f9b622-3935-46f8-947f-8b4011493b26",
         "disabled": false,
@@ -52,6 +44,14 @@
         "type": "shopify://apps/globo-product-option/blocks/app-embed-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
         "disabled": false,
         "settings": {}
+      },
+      "17684494136739790357": {
+        "type": "shopify://apps/arrivesby/blocks/cart/b4f15d36-71f0-4a8c-954f-e485b7529360",
+        "disabled": true,
+        "settings": {
+          "date_format": "medium",
+          "cart_text": "Arrives by"
+        }
       }
     },
     "color_schemes": {

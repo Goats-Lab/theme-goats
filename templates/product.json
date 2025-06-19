@@ -95,30 +95,6 @@
             "show_taxes_notice": false
           }
         },
-        "arrivesby_delivery_time_VED3Mg": {
-          "type": "shopify://apps/arrivesby/blocks/delivery-time/b4f15d36-71f0-4a8c-954f-e485b7529360",
-          "settings": {
-            "show_offer": true,
-            "show_delivery_cutoff": true,
-            "show_shipping_policy": false,
-            "font_size": 16,
-            "line_height": 1.5,
-            "padding": 0.5,
-            "text_align": "left",
-            "icon": "local_shipping",
-            "date_format": "medium",
-            "cutoff_time_format": "timer",
-            "text_color": "#121212",
-            "background_color": "#fafafa",
-            "countdown_color": "#ec407a",
-            "offer_text": "<strong>Pronta Entrega</strong>",
-            "prefix": "Data de entrega:",
-            "separator": "-",
-            "suffix": "",
-            "cutoff_message": "Se comprar dentro de:",
-            "show_explainer": false
-          }
-        },
         "inventory_xjpgDg": {
           "type": "inventory",
           "settings": {
@@ -171,7 +147,6 @@
         "accordion_CwAYGz",
         "accordion_RDnbEJ",
         "price",
-        "arrivesby_delivery_time_VED3Mg",
         "inventory_xjpgDg",
         "globo_product_option_app_block_RtewJL",
         "variant_picker",
