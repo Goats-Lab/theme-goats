@@ -11,6 +11,9 @@
   "sections": {
     "main": {
       "type": "main-cart",
+      "custom_css": [
+        ".checkout_button {position: relative; top: 10px;}"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "show_cart_note": true,
