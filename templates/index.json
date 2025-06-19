@@ -205,7 +205,7 @@
           "type": "look",
           "settings": {
             "image": "shopify://shop_images/Shop_the_Look.png",
-            "hot_spots_background": "#ffffff",
+            "hot_spots_background": "#ff9ccd",
             "product_1": "anel-coracao-brilhante",
             "product_1_horizontal_position": 17,
             "product_1_vertical_position": 32,
@@ -219,15 +219,34 @@
             "product_4_horizontal_position": 85,
             "product_4_vertical_position": 85
           }
+        },
+        "look_mynHg8": {
+          "type": "look",
+          "settings": {
+            "hot_spots_background": "#ffffff",
+            "product_1": "",
+            "product_1_horizontal_position": 55,
+            "product_1_vertical_position": 30,
+            "product_2": "",
+            "product_2_horizontal_position": 25,
+            "product_2_vertical_position": 40,
+            "product_3": "",
+            "product_3_horizontal_position": 65,
+            "product_3_vertical_position": 60,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
         }
       },
       "block_order": [
-        "look_EaNmWn"
+        "look_EaNmWn",
+        "look_mynHg8"
       ],
       "name": "t:sections.shop_the_look.presets.shop_the_look.name",
       "settings": {
         "color_scheme": "scheme-2",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "subheading": "Faça como a Anitta, USE PANDORA.",
         "title": "",
         "content": "",
@@ -255,7 +274,7 @@
           "settings": {
             "style": "solid",
             "text": "Veja Mais",
-            "url": "",
+            "url": "shopify://collections/colecao-swarovski",
             "background": "#ff9ccd",
             "text_color": ""
           }
