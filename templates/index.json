@@ -222,6 +222,7 @@
         },
         "look_mynHg8": {
           "type": "look",
+          "disabled": true,
           "settings": {
             "hot_spots_background": "#ffffff",
             "product_1": "",
