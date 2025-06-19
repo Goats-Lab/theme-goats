@@ -127,7 +127,7 @@
         "container_size": "lg",
         "product_info_size": 40,
         "show_sticky_add_to_cart": true,
-        "center_basic_info": false,
+        "center_basic_info": true,
         "desktop_media_layout": "grid",
         "desktop_media_grid_gap": 0,
         "mobile_controls": "free_scroll",
