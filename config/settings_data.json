@@ -64,7 +64,7 @@
         "settings": {
           "savepay_button_description": "Pague com Pix (_discountPercentage_% OFF)",
           "savepay_checkout_button": "Finalizar pedido",
-          "savepay_insert_position": "before",
+          "savepay_insert_position": "after",
           "savepay_button_html": "",
           "savepay_button_css": "",
           "savepay_cart_form_selector": "",
