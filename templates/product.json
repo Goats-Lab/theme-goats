@@ -17,18 +17,10 @@
           "settings": {
             "icon_color": "#ffffff"
           }
-        },
-        "heading_8UEhh9": {
-          "type": "heading",
-          "settings": {
-            "text": "Video",
-            "heading_tag": "h2"
-          }
         }
       },
       "block_order": [
-        "play_Ckdr8x",
-        "heading_8UEhh9"
+        "play_Ckdr8x"
       ],
       "name": "t:sections.video.presets.video.name",
       "settings": {
