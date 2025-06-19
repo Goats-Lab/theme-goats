@@ -67,18 +67,6 @@
 
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
     
-   <style>
-  #savepay-button {
-    margin-bottom: 16px !important;
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box !important;
-  }
-</style>
- 
   </head>
 
   {% liquid
@@ -127,24 +115,5 @@
         {%- sections 'footer-group' -%}
       {%- endif -%}
     </main>
-    <script>
-  // Espera o botão do SavePay ser carregado no DOM
-  const intervalo = setInterval(() => {
-    const botaoPix = document.querySelector('#savepay-button');
-    if (botaoPix) {
-      // Estilos forçados
-      botaoPix.style.marginBottom = '16px';
-      botaoPix.style.display = 'block';
-      botaoPix.style.width = '100%';
-      botaoPix.style.maxWidth = '100%';
-      botaoPix.style.marginLeft = '0';
-      botaoPix.style.marginRight = '0';
-      botaoPix.style.boxSizing = 'border-box';
-
-      clearInterval(intervalo); // Para de verificar
-    }
-  }, 300); // verifica a cada 300ms
-</script>
-
   </body>
 </html>

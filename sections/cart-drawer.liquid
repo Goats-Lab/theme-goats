@@ -108,27 +108,24 @@
         </div>
       {% endfor %}
 
-      <div class="custom-buttons-wrapper">
-  <div class="button-group">
-    {%- if section.settings.show_view_cart_button or section.settings.show_checkout_button == false -%}
-      {%- assign view_cart = 'cart.general.view_cart' | t -%}
-      {%- render 'button', href: routes.cart_url, content: view_cart, stretch: true -%}
-    {%- endif -%}
-
-    {%- if section.settings.show_checkout_button -%}
-      {%- capture checkout_button -%}
-        {{- 'cart.general.checkout' | t -}}
-
-        {%- if section.settings.show_price_in_checkout_button -%}
-          <span class="cart-drawer__button-price">{{- cart.total_price | money -}}</span>
+      <div class="button-group">
+        {%- if section.settings.show_view_cart_button or section.settings.show_checkout_button == false -%}
+          {%- assign view_cart = 'cart.general.view_cart' | t -%}
+          {%- render 'button', href: routes.cart_url, content: view_cart, stretch: true -%}
         {%- endif -%}
-      {%- endcapture -%}
 
-      {%- render 'button', type: 'submit', content: checkout_button, name: 'checkout', stretch: true -%}
-    {%- endif -%}
-  </div>
-</div>
+        {%- if section.settings.show_checkout_button -%}
+          {%- capture checkout_button -%}
+            {{- 'cart.general.checkout' | t -}}
 
+            {%- if section.settings.show_price_in_checkout_button -%}
+              <span class="cart-drawer__button-price">{{- cart.total_price | money -}}</span>
+            {%- endif -%}
+          {%- endcapture -%}
+
+          {%- render 'button', type: 'submit', content: checkout_button, name: 'checkout', stretch: true -%}
+        {%- endif -%}
+      </div>
     </form>
   {%- endif -%}
 </cart-drawer>
