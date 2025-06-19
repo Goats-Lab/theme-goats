@@ -127,5 +127,24 @@
         {%- sections 'footer-group' -%}
       {%- endif -%}
     </main>
+    <script>
+  // Espera o botão do SavePay ser carregado no DOM
+  const intervalo = setInterval(() => {
+    const botaoPix = document.querySelector('#savepay-button');
+    if (botaoPix) {
+      // Estilos forçados
+      botaoPix.style.marginBottom = '16px';
+      botaoPix.style.display = 'block';
+      botaoPix.style.width = '100%';
+      botaoPix.style.maxWidth = '100%';
+      botaoPix.style.marginLeft = '0';
+      botaoPix.style.marginRight = '0';
+      botaoPix.style.boxSizing = 'border-box';
+
+      clearInterval(intervalo); // Para de verificar
+    }
+  }, 300); // verifica a cada 300ms
+</script>
+
   </body>
 </html>
