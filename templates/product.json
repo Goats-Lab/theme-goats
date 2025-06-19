@@ -9,6 +9,37 @@
  */
 {
   "sections": {
+    "video_HMCJXm": {
+      "type": "video",
+      "blocks": {
+        "play_Ckdr8x": {
+          "type": "play",
+          "settings": {
+            "icon_color": "#ffffff"
+          }
+        },
+        "heading_8UEhh9": {
+          "type": "heading",
+          "settings": {
+            "text": "Video",
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "play_Ckdr8x",
+        "heading_8UEhh9"
+      ],
+      "name": "t:sections.video.presets.video.name",
+      "settings": {
+        "autoplay": false,
+        "show_controls": true,
+        "video_size": "md",
+        "video": "{{ product.metafields.custom.v_deo.value }}",
+        "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "text_color": "#ffffff"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -186,6 +217,7 @@
     }
   },
   "order": [
+    "video_HMCJXm",
     "main",
     "image_with_text_pXa4rn"
   ]
