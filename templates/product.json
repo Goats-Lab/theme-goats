@@ -9,6 +9,29 @@
  */
 {
   "sections": {
+    "video_Ma9Jbf": {
+      "type": "video",
+      "blocks": {
+        "play_i3rhpi": {
+          "type": "play",
+          "settings": {
+            "icon_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "play_i3rhpi"
+      ],
+      "name": "t:sections.video.presets.video.name",
+      "settings": {
+        "autoplay": false,
+        "show_controls": true,
+        "video_size": "md",
+        "video": "{{ product.metafields.custom.v_deo.value }}",
+        "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "text_color": "#ffffff"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -84,9 +107,58 @@
         "enable_image_zoom": true,
         "max_image_zoom_level": 3
       }
+    },
+    "image_with_text_pXa4rn": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_BNBF3j": {
+          "type": "subheading",
+          "settings": {
+            "text": "Siga-nos no Instagram"
+          }
+        },
+        "heading_eEfGgP": {
+          "type": "heading",
+          "settings": {
+            "text": "E confira o que nossos clientes dizem!",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_iywHwG": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>No nosso Instagram, você encontra reviews reais e sinceros nos destaques, além de inspirações incríveis para suas peças favoritas.</p>"
+          }
+        },
+        "link_4LayPp": {
+          "type": "link",
+          "settings": {
+            "text": "Nosso Instagram",
+            "url": "https://www.instagram.com/my.charms.br/"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_BNBF3j",
+        "heading_eEfGgP",
+        "richtext_iywHwG",
+        "link_4LayPp"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/Imagem_do_WhatsApp_de_2025-03-11_a_s_23.12.27_456f1ec7.webp",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
     }
   },
   "order": [
-    "main"
+    "video_Ma9Jbf",
+    "main",
+    "image_with_text_pXa4rn"
   ]
 }
