@@ -42,7 +42,7 @@
         "disabled": false,
         "settings": {
           "savepay_button_description": "Pague com _paymentGatewayName_ (_discountPercentage_% OFF)",
-          "savepay_checkout_button": "Check out",
+          "savepay_checkout_button": "Finalizar Compra",
           "savepay_insert_position": "after",
           "savepay_button_html": "",
           "savepay_button_css": "",
