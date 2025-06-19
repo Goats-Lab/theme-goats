@@ -57,7 +57,7 @@
         "reduce_padding": false,
         "logo": "shopify://shop_images/Design_sem_nome__2_-removebg-preview.png",
         "logo_max_width": 45,
-        "logo_mobile_max_width": 200,
+        "logo_mobile_max_width": 35,
         "menu": "header",
         "sidebar_menu": "",
         "menu_open_trigger": "hover",
