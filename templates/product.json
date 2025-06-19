@@ -51,6 +51,15 @@
             "show_taxes_notice": false
           }
         },
+        "inventory_xjpgDg": {
+          "type": "inventory",
+          "settings": {
+            "show_in_stock_quantity": true,
+            "low_inventory_threshold": 5,
+            "show_progress_bar": true,
+            "progress_bar_max_value": 50
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -60,10 +69,6 @@
             "variant_image_options": "",
             "size_chart_page": ""
           }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -88,8 +93,8 @@
         "vendor",
         "title",
         "price",
+        "inventory_xjpgDg",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
         "description"
       ],
