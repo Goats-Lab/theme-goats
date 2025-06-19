@@ -122,10 +122,222 @@
         "content_width": "sm",
         "remove_vertical_spacing": true
       }
+    },
+    "collection_list_ACYycD": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_6gnjDn": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "bracelete-pulseira-pandora",
+            "image": "shopify://shop_images/1_aaf97400-75b9-4198-b8c8-1f53c7bf56c8.png",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Ver Coleção",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_PyhUAe": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "charms-berloques",
+            "image": "shopify://shop_images/3_cf8ca27a-f30f-4765-9859-1799f43418e6.png",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Ver Coleção",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_PERGbH": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "brinco-pandora",
+            "image": "shopify://shop_images/2.png",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Ver Coleção",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_6gnjDn",
+        "collection_PyhUAe",
+        "collection_PERGbH"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image_size": "sm",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
+    },
+    "shop_the_look_Rj7meD": {
+      "type": "shop-the-look",
+      "blocks": {
+        "look_EaNmWn": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/Shop_the_Look.png",
+            "hot_spots_background": "#ffffff",
+            "product_1": "anel-coracao-brilhante",
+            "product_1_horizontal_position": 17,
+            "product_1_vertical_position": 32,
+            "product_2": "colar-coracao-de-halo-cintilante",
+            "product_2_horizontal_position": 44,
+            "product_2_vertical_position": 73,
+            "product_3": "anel-coracao-vermelho-cintilante",
+            "product_3_horizontal_position": 18,
+            "product_3_vertical_position": 23,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        }
+      },
+      "block_order": [
+        "look_EaNmWn"
+      ],
+      "name": "t:sections.shop_the_look.presets.shop_the_look.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "subheading": "Faça como a Anitta, USE PANDORA.",
+        "title": "",
+        "content": "",
+        "popover_title": ""
+      }
+    },
+    "image_with_text_FicW9t": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_BL6bTh": {
+          "type": "heading",
+          "settings": {
+            "text": "Coleção Swarovski",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_DCzzap": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Swarovski pela inovação, design e o domínio do corte de cristal definiram a Swarovski como a marca líder em acessórios.</p>"
+          }
+        },
+        "button_YaBcRy": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "text": "Veja Mais",
+            "url": "",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_BL6bTh",
+        "richtext_DCzzap",
+        "button_YaBcRy"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/Swarovisk.png",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
+    "collection_list_64fF4f": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_7R4xWq": {
+          "type": "collection",
+          "settings": {
+            "collection": "swarovski-braceletes",
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Ver Coleção"
+          }
+        },
+        "collection_hxQDY6": {
+          "type": "collection",
+          "settings": {
+            "collection": "swarovski-colar",
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Ver Coleção"
+          }
+        },
+        "collection_hmtYfw": {
+          "type": "collection",
+          "settings": {
+            "collection": "swarovski-brincos",
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "Ver Coleção"
+          }
+        }
+      },
+      "block_order": [
+        "collection_7R4xWq",
+        "collection_hxQDY6",
+        "collection_hmtYfw"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image_size": "sm",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
     }
   },
   "order": [
     "slideshow",
-    "image_with_text_x6jHxF"
+    "image_with_text_x6jHxF",
+    "collection_list_ACYycD",
+    "shop_the_look_Rj7meD",
+    "image_with_text_FicW9t",
+    "collection_list_64fF4f"
   ]
 }
