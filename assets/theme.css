@@ -7698,3 +7698,8 @@ ul {
   display: -webkit-box;
   overflow: hidden;
 }
+.video-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* opcional: respiro lateral no mobile */
+}
