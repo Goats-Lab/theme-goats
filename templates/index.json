@@ -114,7 +114,7 @@
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "image": "shopify://shop_images/Pandora_a850a3a0-f22b-4bb4-84ae-f67f9f01d786.png",
         "reveal_on_scroll": true,
@@ -185,7 +185,7 @@
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "image_size": "sm",
         "show_text_outside": false,
@@ -226,7 +226,7 @@
       ],
       "name": "t:sections.shop_the_look.presets.shop_the_look.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "subheading": "Faça como a Anitta, USE PANDORA.",
         "title": "",
@@ -268,7 +268,7 @@
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "image": "shopify://shop_images/Swarovisk.png",
         "reveal_on_scroll": true,
@@ -336,7 +336,7 @@
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "image_size": "sm",
         "show_text_outside": false,
@@ -383,7 +383,7 @@
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "image": "shopify://shop_images/Tiffany.png",
         "reveal_on_scroll": true,
@@ -452,7 +452,7 @@
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "image_size": "sm",
         "show_text_outside": false,

@@ -131,7 +131,7 @@
         "description"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "container_size": "lg",
         "product_info_size": 40,
         "show_sticky_add_to_cart": true,
@@ -183,7 +183,7 @@
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "image": "shopify://shop_images/Imagem_do_WhatsApp_de_2025-03-11_a_s_23.12.27_456f1ec7.webp",
         "reveal_on_scroll": true,
