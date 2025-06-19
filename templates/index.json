@@ -140,7 +140,7 @@
             "button_link": "",
             "button_style": "outline",
             "overlay_color": "#1c1c1c",
-            "overlay_opacity": 20
+            "overlay_opacity": 15
           }
         },
         "collection_PyhUAe": {
@@ -157,7 +157,7 @@
             "button_link": "",
             "button_style": "outline",
             "overlay_color": "#000000",
-            "overlay_opacity": 20
+            "overlay_opacity": 15
           }
         },
         "collection_PERGbH": {
@@ -174,7 +174,7 @@
             "button_link": "",
             "button_style": "outline",
             "overlay_color": "#000000",
-            "overlay_opacity": 20
+            "overlay_opacity": 15
           }
         }
       },
@@ -317,24 +317,24 @@
             "button_link": "",
             "button_style": "outline",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 15
           }
         },
         "collection_WgjLHF": {
           "type": "collection",
           "settings": {
-            "color_scheme": "",
+            "color_scheme": "scheme-4",
             "collection": "swarovski-colar",
             "image": "shopify://shop_images/Captura_de_tela_2025-06-19_005949.png",
             "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
+            "content_position": "place-self-end-center text-center",
             "subheading": "",
             "title": "",
             "button_text": "Colares - Swarovski",
             "button_link": "",
             "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_color": "#1c1c1c",
+            "overlay_opacity": 15
           }
         },
         "collection_kWPcJ7": {
@@ -351,7 +351,7 @@
             "button_link": "",
             "button_style": "outline",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 15
           }
         }
       },

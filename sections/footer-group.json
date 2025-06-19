@@ -17,8 +17,8 @@
         "text": {
           "type": "text",
           "settings": {
-            "title": "MY CHARMS",
-            "content": "<p>Somos um negócio comprometido com a qualidade e a satisfação de nossos clientes. Diferentemente de concorrentes que importam de fora pra sua casa, levando meses, nós contamos com um estoque próprio e abrangente, com mais de 5.000 peças disponíveis à pronta entrega.</p>",
+            "title": "<em><strong>MY CHARMS</strong></em>",
+            "content": "<p>Somos a MyCharms, com estoque próprio no Brasil e mais de 2.500 peças disponíveis à pronta entrega. Entregamos com rapidez e qualidade, diferente de lojas que fazem dropshipping.</p>",
             "enable_follow_on_shop": true
           }
         },
