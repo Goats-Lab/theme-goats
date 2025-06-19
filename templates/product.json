@@ -25,7 +25,7 @@
       "name": "t:sections.video.presets.video.name",
       "settings": {
         "autoplay": false,
-        "show_controls": false,
+        "show_controls": true,
         "video_size": "md",
         "video": "{{ product.metafields.custom.v_deo.value }}",
         "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
