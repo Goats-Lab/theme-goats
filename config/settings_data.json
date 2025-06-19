@@ -16,7 +16,7 @@
     "product_on_sale_accent": "#000000",
     "product_sold_out_badge_background": "#ffffff",
     "product_custom_badge_background": "#1c1c1c",
-    "success_color": "#307a07",
+    "success_color": "#ff9ccd",
     "warning_color": "#ff9ccd",
     "error_color": "#cb2b2b",
     "heading_font": "univers_next_n4",
