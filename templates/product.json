@@ -130,7 +130,7 @@
         "center_basic_info": false,
         "desktop_media_layout": "grid",
         "desktop_media_grid_gap": 0,
-        "mobile_controls": "dots",
+        "mobile_controls": "free_scroll",
         "enable_media_autoplay": false,
         "enable_video_looping": true,
         "enable_image_zoom": false,
