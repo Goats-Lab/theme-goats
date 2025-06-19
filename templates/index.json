@@ -101,7 +101,7 @@
           "settings": {
             "style": "solid",
             "text": "Veja Mais",
-            "url": "shopify://collections/pandoras",
+            "url": "",
             "background": "#ff9ccd",
             "text_color": "#ffffff"
           }
