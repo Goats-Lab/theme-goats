@@ -32,6 +32,7 @@
     "show_sold_out_badge": false,
     "show_discount": false,
     "discount_mode": "percentage",
+    "cart_icon": "shopping_bag_sharp",
     "cart_show_free_shipping_bar": false,
     "cart_free_shipping_threshold": "",
     "social_instagram": "https://www.instagram.com/my.charms.br/",
