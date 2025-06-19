@@ -25,7 +25,7 @@
     "button_letter_spacing": 18,
     "stagger_products_apparition": true,
     "show_secondary_image": false,
-    "product_card_text_font": "body",
+    "product_card_text_font": "heading",
     "product_color_display": "hide",
     "show_product_rating": false,
     "show_quick_buy": false,
