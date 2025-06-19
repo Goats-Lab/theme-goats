@@ -253,10 +253,10 @@
         "button_YaBcRy": {
           "type": "button",
           "settings": {
-            "style": "outline",
+            "style": "solid",
             "text": "Veja Mais",
             "url": "",
-            "background": "",
+            "background": "#ff9ccd",
             "text_color": ""
           }
         }
@@ -371,11 +371,11 @@
         "button_xJ9QRr": {
           "type": "button",
           "settings": {
-            "style": "outline",
+            "style": "solid",
             "text": "Veja Mais",
-            "url": "",
-            "background": "",
-            "text_color": ""
+            "url": "shopify://collections/tiffany",
+            "background": "#ff9ccd",
+            "text_color": "#ffffff"
           }
         }
       },
