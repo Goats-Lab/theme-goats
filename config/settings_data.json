@@ -22,6 +22,7 @@
     "text_font": "univers_next_n4",
     "text_font_size_desktop": 14,
     "button_letter_spacing": 18,
+    "stagger_products_apparition": true,
     "show_secondary_image": false,
     "product_card_text_font": "heading",
     "show_product_rating": true,
