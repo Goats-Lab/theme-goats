@@ -133,14 +133,14 @@
             "collection": "bracelete-pulseira-pandora",
             "image": "shopify://shop_images/1_aaf97400-75b9-4198-b8c8-1f53c7bf56c8.png",
             "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
+            "content_position": "place-self-end-center text-center",
             "subheading": "Pulseiras - Pandora",
             "title": "",
             "button_text": "Ver Coleção",
             "button_link": "",
             "button_style": "outline",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         },
         "collection_PyhUAe": {
