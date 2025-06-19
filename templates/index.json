@@ -277,44 +277,62 @@
         "remove_vertical_spacing": true
       }
     },
-    "collection_list_64fF4f": {
+    "collection_list_nVz8kJ": {
       "type": "collection-list",
       "blocks": {
-        "collection_7R4xWq": {
+        "collection_ajgUHF": {
           "type": "collection",
           "settings": {
+            "color_scheme": "",
             "collection": "swarovski-braceletes",
+            "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "Ver Coleção"
+            "button_text": "Ver Coleção",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
           }
         },
-        "collection_hxQDY6": {
+        "collection_WgjLHF": {
           "type": "collection",
           "settings": {
+            "color_scheme": "",
             "collection": "swarovski-colar",
+            "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "Ver Coleção"
+            "button_text": "Ver Coleção",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
           }
         },
-        "collection_hmtYfw": {
+        "collection_kWPcJ7": {
           "type": "collection",
           "settings": {
+            "color_scheme": "",
             "collection": "swarovski-brincos",
+            "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "Ver Coleção"
+            "button_text": "Ver Coleção",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
           }
         }
       },
       "block_order": [
-        "collection_7R4xWq",
-        "collection_hxQDY6",
-        "collection_hmtYfw"
+        "collection_ajgUHF",
+        "collection_WgjLHF",
+        "collection_kWPcJ7"
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
@@ -330,6 +348,49 @@
         "title": "",
         "content": ""
       }
+    },
+    "image_with_text_Mr6VPW": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_TTX9hg": {
+          "type": "heading",
+          "settings": {
+            "text": "Coleção Tiffany&CO",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_QryQ8A": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Descubra designs radiantes criados para celebrar cada faceta do amor, desde laços atemporais até começos significativos.</p>"
+          }
+        },
+        "button_xJ9QRr": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "text": "Veja Mais",
+            "url": "",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_TTX9hg",
+        "richtext_QryQ8A",
+        "button_xJ9QRr"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/Tiffany.png",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
     }
   },
   "order": [
@@ -338,6 +399,7 @@
     "collection_list_ACYycD",
     "shop_the_look_Rj7meD",
     "image_with_text_FicW9t",
-    "collection_list_64fF4f"
+    "collection_list_nVz8kJ",
+    "image_with_text_Mr6VPW"
   ]
 }
