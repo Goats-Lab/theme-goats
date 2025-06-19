@@ -7701,5 +7701,5 @@ ul {
 .video-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem; /* opcional: respiro lateral no mobile */
+  padding: 0 auto; /* opcional: respiro lateral no mobile */
 }
