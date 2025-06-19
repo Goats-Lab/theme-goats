@@ -7703,6 +7703,6 @@ ul {
   margin: 0 auto;
   padding: 0 auto; /* opcional: respiro lateral no mobile */
 }
-.savepay-button {
-  margin-top: 20px;
+button#savepay-button {
+  margin-top: 20px; /* Ajuste o valor conforme precisar */
 }
