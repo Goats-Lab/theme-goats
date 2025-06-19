@@ -108,24 +108,21 @@
         </div>
       {% endfor %}
 
-      <div class="button-group">
-        {%- if section.settings.show_view_cart_button or section.settings.show_checkout_button == false -%}
-          {%- assign view_cart = 'cart.general.view_cart' | t -%}
-          {%- render 'button', href: routes.cart_url, content: view_cart, stretch: true -%}
-        {%- endif -%}
+        {%- if section.settings.show_accelerated_payment_buttons and additional_checkout_buttons -%}
+                  <div class="additional-checkout-buttons additional-checkout-buttons--vertical">
+                    {{- content_for_additional_checkout_buttons -}}
+                  
+                  </div>
+                {% endif %}
 
-        {%- if section.settings.show_checkout_button -%}
-          {%- capture checkout_button -%}
-            {{- 'cart.general.checkout' | t -}}
+                <noscript>
+                  {%- assign update_button = 'cart.general.update_cart' | t -%}
+                  {%- render 'button', type: 'submit', content: update_button, style: 'outline' -%}
+                </noscript>
 
-            {%- if section.settings.show_price_in_checkout_button -%}
-              <span class="cart-drawer__button-price">{{- cart.total_price | money -}}</span>
-            {%- endif -%}
-          {%- endcapture -%}
-
-          {%- render 'button', type: 'submit', content: checkout_button, name: 'checkout', stretch: true -%}
-        {%- endif -%}
-      </div>
+                {%- assign checkout_button = 'cart.general.checkout' | t -%}
+                {%- render 'button', type: 'submit', content: checkout_button, name: 'Finalizar Compra' -%}
+              </div>
     </form>
   {%- endif -%}
 </cart-drawer>
