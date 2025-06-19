@@ -50,10 +50,15 @@
             "heading_tag": "h3"
           }
         },
-        "text_8yPPY6": {
-          "type": "text",
+        "accordion_RDnbEJ": {
+          "type": "accordion",
           "settings": {
-            "text": "<p>CUSTO ORIGINAL: ﻿{{ product.metafields.custom.origem | metafield_tag }}</p>"
+            "show_below_gallery": true,
+            "icon": "none",
+            "title": "Precisa de ajuda com medidas?",
+            "content": "",
+            "liquid": "",
+            "page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
           }
         },
         "accordion_89TReN": {
@@ -78,17 +83,6 @@
             "page": "{{ product.metafields.custom.compatibilidade.value }}"
           }
         },
-        "accordion_RDnbEJ": {
-          "type": "accordion",
-          "settings": {
-            "show_below_gallery": true,
-            "icon": "none",
-            "title": "Precisa de ajuda com medidas?",
-            "content": "",
-            "liquid": "",
-            "page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -104,10 +98,6 @@
             "progress_bar_max_value": 20
           }
         },
-        "globo_product_option_app_block_RtewJL": {
-          "type": "shopify://apps/globo-product-option/blocks/app-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -115,15 +105,19 @@
             "selector_style": "block",
             "swatch_selector_style": "swatch",
             "variant_image_options": "",
-            "size_chart_page": ""
+            "size_chart_page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
           }
+        },
+        "globo_product_option_app_block_RtewJL": {
+          "type": "shopify://apps/globo-product-option/blocks/app-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_payment_button": true,
             "show_gift_card_recipient": true,
-            "atc_button_background": "",
+            "atc_button_background": "#ff9ccd",
             "atc_button_text_color": "",
             "payment_button_background": "",
             "payment_button_text_color": ""
@@ -142,14 +136,13 @@
         "badges_KPXqnm",
         "vendor",
         "title",
-        "text_8yPPY6",
+        "accordion_RDnbEJ",
         "accordion_89TReN",
         "accordion_CwAYGz",
-        "accordion_RDnbEJ",
         "price",
         "inventory_xjpgDg",
-        "globo_product_option_app_block_RtewJL",
         "variant_picker",
+        "globo_product_option_app_block_RtewJL",
         "buy_buttons",
         "description"
       ],
@@ -160,11 +153,11 @@
         "show_sticky_add_to_cart": false,
         "center_basic_info": false,
         "desktop_media_layout": "grid",
-        "desktop_media_grid_gap": 20,
+        "desktop_media_grid_gap": 0,
         "mobile_controls": "dots",
         "enable_media_autoplay": false,
         "enable_video_looping": true,
-        "enable_image_zoom": true,
+        "enable_image_zoom": false,
         "max_image_zoom_level": 3
       }
     },
