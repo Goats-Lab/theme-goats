@@ -129,18 +129,18 @@
         "collection_6gnjDn": {
           "type": "collection",
           "settings": {
-            "color_scheme": "",
+            "color_scheme": "scheme-4",
             "collection": "bracelete-pulseira-pandora",
             "image": "shopify://shop_images/1_aaf97400-75b9-4198-b8c8-1f53c7bf56c8.png",
             "expand_collection": true,
             "content_position": "place-self-end-center text-center",
-            "subheading": "Pulseiras - Pandora",
+            "subheading": "",
             "title": "",
-            "button_text": "Ver Coleção",
+            "button_text": "Pulseiras - Pandora",
             "button_link": "",
             "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_color": "#1c1c1c",
+            "overlay_opacity": 20
           }
         },
         "collection_PyhUAe": {
@@ -149,15 +149,15 @@
             "color_scheme": "",
             "collection": "charms-berloques",
             "image": "shopify://shop_images/3_cf8ca27a-f30f-4765-9859-1799f43418e6.png",
-            "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
-            "subheading": "Berloques - Pandora",
+            "expand_collection": true,
+            "content_position": "place-self-end-center text-center",
+            "subheading": "",
             "title": "",
-            "button_text": "Ver Coleção",
+            "button_text": "Berloques - Pandora",
             "button_link": "",
             "button_style": "outline",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 20
           }
         },
         "collection_PERGbH": {
@@ -167,14 +167,14 @@
             "collection": "brinco-pandora",
             "image": "shopify://shop_images/2.png",
             "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
-            "subheading": "Brincos - Pandora",
+            "content_position": "place-self-end-center text-center",
+            "subheading": "",
             "title": "",
-            "button_text": "Ver Coleção",
+            "button_text": "Brincos - Pandora",
             "button_link": "",
             "button_style": "outline",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 20
           }
         }
       },
