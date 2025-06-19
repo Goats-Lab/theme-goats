@@ -244,6 +244,9 @@
         "look_EaNmWn",
         "look_mynHg8"
       ],
+      "custom_css": [
+        ".content-over-media {background-color: #ffffff !important;}"
+      ],
       "name": "t:sections.shop_the_look.presets.shop_the_look.name",
       "settings": {
         "color_scheme": "scheme-2",
