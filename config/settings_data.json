@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "icon_stroke_width": 2,
+    "icon_stroke_width": 1,
     "section_vertical_spacing": "md",
     "default_color_scheme": "scheme-2",
     "product_rating_color": "#1c1c1c",
@@ -24,9 +24,11 @@
     "text_font": "univers_next_n4",
     "text_font_size_desktop": 14,
     "button_letter_spacing": 18,
+    "currency_code_enabled": true,
     "stagger_products_apparition": true,
     "show_secondary_image": false,
-    "product_card_text_font": "heading",
+    "show_vendor": false,
+    "product_card_text_font": "body",
     "product_color_display": "hide",
     "show_product_rating": false,
     "show_quick_buy": false,

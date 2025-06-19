@@ -16,8 +16,8 @@
         "color_scheme": "scheme-2",
         "show_cart_note": true,
         "show_order_weight": false,
-        "show_shipping_text": true,
-        "show_accelerated_buttons": false,
+        "show_shipping_text": false,
+        "show_accelerated_buttons": true,
         "show_shipping_estimator": false
       }
     }
