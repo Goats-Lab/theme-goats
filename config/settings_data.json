@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "icon_stroke_width": 1,
     "section_vertical_spacing": "md",
     "product_rating_color": "#1c1c1c",
     "product_on_sale_accent": "#000000",
@@ -37,22 +38,6 @@
     "social_21buttons": "",
     "content_for_index": [],
     "blocks": {
-      "14082006724220070571": {
-        "type": "shopify://apps/savepay-pix-com-desconto/blocks/trigger_body/10f9b622-3935-46f8-947f-8b4011493b26",
-        "disabled": false,
-        "settings": {
-          "savepay_button_description": "Pague com _paymentGatewayName_ (_discountPercentage_% OFF)",
-          "savepay_checkout_button": "Finalizar Compra",
-          "savepay_insert_position": "after",
-          "savepay_button_html": "",
-          "savepay_button_css": "",
-          "savepay_cart_form_selector": "",
-          "savepay_custom_js": "",
-          "savepay_checkout_button_wrapper": "",
-          "savepay_apply_mode": "default",
-          "savepay_debug_mode": "false"
-        }
-      },
       "3720565183479497137": {
         "type": "shopify://apps/globo-product-option/blocks/app-embed-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
         "disabled": false,
@@ -64,6 +49,22 @@
         "settings": {
           "date_format": "medium",
           "cart_text": "Arrives by"
+        }
+      },
+      "14082006724220070571": {
+        "type": "shopify://apps/savepay-pix-com-desconto/blocks/trigger_body/10f9b622-3935-46f8-947f-8b4011493b26",
+        "disabled": false,
+        "settings": {
+          "savepay_button_description": "Pague com Pix (_discountPercentage_% OFF)",
+          "savepay_checkout_button": "Finalizar pagamento",
+          "savepay_insert_position": "before",
+          "savepay_button_html": "",
+          "savepay_button_css": "",
+          "savepay_cart_form_selector": "",
+          "savepay_custom_js": "",
+          "savepay_checkout_button_wrapper": "",
+          "savepay_apply_mode": "default",
+          "savepay_debug_mode": "false"
         }
       }
     },
