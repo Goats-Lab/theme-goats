@@ -50,17 +50,6 @@
             "heading_tag": "h3"
           }
         },
-        "accordion_RDnbEJ": {
-          "type": "accordion",
-          "settings": {
-            "show_below_gallery": true,
-            "icon": "none",
-            "title": "Precisa de ajuda com medidas?",
-            "content": "",
-            "liquid": "",
-            "page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
-          }
-        },
         "accordion_89TReN": {
           "type": "accordion",
           "settings": {
@@ -81,6 +70,17 @@
             "content": "",
             "liquid": "",
             "page": "{{ product.metafields.custom.compatibilidade.value }}"
+          }
+        },
+        "accordion_RDnbEJ": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": true,
+            "icon": "none",
+            "title": "Precisa de ajuda com medidas?",
+            "content": "",
+            "liquid": "",
+            "page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
           }
         },
         "price": {
@@ -136,9 +136,9 @@
         "badges_KPXqnm",
         "vendor",
         "title",
-        "accordion_RDnbEJ",
         "accordion_89TReN",
         "accordion_CwAYGz",
+        "accordion_RDnbEJ",
         "price",
         "inventory_xjpgDg",
         "variant_picker",
@@ -180,7 +180,7 @@
         "richtext_iywHwG": {
           "type": "richtext",
           "settings": {
-            "content": "<p>No nosso Instagram, você encontra reviews reais e sinceros nos destaques, além de inspirações incríveis para suas peças favoritas.</p>"
+            "content": "<p>No nosso Instagram, você encontra reviews reais nos destaques, além de indicações incríveis para suas joias.</p>"
           }
         },
         "link_4LayPp": {
