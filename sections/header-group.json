@@ -59,7 +59,7 @@
         "logo_max_width": 45,
         "logo_mobile_max_width": 35,
         "menu": "header",
-        "sidebar_menu": "",
+        "sidebar_menu": "header",
         "menu_open_trigger": "hover",
         "enable_search": true,
         "sidebar_color_scheme": "",
