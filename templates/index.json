@@ -99,11 +99,11 @@
         "button_TriUTP": {
           "type": "button",
           "settings": {
-            "style": "outline",
+            "style": "solid",
             "text": "Veja Mais",
             "url": "",
-            "background": "",
-            "text_color": ""
+            "background": "#ff9ccd",
+            "text_color": "#ffffff"
           }
         }
       },
