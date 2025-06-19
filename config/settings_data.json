@@ -59,7 +59,7 @@
         "disabled": false,
         "settings": {
           "savepay_button_description": "Pague com Pix (_discountPercentage_% OFF)",
-          "savepay_checkout_button": "Pague com cartão e boleto.",
+          "savepay_checkout_button": "Finalizar pedido",
           "savepay_insert_position": "before",
           "savepay_button_html": "",
           "savepay_button_css": "",
