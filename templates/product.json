@@ -128,6 +128,10 @@
             "progress_bar_max_value": 20
           }
         },
+        "globo_product_option_app_block_RtewJL": {
+          "type": "shopify://apps/globo-product-option/blocks/app-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -169,6 +173,7 @@
         "price",
         "arrivesby_delivery_time_VED3Mg",
         "inventory_xjpgDg",
+        "globo_product_option_app_block_RtewJL",
         "variant_picker",
         "buy_buttons",
         "description"
