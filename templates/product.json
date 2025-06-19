@@ -31,7 +31,6 @@
         "autoplay": true,
         "show_controls": false,
         "video_size": "auto",
-        "video": "{{ product.metafields.custom.v_deo.value }}",
         "mobile_video": "{{ product.metafields.custom.v_deo.value }}",
         "external_video_url": "",
         "text_color": "#ffffff"
