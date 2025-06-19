@@ -15,34 +15,28 @@
     {%- if section.settings.mobile_video != blank -%}
       {%- assign poster_image = section.settings.poster | default: section.settings.mobile_video.preview_image -%}
 
-      <div class="video-wrapper-custom">
-        <video-media {% if section.settings.autoplay %}autoplay{% endif %} class="sm:hidden" style="--aspect-ratio: {{ section.settings.mobile_video.aspect_ratio }}">
-          {{- poster_image | image_url: width: poster_image.width | image_tag: sizes: '100vw', widths: '200,300,400,500,600,700,800,900,1000,1200' -}}
-          {{- section.settings.mobile_video | video_tag: class: 'object-cover sm:hidden', controls: section.settings.show_controls, playsinline: true, muted: section.settings.autoplay, loop: section.settings.autoplay, preload: 'metadata', image_size: '400x' -}}
-        </video-media>
-      </div>
+      <video-media {% if section.settings.autoplay %}autoplay{% endif %} class="sm:hidden" style="--aspect-ratio: {{ section.settings.mobile_video.aspect_ratio }}">
+        {{- poster_image | image_url: width: poster_image.width | image_tag: sizes: '100vw', widths: '200,300,400,500,600,700,800,900,1000,1200' -}}
+        {{- section.settings.mobile_video | video_tag: class: 'object-cover sm:hidden', controls: section.settings.show_controls, playsinline: true, muted: section.settings.autoplay, loop: section.settings.autoplay, preload: 'metadata', image_size: '400x' -}}
+      </video-media>
     {%- endif -%}
 
-    <div class="video-wrapper-custom">
-      <video-media {% if section.settings.autoplay %}autoplay{% endif %} {% if section.settings.mobile_video != blank %}class="hidden sm:block"{% endif %} style="--aspect-ratio: {{ section.settings.video.aspect_ratio }}">
-        {{- poster -}}
-        {{- section.settings.video | video_tag: class: 'object-cover', controls: section.settings.show_controls, playsinline: true, muted: section.settings.autoplay, loop: section.settings.autoplay, preload: 'metadata', image_size: '400x' -}}
-      </video-media>
-    </div>
+    <video-media {% if section.settings.autoplay %}autoplay{% endif %} {% if section.settings.mobile_video != blank %}class="hidden sm:block"{% endif %} style="--aspect-ratio: {{ section.settings.video.aspect_ratio }}">
+      {{- poster -}}
+      {{- section.settings.video | video_tag: class: 'object-cover', controls: section.settings.show_controls, playsinline: true, muted: section.settings.autoplay, loop: section.settings.autoplay, preload: 'metadata', image_size: '400x' -}}
+    </video-media>
   {%- else -%}
-    <div class="video-wrapper-custom">
-      <video-media host="{{ section.settings.external_video_url.type }}" {% if section.settings.autoplay %}autoplay class="pointer-events-none"{% endif %}>
-        {{- poster -}}
+    <video-media host="{{ section.settings.external_video_url.type }}" {% if section.settings.autoplay %}autoplay class="pointer-events-none"{% endif %}>
+      {{- poster -}}
 
-        <template>
-          {%- if section.settings.external_video_url.type == 'youtube' -%}
-            <iframe src="https://www.youtube.com/embed/{{ section.settings.external_video_url.id }}?playsinline=1&{% if section.settings.autoplay %}autoplay=1&controls=0&mute=1&loop=1&{% endif %}playlist={{ section.settings.external_video_url.id }}&enablejsapi=1&rel=0&modestbranding=1&origin={{ 'https://' | append: request.host | url_encode }}" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-          {%- elsif section.settings.external_video_url.type == 'vimeo' -%}
-            <iframe src="https://player.vimeo.com/video/{{ section.settings.external_video_url.id }}?autopause=1&{% if section.settings.autoplay %}background=1&autoplay=1&loop=1&muted=1&{% endif %}transparent=0&responsive=1&portrait=0&title=0&byline=0&color={{ settings.text_color | remove_first: '#' }}" allow="autoplay; encrypted-media;" allowfullscreen="allowfullscreen"></iframe>
-          {%- endif -%}
-        </template>
-      </video-media>
-    </div>
+      <template>
+        {%- if section.settings.external_video_url.type == 'youtube' -%}
+          <iframe src="https://www.youtube.com/embed/{{ section.settings.external_video_url.id }}?playsinline=1&{% if section.settings.autoplay %}autoplay=1&controls=0&mute=1&loop=1&{% endif %}playlist={{ section.settings.external_video_url.id }}&enablejsapi=1&rel=0&modestbranding=1&origin={{ 'https://' | append: request.host | url_encode }}" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        {%- elsif section.settings.external_video_url.type == 'vimeo' -%}
+          <iframe src="https://player.vimeo.com/video/{{ section.settings.external_video_url.id }}?autopause=1&{% if section.settings.autoplay %}background=1&autoplay=1&loop=1&muted=1&{% endif %}transparent=0&responsive=1&portrait=0&title=0&byline=0&color={{ settings.text_color | remove_first: '#' }}" allow="autoplay; encrypted-media;" allowfullscreen="allowfullscreen"></iframe>
+        {%- endif -%}
+      </template>
+    </video-media>
   {%- endif -%}
 
   {%- if section.blocks.size > 0 -%}
@@ -83,6 +77,7 @@
     </div>
   {%- endif -%}
 </div>
+
 {% schema %}
 {
   "name": "t:sections.video.name",
