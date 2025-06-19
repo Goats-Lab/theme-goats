@@ -58,7 +58,7 @@
       },
       "14082006724220070571": {
         "type": "shopify://apps/savepay-pix-com-desconto/blocks/trigger_body/10f9b622-3935-46f8-947f-8b4011493b26",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "savepay_button_description": "Pague com Pix (_discountPercentage_% OFF)",
           "savepay_checkout_button": "Finalizar pedido",
