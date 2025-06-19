@@ -31,6 +31,27 @@
           "date_format": "medium",
           "cart_text": "Arrives by"
         }
+      },
+      "3720565183479497137": {
+        "type": "shopify://apps/globo-product-option/blocks/app-embed-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
+        "disabled": true,
+        "settings": {}
+      },
+      "14082006724220070571": {
+        "type": "shopify://apps/savepay-pix-com-desconto/blocks/trigger_body/10f9b622-3935-46f8-947f-8b4011493b26",
+        "disabled": false,
+        "settings": {
+          "savepay_button_description": "Pague com _paymentGatewayName_ (_discountPercentage_% OFF)",
+          "savepay_checkout_button": "Check out",
+          "savepay_insert_position": "after",
+          "savepay_button_html": "",
+          "savepay_button_css": "",
+          "savepay_cart_form_selector": "",
+          "savepay_custom_js": "",
+          "savepay_checkout_button_wrapper": "",
+          "savepay_apply_mode": "default",
+          "savepay_debug_mode": "false"
+        }
       }
     },
     "color_schemes": {

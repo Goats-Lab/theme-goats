@@ -45,6 +45,12 @@
             "heading_tag": "h3"
           }
         },
+        "text_8yPPY6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>CUSTO ORIGINAL: ﻿{{ product.metafields.custom.origem | metafield_tag }}</p>"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -116,6 +122,7 @@
       "block_order": [
         "vendor",
         "title",
+        "text_8yPPY6",
         "price",
         "arrivesby_delivery_time_VED3Mg",
         "inventory_xjpgDg",
