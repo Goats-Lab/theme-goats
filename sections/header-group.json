@@ -17,7 +17,7 @@
         "message-1": {
           "type": "message",
           "settings": {
-            "text": "Announce something here"
+            "text": "Frete Grátis Acima de R$260!"
           }
         }
       },
@@ -37,21 +37,21 @@
       "type": "header",
       "settings": {
         "color_scheme": "",
-        "enable_sticky": true,
+        "enable_sticky": false,
         "hide_on_scroll": false,
         "show_separation_border": true,
         "reduce_padding": false,
         "logo": "shopify://shop_images/Design_sem_nome__2_-removebg-preview.png",
-        "logo_max_width": 140,
-        "logo_mobile_max_width": 100,
-        "menu": "main-menu",
+        "logo_max_width": 50,
+        "logo_mobile_max_width": 50,
+        "menu": "header",
         "sidebar_menu": "",
         "menu_open_trigger": "hover",
         "enable_search": true,
         "sidebar_color_scheme": "",
         "sidebar_text_font": "heading",
         "sidebar_show_dividers": true,
-        "layout": "logo_left_navigation_inline",
+        "layout": "logo_center_navigation_below",
         "show_icons": true,
         "show_country_selector": true,
         "show_country_name": false,
