@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "page": "Página {{ page }}",
@@ -99,7 +108,7 @@
       "view_in_space": "Veja em seu ambiente",
       "taxes_included": "Tributo incluído.",
       "taxes_excluded": "Tributo excluído.",
-      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Frete<\/a> calculado no checkout",
+      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Frete</a> calculado no checkout",
       "size_chart": "Guia de medidas",
       "available_colors_count": {
         "one": "{{ count }} cor disponível",
@@ -347,7 +356,7 @@
       "order_note": "Observações",
       "save_note": "Salvar observações",
       "view_cart": "Ver carrinho",
-      "checkout": "Checkout",
+      "checkout": "Finalizar Pagamento",
       "we_accept": "Aceitamos"
     },
     "order": {
