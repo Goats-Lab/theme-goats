@@ -63,9 +63,9 @@ Render a list of price for a product, variant or line item.
         </div>
       </div>
     {%- endif -%}
-    <sale-price class="{% if variant.compare_at_price > variant.price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
-      {{ variant.price | money }}
-    </sale-price>
+   <sale-price class="{% if variant.compare_at_price > variant.price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
+  {{ variant.price | money }}{%- if context == 'product' -%} <span style="font-weight: 400; font-size: 14px;">até 2x sem juros</span>{%- endif -%}
+   </sale-price>
     {%- if variant.compare_at_price > variant.price -%}
       <compare-at-price class="{{ compare_at_price_classes }}">
         {{ variant.compare_at_price | money }}
