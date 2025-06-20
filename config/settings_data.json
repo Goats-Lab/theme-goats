@@ -35,7 +35,7 @@
     "show_sold_out_badge": false,
     "show_discount": false,
     "discount_mode": "percentage",
-    "cart_type": "drawer",
+    "cart_type": "page",
     "cart_icon": "shopping_bag_sharp",
     "cart_show_free_shipping_bar": false,
     "cart_free_shipping_threshold": "260",
