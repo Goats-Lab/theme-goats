@@ -14,7 +14,7 @@
     <sale-price class="{% if variant.compare_at_price > variant.price %}text-on-sale{% else %}text-subdued h4{% endif %}">
       {{ variant.price | money }}
       {%- if context == 'product' -%}
-       <span style="font-weight: 400; font-size: 14px;">no PIX</span>
+        <span style="font-weight: 400; font-size: 14px;">no cartão</span>
       {%- endif -%}
     </sale-price>
 
@@ -51,7 +51,7 @@
     <sale-price class="{% if variant.compare_at_price > variant.price %}text-on-sale{% else %}text-subdued h4{% endif %}">
       {{ variant.price | money }}
       {%- if context == 'product' -%}
-        <span style="font-weight: 400; font-size: 14px;">no PIX</span>
+        <span style="font-weight: 400; font-size: 14px;">no cartão</span>
       {%- endif -%}
     </sale-price>
 
