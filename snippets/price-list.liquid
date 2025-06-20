@@ -2,7 +2,7 @@
   {%- if variant != blank -%}
     {%- assign pix_price = variant.price | times: 0.85 -%}
 
-    <sale-price class="{% if variant.compare_at_price > variant.price %}text-on-sale{% else %}{% endif %}">
+    <sale-price class="{% if variant.compare_at_price > variant.price %}text-on-sale{% else %}text-subdued h5{% endif %}">
       {{ variant.price | money }}
       {%- if context == 'product' -%}
         <span style="font-size: 12px; font-weight: 400; margin-left: 4px;">até 2x sem juros</span>
