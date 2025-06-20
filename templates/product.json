@@ -19,7 +19,7 @@
             "video": "{{ product.metafields.custom.v_deo.value }}",
             "autoplay": true,
             "show_controls": false,
-            "column_count": "12",
+            "column_count": "3",
             "row_count": 1,
             "title": "",
             "heading_tag": "h4",
