@@ -124,7 +124,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-2",
-        "container_size": "lg",
+        "container_size": "full",
         "product_info_size": 40,
         "show_sticky_add_to_cart": true,
         "center_basic_info": true,
