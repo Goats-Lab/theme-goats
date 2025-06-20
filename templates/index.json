@@ -297,7 +297,7 @@
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
-        "remove_vertical_spacing": true
+        "remove_vertical_spacing": false
       }
     },
     "collection_list_nVz8kJ": {
@@ -415,7 +415,7 @@
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
-        "remove_vertical_spacing": true
+        "remove_vertical_spacing": false
       }
     },
     "collection_list_Qd99kw": {
