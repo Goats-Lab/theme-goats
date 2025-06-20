@@ -4,16 +4,13 @@
   case context
     when 'card' or 'line_item'
       assign base_text_class = ''
-
       if settings.product_card_text_font == 'heading'
         assign base_text_class = 'h6 '
       endif
-
       assign regular_price_classes = base_text_class | append: 'text-subdued'
       assign on_sale_price_classes = base_text_class | append: 'text-on-sale'
       assign compare_at_price_classes = base_text_class | append: 'text-subdued line-through'
       assign unit_price_classes = base_text_class | append: 'text-subdued'
-
     when 'product'
       assign regular_price_classes = base_text_class | append: 'h4 text-subdued'
       assign on_sale_price_classes = base_text_class | append: 'h4 text-on-sale'
@@ -23,37 +20,24 @@
 -%}
 
 <price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
-  {%- if variant != blank -%}
+  {%- if product != blank -%}
+    {%- assign variant = product.selected_or_first_available_variant -%}
+    {%- assign pix_price = variant.price | times: 1.0 | times: 0.85 -%}
+
+    <div class="PixPriceBox" style="margin-bottom: 6px;">
+      <div style="font-size: 20px; font-weight: 600; color: #169c5b;">
+        R$ {{ pix_price | money_without_currency | replace: '.', ',' }} <span style="font-weight: 400; font-size: 16px;">no PIX</span>
+      </div>
+    </div>
+
     <sale-price class="{% if variant.compare_at_price > variant.price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
-      {{ variant.price | money }}
+      R$ {{ variant.price | money_without_currency | replace: '.', ',' }}
     </sale-price>
 
     {%- if variant.compare_at_price > variant.price -%}
       <compare-at-price class="{{ compare_at_price_classes }}">
-        {{ variant.compare_at_price | money }}
+        R$ {{ variant.compare_at_price | money_without_currency | replace: '.', ',' }}
       </compare-at-price>
     {%- endif -%}
-
-    <div class="PixDiscount text-green-700 text-sm font-bold">
-      Pix: {{ variant.price | times: 0.85 | money }} (15% OFF)
-    </div>
-
-  {%- elsif product != blank -%}
-    {%- assign variant = product.variants | sort: 'price' | first -%}
-
-    <sale-price class="{% if variant.compare_at_price > variant.price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
-      {{ variant.price | money }}
-    </sale-price>
-
-    {%- if variant.compare_at_price > variant.price -%}
-      <compare-at-price class="{{ compare_at_price_classes }}">
-        {{ variant.compare_at_price | money }}
-      </compare-at-price>
-    {%- endif -%}
-
-    <div class="PixDiscount text-green-700 text-sm font-bold">
-      Pix: {{ variant.price | times: 0.85 | money }} (15% OFF)
-    </div>
-
   {%- endif -%}
 </price-list>
