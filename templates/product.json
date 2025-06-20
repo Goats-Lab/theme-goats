@@ -40,8 +40,8 @@
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
-        "desktop_row_height": 290,
-        "mobile_row_height": 180,
+        "desktop_row_height": 400,
+        "mobile_row_height": 400,
         "section_width": "full",
         "spacing": "md",
         "subheading": "",
