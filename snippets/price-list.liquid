@@ -2,21 +2,21 @@
   {%- if variant != blank -%}
     {%- assign pix_price = variant.price | times: 0.85 -%}
 
-    <sale-price class="{% if variant.compare_at_price > variant.price %}text-on-sale{% else %}text-subdued h5{% endif %}">
-      {{ variant.price | money }}
-      {%- if context == 'product' -%}
-        <span style="font-size: 12px; font-weight: 400; margin-left: 4px;">até 2x sem juros</span>
-      {%- endif -%}
-    </sale-price>
-
     {%- if context == 'product' -%}
-      <div class="PixPriceBox" style="margin-top: 4px;">
+      <div class="PixPriceBox" style="margin-bottom: 4px;">
         <div style="font-size: 16px; font-weight: 600; color: #169c5b;">
           R$ {{ pix_price | money_without_currency | replace: '.', ',' }}
           <span style="font-weight: 400; font-size: 14px;">no PIX</span>
         </div>
       </div>
     {%- endif -%}
+
+    <sale-price class="{% if variant.compare_at_price > variant.price %}text-on-sale{% else %}text-subdued h4{% endif %}">
+      {{ variant.price | money }}
+      {%- if context == 'product' -%}
+        <span style="font-size: 12px; font-weight: 400; margin-left: 4px;">no cartão</span>
+      {%- endif -%}
+    </sale-price>
 
     {%- if variant.compare_at_price > variant.price -%}
       <compare-at-price class="text-subdued h5 line-through">
@@ -30,7 +30,7 @@
     </sale-price>
 
     {%- if line_item.original_price > line_item.final_price -%}
-      <compare-at-price class="text-subdued h4 line-through">
+      <compare-at-price class="text-subdued h5 line-through">
         {{ line_item.original_price | money }}
       </compare-at-price>
     {%- endif -%}
@@ -39,21 +39,21 @@
     {%- assign variant = product.selected_or_first_available_variant -%}
     {%- assign pix_price = variant.price | times: 0.85 -%}
 
-    <sale-price class="{% if variant.compare_at_price > variant.price %}text-on-sale{% else %}text-subdued h4{% endif %}">
-      {{ variant.price | money }}
-      {%- if context == 'product' -%}
-        <span style="font-size: 12px; font-weight: 400; margin-left: 4px;">até 2x sem juros</span>
-      {%- endif -%}
-    </sale-price>
-
     {%- if context == 'product' -%}
-      <div class="PixPriceBox" style="margin-top: 4px;">
+      <div class="PixPriceBox" style="margin-bottom: 4px;">
         <div style="font-size: 16px; font-weight: 600; color: #169c5b;">
           R$ {{ pix_price | money_without_currency | replace: '.', ',' }}
           <span style="font-weight: 400; font-size: 14px;">no PIX</span>
         </div>
       </div>
     {%- endif -%}
+
+    <sale-price class="{% if variant.compare_at_price > variant.price %}text-on-sale{% else %}text-subdued h4{% endif %}">
+      {{ variant.price | money }}
+      {%- if context == 'product' -%}
+        <span style="font-size: 12px; font-weight: 400; margin-left: 4px;">no cartão</span>
+      {%- endif -%}
+    </sale-price>
 
     {%- if variant.compare_at_price > variant.price -%}
       <compare-at-price class="text-subdued h5 line-through">
