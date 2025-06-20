@@ -1,8 +1,7 @@
 {%- comment -%}
 ----------------------------------------------------------------------------------------------------------------------
-PRODUCT PRICE
+PRODUCT PRICE (com Pix + 2x sem juros)
 ----------------------------------------------------------------------------------------------------------------------
-Render a list of price for a product, variant or line item.
 {%- endcomment -%}
 
 {%- liquid
@@ -25,56 +24,47 @@ Render a list of price for a product, variant or line item.
 -%}
 
 <price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
-  {%- if variant != blank -%}
-    {%- assign pix_price = variant.price | times: 0.85 -%}
-    {%- if context == 'product' -%}
-      <div class="PixPriceBox" style="margin-bottom: 6px;">
-        <div style="font-size: 20px; font-weight: 600; color: #169c5b;">
-          R$ {{ pix_price | money_without_currency | replace: '.', ',' }} <span style="font-weight: 400; font-size: 16px;">no PIX</span>
-        </div>
-      </div>
-    {%- endif -%}
-    <sale-price class="{% if variant.compare_at_price > variant.price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
-  {{ variant.price | money }}{%- if context == 'product' -%} <span style="font-weight: 400; font-size: 14px;">até 2x sem juros</span>{%- endif -%}
-    </sale-price>
-    {%- if variant.compare_at_price > variant.price -%}
-      <compare-at-price class="{{ compare_at_price_classes }}">
-        {{ variant.compare_at_price | money }}
-      </compare-at-price>
-    {%- endif -%}
 
-  {%- elsif line_item != blank -%}
-    <sale-price class="{% if line_item.original_price > line_item.final_price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
-      {{ line_item.final_price | money }}
-    </sale-price>
-    {%- if line_item.original_price > line_item.final_price -%}
-      <compare-at-price class="{{ compare_at_price_classes }}">
-        {{ line_item.original_price | money }}
-      </compare-at-price>
-    {%- endif -%}
-
-  {%- elsif product != blank -%}
+  {%- if context == 'product' and product != blank -%}
     {%- assign variant = product.selected_or_first_available_variant -%}
     {%- assign pix_price = variant.price | times: 0.85 -%}
-    {%- if context == 'product' -%}
-      <div class="PixPriceBox" style="margin-bottom: 6px;">
-        <div style="font-size: 20px; font-weight: 600; color: #169c5b;">
-          R$ {{ pix_price | money_without_currency | replace: '.', ',' }} <span style="font-weight: 400; font-size: 16px;">no PIX</span>
-        </div>
+    <div class="PixPriceBox" style="margin-bottom: 6px;">
+      <div style="font-size: 20px; font-weight: 600; color: #169c5b;">
+        R$ {{ pix_price | money_without_currency | replace: '.', ',' }} <span style="font-weight: 400; font-size: 16px;">no PIX</span>
       </div>
-    {%- endif -%}
-   <sale-price class="{% if variant.compare_at_price > variant.price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
-  {{ variant.price | money }}{%- if context == 'product' -%} <span style="font-weight: 400; font-size: 14px;">até 2x sem juros</span>{%- endif -%}
-   </sale-price>
+    </div>
+  {%- endif -%}
+
+  {%- if variant != blank -%}
+    <sale-price class="{% if variant.compare_at_price > variant.price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
+      <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+      {{ variant.price | money }}<span class="installment-note" style="font-weight: 400; font-size: 14px; margin-left: 4px;"> até 2x sem juros</span>
+    </sale-price>
+
     {%- if variant.compare_at_price > variant.price -%}
       <compare-at-price class="{{ compare_at_price_classes }}">
+        <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
         {{ variant.compare_at_price | money }}
       </compare-at-price>
     {%- endif -%}
-
-  {%- else -%}
-    <sale-price class="{{ regular_price_classes }}">
-      {{ 4999 | money }}
-    </sale-price>
   {%- endif -%}
+
 </price-list>
+
+<script>
+function addInstallmentNote() {
+  const priceEl = document.querySelector('sale-price');
+  if (priceEl && !priceEl.innerHTML.includes('2x sem juros')) {
+    const note = document.createElement('span');
+    note.textContent = ' até 2x sem juros';
+    note.style.fontWeight = '400';
+    note.style.fontSize = '14px';
+    note.style.marginLeft = '4px';
+    priceEl.appendChild(note);
+  }
+}
+document.addEventListener('DOMContentLoaded', addInstallmentNote);
+document.addEventListener('shopify:section:load', addInstallmentNote);
+document.addEventListener('shopify:section:select', addInstallmentNote);
+document.addEventListener('variant:change', addInstallmentNote);
+</script>
