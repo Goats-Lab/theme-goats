@@ -139,7 +139,7 @@
             "style": "solid",
             "text": "Veja Mais",
             "url": "shopify://collections/pandoras",
-            "background": "#ff9ccd",
+            "background": "#ff6eb6",
             "text_color": "#ffffff"
           }
         }
@@ -316,7 +316,7 @@
             "style": "solid",
             "text": "Veja Mais",
             "url": "shopify://collections/colecao-swarovski",
-            "background": "#ff9ccd",
+            "background": "#ff6eb6",
             "text_color": ""
           }
         }
@@ -434,7 +434,7 @@
             "style": "solid",
             "text": "Veja Mais",
             "url": "shopify://collections/tiffany",
-            "background": "#ff9ccd",
+            "background": "#ff6eb6",
             "text_color": "#ffffff"
           }
         }
