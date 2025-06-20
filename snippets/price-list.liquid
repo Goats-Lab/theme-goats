@@ -2,20 +2,34 @@
 ----------------------------------------------------------------------------------------------------------------------
 PRODUCT PRICE
 ----------------------------------------------------------------------------------------------------------------------
+
 Render a list of price for a product, variant or line item.
+
+********************************************
+Supported variables
+********************************************
+
+* product: if provided, the prices are rendered for the whole product
+* variant: if provided, then only the price from this variant is rendered
+* line_item: if provided, then the price from this line item are rendered (used on cart or order)
+* hide_unit_price: if set to true unit prices are hidden (mostly useful for size constrained elements)
+* context: can be "product", "line_item" or "card". This controls how the prices are displayed (using the correct sizes)
 {%- endcomment -%}
 
 {%- liquid
   case context
     when 'card' or 'line_item'
       assign base_text_class = ''
+
       if settings.product_card_text_font == 'heading'
         assign base_text_class = 'h6 '
       endif
+
       assign regular_price_classes = base_text_class | append: 'text-subdued'
       assign on_sale_price_classes = base_text_class | append: 'text-on-sale'
       assign compare_at_price_classes = base_text_class | append: 'text-subdued line-through'
       assign unit_price_classes = base_text_class | append: 'text-subdued'
+
     when 'product'
       assign regular_price_classes = base_text_class | append: 'h4 text-subdued'
       assign on_sale_price_classes = base_text_class | append: 'h4 text-on-sale'
@@ -26,55 +40,84 @@ Render a list of price for a product, variant or line item.
 
 <price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
   {%- if variant != blank -%}
-    {%- assign pix_price = variant.price | times: 0.85 -%}
-    {%- if context == 'product' -%}
-      <div class="PixPriceBox" style="margin-bottom: 6px;">
-        <div style="font-size: 20px; font-weight: 600; color: #169c5b;">
-          R$ {{ pix_price | money_without_currency | replace: '.', ',' }} <span style="font-weight: 400; font-size: 16px;">no PIX</span>
-        </div>
-      </div>
-    {%- endif -%}
     <sale-price class="{% if variant.compare_at_price > variant.price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
-  {{ variant.price | money }}{%- if context == 'product' -%} <span style="font-weight: 400; font-size: 14px;">até 2x sem juros</span>{%- endif -%}
+      <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+      {{- settings.currency_code_enabled | default: false | if: variant.price | money_with_currency else: variant.price | money -}}
+      {%- if context == 'product' -%}
+        <span class="text-sm text-subdued">&nbsp;|&nbsp;até 2x sem juros</span>
+      {%- endif -%}
     </sale-price>
+
     {%- if variant.compare_at_price > variant.price -%}
       <compare-at-price class="{{ compare_at_price_classes }}">
-        {{ variant.compare_at_price | money }}
+        <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
+        {{- settings.currency_code_enabled | default: false | if: variant.compare_at_price | money_with_currency else: variant.compare_at_price | money -}}
       </compare-at-price>
     {%- endif -%}
 
   {%- elsif line_item != blank -%}
     <sale-price class="{% if line_item.original_price > line_item.final_price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
-      {{ line_item.final_price | money }}
+      <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+      {{- settings.currency_code_enabled | default: false | if: line_item.final_price | money_with_currency else: line_item.final_price | money -}}
     </sale-price>
+
     {%- if line_item.original_price > line_item.final_price -%}
       <compare-at-price class="{{ compare_at_price_classes }}">
-        {{ line_item.original_price | money }}
+        <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
+        {{- settings.currency_code_enabled | default: false | if: line_item.original_price | money_with_currency else: line_item.original_price | money -}}
       </compare-at-price>
     {%- endif -%}
 
   {%- elsif product != blank -%}
-    {%- assign variant = product.selected_or_first_available_variant -%}
-    {%- assign pix_price = variant.price | times: 0.85 -%}
-    {%- if context == 'product' -%}
-      <div class="PixPriceBox" style="margin-bottom: 6px;">
-        <div style="font-size: 20px; font-weight: 600; color: #169c5b;">
-          R$ {{ pix_price | money_without_currency | replace: '.', ',' }} <span style="font-weight: 400; font-size: 16px;">no PIX</span>
-        </div>
-      </div>
-    {%- endif -%}
-   <sale-price class="{% if variant.compare_at_price > variant.price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
-  {{ variant.price | money }}{%- if context == 'product' -%} <span style="font-weight: 400; font-size: 14px;">até 2x sem juros</span>{%- endif -%}
-   </sale-price>
-    {%- if variant.compare_at_price > variant.price -%}
-      <compare-at-price class="{{ compare_at_price_classes }}">
-        {{ variant.compare_at_price | money }}
-      </compare-at-price>
+    {%- liquid
+      if product.price_varies and settings.product_price_strategy != 'from_price'
+        assign variant = product.variants | sort: 'price' | last | default: product.selected_or_first_available_variant
+      else
+        assign variant = product.variants | sort: 'price' | first | default: product.selected_or_first_available_variant
+      endif
+
+      assign variant_price = settings.currency_code_enabled | default: false | if: variant.price | money_with_currency else: variant.price | money
+      assign variant_compare_at_price = settings.currency_code_enabled | default: false | if: variant.compare_at_price | money_with_currency else: variant.compare_at_price | money
+    -%}
+
+    {%- if product.price_varies -%}
+      {%- assign is_variant_on_sale = variant.price < variant.compare_at_price -%}
+
+      {%- if settings.product_price_strategy == 'from_price' -%}
+        <sale-price class="{% if is_variant_on_sale %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
+          <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+          {{ 'product.price.from_price_html' | t: price_min: variant_price }}
+        </sale-price>
+      {%- else -%}
+        <sale-price class="{{ on_sale_price_classes }}">
+          <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+          {{ variant_price }}
+        </sale-price>
+      {%- endif -%}
+    {%- else -%}
+      <sale-price class="{% if variant.price < variant.compare_at_price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
+        <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+        {{ variant_price }}
+        {%- if context == 'product' -%}
+          <span class="text-sm text-subdued">&nbsp;|&nbsp;até 2x sem juros</span>
+        {%- endif -%}
+      </sale-price>
     {%- endif -%}
 
-  {%- else -%}
-    <sale-price class="{{ regular_price_classes }}">
-      {{ 4999 | money }}
-    </sale-price>
+    {%- if variant.price < variant.compare_at_price -%}
+      <compare-at-price class="{{ compare_at_price_classes }}">
+        <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
+        {{ variant_compare_at_price }}
+      </compare-at-price>
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if context == 'product' and variant != blank -%}
+    {%- assign pix_price = variant.price | times: 0.85 | round: 0 -%}
+    <div class="PixPriceBox" style="margin-top: 6px;">
+      <div style="font-size: 20px; font-weight: 600; color: #169c5b;">
+        R$ {{ pix_price | money_without_currency | replace: '.', ',' }} <span style="font-weight: 400; font-size: 16px;">no PIX</span>
+      </div>
+    </div>
   {%- endif -%}
 </price-list>
