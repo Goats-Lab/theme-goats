@@ -38,12 +38,12 @@
       ],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": true,
         "desktop_row_height": 400,
         "mobile_row_height": 400,
         "section_width": "full",
-        "spacing": "sm",
+        "spacing": "xs",
         "subheading": "",
         "title": "",
         "content": ""
