@@ -30,7 +30,7 @@
     </sale-price>
 
     {%- if line_item.original_price > line_item.final_price -%}
-      <compare-at-price class="text-subdued h5 line-through">
+      <compare-at-price class="text-subdued h4 line-through">
         {{ line_item.original_price | money }}
       </compare-at-price>
     {%- endif -%}
