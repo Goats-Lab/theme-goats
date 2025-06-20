@@ -72,7 +72,7 @@ Render a list of price for a product, variant or line item.
     {%- endif -%}
     {%- if context == 'product' -%}
       <div class="PixPriceBox" style="margin-top: 4px;">
-        <div style="font-size: 20px; font-weight: 600; color: #169c5b;">
+        <div style="font-size: 10px; font-weight: 600; color: #169c5b;">
           R$ {{ pix_price | money_without_currency | replace: '.', ',' }} <span style="font-weight: 400; font-size: 16px;">no PIX</span>
         </div>
       </div>
