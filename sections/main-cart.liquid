@@ -138,7 +138,6 @@
                 {%- if section.settings.show_accelerated_payment_buttons and additional_checkout_buttons -%}
                   <div class="additional-checkout-buttons additional-checkout-buttons--vertical">
                     {{- content_for_additional_checkout_buttons -}}
-                  
                   </div>
                 {% endif %}
 
@@ -148,7 +147,7 @@
                 </noscript>
 
                 {%- assign checkout_button = 'cart.general.checkout' | t -%}
-                {%- render 'button', type: 'submit', content: checkout_button, name: 'Finalizar Compra' -%}
+                {%- render 'button', type: 'submit', content: checkout_button, name: 'checkout' -%}
               </div>
             </div>
           </div>
