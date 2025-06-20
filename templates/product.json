@@ -43,7 +43,7 @@
         "desktop_row_height": 400,
         "mobile_row_height": 400,
         "section_width": "sm",
-        "spacing": "sm",
+        "spacing": "lg",
         "subheading": "",
         "title": "",
         "content": ""
