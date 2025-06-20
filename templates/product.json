@@ -78,8 +78,8 @@
           "type": "variant_picker",
           "settings": {
             "hide_sold_out_variants": false,
-            "selector_style": "block",
-            "swatch_selector_style": "swatch",
+            "selector_style": "dropdown",
+            "swatch_selector_style": "block_swatch",
             "variant_image_options": "",
             "size_chart_page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
           }
