@@ -79,7 +79,7 @@
           "settings": {
             "hide_sold_out_variants": true,
             "selector_style": "block",
-            "swatch_selector_style": "none",
+            "swatch_selector_style": "swatch",
             "variant_image_options": "",
             "size_chart_page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
           }
