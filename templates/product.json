@@ -12,11 +12,13 @@
     "media_grid_776mrJ": {
       "type": "media-grid",
       "blocks": {
-        "image_FfrPxU": {
-          "type": "image",
+        "video_RQrFRb": {
+          "type": "video",
           "settings": {
-            "color_scheme": "",
-            "image": "{{ product.metafields.custom.v_deo.value }}",
+            "color_scheme": "scheme-4",
+            "video": "{{ product.metafields.custom.v_deo.value }}",
+            "autoplay": true,
+            "show_controls": false,
             "column_count": "12",
             "row_count": 1,
             "title": "",
@@ -32,7 +34,7 @@
         }
       },
       "block_order": [
-        "image_FfrPxU"
+        "video_RQrFRb"
       ],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
