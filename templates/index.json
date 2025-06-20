@@ -80,6 +80,43 @@
         "controls_color": "#ffffff"
       }
     },
+    "scrolling_content_6CAnJm": {
+      "type": "scrolling-content",
+      "blocks": {
+        "text_cbbhWi": {
+          "type": "text",
+          "settings": {
+            "text": "Tiffany - Pandora - Swarovski"
+          }
+        },
+        "text_kMYXfE": {
+          "type": "text",
+          "settings": {
+            "text": "tudo em Prata 925"
+          }
+        }
+      },
+      "block_order": [
+        "text_cbbhWi",
+        "text_kMYXfE"
+      ],
+      "name": "t:sections.scrolling_content.presets.scrolling_content.name",
+      "settings": {
+        "separate_section_with_border": true,
+        "scrolling_speed": 0.3,
+        "scroll_direction": "left",
+        "pause_on_hover": false,
+        "text_font": "heading",
+        "text_font_size_mobile": 10,
+        "text_font_size_desktop": 10,
+        "section_vertical_spacing_mobile": 10,
+        "section_vertical_spacing_desktop": 10,
+        "item_horizontal_spacing_mobile": 10,
+        "item_horizontal_spacing_desktop": 10,
+        "background": "",
+        "text_color": ""
+      }
+    },
     "image_with_text_x6jHxF": {
       "type": "image-with-text",
       "blocks": {
@@ -292,7 +329,7 @@
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "scheme-2",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "image": "shopify://shop_images/Swarovisk.png",
         "reveal_on_scroll": true,
         "image_position": "start",
@@ -410,7 +447,7 @@
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "scheme-2",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "image": "shopify://shop_images/Tiffany.png",
         "reveal_on_scroll": true,
         "image_position": "start",
@@ -496,6 +533,7 @@
   },
   "order": [
     "slideshow",
+    "scrolling_content_6CAnJm",
     "image_with_text_x6jHxF",
     "collection_list_ACYycD",
     "shop_the_look_Rj7meD",
