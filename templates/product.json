@@ -39,11 +39,11 @@
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
         "color_scheme": "scheme-3",
-        "separate_section_with_border": false,
+        "separate_section_with_border": true,
         "desktop_row_height": 400,
         "mobile_row_height": 400,
-        "section_width": "xs",
-        "spacing": "xs",
+        "section_width": "full",
+        "spacing": "sm",
         "subheading": "",
         "title": "",
         "content": ""
