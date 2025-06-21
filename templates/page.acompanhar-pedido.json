@@ -13,25 +13,12 @@
       "type": "main-page",
       "settings": {
         "color_scheme": "scheme-2",
-        "show_title": true,
-        "page_width": "xs"
-      }
-    },
-    "custom_liquid_NUih6G": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "separate_section_with_border": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<iframe\n  style=\"width: 100%;\"\n  id=\"as-tracking-page\"\n  src=\"https://username.aftership.com?username=k9jjtsbq&iframe=1\"\n  scrolling=\"no\"\n  frameborder=\"0\"\n  >\n  </iframe>\n  <script>\n  // resize iframe to fit content\n  const iframe = document.querySelector(\"#as-tracking-page\");\n  window.addEventListener(\"message\", (event) => {\n    if (\n      event.data &&\n      event.data.type === \"resize\" &&\n      typeof event.data.scrollHeight === \"number\" &&\n      iframe\n    ) {\n      iframe.style.height = event.data.scrollHeight + \"px\";\n    }\n  });\n\n  // support widget float\n  window.addEventListener(\"message\", (event) => {\n\tif (\n\t\tevent.data &&\n\t\tevent.data.type === \"widgetScriptLoad\" &&\n\t\ttypeof event.data.scripts === \"object\"\n\t) {\n\t\tevent.data.scripts.forEach((script) => {\n\t\t\tconst scriptDom = document.createElement(\"script\");\n\t\t\tscriptDom.innerHTML = script;\n\t\t\tdocument.body.appendChild(scriptDom);\n\t\t\twindow.postMessage({ type: \"hideAllWidget\" }, \"*\");\n\t\t});\n\t}\n  });\n  </script>",
-        "text_alignment": "center"
+        "show_title": false,
+        "page_width": "sm"
       }
     }
   },
   "order": [
-    "main",
-    "custom_liquid_NUih6G"
+    "main"
   ]
 }
