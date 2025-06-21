@@ -12,13 +12,51 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "show_title": false,
         "page_width": "xs"
+      }
+    },
+    "rich_text_EdBEaG": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_7dtAMJ": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_QXqLR9": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>COMO SABEr o numero do meu pedido?</strong>",
+            "heading_tag": "h3"
+          }
+        },
+        "richtext_b4EE9n": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><a href=\"https://account.mycharms.com.br/orders\" title=\"https://account.mycharms.com.br/orders\">Diretamente em sua conta, clique aqui.</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_7dtAMJ",
+        "heading_QXqLR9",
+        "richtext_b4EE9n"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_EdBEaG"
   ]
 }
