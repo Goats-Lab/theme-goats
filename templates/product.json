@@ -105,6 +105,12 @@
             "show_taxes_notice": false
           }
         },
+        "text_QVmHQ7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>    Em ate 12x no cartão ou 2x sem juros. </p>"
+          }
+        },
         "inventory_xjpgDg": {
           "type": "inventory",
           "settings": {
@@ -156,6 +162,7 @@
         "accordion_CwAYGz",
         "accordion_RDnbEJ",
         "price",
+        "text_QVmHQ7",
         "inventory_xjpgDg",
         "variant_picker",
         "globo_product_option_app_block_RtewJL",
