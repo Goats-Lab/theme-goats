@@ -32,12 +32,19 @@
           "settings": {
             "content": "<p><a href=\"https://rastreamento.correios.com.br/app/index.php\" title=\"https://rastreamento.correios.com.br/app/index.php\">Use o site ou app dos correios para realizar o acompanhamento do seu pedido. Clique aqui.</a></p>"
           }
+        },
+        "richtext_TrRk9Q": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><em><strong>Fique atento(a) a prazos para evitar que sua encomenda volte para nós!</strong></em></p>"
+          }
         }
       },
       "block_order": [
         "subheading_PEg8k9",
         "heading_Rg9CXG",
-        "richtext_WPPjBV"
+        "richtext_WPPjBV",
+        "richtext_TrRk9Q"
       ],
       "name": "t:sections.rich_text.presets.rich_text.name",
       "settings": {
