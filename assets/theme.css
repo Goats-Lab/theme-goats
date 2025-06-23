@@ -7698,11 +7698,17 @@ ul {
   display: -webkit-box;
   overflow: hidden;
 }
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+/* Agora fora do seletor global */
 .video-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 auto; /* opcional: respiro lateral no mobile */
 }
+
 @media screen and (min-width: 750px) {
   .ocultar-no-desktop {
     display: none !important;
