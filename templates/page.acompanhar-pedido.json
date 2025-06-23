@@ -49,9 +49,9 @@
           "type": "button",
           "settings": {
             "style": "solid",
-            "text": "Button text",
-            "url": "",
-            "background": "",
+            "text": "Suporte",
+            "url": "https://www.instagram.com/my.charms.br/",
+            "background": "#ff9ccd",
             "text_color": ""
           }
         }
