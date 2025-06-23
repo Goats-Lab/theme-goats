@@ -180,23 +180,6 @@
             "overlay_opacity": 15
           }
         },
-        "collection_PyhUAe": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "",
-            "collection": "charms-berloques",
-            "image": "shopify://shop_images/Video_da_peca_em_producao_Em_breve_voce_podera_ver_todos_os_detalhes_ao_vivo.png",
-            "expand_collection": true,
-            "content_position": "place-self-end-center text-center",
-            "subheading": "",
-            "title": "",
-            "button_text": "Berloques - Pandora",
-            "button_link": "",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 15
-          }
-        },
         "collection_PERGbH": {
           "type": "collection",
           "settings": {
@@ -213,12 +196,29 @@
             "overlay_color": "#000000",
             "overlay_opacity": 15
           }
+        },
+        "collection_PyhUAe": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "charms-berloques",
+            "image": "shopify://shop_images/Video_da_peca_em_producao_Em_breve_voce_podera_ver_todos_os_detalhes_ao_vivo.png",
+            "expand_collection": true,
+            "content_position": "place-self-end-center text-center",
+            "subheading": "",
+            "title": "",
+            "button_text": "Berloques - Pandora",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 15
+          }
         }
       },
       "block_order": [
         "collection_6gnjDn",
-        "collection_PyhUAe",
-        "collection_PERGbH"
+        "collection_PERGbH",
+        "collection_PyhUAe"
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
