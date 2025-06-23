@@ -36,13 +36,13 @@
         "richtext_b4EE9n": {
           "type": "richtext",
           "settings": {
-            "content": "<p><a href=\"https://account.mycharms.com.br/orders\" title=\"https://account.mycharms.com.br/orders\">Diretamente em sua conta, clique aqui.</a></p>"
+            "content": "<h5><a href=\"https://account.mycharms.com.br/orders\" title=\"https://account.mycharms.com.br/orders\">Diretamente em sua conta, clique aqui.</a></h5>"
           }
         },
         "richtext_wJTaJL": {
           "type": "richtext",
           "settings": {
-            "content": "<p><strong>Já possui o código de rastreio do seu pedido?</strong><br/><br/>Recomendamos que acompanhe sua encomenda diretamente no site oficial dos Correios para evitar atrasos ou extravios:<br/><br/>📦 Acesse: <a href=\"https://rastreamento.correios.com.br/app/index.php\" title=\"https://rastreamento.correios.com.br/app/index.php\">Clique aqui</a></p><p>Você também pode consultar o rastreio pela sua conta no nosso site, acessando a área de pedidos:<br/><br/>👤 <a href=\"https://mycharms.com.br/account\">Clique aqui para acessar sua conta</a></p><p>Ficou com dúvidas? Estamos por aqui! 💖✨</p>"
+            "content": "<h5><strong>Já possui o código de rastreio do seu pedido?</strong><br/><br/>Recomendamos que acompanhe sua encomenda diretamente no site oficial dos Correios para evitar atrasos ou extravios:<br/><br/>📦 Acesse: <a href=\"https://rastreamento.correios.com.br/app/index.php\" title=\"https://rastreamento.correios.com.br/app/index.php\">Clique aqui</a></h5><p>Você também pode consultar o rastreio pela sua conta no nosso site, acessando a área de pedidos:<br/><br/>👤 <a href=\"https://mycharms.com.br/account\">Clique aqui para acessar sua conta</a></p><p>Ficou com dúvidas? Estamos por aqui! 💖✨</p>"
           }
         },
         "button_YaeLbd": {
