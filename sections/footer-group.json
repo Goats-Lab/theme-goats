@@ -11,50 +11,6 @@
   "type": "footer",
   "name": "Footer group",
   "sections": {
-    "rich_text_QQWVGM": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading_PEg8k9": {
-          "type": "subheading",
-          "settings": {
-            "text": ""
-          }
-        },
-        "heading_Rg9CXG": {
-          "type": "heading",
-          "settings": {
-            "text": "<strong>tenho o rastreio e agora?</strong>",
-            "heading_tag": "h3"
-          }
-        },
-        "richtext_WPPjBV": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p><a href=\"https://rastreamento.correios.com.br/app/index.php\" title=\"https://rastreamento.correios.com.br/app/index.php\">Use o site ou app dos correios para realizar o acompanhamento do seu pedido. Clique aqui.</a></p>"
-          }
-        },
-        "richtext_TrRk9Q": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p><em><strong>Fique atento(a) a prazos para evitar que sua encomenda volte para nós!</strong></em></p>"
-          }
-        }
-      },
-      "block_order": [
-        "subheading_PEg8k9",
-        "heading_Rg9CXG",
-        "richtext_WPPjBV",
-        "richtext_TrRk9Q"
-      ],
-      "name": "t:sections.rich_text.presets.rich_text.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "content_width": "sm",
-        "text_position": "center",
-        "remove_vertical_spacing": false
-      }
-    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -101,7 +57,6 @@
     }
   },
   "order": [
-    "rich_text_QQWVGM",
     "footer"
   ]
 }
