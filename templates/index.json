@@ -598,7 +598,7 @@
             "button_link": "",
             "button_style": "outline",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 15
           }
         },
         "collection_WLTNLG": {
@@ -648,9 +648,9 @@
         "image_size": "sm",
         "show_text_outside": false,
         "space_items": true,
-        "stack_collections": true,
+        "stack_collections": false,
         "collections_per_row_mobile": "1",
-        "collections_per_row_desktop": 3,
+        "collections_per_row_desktop": 5,
         "subheading": "",
         "title": "",
         "content": ""
