@@ -485,7 +485,10 @@
   "customer_accounts": {
     "orders": {
       "order_list": {
-        "orders_title": "Confirmado Rastreio em até 7 dias úteis "
+        "orders_title": "Confirmado "
+      },
+      "order_status": {
+        "confirmed_label": "Confirmado Rastreio em até 7 dias úteis "
       }
     }
   }
