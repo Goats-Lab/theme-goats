@@ -315,45 +315,6 @@
         "remove_vertical_spacing": false
       }
     },
-    "shop_the_look_x8xCEe": {
-      "type": "shop-the-look",
-      "blocks": {
-        "look_ryAeXn": {
-          "type": "look",
-          "settings": {
-            "image": "shopify://shop_images/9fa0b14cb07c36304c5440ac71f2da55.jpg",
-            "hot_spots_background": "#f4f4f4",
-            "product_1": "colar-angelic-all-around-branco-prata-925",
-            "product_1_horizontal_position": 60,
-            "product_1_vertical_position": 76,
-            "product_2": "brincos-all-around",
-            "product_2_horizontal_position": 74,
-            "product_2_vertical_position": 46,
-            "product_3": "pulseira-angelic-all-around-branco-prata-925",
-            "product_3_horizontal_position": 42,
-            "product_3_vertical_position": 81,
-            "product_4": "conjunto-angelic-all-around-branco-prata-925",
-            "product_4_horizontal_position": 43,
-            "product_4_vertical_position": 35
-          }
-        }
-      },
-      "block_order": [
-        "look_ryAeXn"
-      ],
-      "custom_css": [
-        ".content-over-media {background-color: #ffffff !important;}"
-      ],
-      "name": "t:sections.shop_the_look.presets.shop_the_look.name",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "subheading": "SWAROVSKI - Conjunto angelic",
-        "title": "",
-        "content": "",
-        "popover_title": "Poucas unidades disponíveis"
-      }
-    },
     "collection_list_nVz8kJ": {
       "type": "collection-list",
       "blocks": {
@@ -426,6 +387,143 @@
         "collections_per_row_desktop": 3,
         "subheading": "",
         "title": "",
+        "content": ""
+      }
+    },
+    "shop_the_look_x8xCEe": {
+      "type": "shop-the-look",
+      "blocks": {
+        "look_ryAeXn": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/9fa0b14cb07c36304c5440ac71f2da55.jpg",
+            "hot_spots_background": "#f4f4f4",
+            "product_1": "colar-angelic-all-around-branco-prata-925",
+            "product_1_horizontal_position": 60,
+            "product_1_vertical_position": 76,
+            "product_2": "brincos-all-around",
+            "product_2_horizontal_position": 74,
+            "product_2_vertical_position": 46,
+            "product_3": "pulseira-angelic-all-around-branco-prata-925",
+            "product_3_horizontal_position": 42,
+            "product_3_vertical_position": 81,
+            "product_4": "conjunto-angelic-all-around-branco-prata-925",
+            "product_4_horizontal_position": 43,
+            "product_4_vertical_position": 35
+          }
+        }
+      },
+      "block_order": [
+        "look_ryAeXn"
+      ],
+      "custom_css": [
+        ".content-over-media {background-color: #ffffff !important;}"
+      ],
+      "name": "t:sections.shop_the_look.presets.shop_the_look.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
+        "subheading": "SWAROVSKI - Conjunto angelic",
+        "title": "",
+        "content": "",
+        "popover_title": "Poucas unidades disponíveis"
+      }
+    },
+    "featured_product_AHC9XD": {
+      "type": "featured-product",
+      "blocks": {
+        "vendor_yVJAWi": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title_dccccB": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "badges_jXTWVL": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price_3FpcWJ": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "payment_terms_4gPBJN": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator_hiimp3": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker_VPw7Hg": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector_6pTgmE": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "globo_product_option_app_block_fTRYqw": {
+          "type": "shopify://apps/globo-product-option/blocks/app-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
+          "settings": {}
+        },
+        "buy_buttons_fBxzxa": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "#ff9ccd",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "pickup_availability_ryi6tP": {
+          "type": "pickup_availability",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor_yVJAWi",
+        "title_dccccB",
+        "badges_jXTWVL",
+        "price_3FpcWJ",
+        "payment_terms_4gPBJN",
+        "separator_hiimp3",
+        "variant_picker_VPw7Hg",
+        "quantity_selector_6pTgmE",
+        "globo_product_option_app_block_fTRYqw",
+        "buy_buttons_fBxzxa",
+        "pickup_availability_ryi6tP"
+      ],
+      "name": "t:sections.featured_product.presets.featured_product.name",
+      "settings": {
+        "color_scheme": "",
+        "product": "pulseira-attract-soul-heart-branco-prata-925",
+        "separate_section_with_border": true,
+        "container_size": "lg",
+        "product_info_size": 45,
+        "center_basic_info": false,
+        "desktop_media_layout": "carousel_thumbnails_bottom",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "thumbnails",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": false,
+        "max_image_zoom_level": 3,
+        "subheading": "",
+        "title": "Featured product",
         "content": ""
       }
     },
@@ -555,8 +653,9 @@
     "collection_list_ACYycD",
     "shop_the_look_Rj7meD",
     "image_with_text_FicW9t",
-    "shop_the_look_x8xCEe",
     "collection_list_nVz8kJ",
+    "shop_the_look_x8xCEe",
+    "featured_product_AHC9XD",
     "image_with_text_Mr6VPW",
     "collection_list_Qd99kw"
   ]
