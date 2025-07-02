@@ -337,6 +337,64 @@
         "remove_vertical_spacing": false
       }
     },
+    "shop_the_look_x8xCEe": {
+      "type": "shop-the-look",
+      "blocks": {
+        "look_ryAeXn": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/9fa0b14cb07c36304c5440ac71f2da55.jpg",
+            "hot_spots_background": "#ff9ccd",
+            "product_1": "colar-angelic-all-around-branco-prata-925",
+            "product_1_horizontal_position": 60,
+            "product_1_vertical_position": 76,
+            "product_2": "brincos-all-around",
+            "product_2_horizontal_position": 74,
+            "product_2_vertical_position": 46,
+            "product_3": "pulseira-angelic-all-around-branco-prata-925",
+            "product_3_horizontal_position": 42,
+            "product_3_vertical_position": 81,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 60
+          }
+        },
+        "look_VPCK44": {
+          "type": "look",
+          "settings": {
+            "hot_spots_background": "#ffffff",
+            "product_1": "",
+            "product_1_horizontal_position": 30,
+            "product_1_vertical_position": 35,
+            "product_2": "",
+            "product_2_horizontal_position": 70,
+            "product_2_vertical_position": 30,
+            "product_3": "",
+            "product_3_horizontal_position": 60,
+            "product_3_vertical_position": 65,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        }
+      },
+      "block_order": [
+        "look_ryAeXn",
+        "look_VPCK44"
+      ],
+      "custom_css": [
+        ".content-over-media {background-color: #ffffff !important;}"
+      ],
+      "name": "t:sections.shop_the_look.presets.shop_the_look.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "subheading": "",
+        "title": "Shop the look",
+        "content": "",
+        "popover_title": "Shop the look"
+      }
+    },
     "collection_list_nVz8kJ": {
       "type": "collection-list",
       "blocks": {
@@ -538,6 +596,7 @@
     "collection_list_ACYycD",
     "shop_the_look_Rj7meD",
     "image_with_text_FicW9t",
+    "shop_the_look_x8xCEe",
     "collection_list_nVz8kJ",
     "image_with_text_Mr6VPW",
     "collection_list_Qd99kw"
