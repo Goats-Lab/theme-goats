@@ -489,7 +489,7 @@
       },
       "order_status": {
         "confirmed_label": "Confirmado Rastreio em até 7 dias úteis ",
-        "confirmed_description": "Recebemos seu pedido!  O rastreio aparecerá aqui mesmo, lembre-se de cuidar dos prazos! (use o app dos correios após receber seu rastreio)."
+        "confirmed_description": "Recebemos seu pedido!  O rastreio aparecerá aqui mesmo. (use o app dos correios após receber seu rastreio)"
       }
     }
   }
