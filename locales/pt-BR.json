@@ -488,7 +488,8 @@
         "orders_title": "Confirmado "
       },
       "order_status": {
-        "confirmed_label": "Confirmado Rastreio em até 7 dias úteis "
+        "confirmed_label": "Confirmado Rastreio em até 7 dias úteis ",
+        "last_updated": "aaaa"
       }
     }
   }
