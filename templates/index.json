@@ -460,6 +460,15 @@
           "type": "separator",
           "settings": {}
         },
+        "inventory_79nNBB": {
+          "type": "inventory",
+          "settings": {
+            "show_in_stock_quantity": true,
+            "low_inventory_threshold": 0,
+            "show_progress_bar": true,
+            "progress_bar_max_value": 50
+          }
+        },
         "globo_product_option_app_block_fTRYqw": {
           "type": "shopify://apps/globo-product-option/blocks/app-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
           "settings": {}
@@ -501,6 +510,7 @@
         "price_3FpcWJ",
         "payment_terms_4gPBJN",
         "separator_hiimp3",
+        "inventory_79nNBB",
         "globo_product_option_app_block_fTRYqw",
         "variant_picker_VPw7Hg",
         "quantity_selector_6pTgmE",
