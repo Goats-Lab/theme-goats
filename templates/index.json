@@ -139,7 +139,7 @@
             "style": "solid",
             "text": "Veja Mais",
             "url": "shopify://collections/pandoras",
-            "background": "#ff6eb6",
+            "background": "#ff9ccd",
             "text_color": "#ffffff"
           }
         }
@@ -286,8 +286,8 @@
       ],
       "name": "t:sections.shop_the_look.presets.shop_the_look.name",
       "settings": {
-        "color_scheme": "scheme-3",
-        "separate_section_with_border": false,
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
         "subheading": "Faça como a Anitta, USE PANDORA.",
         "title": "",
         "content": "",
@@ -368,8 +368,8 @@
       ],
       "name": "t:sections.shop_the_look.presets.shop_the_look.name",
       "settings": {
-        "color_scheme": "scheme-4",
-        "separate_section_with_border": false,
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
         "subheading": "SWAROVSKI - Conjunto angelic",
         "title": "",
         "content": "",
