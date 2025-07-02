@@ -476,7 +476,8 @@
   "shopify": {
     "checkout": {
       "thank_you": {
-        "confirmed": "Confirmado"
+        "confirmed": "Confirmado",
+        "breadcrumbs_confirmed": "Confirmado Rastreio em até 7 dias úteis "
       }
     }
   }
