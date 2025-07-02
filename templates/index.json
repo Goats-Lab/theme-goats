@@ -309,7 +309,7 @@
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "image": "shopify://shop_images/Swarovisk.png",
-        "reveal_on_scroll": true,
+        "reveal_on_scroll": false,
         "image_position": "start",
         "content_width": "sm",
         "remove_vertical_spacing": false
@@ -575,7 +575,7 @@
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "image": "shopify://shop_images/Tiffany.png",
-        "reveal_on_scroll": true,
+        "reveal_on_scroll": false,
         "image_position": "start",
         "content_width": "sm",
         "remove_vertical_spacing": false
