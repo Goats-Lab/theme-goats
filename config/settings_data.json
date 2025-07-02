@@ -29,7 +29,7 @@
     "show_secondary_image": false,
     "show_vendor": false,
     "product_card_text_font": "body",
-    "product_color_display": "hide",
+    "product_color_display": "swatch",
     "show_product_rating": false,
     "show_quick_buy": true,
     "show_sold_out_badge": true,
