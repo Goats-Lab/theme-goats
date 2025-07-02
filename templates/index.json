@@ -222,7 +222,7 @@
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "image_size": "sm",
         "show_text_outside": false,
@@ -381,7 +381,7 @@
         "separate_section_with_border": false,
         "image_size": "sm",
         "show_text_outside": false,
-        "space_items": false,
+        "space_items": true,
         "stack_collections": false,
         "collections_per_row_mobile": "2",
         "collections_per_row_desktop": 5,
