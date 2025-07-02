@@ -226,7 +226,7 @@
         "separate_section_with_border": false,
         "image_size": "sm",
         "show_text_outside": false,
-        "space_items": false,
+        "space_items": true,
         "stack_collections": false,
         "collections_per_row_mobile": "1",
         "collections_per_row_desktop": 3,
