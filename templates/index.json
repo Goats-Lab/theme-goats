@@ -584,6 +584,23 @@
     "collection_list_Qd99kw": {
       "type": "collection-list",
       "blocks": {
+        "collection_8R6QWW": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "tiffany-anel",
+            "image": "shopify://shop_images/Captura_de_tela_2025-06-19_010358.png",
+            "expand_collection": false,
+            "content_position": "place-self-end-center text-center",
+            "subheading": "",
+            "title": "",
+            "button_text": "Anéis - Tiffany",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
         "collection_g4Q9CL": {
           "type": "collection",
           "settings": {
@@ -617,29 +634,12 @@
             "overlay_color": "#000000",
             "overlay_opacity": 30
           }
-        },
-        "collection_8R6QWW": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "",
-            "collection": "tiffany-anel",
-            "image": "shopify://shop_images/Captura_de_tela_2025-06-19_010358.png",
-            "expand_collection": false,
-            "content_position": "place-self-end-center text-center",
-            "subheading": "",
-            "title": "",
-            "button_text": "Anéis - Tiffany",
-            "button_link": "",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
         }
       },
       "block_order": [
+        "collection_8R6QWW",
         "collection_g4Q9CL",
-        "collection_WLTNLG",
-        "collection_8R6QWW"
+        "collection_WLTNLG"
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
