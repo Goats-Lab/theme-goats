@@ -578,7 +578,7 @@
         "reveal_on_scroll": false,
         "image_position": "start",
         "content_width": "sm",
-        "remove_vertical_spacing": false
+        "remove_vertical_spacing": true
       }
     },
     "collection_list_Qd99kw": {
@@ -589,7 +589,7 @@
           "settings": {
             "color_scheme": "",
             "collection": "tiffany-anel",
-            "image": "shopify://shop_images/Captura_de_tela_2025-06-19_010358.png",
+            "image": "shopify://shop_images/96e08654e0ff06dbe143338d96d55af2.jpg",
             "expand_collection": false,
             "content_position": "place-self-end-center text-center",
             "subheading": "",
@@ -606,7 +606,7 @@
           "settings": {
             "color_scheme": "",
             "collection": "tiffany-pulseira",
-            "image": "shopify://shop_images/Captura_de_tela_2025-06-19_010329.png",
+            "image": "shopify://shop_images/f018af905551cdbda98c5738a688bab0.jpg",
             "expand_collection": false,
             "content_position": "place-self-end-center text-center",
             "subheading": "",
@@ -623,7 +623,7 @@
           "settings": {
             "color_scheme": "",
             "collection": "tiffany-colar",
-            "image": "shopify://shop_images/Captura_de_tela_2025-06-19_010253.png",
+            "image": "shopify://shop_images/8bb91c15eb35332742a0144e797cbb8f.jpg",
             "expand_collection": false,
             "content_position": "place-self-end-center text-center",
             "subheading": "",
