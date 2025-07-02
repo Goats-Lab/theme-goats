@@ -229,7 +229,7 @@
         "space_items": true,
         "stack_collections": false,
         "collections_per_row_mobile": "2",
-        "collections_per_row_desktop": 1,
+        "collections_per_row_desktop": 4,
         "subheading": "",
         "title": "",
         "content": ""
