@@ -481,5 +481,12 @@
         "cancelled_title": "Seu pedido foi cancelado, entre em contato."
       }
     }
+  },
+  "customer_accounts": {
+    "orders": {
+      "order_list": {
+        "orders_title": "Confirmado Rastreio em até 7 dias úteis "
+      }
+    }
   }
 }
