@@ -428,18 +428,18 @@
           "settings": {
             "image": "shopify://shop_images/5c5148cc45b6b7616f76ead8bb735013.jpg",
             "hot_spots_background": "#f4f4f4",
-            "product_1": "colar-angelic-all-around-branco-prata-925",
-            "product_1_horizontal_position": 60,
-            "product_1_vertical_position": 76,
-            "product_2": "brincos-all-around",
-            "product_2_horizontal_position": 74,
-            "product_2_vertical_position": 46,
-            "product_3": "pulseira-angelic-all-around-branco-prata-925",
-            "product_3_horizontal_position": 42,
-            "product_3_vertical_position": 81,
-            "product_4": "conjunto-angelic-all-around-branco-prata-925",
-            "product_4_horizontal_position": 43,
-            "product_4_vertical_position": 35
+            "product_1": "brincos-de-argola-gema",
+            "product_1_horizontal_position": 90,
+            "product_1_vertical_position": 33,
+            "product_2": "brincos-gema",
+            "product_2_horizontal_position": 13,
+            "product_2_vertical_position": 32,
+            "product_3": "colar-de-pedras-preciosas-banhado-a-rodio-multicolorido",
+            "product_3_horizontal_position": 63,
+            "product_3_vertical_position": 63,
+            "product_4": "pulseira-de-pedras-multicoloridas-banhada-a-rodio",
+            "product_4_horizontal_position": 17,
+            "product_4_vertical_position": 95
           }
         }
       },
