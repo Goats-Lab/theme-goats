@@ -26,6 +26,7 @@
     "button_letter_spacing": 18,
     "currency_code_enabled": true,
     "stagger_products_apparition": true,
+    "product_image_aspect_ratio": "square",
     "show_secondary_image": false,
     "show_vendor": false,
     "product_card_text_font": "body",

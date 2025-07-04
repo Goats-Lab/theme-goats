@@ -117,6 +117,36 @@
         "text_color": ""
       }
     },
+    "featured_collections_aVbznB": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_ChmGwk": {
+          "type": "collection",
+          "settings": {
+            "collection": "descontos-do-mes",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ChmGwk"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "<strong>JULHO - 10%OFF</strong>"
+      }
+    },
     "image_with_text_x6jHxF": {
       "type": "image-with-text",
       "blocks": {
@@ -396,7 +426,7 @@
         "look_ryAeXn": {
           "type": "look",
           "settings": {
-            "image": "shopify://shop_images/9fa0b14cb07c36304c5440ac71f2da55.jpg",
+            "image": "shopify://shop_images/5c5148cc45b6b7616f76ead8bb735013.jpg",
             "hot_spots_background": "#f4f4f4",
             "product_1": "colar-angelic-all-around-branco-prata-925",
             "product_1_horizontal_position": 60,
@@ -660,6 +690,7 @@
   "order": [
     "slideshow",
     "scrolling_content_6CAnJm",
+    "featured_collections_aVbznB",
     "image_with_text_x6jHxF",
     "collection_list_ACYycD",
     "shop_the_look_Rj7meD",
