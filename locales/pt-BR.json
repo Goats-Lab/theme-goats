@@ -479,6 +479,9 @@
         "confirmed": "Confirmado",
         "breadcrumbs_confirmed": "Confirmado",
         "cancelled_title": "Seu pedido foi cancelado, entre em contato."
+      },
+      "shipping": {
+        "shipping_method_title": "Frete Grátis acima R$260,00 Cupom: FRETE260"
       }
     }
   },
