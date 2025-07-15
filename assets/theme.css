@@ -7714,3 +7714,21 @@ ul {
     display: none !important;
   }
 }
+
+.notice-cupom-info {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  display: block;
+  margin-bottom: 8px;
+  color: #ff4d4d; /* vermelho suave */
+}
+.notice-cupom-info {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  display: block;
+  margin-bottom: 10px;
+  color: #cc0000;
+}
+
