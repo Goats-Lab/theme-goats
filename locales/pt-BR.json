@@ -485,7 +485,7 @@
       },
       "order_summary": {
         "discount_order_stacking": {
-          "one": "Desconto no pedido ( Somente 1 de Influencer! )"
+          "one": "Descontos ( Somente 1 de Influencer! )"
         }
       }
     }
