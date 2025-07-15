@@ -482,6 +482,11 @@
       },
       "shipping": {
         "shipping_method_title": "Frete Grátis acima R$260,00 Cupom: FRETE260"
+      },
+      "order_summary": {
+        "discount_order_stacking": {
+          "one": "Desconto no pedido ( Somente 1 de Influencer! )"
+        }
       }
     }
   },
