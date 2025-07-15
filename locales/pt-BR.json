@@ -487,7 +487,7 @@
         "discount_order_stacking": {
           "one": "Descontos ( Somente 1 de Influencer! )",
           "other": "Descontos ( Somente 1 de Influencer! )",
-          "many": "Descontos ( Somente 1 de Influencer! )"
+          "many": "( Somente 1 de Influencer! )"
         }
       }
     }
