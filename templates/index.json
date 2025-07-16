@@ -139,12 +139,42 @@
         "color_scheme": "",
         "separate_section_with_border": true,
         "hide_product_information": true,
-        "stack_products": true,
+        "stack_products": false,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
         "subheading": "<strong>JULHO - 10%OFF</strong>"
+      }
+    },
+    "featured_collections_Ujh3MC": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_8bCxbx": {
+          "type": "collection",
+          "settings": {
+            "collection": "ultimas-unidades",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_8bCxbx"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "hide_product_information": true,
+        "stack_products": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 2,
+        "vertical_spacing_factor": 0.2,
+        "subheading": "Featured collection"
       }
     },
     "image_with_text_x6jHxF": {
@@ -740,6 +770,7 @@
     "slideshow",
     "scrolling_content_6CAnJm",
     "featured_collections_aVbznB",
+    "featured_collections_Ujh3MC",
     "image_with_text_x6jHxF",
     "collection_list_ACYycD",
     "shop_the_look_Rj7meD",
