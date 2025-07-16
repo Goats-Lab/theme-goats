@@ -685,6 +685,55 @@
         "title": "",
         "content": ""
       }
+    },
+    "text_with_icons_jgYnYM": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_z9dLYH": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-delivery-truck",
+            "icon_width": 16,
+            "mobile_icon_width": 16,
+            "title": "<strong>Frete Grátis </strong>",
+            "content": "<p>Ganhe <strong>frete grátis</strong> em pedidos acima de <strong>R$260</strong>! Aproveite para garantir suas joias favoritas e economizar no envio.📦<br/><br/></p>"
+          }
+        },
+        "item_CWfgen": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "icon_width": 24,
+            "mobile_icon_width": 24,
+            "title": "<strong>Envios Rápidos </strong>",
+            "content": "<p>A equipe logística da MyCharms leva de 3 a 4 dias para embalar seu pedido com todo cuidado antes do envio.<br/><br/></p>"
+          }
+        },
+        "item_L8wKTi": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-shield",
+            "icon_width": 24,
+            "mobile_icon_width": 24,
+            "title": "<strong>15% OFF no pix</strong>",
+            "content": "<p>Pedidos pagos no Pix recebem 15% de <strong>desconto </strong>e prioridade no envio. 🚚</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_z9dLYH",
+        "item_CWfgen",
+        "item_L8wKTi"
+      ],
+      "name": "t:sections.text_with_icons.presets.text_with_icons.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "stack_on_mobile": false,
+        "icon_color": "",
+        "text_color": "",
+        "text_alignment": "center"
+      }
     }
   },
   "order": [
@@ -699,6 +748,7 @@
     "shop_the_look_x8xCEe",
     "featured_product_AHC9XD",
     "image_with_text_Mr6VPW",
-    "collection_list_Qd99kw"
+    "collection_list_Qd99kw",
+    "text_with_icons_jgYnYM"
   ]
 }
