@@ -38,7 +38,7 @@
     "discount_mode": "percentage",
     "cart_type": "page",
     "cart_icon": "shopping_bag_sharp",
-    "cart_show_free_shipping_bar": false,
+    "cart_show_free_shipping_bar": true,
     "cart_free_shipping_threshold": "260",
     "social_instagram": "https://www.instagram.com/my.charms.br/",
     "social_whatsapp": "https://wa.me//5551920048485",
