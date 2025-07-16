@@ -154,10 +154,10 @@
           "type": "collection",
           "settings": {
             "collection": "ultimas-unidades",
-            "products_count": 8,
-            "title": "Ultimas unidades (fim de estoque)",
+            "products_count": 12,
+            "title": "Ultimas unidade (-5 unidades)",
             "link_url": "",
-            "link_text": "View all"
+            "link_text": "Descubra mais"
           }
         }
       },
