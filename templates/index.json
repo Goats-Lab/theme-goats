@@ -155,7 +155,7 @@
           "settings": {
             "collection": "ultimas-unidades",
             "products_count": 12,
-            "title": "Ultimas unidade (-5 unidades)",
+            "title": "Ultimas unidades",
             "link_url": "",
             "link_text": "Descubra mais"
           }
@@ -174,7 +174,7 @@
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 2,
         "vertical_spacing_factor": 0.2,
-        "subheading": "Featured collection"
+        "subheading": "MENOS DE 5 UNIDADES DISPONÍVEIS"
       }
     },
     "image_with_text_x6jHxF": {
