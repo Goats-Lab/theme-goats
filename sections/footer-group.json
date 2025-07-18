@@ -17,7 +17,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "title": "<em><strong>MY CHARMS</strong></em>",
+            "title": "<em><strong>MY CHARMS CNPJ: </strong></em> 61.754.033/0001-11",
             "content": "<p>Somos a MyCharms, com estoque próprio no Brasil e mais de 2.500 peças disponíveis à pronta entrega. Entregamos com rapidez e qualidade, diferente de lojas que fazem dropshipping.</p>",
             "enable_follow_on_shop": true
           }
