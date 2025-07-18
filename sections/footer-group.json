@@ -44,6 +44,9 @@
         "links_3rVJfR",
         "links_pWCMNM"
       ],
+      "custom_css": [
+        ".footer__aside {display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 5px; /* espaço entre os elementos */}"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
