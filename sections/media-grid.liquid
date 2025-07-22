@@ -1,4 +1,10 @@
-{%- if section.blocks.size > 0 -%}
+{%- assign has_video = false -%}
+{%- for block in section.blocks -%}
+  {%- if block.type == 'video' and block.settings.video != blank -%}
+    {%- assign has_video = true -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if has_video -%}
   <style>
     #shopify-section-{{ section.id }} {
       --media-grid-row-height: {{ section.settings.mobile_row_height }}px;

@@ -16,7 +16,6 @@
           "type": "video",
           "settings": {
             "color_scheme": "scheme-4",
-            "video": "{{ product.metafields.custom.v_deo.value }}",
             "autoplay": true,
             "show_controls": false,
             "column_count": "4",
