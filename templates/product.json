@@ -16,6 +16,7 @@
           "type": "video",
           "settings": {
             "color_scheme": "scheme-4",
+            "video": "shopify://files/videos/🎥 Vídeo da peça em produção! Em breve você poderá ver todos os detalhes ao vivo ✨ (1).mp4",
             "autoplay": true,
             "show_controls": false,
             "column_count": "4",
