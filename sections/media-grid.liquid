@@ -64,7 +64,7 @@
                 {%- else -%}
                   {%- if block.settings.video -%}
                     <video autoplay muted playsinline loop {% if block.settings.show_controls %}controls{% endif %}>
-                      <source src="{{ block.settings.video | file_url }}" type="video/mp4">
+                      <source src="{{ block.settings.video | video_url }}" type="video/mp4">
                       Seu navegador não suporta vídeo em HTML5.
                     </video>
                   {%- else -%}
