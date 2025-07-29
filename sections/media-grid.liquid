@@ -24,7 +24,6 @@
         --media-grid-row-height: {{ section.settings.desktop_row_height }}px;
       }
     }
-
     @media screen and (min-width: 1150px) {
       #shopify-section-{{ section.id }} {
         --media-grid-gap: {% if section.settings.spacing == 'xs' %}0.75rem{% elsif section.settings.spacing == 'sm' %}1.25rem{% elsif section.settings.spacing == 'md' %}1.875rem{% elsif section.settings.spacing == 'lg' %}2.5rem{% else %}0rem{% endif %};
@@ -66,7 +65,10 @@
                   {%- endif -%}
                 {%- else -%}
                   {%- if block.settings.video -%}
-                    {%- render 'media', media: block.settings.video, autoplay: block.settings.autoplay, loop: true, controls: block.settings.show_controls -%}
+                    <video autoplay muted playsinline loop {% if block.settings.show_controls %}controls{% endif %}>
+                      <source src="{{ block.settings.video | video_url }}" type="video/mp4">
+                      Seu navegador não suporta vídeo em HTML5.
+                    </video>
                   {%- else -%}
                     {%- capture collection_image -%}collection-{% cycle '1', '2', '3', '4' %}{%- endcapture -%}
                     {{- collection_image | placeholder_svg_tag: 'placeholder zoom-image group-hover:zoom' -}}
@@ -76,9 +78,7 @@
                 {%- if block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
                   <div class="prose prose--tight {{ block.settings.text_position }}">
                     <p class="{{ block.settings.heading_tag }}">{{ block.settings.title }}</p>
-
                     {{- block.settings.content -}}
-
                     {%- if block.settings.link_text != blank -%}
                       {%- render 'button', content: block.settings.link_text, style: block.settings.link_style -%}
                     {%- endif -%}
