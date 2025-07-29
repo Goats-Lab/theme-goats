@@ -66,10 +66,7 @@
                   {%- endif -%}
                 {%- else -%}
                   {%- if block.settings.video -%}
-                    <video autoplay muted playsinline loop {% if block.settings.show_controls %}controls{% endif %}>
-  <source src="{{ block.settings.video | file_url }}" type="video/mp4">
-  Seu navegador não suporta vídeo em HTML5.
-                         </video>
+                    {%- render 'media', media: block.settings.video, autoplay: block.settings.autoplay, loop: true, controls: block.settings.show_controls -%}
                   {%- else -%}
                     {%- capture collection_image -%}collection-{% cycle '1', '2', '3', '4' %}{%- endcapture -%}
                     {{- collection_image | placeholder_svg_tag: 'placeholder zoom-image group-hover:zoom' -}}
