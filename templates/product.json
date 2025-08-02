@@ -187,14 +187,16 @@
     },
     "custom_liquid_PNRwTm": {
       "type": "custom-liquid",
-      "custom_css": [],
+      "custom_css": [
+        "#reputation-ra {display: flex !important; justify-content: center !important; align-items: center !important;}"
+      ],
       "name": "t:sections.custom_liquid.presets.custom_liquid.name",
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": false,
-        "liquid": "<div style=\"padding:16px 0; border:1px solid #e5e5e5; border-radius:8px; background:#fafafa;\">\n  <p style=\"text-align:center; margin-bottom:12px; font-weight:600; font-size:14px; color:#333;\">\n    Avaliação no Reclame Aqui\n  </p>\n  <div id=\"reputation-ra\"></div>\n</div>\n\n<script>\n  function centralizarRA() {\n    var ra = document.querySelector('#reputation-ra');\n    if (ra) {\n      ra.style.display = \"flex\";\n      ra.style.justifyContent = \"center\";\n      ra.style.alignItems = \"center\";\n      ra.style.width = \"100%\";\n    }\n  }\n  document.addEventListener(\"DOMContentLoaded\", function() {\n    setTimeout(centralizarRA, 1000); // espera o selo carregar\n  });\n</script>\n\n<script \n  type=\"text/javascript\" \n  id=\"ra-embed-reputation\" \n  src=\"https://s3.amazonaws.com/raichu-beta/selos/bundle.js\" \n  data-id=\"LWpvSVBwRVdPSWdIVmF5RTpteS1jaGFybXMtMTY3OTc2NQ==\" \n  data-target=\"reputation-ra\" \n  data-model=\"1\">\n</script>",
+        "liquid": "<div id=\"reputation-ra\" style=\"display:flex; justify-content:center; align-items:center;\"></div>\n<script \n  type=\"text/javascript\" \n  id=\"ra-embed-reputation\" \n  src=\"https://s3.amazonaws.com/raichu-beta/selos/bundle.js\" \n  data-id=\"LWpvSVBwRVdPSWdIVmF5RTpteS1jaGFybXMtMTY3OTc2NQ==\" \n  data-target=\"reputation-ra\" \n  data-model=\"1\">\n</script>",
         "text_alignment": "start"
       }
     },
