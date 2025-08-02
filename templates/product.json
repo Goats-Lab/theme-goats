@@ -194,7 +194,7 @@
         "separate_section_with_border": true,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": false,
-        "liquid": "<style>\n  /* Centraliza o selo do Reclame Aqui */\n  #reputation-ra {\n    display: flex !important;\n    justify-content: center !important;\n    align-items: center !important;\n    width: 100% !important;\n    margin: 0 auto !important;\n    padding: 0 !important;\n  }\n  /* Centraliza qualquer elemento dentro */\n  #reputation-ra > * {\n    margin: auto !important;\n  }\n</style>\n\n<div id=\"reputation-ra\">\n  <script \n    type=\"text/javascript\" \n    id=\"ra-embed-reputation\" \n    src=\"https://s3.amazonaws.com/raichu-beta/selos/bundle.js\" \n    data-id=\"LWpvSVBwRVdPSWdIVmF5RTpteS1jaGFybXMtMTY3OTc2NQ==\" \n    data-target=\"reputation-ra\" \n    data-model=\"1\">\n  </script>\n</div>",
+        "liquid": "<style>\n  /* Centraliza o selo do Reclame Aqui */\n  #reputation-ra {\n    display: flex !important;\n    justify-content: center !important;\n    align-items: center !important;\n    width: 100% !important;\n    margin: 0 auto !important;\n    padding: 0 !important;\n  }\n  /* Centraliza qualquer elemento dentro */\n  #reputation-ra > * {\n    margin: auto !important;\n  }\n</style>\n\n<div id=\"reputation-ra\">\n  <script \n    type=\"text/javascript\" \n    id=\"ra-embed-reputation\" \n    src=\"https://s3.amazonaws.com/raichu-beta/selos/bundle.js\" \n    data-id=\"LWpvSVBwRVdPSWdIVmF5RTpteS1jaGFybXMtMTY3OTc2NQ==\" \n    data-target=\"reputation-ra\" \n    data-model=\"2\">\n  </script>\n</div>",
         "text_alignment": "center"
       }
     },
