@@ -80,7 +80,7 @@
           "textSelector": "FINALIZAR PEDIDO",
           "textSelector2": "Check out",
           "selector": "",
-          "message": "<strong>COMPRE COM PIX</strong>",
+          "message": "COMPRE COM PIX",
           "position": "before",
           "customliquid": "<style>\n  /* Botão Pix com desconto */\n  #scala-button {\n    background-color: #ff9ccd !important; /* fundo rosa */\n    color: #fff !important;               /* texto branco */\n    border: none !important;\n    border-radius: 6px !important;\n    font-weight: bold !important;\n    text-transform: uppercase !important;\n    letter-spacing: 1px !important;\n  }\n\n  #scala-button strong {\n    color: #fff !important; /* força o <strong> interno */\n  }\n</style>"
         }
