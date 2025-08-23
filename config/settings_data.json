@@ -72,6 +72,18 @@
           "savepay_apply_mode": "default",
           "savepay_debug_mode": "false"
         }
+      },
+      "15188581332139481108": {
+        "type": "shopify://apps/scala-descontos/blocks/cartButton/24748891-1ee0-454d-bfde-d80e65983c18",
+        "disabled": false,
+        "settings": {
+          "textSelector": "FINALIZAR PEDIDO",
+          "textSelector2": "Check out",
+          "selector": "button[name=\"checkout\"],input[name=\"checkout\"]",
+          "message": "<strong>Pix com desconto</strong>",
+          "position": "before",
+          "customliquid": "{% comment %}\n<style>\nbutton {\n  background: #000000;\n}\n</style>\n{% endcomment %}"
+        }
       }
     },
     "color_schemes": {
