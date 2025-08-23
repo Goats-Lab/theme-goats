@@ -82,7 +82,7 @@
           "selector": "button[name=\"checkout\"],input[name=\"checkout\"]",
           "message": "<strong>Pix com desconto</strong>",
           "position": "before",
-          "customliquid": "{% comment %}\n<style>\nbutton {\n  background: #000000;\n}\n</style>\n{% endcomment %}"
+          "customliquid": "{% comment %}\n<style>\nbutton {\n  background: #FF9CCD;\n}\n</style>\n{% endcomment %}"
         }
       }
     },
