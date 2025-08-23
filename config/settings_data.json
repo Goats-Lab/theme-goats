@@ -79,10 +79,11 @@
         "settings": {
           "textSelector": "FINALIZAR PEDIDO",
           "textSelector2": "Check out",
-          "selector": "button[name=\"checkout\"],input[name=\"checkout\"]",
-          "message": "<strong>Pix com desconto</strong>",
+          "selector": "",
+          "message": "<strong>COMPRE COM PIX</strong>",
+          "icon": "shopify://shop_images/simbolo-de-pix.png",
           "position": "before",
-          "customliquid": "{% comment %}\n<style>\nbutton {\n  background: #FF9CCD;\n}\n</style>\n{% endcomment %}"
+          "customliquid": "<style>\n  .pix, .pix-discount, [class*=\"pix\"], [id*=\"pix\"], .payment-buttons > div {\n    color: #ff9ccd !important;\n    font-weight: bold !important;\n    text-transform: uppercase !important;\n    text-align: center !important;\n  }\n  .pix * {\n    color: #ff9ccd !important;\n  }\n</style>"
         }
       }
     },
