@@ -81,9 +81,8 @@
           "textSelector2": "Check out",
           "selector": "",
           "message": "<strong>COMPRE COM PIX</strong>",
-          "icon": "shopify://shop_images/simbolo-de-pix.png",
           "position": "before",
-          "customliquid": "<style>\n  .pix, .pix-discount, [class*=\"pix\"], [id*=\"pix\"], .payment-buttons > div {\n    color: #ff9ccd !important;\n    font-weight: bold !important;\n    text-transform: uppercase !important;\n    text-align: center !important;\n  }\n  .pix * {\n    color: #ff9ccd !important;\n  }\n</style>"
+          "customliquid": "<style>\n  /* Botão Pix com desconto */\n  #scala-button {\n    background-color: #ff9ccd !important; /* fundo rosa */\n    color: #fff !important;               /* texto branco */\n    border: none !important;\n    border-radius: 6px !important;\n    font-weight: bold !important;\n    text-transform: uppercase !important;\n    letter-spacing: 1px !important;\n  }\n\n  #scala-button strong {\n    color: #fff !important; /* força o <strong> interno */\n  }\n</style>"
         }
       }
     },
