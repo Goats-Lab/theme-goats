@@ -84,6 +84,11 @@
           "position": "before",
           "customliquid": "<style>\n  /* Botão Pix com desconto */\n  #scala-button {\n    background-color: #ff9ccd !important; /* fundo rosa */\n    color: #fff !important;               /* texto branco */\n    border: none !important;\n    border-radius: 1px !important;\n    font-weight: bold !important;\n    text-transform: uppercase !important;\n    letter-spacing: 1px !important;\n  }\n\n  #scala-button strong {\n    color: #fff !important; /* força o <strong> interno */\n  }\n</style>"
         }
+      },
+      "534977871531306417": {
+        "type": "shopify://apps/tnc-terms-and-conditions-box/blocks/app-embed/2b45c8fb-5ee2-4392-8a72-b663da1d38ad",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
