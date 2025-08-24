@@ -118,6 +118,16 @@
                   </div>
                 {% endfor %}
 
+                <!-- Aviso Cupom Influencer -->
+                {%- if section.settings.show_influencer_note -%}
+                  <div class="cart-influencer-note" role="note" style="margin:.5rem 0 1rem">
+                    <span class="discount-badge text-xs">
+                      {%- render 'icon' with 'discount', width: 12 -%}
+                      Use apenas <strong>1</strong> cupom de influencer por pedido
+                    </span>
+                  </div>
+                {%- endif -%}
+
                 <div class="h-stack justify-start gap-2">
                   <span class="text-lg">{{ 'cart.general.total' | t }}:</span>
                   <span class="text-lg">{{- cart.total_price | money_with_currency -}}</span>
@@ -208,6 +218,12 @@
       "type": "checkbox",
       "id": "show_shipping_estimator",
       "label": "t:sections.main_cart.show_shipping_estimator",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_influencer_note",
+      "label": "Exibir aviso: 1 cupom de influencer",
       "default": true
     }
   ],
