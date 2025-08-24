@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "icon_stroke_width": 1,
+    "icon_stroke_width": 2,
     "section_vertical_spacing": "md",
     "default_color_scheme": "scheme-2",
     "product_rating_color": "#1c1c1c",
@@ -36,7 +36,7 @@
     "show_sold_out_badge": true,
     "show_discount": false,
     "discount_mode": "percentage",
-    "cart_type": "message",
+    "cart_type": "drawer",
     "cart_icon": "shopping_bag_sharp",
     "cart_show_free_shipping_bar": true,
     "cart_free_shipping_threshold": "260",
@@ -57,22 +57,22 @@
         "disabled": false,
         "settings": {}
       },
+      "534977871531306417": {
+        "type": "shopify://apps/tnc-terms-and-conditions-box/blocks/app-embed/2b45c8fb-5ee2-4392-8a72-b663da1d38ad",
+        "disabled": true,
+        "settings": {}
+      },
       "15188581332139481108": {
         "type": "shopify://apps/scala-descontos/blocks/cartButton/24748891-1ee0-454d-bfde-d80e65983c18",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "textSelector": "FINALIZAR PEDIDO",
           "textSelector2": "Check out",
-          "selector": "",
+          "selector": "button[name=\"checkout\"],input[name=\"checkout\"]",
           "message": "FINALIZAR COM PIX",
           "position": "before",
           "customliquid": "<style>\n  /* Botão Pix com desconto */\n  #scala-button {\n    background-color: #ff9ccd !important; /* fundo rosa */\n    color: #fff !important;               /* texto branco */\n    border: none !important;\n    border-radius: 1px !important;\n    font-weight: bold !important;\n    text-transform: uppercase !important;\n    letter-spacing: 1px !important;\n  }\n\n  #scala-button strong {\n    color: #fff !important; /* força o <strong> interno */\n  }\n</style>"
         }
-      },
-      "534977871531306417": {
-        "type": "shopify://apps/tnc-terms-and-conditions-box/blocks/app-embed/2b45c8fb-5ee2-4392-8a72-b663da1d38ad",
-        "disabled": false,
-        "settings": {}
       }
     },
     "color_schemes": {
