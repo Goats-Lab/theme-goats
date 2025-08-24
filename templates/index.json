@@ -117,36 +117,6 @@
         "text_color": ""
       }
     },
-    "featured_collections_aVbznB": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_ChmGwk": {
-          "type": "collection",
-          "settings": {
-            "collection": "descontos-do-mes",
-            "products_count": 8,
-            "title": "OFERTAS DO MÊS",
-            "link_url": "",
-            "link_text": "VER TODOS"
-          }
-        }
-      },
-      "block_order": [
-        "collection_ChmGwk"
-      ],
-      "name": "t:sections.featured_collections.presets.featured_collections.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "hide_product_information": true,
-        "stack_products": false,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "<strong>AGOSTO- 10%OFF</strong>"
-      }
-    },
     "image_with_text_x6jHxF": {
       "type": "image-with-text",
       "blocks": {
@@ -168,7 +138,7 @@
           "settings": {
             "style": "solid",
             "text": "Veja Mais",
-            "url": "shopify://collections/pandoras",
+            "url": "shopify://pages/pandoras",
             "background": "#ff9ccd",
             "text_color": "#ffffff"
           }
@@ -188,43 +158,6 @@
         "image_position": "start",
         "content_width": "sm",
         "remove_vertical_spacing": true
-      }
-    },
-    "shop_the_look_Rj7meD": {
-      "type": "shop-the-look",
-      "blocks": {
-        "look_EaNmWn": {
-          "type": "look",
-          "settings": {
-            "image": "shopify://shop_images/Shop_the_Look.png",
-            "hot_spots_background": "#ffffff",
-            "product_1": "anel-coracao-brilhante",
-            "product_1_horizontal_position": 17,
-            "product_1_vertical_position": 32,
-            "product_2": "colar-coracao-de-halo-cintilante",
-            "product_2_horizontal_position": 44,
-            "product_2_vertical_position": 73,
-            "product_3": "anel-coracao-vermelho-cintilante",
-            "product_3_horizontal_position": 18,
-            "product_3_vertical_position": 23,
-            "product_4": "",
-            "product_4_horizontal_position": 85,
-            "product_4_vertical_position": 85
-          }
-        }
-      },
-      "block_order": [
-        "look_EaNmWn"
-      ],
-      "custom_css": [],
-      "name": "t:sections.shop_the_look.presets.shop_the_look.name",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "subheading": "Faça como a Anitta, USE PANDORA.",
-        "title": "",
-        "content": "",
-        "popover_title": "Poucas unidades disponíveis"
       }
     },
     "collection_list_ACYycD": {
@@ -300,6 +233,73 @@
         "subheading": "",
         "title": "",
         "content": ""
+      }
+    },
+    "shop_the_look_Rj7meD": {
+      "type": "shop-the-look",
+      "blocks": {
+        "look_EaNmWn": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/Shop_the_Look.png",
+            "hot_spots_background": "#ffffff",
+            "product_1": "anel-coracao-brilhante",
+            "product_1_horizontal_position": 17,
+            "product_1_vertical_position": 32,
+            "product_2": "colar-coracao-de-halo-cintilante",
+            "product_2_horizontal_position": 44,
+            "product_2_vertical_position": 73,
+            "product_3": "anel-coracao-vermelho-cintilante",
+            "product_3_horizontal_position": 18,
+            "product_3_vertical_position": 23,
+            "product_4": "",
+            "product_4_horizontal_position": 85,
+            "product_4_vertical_position": 85
+          }
+        }
+      },
+      "block_order": [
+        "look_EaNmWn"
+      ],
+      "custom_css": [],
+      "name": "t:sections.shop_the_look.presets.shop_the_look.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
+        "subheading": "Faça como a Anitta, USE PANDORA.",
+        "title": "",
+        "content": "",
+        "popover_title": "Poucas unidades disponíveis"
+      }
+    },
+    "featured_collections_aVbznB": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_ChmGwk": {
+          "type": "collection",
+          "settings": {
+            "collection": "descontos-do-mes",
+            "products_count": 8,
+            "title": "OFERTAS DO MÊS",
+            "link_url": "",
+            "link_text": "VER TODOS"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ChmGwk"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "<strong>AGOSTO- 10%OFF</strong>"
       }
     },
     "image_with_text_FicW9t": {
@@ -727,7 +727,7 @@
       ],
       "name": "t:sections.text_with_icons.presets.text_with_icons.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-9fd2f508-0e58-4780-aa25-7b903dcdde2a",
         "separate_section_with_border": false,
         "stack_on_mobile": false,
         "icon_color": "",
