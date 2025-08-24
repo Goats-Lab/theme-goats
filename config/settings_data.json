@@ -57,22 +57,6 @@
         "disabled": false,
         "settings": {}
       },
-      "14082006724220070571": {
-        "type": "shopify://apps/savepay-pix-com-desconto/blocks/trigger_body/10f9b622-3935-46f8-947f-8b4011493b26",
-        "disabled": true,
-        "settings": {
-          "savepay_button_description": "Pague com Pix (_discountPercentage_% OFF)",
-          "savepay_checkout_button": "Finalizar pedido",
-          "savepay_insert_position": "after",
-          "savepay_button_html": "",
-          "savepay_button_css": "",
-          "savepay_cart_form_selector": "",
-          "savepay_custom_js": "",
-          "savepay_checkout_button_wrapper": "",
-          "savepay_apply_mode": "default",
-          "savepay_debug_mode": "false"
-        }
-      },
       "15188581332139481108": {
         "type": "shopify://apps/scala-descontos/blocks/cartButton/24748891-1ee0-454d-bfde-d80e65983c18",
         "disabled": false,

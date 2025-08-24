@@ -116,9 +116,9 @@
           "type": "inventory",
           "settings": {
             "show_in_stock_quantity": true,
-            "low_inventory_threshold": 5,
+            "low_inventory_threshold": 1,
             "show_progress_bar": true,
-            "progress_bar_max_value": 15
+            "progress_bar_max_value": 10
           }
         },
         "variant_picker": {
