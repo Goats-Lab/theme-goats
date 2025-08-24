@@ -11,7 +11,9 @@
   "sections": {
     "main": {
       "type": "main-cart",
-      "custom_css": [],
+      "custom_css": [
+        ".cart-influencer-note .discount-badge {background-color: #ff0000; /* fundo vermelho */ color: #fff; /* texto branco */ padding: 6px 10px; /* espaço interno */ border-radius: 6px; /* borda arredondada */ display: inline-block; /* manter como \"tag\" */}"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "show_cart_note": true,
