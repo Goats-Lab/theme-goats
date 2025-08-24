@@ -220,6 +220,7 @@
         "collection_PERGbH",
         "collection_PyhUAe"
       ],
+      "disabled": true,
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
         "color_scheme": "scheme-2",
