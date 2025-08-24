@@ -45,7 +45,7 @@
         "links_pWCMNM"
       ],
       "custom_css": [
-        ".footer__aside {display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 5px; /* espaço entre os elementos */}"
+        ".footer__aside {display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 35px; /* espaço entre os elementos */}"
       ],
       "settings": {
         "color_scheme": "scheme-2",
