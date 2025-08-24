@@ -67,11 +67,11 @@
         "disabled": false,
         "settings": {
           "textSelector": "FINALIZAR PEDIDO",
-          "textSelector2": "",
+          "textSelector2": "Check out",
           "selector": "button[name=\"checkout\"],input[name=\"checkout\"]",
           "message": "FINALIZAR COM PIX",
           "position": "after",
-          "customliquid": "<style>\n  /* Botão Pix com desconto */\n  #scala-button {\n    background-color: #ff9ccd !important; /* fundo rosa */\n    color: #fff !important;               /* texto branco */\n    border: none !important;\n    border-radius: 1px !important;\n    font-weight: bold !important;\n    text-transform: uppercase !important;\n    letter-spacing: 1px !important;\n  }\n\n  #scala-button strong {\n    color: #fff !important; /* força o <strong> interno */\n  }\n</style>"
+          "customliquid": "<style>\n#scala-button{\n  background:#ff9ccd!important;\n  color:#fff!important;\n  border:0!important;\n  border-radius:4px!important;\n  font-weight:700!important;\n  text-transform:uppercase!important;\n  letter-spacing:1px!important;\n  display:block!important;\n  width:100%!important;\n  padding:14px 0!important;\n  text-align:center!important;\n  box-sizing:border-box!important\n}\n#scala-button strong{color:#fff!important}\n</style>"
         }
       }
     },
