@@ -11,6 +11,7 @@
   "sections": {
     "collection-banner": {
       "type": "collection-banner",
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2",
         "image_size": "xs",
@@ -24,81 +25,6 @@
         "content_width": "xs",
         "overlay_color": "#000000",
         "overlay_opacity": 30
-      }
-    },
-    "collection_list_jYWVpJ": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_9GRWaK": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "scheme-4",
-            "collection": "bracelete-pulseira-pandora",
-            "image": "shopify://shop_images/file_2025-06-23_04.33.32_1.png",
-            "expand_collection": true,
-            "content_position": "place-self-end-center text-center",
-            "subheading": "",
-            "title": "",
-            "button_text": "Pulseiras - Pandora",
-            "button_link": "",
-            "button_style": "outline",
-            "overlay_color": "#1c1c1c",
-            "overlay_opacity": 15
-          }
-        },
-        "collection_MUgEa7": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "",
-            "collection": "aneis-pandora",
-            "image": "shopify://shop_images/Video_da_peca_em_producao_Em_breve_voce_podera_ver_todos_os_detalhes_ao_vivo_1.png",
-            "expand_collection": false,
-            "content_position": "place-self-end-center text-center",
-            "subheading": "",
-            "title": "",
-            "button_text": "Anéis - Pandora",
-            "button_link": "",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 15
-          }
-        },
-        "collection_P7aLrq": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "",
-            "collection": "charms-berloques",
-            "image": "shopify://shop_images/Video_da_peca_em_producao_Em_breve_voce_podera_ver_todos_os_detalhes_ao_vivo.png",
-            "expand_collection": true,
-            "content_position": "place-self-end-center text-center",
-            "subheading": "",
-            "title": "",
-            "button_text": "Berloques - Pandora",
-            "button_link": "",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 15
-          }
-        }
-      },
-      "block_order": [
-        "collection_9GRWaK",
-        "collection_MUgEa7",
-        "collection_P7aLrq"
-      ],
-      "name": "t:sections.collection_list.presets.collection_list.name",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "separate_section_with_border": false,
-        "image_size": "sm",
-        "show_text_outside": false,
-        "space_items": true,
-        "stack_collections": false,
-        "collections_per_row_mobile": "2",
-        "collections_per_row_desktop": 3,
-        "subheading": "",
-        "title": "",
-        "content": ""
       }
     },
     "main": {
@@ -128,7 +54,6 @@
   },
   "order": [
     "collection-banner",
-    "collection_list_jYWVpJ",
     "main"
   ]
 }
