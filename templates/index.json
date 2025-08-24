@@ -59,7 +59,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2) 0%, rgba(4, 4, 4, 0.65) 100%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
           }
         }
       },
@@ -220,7 +220,6 @@
         "collection_PERGbH",
         "collection_PyhUAe"
       ],
-      "disabled": true,
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
         "color_scheme": "scheme-2",
@@ -773,6 +772,7 @@
     "image_with_text_x6jHxF",
     "collection_list_ACYycD",
     "shop_the_look_Rj7meD",
+    "text_with_icons_jgYnYM",
     "featured_collections_aVbznB",
     "image_with_text_FicW9t",
     "collection_list_nVz8kJ",
@@ -780,7 +780,6 @@
     "featured_product_AHC9XD",
     "image_with_text_Mr6VPW",
     "collection_list_Qd99kw",
-    "text_with_icons_jgYnYM",
     "featured_collections_Ujh3MC"
   ]
 }
