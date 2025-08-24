@@ -67,7 +67,7 @@
         "disabled": false,
         "settings": {
           "textSelector": "FINALIZAR PEDIDO",
-          "textSelector2": "Check out",
+          "textSelector2": "",
           "selector": "button[name=\"checkout\"],input[name=\"checkout\"]",
           "message": "FINALIZAR COM PIX",
           "position": "after",
