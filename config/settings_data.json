@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "icon_stroke_width": 2,
+    "icon_stroke_width": 1,
     "section_vertical_spacing": "md",
     "default_color_scheme": "scheme-2",
     "product_rating_color": "#1c1c1c",
@@ -28,15 +28,15 @@
     "stagger_products_apparition": true,
     "product_image_aspect_ratio": "square",
     "show_secondary_image": false,
-    "show_vendor": false,
-    "product_card_text_font": "body",
+    "show_vendor": true,
+    "product_card_text_font": "heading",
     "product_color_display": "swatch",
     "show_product_rating": false,
     "show_quick_buy": false,
     "show_sold_out_badge": true,
     "show_discount": false,
     "discount_mode": "percentage",
-    "cart_type": "message",
+    "cart_type": "page",
     "cart_icon": "shopping_bag",
     "cart_show_free_shipping_bar": true,
     "cart_free_shipping_threshold": "260",
