@@ -69,7 +69,7 @@
           "textSelector": "FINALIZAR PEDIDO",
           "textSelector2": "Check out",
           "selector": "button[name=\"checkout\"],input[name=\"checkout\"]",
-          "message": "FINALIZAR COM PIX",
+          "message": "PAGUE COM PIX 15% OFF",
           "position": "after",
           "customliquid": "<style>\n#scala-button{\n  background:#ff9ccd!important;\n  color:#fff!important;\n  border:0!important;\n  border-radius:0px!important;\n  font-weight:700!important;\n  text-transform:uppercase!important;\n  letter-spacing:1px!important;\n  display:block!important;\n  width:100%!important;\n  padding:14px 0!important;\n  text-align:center!important;\n  box-sizing:border-box!important\n}\n#scala-button strong{color:#fff!important}\n</style>"
         }
