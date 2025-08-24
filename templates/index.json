@@ -190,36 +190,6 @@
         "remove_vertical_spacing": true
       }
     },
-    "featured_collections_Ujh3MC": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_8bCxbx": {
-          "type": "collection",
-          "settings": {
-            "collection": "ultimas-unidades",
-            "products_count": 12,
-            "title": "Ultimas unidades",
-            "link_url": "",
-            "link_text": "Descubra mais"
-          }
-        }
-      },
-      "block_order": [
-        "collection_8bCxbx"
-      ],
-      "name": "t:sections.featured_collections.presets.featured_collections.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "hide_product_information": true,
-        "stack_products": true,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 2,
-        "vertical_spacing_factor": 0.2,
-        "subheading": "MENOS DE 5 UNIDADES DISPONÍVEIS"
-      }
-    },
     "collection_list_ACYycD": {
       "type": "collection-list",
       "blocks": {
@@ -763,6 +733,36 @@
         "icon_color": "",
         "text_color": "",
         "text_alignment": "center"
+      }
+    },
+    "featured_collections_Ujh3MC": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_8bCxbx": {
+          "type": "collection",
+          "settings": {
+            "collection": "ultimas-unidades",
+            "products_count": 14,
+            "title": "Ultimas unidades",
+            "link_url": "",
+            "link_text": "Descubra mais"
+          }
+        }
+      },
+      "block_order": [
+        "collection_8bCxbx"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "hide_product_information": true,
+        "stack_products": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 2,
+        "vertical_spacing_factor": 0.2,
+        "subheading": "MENOS DE 5 UNIDADES DISPONÍVEIS"
       }
     }
   },
