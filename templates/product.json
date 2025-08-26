@@ -67,15 +67,37 @@
             "heading_tag": "h5"
           }
         },
-        "accordion_89TReN": {
+        "accordion_RDnbEJ": {
           "type": "accordion",
           "settings": {
             "show_below_gallery": true,
             "icon": "none",
-            "title": "Descrição e Detalhes",
-            "content": "{{ product.description }}",
+            "title": "Precisa de ajuda com medidas?",
+            "content": "",
             "liquid": "",
-            "page": ""
+            "page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
+          }
+        },
+        "accordion_CMFYpn": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": true,
+            "icon": "none",
+            "title": "Cuidados com a joias",
+            "content": "<p>Share some content to your customers about your products.</p>",
+            "liquid": "",
+            "page": "cuidado-com-as-joias"
+          }
+        },
+        "accordion_ycDW7r": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": true,
+            "icon": "none",
+            "title": "Qualidade das joias",
+            "content": "<p>Share some content to your customers about your products.</p>",
+            "liquid": "",
+            "page": "controle-de-qualidade-e-producao-mycharms"
           }
         },
         "accordion_CwAYGz": {
@@ -89,27 +111,15 @@
             "page": "{{ product.metafields.custom.compatibilidade.value }}"
           }
         },
-        "accordion_RDnbEJ": {
-          "type": "accordion",
-          "disabled": true,
-          "settings": {
-            "show_below_gallery": true,
-            "icon": "none",
-            "title": "Precisa de ajuda com medidas?",
-            "content": "",
-            "liquid": "",
-            "page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
-          }
-        },
-        "accordion_ycDW7r": {
+        "accordion_89TReN": {
           "type": "accordion",
           "settings": {
             "show_below_gallery": true,
             "icon": "none",
-            "title": "Qualidade das joias",
-            "content": "<p>Share some content to your customers about your products.</p>",
+            "title": "Descrição e Detalhes",
+            "content": "{{ product.description }}",
             "liquid": "",
-            "page": "controle-de-qualidade-e-producao-mycharms"
+            "page": ""
           }
         },
         "price": {
@@ -171,10 +181,11 @@
         "badges_KPXqnm",
         "vendor",
         "title",
-        "accordion_89TReN",
-        "accordion_CwAYGz",
         "accordion_RDnbEJ",
+        "accordion_CMFYpn",
         "accordion_ycDW7r",
+        "accordion_CwAYGz",
+        "accordion_89TReN",
         "price",
         "text_QVmHQ7",
         "inventory_xjpgDg",
