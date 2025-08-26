@@ -209,6 +209,36 @@
         "max_image_zoom_level": 3
       }
     },
+    "featured_collections_yByfCc": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_rQf8dU": {
+          "type": "collection",
+          "settings": {
+            "collection": "charms-berloques",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_rQf8dU"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 6,
+        "horizontal_spacing_factor": 0.2,
+        "vertical_spacing_factor": 0.2,
+        "subheading": "Featured collection"
+      }
+    },
     "custom_liquid_PNRwTm": {
       "type": "custom-liquid",
       "disabled": true,
@@ -276,6 +306,7 @@
   "order": [
     "media_grid_776mrJ",
     "main",
+    "featured_collections_yByfCc",
     "custom_liquid_PNRwTm",
     "image_with_text_pXa4rn"
   ]
