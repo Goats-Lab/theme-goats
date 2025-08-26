@@ -122,6 +122,12 @@
             "page": ""
           }
         },
+        "text_6q6WHF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nao ha em estoque? veja disponibilidade para encomenda ( CLIQUE AQUI )</p>"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -186,6 +192,7 @@
         "accordion_ycDW7r",
         "accordion_CwAYGz",
         "accordion_89TReN",
+        "text_6q6WHF",
         "price",
         "text_QVmHQ7",
         "inventory_xjpgDg",
