@@ -163,6 +163,12 @@
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
+        },
+        "liquid_kNaQQH": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% if product.tags contains 'encomenda' %}\n  <div style=\"background-color: #fff1f7; padding: 12px; border-radius: 6px; font-size: 14px; color: #cc2b84;\">\n    ⏳ Esta joia é feita <em>sob encomenda</em>. Produção artesanal de até <strong>50 dias úteis</strong>.  \n    Você poderá acompanhar cada etapa do processo em uma página exclusiva após a compra 💖\n  </div>\n{% endif %}"
+          }
         }
       },
       "block_order": [
@@ -178,7 +184,8 @@
         "inventory_xjpgDg",
         "variant_picker",
         "globo_product_option_app_block_RtewJL",
-        "buy_buttons"
+        "buy_buttons",
+        "liquid_kNaQQH"
       ],
       "settings": {
         "color_scheme": "scheme-2",
