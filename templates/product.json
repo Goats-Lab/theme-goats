@@ -163,12 +163,6 @@
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
-        },
-        "text_6q6WHF": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Nao ha em estoque? veja disponibilidade para encomenda ( CLIQUE AQUI )</p>"
-          }
         }
       },
       "block_order": [
@@ -184,8 +178,7 @@
         "inventory_xjpgDg",
         "variant_picker",
         "globo_product_option_app_block_RtewJL",
-        "buy_buttons",
-        "text_6q6WHF"
+        "buy_buttons"
       ],
       "settings": {
         "color_scheme": "scheme-2",
