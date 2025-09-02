@@ -63,61 +63,6 @@
             "heading_tag": "h5"
           }
         },
-        "accordion_RDnbEJ": {
-          "type": "accordion",
-          "settings": {
-            "show_below_gallery": true,
-            "icon": "none",
-            "title": "Precisa de ajuda com medidas?",
-            "content": "",
-            "liquid": "",
-            "page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
-          }
-        },
-        "accordion_CMFYpn": {
-          "type": "accordion",
-          "settings": {
-            "show_below_gallery": true,
-            "icon": "none",
-            "title": "Cuidados com a joias",
-            "content": "<p>Share some content to your customers about your products.</p>",
-            "liquid": "",
-            "page": "cuidados-com-as-joias"
-          }
-        },
-        "accordion_ycDW7r": {
-          "type": "accordion",
-          "settings": {
-            "show_below_gallery": true,
-            "icon": "none",
-            "title": "Qualidade das joias",
-            "content": "<p>Share some content to your customers about your products.</p>",
-            "liquid": "",
-            "page": "controle-de-qualidade-e-producao-mycharms"
-          }
-        },
-        "accordion_CwAYGz": {
-          "type": "accordion",
-          "settings": {
-            "show_below_gallery": true,
-            "icon": "none",
-            "title": "Envio e garantia",
-            "content": "",
-            "liquid": "",
-            "page": "{{ product.metafields.custom.compatibilidade.value }}"
-          }
-        },
-        "accordion_89TReN": {
-          "type": "accordion",
-          "settings": {
-            "show_below_gallery": true,
-            "icon": "none",
-            "title": "Descrição e Detalhes",
-            "content": "{{ product.description }}",
-            "liquid": "",
-            "page": ""
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -137,6 +82,12 @@
             "low_inventory_threshold": 1,
             "show_progress_bar": true,
             "progress_bar_max_value": 10
+          }
+        },
+        "liquid_dReAVB": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{%- assign v = product.selected_or_first_available_variant -%}\n\n<div id=\"mc-esgotado-texto\"\n     style=\"{% if v.available %}display:none{% else %}display:block{% endif %}; margin-top:6px;\">\n  Está esgotado? Encomende já sua peça.\n</div>\n\n<script>\n(function(){\n  var MAP = {\n    {% for v in product.variants %}\n      \"{{ v.id }}\": {{ v.available | json }}{% unless forloop.last %},{% endunless %}\n    {% endfor %}\n  };\n  var el = document.getElementById('mc-esgotado-texto');\n\n  function currentVariantId(){\n    var p = new URLSearchParams(location.search).get('variant');\n    if (p) return p;\n    var sel = document.querySelector('form[action*=\"/cart/add\"] [name=\"id\"], select[name=\"id\"]');\n    return sel && sel.value ? sel.value : \"{{ product.variants.first.id }}\";\n  }\n\n  function update(){\n    if (!el) return;\n    el.style.display = MAP[currentVariantId()] ? 'none' : 'block';\n  }\n\n  document.addEventListener('change', function(e){\n    if (e.target && (e.target.name === 'id' || e.target.name?.startsWith('options'))) update();\n  });\n  document.addEventListener('variant:change', update);\n  document.addEventListener('DOMContentLoaded', update);\n})();\n</script>"
           }
         },
         "variant_picker": {
@@ -164,28 +115,77 @@
             "payment_button_text_color": ""
           }
         },
-        "liquid_kNaQQH": {
-          "type": "liquid",
+        "accordion_CMFYpn": {
+          "type": "accordion",
           "settings": {
-            "liquid": "{% if product.tags contains 'encomenda' %}\n  <div style=\"background-color: #fff1f7; padding: 12px; border-radius: 6px; font-size: 14px; color: #cc2b84;\">\n    ⏳ Esta joia é feita <em>sob encomenda</em>. Produção artesanal de até <strong>50 dias úteis</strong>.  \n    Você poderá acompanhar cada etapa do processo em uma página exclusiva após a compra 💖\n  </div>\n{% endif %}"
+            "show_below_gallery": true,
+            "icon": "none",
+            "title": "Cuidados com a joias",
+            "content": "<p>Share some content to your customers about your products.</p>",
+            "liquid": "",
+            "page": "cuidados-com-as-joias"
+          }
+        },
+        "accordion_RDnbEJ": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": true,
+            "icon": "none",
+            "title": "Precisa de ajuda com medidas?",
+            "content": "",
+            "liquid": "",
+            "page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
+          }
+        },
+        "accordion_ycDW7r": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": true,
+            "icon": "none",
+            "title": "Qualidade das joias",
+            "content": "<p>Share some content to your customers about your products.</p>",
+            "liquid": "",
+            "page": "controle-de-qualidade-e-producao-mycharms"
+          }
+        },
+        "accordion_89TReN": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": true,
+            "icon": "none",
+            "title": "Descrição e Detalhes",
+            "content": "{{ product.description }}",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_CwAYGz": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": true,
+            "icon": "none",
+            "title": "Envio e garantia",
+            "content": "",
+            "liquid": "",
+            "page": "{{ product.metafields.custom.compatibilidade.value }}"
           }
         }
       },
       "block_order": [
         "vendor",
         "title",
-        "accordion_RDnbEJ",
-        "accordion_CMFYpn",
-        "accordion_ycDW7r",
-        "accordion_CwAYGz",
-        "accordion_89TReN",
         "price",
         "text_QVmHQ7",
         "inventory_xjpgDg",
+        "liquid_dReAVB",
         "variant_picker",
         "globo_product_option_app_block_RtewJL",
         "buy_buttons",
-        "liquid_kNaQQH"
+        "accordion_CMFYpn",
+        "accordion_RDnbEJ",
+        "accordion_ycDW7r",
+        "accordion_89TReN",
+        "accordion_CwAYGz"
       ],
       "settings": {
         "color_scheme": "scheme-2",
