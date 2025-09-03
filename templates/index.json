@@ -68,6 +68,7 @@
         "image_Fng8nE",
         "image_kqzixK"
       ],
+      "disabled": true,
       "custom_css": [
         ".button-container {display: flex; justify-content: center; /* centraliza horizontalmente */}"
       ],
