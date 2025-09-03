@@ -49,25 +49,180 @@
             "overlay_color": "#000000",
             "overlay_opacity": 30
           }
-        },
-        "collection_fXLMGV": {
+        }
+      },
+      "block_order": [
+        "collection_djQVn9"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "image_size": "sm",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
+    },
+    "featured_collections_P4TCCb": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_8NRCVC": {
           "type": "collection",
           "settings": {
-            "color_scheme": "",
-            "collection": "all-swarovski-encomenda",
-            "image": "shopify://shop_images/7be99f65da4aeac44dd7447b4fb3ef00.jpg",
-            "expand_collection": false,
-            "content_position": "place-self-end-center text-center",
-            "subheading": "",
+            "collection": "pulseira-pandora-encomenda",
+            "products_count": 12,
             "title": "",
-            "button_text": "Encomende-SWAROVSKI",
-            "button_link": "",
-            "button_style": "outline",
-            "overlay_color": "#000000",
-            "overlay_opacity": 15
+            "link_url": "",
+            "link_text": "Ver todas"
           }
-        },
-        "collection_kgdnbD": {
+        }
+      },
+      "block_order": [
+        "collection_8NRCVC"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_4MwXyy": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_LeQ6C9": {
+          "type": "collection",
+          "settings": {
+            "collection": "berloque-pandora-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_LeQ6C9"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_d7WTGy": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_Q3Pwci": {
+          "type": "collection",
+          "settings": {
+            "collection": "pandora-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_Q3Pwci"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_gmREaW": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_YQdcbw": {
+          "type": "collection",
+          "settings": {
+            "collection": "encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_YQdcbw"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_dMFarD": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_GY8DBa": {
+          "type": "collection",
+          "settings": {
+            "collection": "colar-pandora-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_GY8DBa"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "collection_list_dGDXxp": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_6wA8yg": {
           "type": "collection",
           "settings": {
             "color_scheme": "",
@@ -86,15 +241,52 @@
         }
       },
       "block_order": [
-        "collection_djQVn9",
-        "collection_fXLMGV",
-        "collection_kgdnbD"
+        "collection_6wA8yg"
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
-        "color_scheme": "scheme-2",
-        "separate_section_with_border": false,
-        "image_size": "sm",
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image_size": "auto",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
+    },
+    "collection_list_Vq9Tq7": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_AYRWyN": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "all-swarovski-encomenda",
+            "image": "shopify://shop_images/7be99f65da4aeac44dd7447b4fb3ef00.jpg",
+            "expand_collection": false,
+            "content_position": "place-self-end-center text-center",
+            "subheading": "",
+            "title": "",
+            "button_text": "Encomende-SWAROVSKI",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 15
+          }
+        }
+      },
+      "block_order": [
+        "collection_AYRWyN"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image_size": "auto",
         "show_text_outside": false,
         "space_items": true,
         "stack_collections": true,
@@ -109,6 +301,13 @@
   "order": [
     "main",
     "custom_liquid_E9kRgn",
-    "collection_list_eKUVQ7"
+    "collection_list_eKUVQ7",
+    "featured_collections_P4TCCb",
+    "featured_collections_4MwXyy",
+    "featured_collections_d7WTGy",
+    "featured_collections_gmREaW",
+    "featured_collections_dMFarD",
+    "collection_list_dGDXxp",
+    "collection_list_Vq9Tq7"
   ]
 }
