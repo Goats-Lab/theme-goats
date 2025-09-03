@@ -29,7 +29,7 @@
     "product_image_aspect_ratio": "square",
     "show_secondary_image": false,
     "show_vendor": true,
-    "product_card_text_font": "heading",
+    "product_card_text_font": "body",
     "product_color_display": "swatch",
     "show_product_rating": false,
     "show_quick_buy": false,
