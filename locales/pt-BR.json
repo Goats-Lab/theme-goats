@@ -139,7 +139,7 @@
     },
     "inventory": {
       "in_stock": "Em estoque",
-      "oversell_stock": "Reestoque próximo",
+      "oversell_stock": "Disponível para encomendar",
       "incoming_stock": "Reestoque em {{ next_incoming_date }}",
       "low_stock_with_quantity_count": {
         "one": "Apenas {{ count }} unidade disponível",
