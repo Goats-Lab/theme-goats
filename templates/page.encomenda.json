@@ -11,10 +11,310 @@
   "sections": {
     "main": {
       "type": "main-list-collections",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "show_title": true,
+        "collections": [],
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "image_size": "auto",
+        "content_position": "place-self-end-start text-start",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "custom_liquid_diLRq4": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<div id=\"mc-encomenda-timeline\">\n  <div class=\"mc-banner\">\n    <span class=\"mc-badge\"> ENCOMENDAS</span>\n    <span class=\"mc-text\">Peças exclusivas sob encomenda </strong></span>\n  </div>\n\n  <ul class=\"mc-steps\" role=\"list\">\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">🛒</div>\n      <div class=\"mc-label\">Pedido</div>\n      <div class=\"mc-sub\">Recebemos seu pedido</div>\n    </li>\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">⚒️</div>\n      <div class=\"mc-label\">Produção</div>\n      <div class=\"mc-sub\">Peça feita sob medida</div>\n    </li>\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">🧪</div>\n      <div class=\"mc-label\">Qualidade</div>\n      <div class=\"mc-sub\">Produção e acabamento</div>\n    </li>\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">🔎</div>\n      <div class=\"mc-label\">Inspeção</div>\n      <div class=\"mc-sub\">Inspeção de qualidade</div>\n    </li>\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">📦</div>\n      <div class=\"mc-label\">Entrega</div>\n      <div class=\"mc-sub\">Rastreio e recebimento</div>\n    </li>\n  </ul>\n\n  <details class=\"mc-faq\">\n    <summary>Como funciona a encomenda?</summary>\n    <div class=\"mc-faq-body\">\n      <ul>\n        <li>Prazo total estimado: até <strong>50 dias úteis</strong>.</li>\n        <li>Cada etapa é atualizada internamente até o despacho.</li>\n        <li>Prazo pode variar por Joia e controle de qualidade.</li>\n      </ul>\n    </div>\n  </details>\n</div>\n\n<style>\n  /* ====== Configurações rápidas ====== */\n  #mc-encomenda-timeline {\n    --mc-primary: #ff9ccd;    /* Rosa MyCharms */\n    --mc-ink: #222;           /* Texto principal */\n    --mc-muted: #666;         /* Texto secundário */\n    --mc-bg: #fff7fb;         /* Fundo suave */\n    --mc-line: #ffd6e9;       /* Linha da timeline */\n    --mc-radius: 10px;\n  }\n\n  /* ====== Banner ====== */\n  #mc-encomenda-timeline .mc-banner{\n    display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:center;\n    background: var(--mc-bg); border:1px solid var(--mc-line);\n    padding:12px 14px; border-radius: var(--mc-radius); margin: 10px 0 18px;\n  }\n  #mc-encomenda-timeline .mc-badge{\n    background: var(--mc-primary); color:#fff; font-weight:700; padding:6px 10px; border-radius:999px; font-size:12px; letter-spacing:.3px;\n  }\n  #mc-encomenda-timeline .mc-text{ color:var(--mc-ink); font-size:14px; }\n\n  /* ====== Timeline ====== */\n  #mc-encomenda-timeline .mc-steps{\n    list-style:none; padding:0; margin:0;\n    display:flex; align-items:flex-start; justify-content:space-between; gap:14px;\n    position:relative;\n  }\n  #mc-encomenda-timeline .mc-steps::before{\n    content:\"\"; position:absolute; left:8%; right:8%; top:28px; height:3px;\n    background: linear-gradient(90deg, var(--mc-line), var(--mc-line));\n    z-index:0; border-radius:3px;\n  }\n  #mc-encomenda-timeline .mc-step{\n    text-align:center; flex:1 1 0; position:relative; z-index:1; min-width:80px;\n  }\n  #mc-encomenda-timeline .mc-icon{\n    width:56px; height:56px; margin:0 auto 8px; display:grid; place-items:center;\n    background:#fff; border:3px solid var(--mc-primary); border-radius:50%;\n    font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,.05);\n  }\n  #mc-encomenda-timeline .mc-label{\n    font-weight:700; color:var(--mc-ink); font-size:14px; line-height:1.2;\n  }\n  #mc-encomenda-timeline .mc-sub{\n    color:var(--mc-muted); font-size:12px; margin-top:2px;\n  }\n\n  /* ====== FAQ ====== */\n  #mc-encomenda-timeline .mc-faq{\n    margin-top:14px;\n  }\n  #mc-encomenda-timeline .mc-faq summary{\n    cursor:pointer; padding:10px 12px; background:#fafafa; border:1px solid #eee; border-radius: var(--mc-radius);\n    font-weight:600; color:var(--mc-ink);\n  }\n  #mc-encomenda-timeline .mc-faq-body{\n    border:1px solid #eee; border-top:0; padding:10px 14px; border-radius: 0 0 var(--mc-radius) var(--mc-radius);\n    color:var(--mc-muted); font-size:14px; background:#fff;\n  }\n  #mc-encomenda-timeline .mc-faq-body ul{ margin:6px 0 0 18px; }\n\n  /* ====== Responsivo ====== */\n  @media (max-width: 720px){\n    #mc-encomenda-timeline .mc-steps{\n      flex-direction:column; gap:16px;\n    }\n    #mc-encomenda-timeline .mc-steps::before{\n      display:none;\n    }\n    #mc-encomenda-timeline .mc-step{\n      display:flex; align-items:center; gap:12px; text-align:left;\n    }\n    #mc-encomenda-timeline .mc-icon{ margin:0; }\n  }\n</style>",
+        "text_alignment": "start"
+      }
+    },
+    "collection_list_tyHBMA": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_9My3XX": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "all-pandora-encomenda",
+            "image": "shopify://shop_images/6252c10f8c83d4e6baa1bdb2cbec3ca5.jpg",
+            "expand_collection": false,
+            "content_position": "place-self-end-center text-center",
+            "subheading": "",
+            "title": "",
+            "button_text": "Encomende - Pandora",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_9My3XX"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "image_size": "sm",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
+    },
+    "featured_collections_K9f4gJ": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_JEdnA8": {
+          "type": "collection",
+          "settings": {
+            "collection": "pulseira-pandora-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_JEdnA8"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_3Lr3t6": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_yJhjQd": {
+          "type": "collection",
+          "settings": {
+            "collection": "berloque-pandora-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_yJhjQd"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_XcGr7E": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_QD4azc": {
+          "type": "collection",
+          "settings": {
+            "collection": "pandora-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_QD4azc"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_HRaiTH": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_V8787K": {
+          "type": "collection",
+          "settings": {
+            "collection": "encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_V8787K"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_DRBB6d": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_TJw6Pq": {
+          "type": "collection",
+          "settings": {
+            "collection": "colar-pandora-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_TJw6Pq"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "collection_list_tyUTzx": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_wiq9td": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "all-tiffany-encomenda",
+            "image": "shopify://shop_images/c3497d9e75585e5ced4c48ec37640dbd.jpg",
+            "expand_collection": false,
+            "content_position": "place-self-end-center text-center",
+            "subheading": "",
+            "title": "",
+            "button_text": "Encomende - Tiffany",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_wiq9td"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image_size": "auto",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
+    },
+    "collection_list_J4RYaJ": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_nAwCPc": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "all-swarovski-encomenda",
+            "image": "shopify://shop_images/7be99f65da4aeac44dd7447b4fb3ef00.jpg",
+            "expand_collection": false,
+            "content_position": "place-self-end-center text-center",
+            "subheading": "",
+            "title": "",
+            "button_text": "Encomende-SWAROVSKI",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 15
+          }
+        }
+      },
+      "block_order": [
+        "collection_nAwCPc"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image_size": "auto",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_diLRq4",
+    "collection_list_tyHBMA",
+    "featured_collections_K9f4gJ",
+    "featured_collections_3Lr3t6",
+    "featured_collections_XcGr7E",
+    "featured_collections_HRaiTH",
+    "featured_collections_DRBB6d",
+    "collection_list_tyUTzx",
+    "collection_list_J4RYaJ"
   ]
 }
