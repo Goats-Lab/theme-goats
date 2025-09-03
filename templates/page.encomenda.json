@@ -25,15 +25,52 @@
         "overlay_opacity": 30
       }
     },
+    "rich_text_jYfmH9": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_adPENg": {
+          "type": "subheading",
+          "settings": {
+            "text": "Disponível por tempo limitado"
+          }
+        },
+        "heading_Jhrqxp": {
+          "type": "heading",
+          "settings": {
+            "text": "Encomende já",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_r4jLwP": {
+          "type": "richtext",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_adPENg",
+        "heading_Jhrqxp",
+        "richtext_r4jLwP"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "md",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
     "custom_liquid_diLRq4": {
       "type": "custom-liquid",
       "name": "t:sections.custom_liquid.presets.custom_liquid.name",
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
-        "remove_vertical_spacing": false,
+        "remove_vertical_spacing": true,
         "remove_horizontal_spacing": false,
-        "liquid": "<div id=\"mc-encomenda-timeline\">\n  <div class=\"mc-banner\">\n    <span class=\"mc-badge\"> ENCOMENDAS</span>\n    <span class=\"mc-text\">Peças exclusivas sob encomenda </strong></span>\n  </div>\n\n  <ul class=\"mc-steps\" role=\"list\">\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">🛒</div>\n      <div class=\"mc-label\">Pedido</div>\n      <div class=\"mc-sub\">Recebemos seu pedido</div>\n    </li>\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">⚒️</div>\n      <div class=\"mc-label\">Produção</div>\n      <div class=\"mc-sub\">Peça feita sob medida</div>\n    </li>\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">🧪</div>\n      <div class=\"mc-label\">Qualidade</div>\n      <div class=\"mc-sub\">Produção e acabamento</div>\n    </li>\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">🔎</div>\n      <div class=\"mc-label\">Inspeção</div>\n      <div class=\"mc-sub\">Inspeção de qualidade</div>\n    </li>\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">📦</div>\n      <div class=\"mc-label\">Entrega</div>\n      <div class=\"mc-sub\">Rastreio e recebimento</div>\n    </li>\n  </ul>\n\n  <details class=\"mc-faq\">\n    <summary>Como funciona a encomenda?</summary>\n    <div class=\"mc-faq-body\">\n      <ul>\n        <li>Prazo total estimado: até <strong>50 dias úteis</strong>.</li>\n        <li>Cada etapa é atualizada internamente até o despacho.</li>\n        <li>Prazo pode variar por Joia e controle de qualidade.</li>\n      </ul>\n    </div>\n  </details>\n</div>\n\n<style>\n  /* ====== Configurações rápidas ====== */\n  #mc-encomenda-timeline {\n    --mc-primary: #ff9ccd;    /* Rosa MyCharms */\n    --mc-ink: #222;           /* Texto principal */\n    --mc-muted: #666;         /* Texto secundário */\n    --mc-bg: #fff7fb;         /* Fundo suave */\n    --mc-line: #ffd6e9;       /* Linha da timeline */\n    --mc-radius: 10px;\n  }\n\n  /* ====== Banner ====== */\n  #mc-encomenda-timeline .mc-banner{\n    display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:center;\n    background: var(--mc-bg); border:1px solid var(--mc-line);\n    padding:12px 14px; border-radius: var(--mc-radius); margin: 10px 0 18px;\n  }\n  #mc-encomenda-timeline .mc-badge{\n    background: var(--mc-primary); color:#fff; font-weight:700; padding:6px 10px; border-radius:999px; font-size:12px; letter-spacing:.3px;\n  }\n  #mc-encomenda-timeline .mc-text{ color:var(--mc-ink); font-size:14px; }\n\n  /* ====== Timeline ====== */\n  #mc-encomenda-timeline .mc-steps{\n    list-style:none; padding:0; margin:0;\n    display:flex; align-items:flex-start; justify-content:space-between; gap:14px;\n    position:relative;\n  }\n  #mc-encomenda-timeline .mc-steps::before{\n    content:\"\"; position:absolute; left:8%; right:8%; top:28px; height:3px;\n    background: linear-gradient(90deg, var(--mc-line), var(--mc-line));\n    z-index:0; border-radius:3px;\n  }\n  #mc-encomenda-timeline .mc-step{\n    text-align:center; flex:1 1 0; position:relative; z-index:1; min-width:80px;\n  }\n  #mc-encomenda-timeline .mc-icon{\n    width:56px; height:56px; margin:0 auto 8px; display:grid; place-items:center;\n    background:#fff; border:3px solid var(--mc-primary); border-radius:50%;\n    font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,.05);\n  }\n  #mc-encomenda-timeline .mc-label{\n    font-weight:700; color:var(--mc-ink); font-size:14px; line-height:1.2;\n  }\n  #mc-encomenda-timeline .mc-sub{\n    color:var(--mc-muted); font-size:12px; margin-top:2px;\n  }\n\n  /* ====== FAQ ====== */\n  #mc-encomenda-timeline .mc-faq{\n    margin-top:14px;\n  }\n  #mc-encomenda-timeline .mc-faq summary{\n    cursor:pointer; padding:10px 12px; background:#fafafa; border:1px solid #eee; border-radius: var(--mc-radius);\n    font-weight:600; color:var(--mc-ink);\n  }\n  #mc-encomenda-timeline .mc-faq-body{\n    border:1px solid #eee; border-top:0; padding:10px 14px; border-radius: 0 0 var(--mc-radius) var(--mc-radius);\n    color:var(--mc-muted); font-size:14px; background:#fff;\n  }\n  #mc-encomenda-timeline .mc-faq-body ul{ margin:6px 0 0 18px; }\n\n  /* ====== Responsivo ====== */\n  @media (max-width: 720px){\n    #mc-encomenda-timeline .mc-steps{\n      flex-direction:column; gap:16px;\n    }\n    #mc-encomenda-timeline .mc-steps::before{\n      display:none;\n    }\n    #mc-encomenda-timeline .mc-step{\n      display:flex; align-items:center; gap:12px; text-align:left;\n    }\n    #mc-encomenda-timeline .mc-icon{ margin:0; }\n  }\n</style>",
+        "liquid": "<div id=\"mc-encomenda-timeline\">\n  <div class=\"mc-banner\">\n    <span class=\"mc-badge\"> ENCOMENDAS COMO FUNCIONA?</span>\n    <span class=\"mc-text\">Peças reservadas somente para você! </strong></span>\n  </div>\n\n  <ul class=\"mc-steps\" role=\"list\">\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">🛒</div>\n      <div class=\"mc-label\">Pedido</div>\n      <div class=\"mc-sub\">Recebemos seu pedido</div>\n    </li>\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">⚒️</div>\n      <div class=\"mc-label\">Produção</div>\n      <div class=\"mc-sub\">Peça feita sob medida</div>\n    </li>\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">🧪</div>\n      <div class=\"mc-label\">Qualidade</div>\n      <div class=\"mc-sub\">Produção e acabamento</div>\n    </li>\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">🔎</div>\n      <div class=\"mc-label\">Inspeção</div>\n      <div class=\"mc-sub\">Inspeção de qualidade</div>\n    </li>\n    <li class=\"mc-step\">\n      <div class=\"mc-icon\" aria-hidden=\"true\">📦</div>\n      <div class=\"mc-label\">Entrega</div>\n      <div class=\"mc-sub\">Rastreio e recebimento</div>\n    </li>\n  </ul>\n\n  <details class=\"mc-faq\">\n    <summary>Detalhes sob a encomenda</summary>\n    <div class=\"mc-faq-body\">\n      <ul>\n        <li>Prazo total estimado: até <strong>50 dias úteis</strong>.</li>\n        <li>Cada etapa é atualizada internamente até o despacho.</li>\n        <li>Prazo pode variar por Joia e controle de qualidade.</li>\n      </ul>\n    </div>\n  </details>\n</div>\n\n<style>\n  /* ====== Configurações rápidas ====== */\n  #mc-encomenda-timeline {\n    --mc-primary: #ff9ccd;    /* Rosa MyCharms */\n    --mc-ink: #222;           /* Texto principal */\n    --mc-muted: #666;         /* Texto secundário */\n    --mc-bg: #fff7fb;         /* Fundo suave */\n    --mc-line: #ffd6e9;       /* Linha da timeline */\n    --mc-radius: 10px;\n  }\n\n  /* ====== Banner ====== */\n  #mc-encomenda-timeline .mc-banner{\n    display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:center;\n    background: var(--mc-bg); border:1px solid var(--mc-line);\n    padding:12px 14px; border-radius: var(--mc-radius); margin: 10px 0 18px;\n  }\n  #mc-encomenda-timeline .mc-badge{\n    background: var(--mc-primary); color:#fff; font-weight:700; padding:6px 10px; border-radius:999px; font-size:12px; letter-spacing:.3px;\n  }\n  #mc-encomenda-timeline .mc-text{ color:var(--mc-ink); font-size:14px; }\n\n  /* ====== Timeline ====== */\n  #mc-encomenda-timeline .mc-steps{\n    list-style:none; padding:0; margin:0;\n    display:flex; align-items:flex-start; justify-content:space-between; gap:14px;\n    position:relative;\n  }\n  #mc-encomenda-timeline .mc-steps::before{\n    content:\"\"; position:absolute; left:8%; right:8%; top:28px; height:3px;\n    background: linear-gradient(90deg, var(--mc-line), var(--mc-line));\n    z-index:0; border-radius:3px;\n  }\n  #mc-encomenda-timeline .mc-step{\n    text-align:center; flex:1 1 0; position:relative; z-index:1; min-width:80px;\n  }\n  #mc-encomenda-timeline .mc-icon{\n    width:56px; height:56px; margin:0 auto 8px; display:grid; place-items:center;\n    background:#fff; border:3px solid var(--mc-primary); border-radius:50%;\n    font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,.05);\n  }\n  #mc-encomenda-timeline .mc-label{\n    font-weight:700; color:var(--mc-ink); font-size:14px; line-height:1.2;\n  }\n  #mc-encomenda-timeline .mc-sub{\n    color:var(--mc-muted); font-size:12px; margin-top:2px;\n  }\n\n  /* ====== FAQ ====== */\n  #mc-encomenda-timeline .mc-faq{\n    margin-top:14px;\n  }\n  #mc-encomenda-timeline .mc-faq summary{\n    cursor:pointer; padding:10px 12px; background:#fafafa; border:1px solid #eee; border-radius: var(--mc-radius);\n    font-weight:600; color:var(--mc-ink);\n  }\n  #mc-encomenda-timeline .mc-faq-body{\n    border:1px solid #eee; border-top:0; padding:10px 14px; border-radius: 0 0 var(--mc-radius) var(--mc-radius);\n    color:var(--mc-muted); font-size:14px; background:#fff;\n  }\n  #mc-encomenda-timeline .mc-faq-body ul{ margin:6px 0 0 18px; }\n\n  /* ====== Responsivo ====== */\n  @media (max-width: 720px){\n    #mc-encomenda-timeline .mc-steps{\n      flex-direction:column; gap:16px;\n    }\n    #mc-encomenda-timeline .mc-steps::before{\n      display:none;\n    }\n    #mc-encomenda-timeline .mc-step{\n      display:flex; align-items:center; gap:12px; text-align:left;\n    }\n    #mc-encomenda-timeline .mc-icon{ margin:0; }\n  }\n</style>",
         "text_alignment": "start"
       }
     },
@@ -307,6 +344,7 @@
   },
   "order": [
     "main",
+    "rich_text_jYfmH9",
     "custom_liquid_diLRq4",
     "collection_list_tyHBMA",
     "featured_collections_K9f4gJ",
