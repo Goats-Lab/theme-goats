@@ -116,6 +116,17 @@
             "payment_button_text_color": ""
           }
         },
+        "accordion_89TReN": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": true,
+            "icon": "none",
+            "title": "Descrição e Detalhes",
+            "content": "{{ product.description }}",
+            "liquid": "",
+            "page": ""
+          }
+        },
         "accordion_CMFYpn": {
           "type": "accordion",
           "settings": {
@@ -149,17 +160,6 @@
             "page": "controle-de-qualidade-e-producao-mycharms"
           }
         },
-        "accordion_89TReN": {
-          "type": "accordion",
-          "settings": {
-            "show_below_gallery": true,
-            "icon": "none",
-            "title": "Descrição e Detalhes",
-            "content": "{{ product.description }}",
-            "liquid": "",
-            "page": ""
-          }
-        },
         "accordion_CwAYGz": {
           "type": "accordion",
           "settings": {
@@ -182,10 +182,10 @@
         "variant_picker",
         "globo_product_option_app_block_RtewJL",
         "buy_buttons",
+        "accordion_89TReN",
         "accordion_CMFYpn",
         "accordion_RDnbEJ",
         "accordion_ycDW7r",
-        "accordion_89TReN",
         "accordion_CwAYGz"
       ],
       "settings": {
@@ -224,7 +224,7 @@
       "name": "t:sections.featured_collections.presets.featured_collections.name",
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "hide_product_information": false,
         "stack_products": false,
         "products_per_row_mobile": "2",
