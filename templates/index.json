@@ -52,7 +52,7 @@
         "image_Fng8nE": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/whatsapp-image-2024-05-04-at-13.32.35-2.avif",
+            "image": "shopify://shop_images/8890dffcbe374d282e44e2398cfbce47.jpg",
             "rotation": 0
           }
         },
@@ -68,7 +68,6 @@
         "image_Fng8nE",
         "image_kqzixK"
       ],
-      "disabled": true,
       "custom_css": [
         ".button-container {display: flex; justify-content: center; /* centraliza horizontalmente */}"
       ],

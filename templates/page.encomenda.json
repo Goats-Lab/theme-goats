@@ -9,22 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-list-collections",
-      "disabled": true,
-      "settings": {
-        "color_scheme": "",
-        "show_title": true,
-        "collections": [],
-        "collections_per_row_mobile": "1",
-        "collections_per_row_desktop": 3,
-        "image_size": "auto",
-        "content_position": "place-self-end-start text-start",
-        "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 30
-      }
-    },
     "rich_text_jYfmH9": {
       "type": "rich-text",
       "blocks": {
@@ -82,7 +66,7 @@
           "settings": {
             "color_scheme": "",
             "collection": "all-pandora-encomenda",
-            "image": "shopify://shop_images/6252c10f8c83d4e6baa1bdb2cbec3ca5.jpg",
+            "image": "shopify://shop_images/IMG_5124.jpg",
             "expand_collection": false,
             "content_position": "place-self-end-center text-center",
             "subheading": "",
@@ -271,7 +255,7 @@
           "settings": {
             "color_scheme": "",
             "collection": "all-tiffany-encomenda",
-            "image": "shopify://shop_images/c3497d9e75585e5ced4c48ec37640dbd.jpg",
+            "image": "shopify://shop_images/tiffany.jpg",
             "expand_collection": false,
             "content_position": "place-self-end-center text-center",
             "subheading": "",
@@ -302,6 +286,96 @@
         "content": ""
       }
     },
+    "featured_collections_meQfRy": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_bgifgm": {
+          "type": "collection",
+          "settings": {
+            "collection": "anel-tiffany-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_bgifgm"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_BzaWKL": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_ThphLd": {
+          "type": "collection",
+          "settings": {
+            "collection": "colar-tiffany-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ThphLd"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_HqtQKp": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_grpWwq": {
+          "type": "collection",
+          "settings": {
+            "collection": "pulseira-tiffany-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_grpWwq"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
     "collection_list_J4RYaJ": {
       "type": "collection-list",
       "blocks": {
@@ -310,7 +384,7 @@
           "settings": {
             "color_scheme": "",
             "collection": "all-swarovski-encomenda",
-            "image": "shopify://shop_images/7be99f65da4aeac44dd7447b4fb3ef00.jpg",
+            "image": "shopify://shop_images/swaro.jpg",
             "expand_collection": false,
             "content_position": "place-self-end-center text-center",
             "subheading": "",
@@ -340,10 +414,145 @@
         "title": "",
         "content": ""
       }
+    },
+    "featured_collections_nykx4r": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_4M7Yqd": {
+          "type": "collection",
+          "settings": {
+            "collection": "anel-swarovski-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_4M7Yqd"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_eFx8jB": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_pPcTxa": {
+          "type": "collection",
+          "settings": {
+            "collection": "brinco-swarovski-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_pPcTxa"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_cz4mFt": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_qyDP7Q": {
+          "type": "collection",
+          "settings": {
+            "collection": "colar-swarovski-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_qyDP7Q"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "featured_collections_iWAeEC": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_kBit8q": {
+          "type": "collection",
+          "settings": {
+            "collection": "pulseira-swarovski-encomenda",
+            "products_count": 12,
+            "title": "",
+            "link_url": "",
+            "link_text": "Ver todas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_kBit8q"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "show_title": true,
+        "collections": [],
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "image_size": "auto",
+        "content_position": "place-self-end-start text-start",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
     }
   },
   "order": [
-    "main",
     "rich_text_jYfmH9",
     "custom_liquid_diLRq4",
     "collection_list_tyHBMA",
@@ -353,6 +562,14 @@
     "featured_collections_HRaiTH",
     "featured_collections_DRBB6d",
     "collection_list_tyUTzx",
-    "collection_list_J4RYaJ"
+    "featured_collections_meQfRy",
+    "featured_collections_BzaWKL",
+    "featured_collections_HqtQKp",
+    "collection_list_J4RYaJ",
+    "featured_collections_nykx4r",
+    "featured_collections_eFx8jB",
+    "featured_collections_cz4mFt",
+    "featured_collections_iWAeEC",
+    "main"
   ]
 }
