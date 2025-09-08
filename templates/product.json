@@ -169,6 +169,12 @@
             "liquid": "",
             "page": "{{ product.metafields.custom.compatibilidade.value }}"
           }
+        },
+        "liquid_aGfn7y": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div id=\"ra-verified-wrapper\" style=\"display:flex; justify-content:center; align-items:center; border:none; background:none; padding:0; margin:0;\">\n  <div id=\"ra-verified-seal\">\n    <script type=\"text/javascript\" id=\"ra-embed-verified-seal\"\n      src=\"https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js\"\n      data-id=\"LWpvSVBwRVdPSWdIVmF5RTpteS1jaGFybXMtMTY3OTc2NQ==\"\n      data-target=\"ra-verified-seal\"\n      data-model=\"compact_2\">\n    </script>\n  </div>\n</div>"
+          }
         }
       },
       "block_order": [
@@ -185,7 +191,8 @@
         "accordion_CMFYpn",
         "accordion_RDnbEJ",
         "accordion_ycDW7r",
-        "accordion_CwAYGz"
+        "accordion_CwAYGz",
+        "liquid_aGfn7y"
       ],
       "settings": {
         "color_scheme": "scheme-2",
