@@ -4,8 +4,8 @@
     "theme_name": "Prestige",
     "theme_author": "Maestrooo",
     "theme_version": "10.0.2",
-    "theme_documentation_url": "https://support.maestrooo.com/",
-    "theme_support_url": "https://support.maestrooo.com/article/203-contact-us"
+    "theme_documentation_url": "http://support.maestrooo.com/",
+    "theme_support_email": "shopify-support@maestrooo.com"
   },
   {
     "name": "t:theme_settings.appearance.name",
