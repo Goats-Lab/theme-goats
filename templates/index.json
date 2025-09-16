@@ -60,7 +60,7 @@
             "desktop_text_position": "sm:place-self-start-center sm:text-center",
             "content_max_width": 400,
             "button_1_text": "",
-            "button_1_link": "",
+            "button_1_link": "shopify://pages/all-encomenda",
             "button_1_style": "link",
             "button_1_background": "#ff6eb6",
             "button_1_text_color": "#ff9ccd",
