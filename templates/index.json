@@ -11,6 +11,7 @@
   "sections": {
     "image_with_text_overlay_VjDQtD": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "name": "t:sections.image_with_text_overlay.presets.image_with_text_overlay.name",
       "settings": {
         "color_scheme": "",
