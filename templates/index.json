@@ -337,6 +337,36 @@
         "popover_title": "Poucas unidades disponíveis"
       }
     },
+    "featured_collections_aVbznB": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_ChmGwk": {
+          "type": "collection",
+          "settings": {
+            "collection": "descontos-do-mes",
+            "products_count": 8,
+            "title": "OFERTAS DO MÊS",
+            "link_url": "",
+            "link_text": "VER TODOS"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ChmGwk"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "<strong>Setembro - 10%OFF</strong>"
+      }
+    },
     "text_with_icons_jgYnYM": {
       "type": "text-with-icons",
       "blocks": {
@@ -384,36 +414,6 @@
         "icon_color": "",
         "text_color": "",
         "text_alignment": "center"
-      }
-    },
-    "featured_collections_aVbznB": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_ChmGwk": {
-          "type": "collection",
-          "settings": {
-            "collection": "descontos-do-mes",
-            "products_count": 8,
-            "title": "OFERTAS DO MÊS",
-            "link_url": "",
-            "link_text": "VER TODOS"
-          }
-        }
-      },
-      "block_order": [
-        "collection_ChmGwk"
-      ],
-      "name": "t:sections.featured_collections.presets.featured_collections.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "hide_product_information": true,
-        "stack_products": true,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "<strong>Setembro - 10%OFF</strong>"
       }
     },
     "image_with_text_FicW9t": {
@@ -834,12 +834,12 @@
     "image_with_text_overlay_VjDQtD",
     "scrolling_content_6CAnJm",
     "slideshow_Cr6bfE",
+    "featured_collections_aVbznB",
     "multiple_media_with_text_qUg4nz",
     "image_with_text_x6jHxF",
     "collection_list_ACYycD",
     "shop_the_look_Rj7meD",
     "text_with_icons_jgYnYM",
-    "featured_collections_aVbznB",
     "image_with_text_FicW9t",
     "collection_list_nVz8kJ",
     "shop_the_look_x8xCEe",
