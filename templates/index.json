@@ -154,6 +154,7 @@
       "block_order": [
         "image_Fng8nE"
       ],
+      "disabled": true,
       "custom_css": [
         ".button-container {display: flex; justify-content: center; /* centraliza horizontalmente */}"
       ],
@@ -216,7 +217,8 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
-        "image": "shopify://shop_images/Pandora_a850a3a0-f22b-4bb4-84ae-f67f9f01d786.png",
+        "image": "shopify://shop_images/3c31c2c44d54af6e014c309cfb2f85c9.jpg",
+        "mobile_image": "shopify://shop_images/3c31c2c44d54af6e014c309cfb2f85c9.jpg",
         "reveal_on_scroll": false,
         "image_position": "start",
         "content_width": "sm",
