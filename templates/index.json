@@ -117,7 +117,7 @@
         "autoplay": true,
         "autoplay_pause_on_video": false,
         "cycle_speed": 7,
-        "background": "#ff9ccd",
+        "background": "#ffffff",
         "controls_color": "#ffffff"
       }
     },
