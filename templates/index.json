@@ -180,7 +180,7 @@
       ],
       "name": "t:sections.featured_collections.presets.featured_collections.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "hide_product_information": true,
         "stack_products": true,
