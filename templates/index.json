@@ -848,7 +848,7 @@
       "name": "t:sections.text_with_icons.presets.text_with_icons.name",
       "settings": {
         "color_scheme": "scheme-9fd2f508-0e58-4780-aa25-7b903dcdde2a",
-        "separate_section_with_border": false,
+        "separate_section_with_border": true,
         "stack_on_mobile": false,
         "icon_color": "",
         "text_color": "",
