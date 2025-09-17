@@ -40,7 +40,7 @@
         "text_kMYXfE": {
           "type": "text",
           "settings": {
-            "text": "- tudo em Prata 925 -"
+            "text": "- Tudo Contém Prata 925 -"
           }
         }
       },
@@ -140,34 +140,34 @@
         "controls_color": "#ffffff"
       }
     },
-    "featured_collections_aVbznB": {
+    "featured_collections_Ujh3MC": {
       "type": "featured-collections",
       "blocks": {
-        "collection_ChmGwk": {
+        "collection_8bCxbx": {
           "type": "collection",
           "settings": {
-            "collection": "descontos-do-mes",
-            "products_count": 8,
-            "title": "OFERTAS DO MÊS",
+            "collection": "ultimas-unidades",
+            "products_count": 14,
+            "title": "Ultimas unidades",
             "link_url": "",
-            "link_text": "VER TODOS"
+            "link_text": "Descubra mais"
           }
         }
       },
       "block_order": [
-        "collection_ChmGwk"
+        "collection_8bCxbx"
       ],
       "name": "t:sections.featured_collections.presets.featured_collections.name",
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "hide_product_information": true,
         "stack_products": true,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "<strong>Setembro - 10%OFF</strong>"
+        "horizontal_spacing_factor": 2,
+        "vertical_spacing_factor": 0.2,
+        "subheading": "MENOS DE 5 UNIDADES DISPONÍVEIS"
       }
     },
     "multiple_media_with_text_qUg4nz": {
@@ -213,36 +213,6 @@
     },
     "image_with_text_x6jHxF": {
       "type": "image-with-text",
-      "blocks": {
-        "heading_He9yCa": {
-          "type": "heading",
-          "settings": {
-            "text": "Coleção - Pandora",
-            "heading_tag": "h1"
-          }
-        },
-        "richtext_KRyF78": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Celebre a individualidade com joias que contam histórias. Cada peça da Pandora é pensada para eternizar momentos, expressar sentimentos e refletir sua essência.</p>"
-          }
-        },
-        "button_TriUTP": {
-          "type": "button",
-          "settings": {
-            "style": "solid",
-            "text": "Veja Mais",
-            "url": "shopify://collections/pandoras",
-            "background": "#ff9ccd",
-            "text_color": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "heading_He9yCa",
-        "richtext_KRyF78",
-        "button_TriUTP"
-      ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "scheme-2",
@@ -724,36 +694,6 @@
         "remove_vertical_spacing": true
       }
     },
-    "featured_collections_Ujh3MC": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_8bCxbx": {
-          "type": "collection",
-          "settings": {
-            "collection": "ultimas-unidades",
-            "products_count": 14,
-            "title": "Ultimas unidades",
-            "link_url": "",
-            "link_text": "Descubra mais"
-          }
-        }
-      },
-      "block_order": [
-        "collection_8bCxbx"
-      ],
-      "name": "t:sections.featured_collections.presets.featured_collections.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "hide_product_information": true,
-        "stack_products": true,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 2,
-        "vertical_spacing_factor": 0.2,
-        "subheading": "MENOS DE 5 UNIDADES DISPONÍVEIS"
-      }
-    },
     "collection_list_Qd99kw": {
       "type": "collection-list",
       "blocks": {
@@ -827,6 +767,36 @@
         "subheading": "",
         "title": "",
         "content": ""
+      }
+    },
+    "featured_collections_aVbznB": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_ChmGwk": {
+          "type": "collection",
+          "settings": {
+            "collection": "descontos-do-mes",
+            "products_count": 8,
+            "title": "OFERTAS DO MÊS",
+            "link_url": "",
+            "link_text": "VER TODOS"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ChmGwk"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "<strong>Setembro - 10%OFF</strong>"
       }
     }
   },
