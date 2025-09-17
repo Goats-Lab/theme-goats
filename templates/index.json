@@ -326,6 +326,7 @@
       "block_order": [
         "look_EaNmWn"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "t:sections.shop_the_look.presets.shop_the_look.name",
       "settings": {
@@ -534,6 +535,7 @@
       "block_order": [
         "look_ryAeXn"
       ],
+      "disabled": true,
       "custom_css": [
         ".content-over-media {background-color: #ffffff !important;}"
       ],
@@ -635,6 +637,7 @@
         "buy_buttons_fBxzxa",
         "pickup_availability_ryi6tP"
       ],
+      "disabled": true,
       "name": "t:sections.featured_product.presets.featured_product.name",
       "settings": {
         "color_scheme": "scheme-2",
@@ -660,6 +663,7 @@
       "blocks": {
         "heading_TTX9hg": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "text": "Coleção Tiffany&CO",
             "heading_tag": "h1"
@@ -667,12 +671,14 @@
         },
         "richtext_QryQ8A": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "content": "<p>Descubra designs radiantes criados para celebrar cada faceta do amor, desde laços atemporais até começos significativos.</p>"
           }
         },
         "button_xJ9QRr": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "style": "solid",
             "text": "Veja Mais",
@@ -691,7 +697,8 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
-        "image": "shopify://shop_images/fd5a2afe5d0b6fb281812117187fa7a1.jpg",
+        "image": "shopify://shop_images/cb5646d37eaf7cbaac6259988f5f8555.jpg",
+        "mobile_image": "shopify://shop_images/cb5646d37eaf7cbaac6259988f5f8555.jpg",
         "reveal_on_scroll": false,
         "image_position": "start",
         "content_width": "sm",
@@ -813,13 +820,13 @@
     "image_with_text_x6jHxF",
     "collection_list_ACYycD",
     "shop_the_look_Rj7meD",
-    "text_with_icons_jgYnYM",
     "image_with_text_FicW9t",
     "collection_list_nVz8kJ",
     "shop_the_look_x8xCEe",
     "featured_product_AHC9XD",
     "image_with_text_Mr6VPW",
     "collection_list_Qd99kw",
+    "text_with_icons_jgYnYM",
     "featured_collections_aVbznB"
   ]
 }
