@@ -163,47 +163,6 @@
         "subheading": "MENOS DE 5 UNIDADES DISPONÍVEIS"
       }
     },
-    "multiple_media_with_text_qUg4nz": {
-      "type": "multiple-media-with-text",
-      "blocks": {
-        "image_Fng8nE": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/8890dffcbe374d282e44e2398cfbce47.jpg",
-            "rotation": 0
-          }
-        }
-      },
-      "block_order": [
-        "image_Fng8nE"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".button-container {display: flex; justify-content: center; /* centraliza horizontalmente */}"
-      ],
-      "name": "t:sections.multiple_media_with_text.presets.multiple_media_with_text.name",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "reveal_on_scroll": true,
-        "separate_section_with_border": true,
-        "media_position_desktop": "before_text",
-        "media_position_mobile": "before_text",
-        "media_layout": "overlap",
-        "media_alignment": "center",
-        "media_alignment_offset": 0,
-        "media_mobile_alignment_offset": 0,
-        "text_alignment": "center",
-        "subheading": "",
-        "title": "como encomendar",
-        "content": "<p>Agora é possivel encomendar sua peça e ter ela reservada somente para você sem precisar esperar pela pronta entrega!</p>",
-        "button_1_text": "QUERO ENCOMENDAR",
-        "button_1_link": "shopify://pages/all-encomenda",
-        "button_1_style": "solid",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_2_style": "solid"
-      }
-    },
     "image_with_text_x6jHxF": {
       "type": "image-with-text",
       "name": "t:sections.image_with_text.presets.image_with_text.name",
@@ -827,6 +786,46 @@
         "text_alignment": "center"
       }
     },
+    "multiple_media_with_text_qUg4nz": {
+      "type": "multiple-media-with-text",
+      "blocks": {
+        "image_Fng8nE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Criativo_2_1080x1080_8fae71b4-471b-40d6-8df1-234ba44e6ea5.png",
+            "rotation": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_Fng8nE"
+      ],
+      "custom_css": [
+        ".button-container {display: flex; justify-content: center; /* centraliza horizontalmente */}"
+      ],
+      "name": "t:sections.multiple_media_with_text.presets.multiple_media_with_text.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "reveal_on_scroll": true,
+        "separate_section_with_border": true,
+        "media_position_desktop": "before_text",
+        "media_position_mobile": "before_text",
+        "media_layout": "overlap",
+        "media_alignment": "center",
+        "media_alignment_offset": 0,
+        "media_mobile_alignment_offset": 0,
+        "text_alignment": "center",
+        "subheading": "",
+        "title": "como encomendar",
+        "content": "<p>Agora é possivel encomendar sua peça e ter ela reservada somente para você sem precisar esperar pela pronta entrega!</p>",
+        "button_1_text": "QUERO ENCOMENDAR",
+        "button_1_link": "shopify://pages/all-encomenda",
+        "button_1_style": "solid",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_2_style": "solid"
+      }
+    },
     "featured_collections_aVbznB": {
       "type": "featured-collections",
       "blocks": {
@@ -864,7 +863,6 @@
     "slideshow_Cr6bfE",
     "blog_posts_EVQ3UF",
     "featured_collections_Ujh3MC",
-    "multiple_media_with_text_qUg4nz",
     "image_with_text_x6jHxF",
     "collection_list_ACYycD",
     "shop_the_look_Rj7meD",
@@ -875,6 +873,7 @@
     "image_with_text_Mr6VPW",
     "collection_list_Qd99kw",
     "text_with_icons_jgYnYM",
+    "multiple_media_with_text_qUg4nz",
     "featured_collections_aVbznB"
   ]
 }
