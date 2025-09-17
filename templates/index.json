@@ -391,6 +391,7 @@
       "blocks": {
         "heading_BL6bTh": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "text": "Coleção Swarovski",
             "heading_tag": "h1"
@@ -398,12 +399,14 @@
         },
         "richtext_DCzzap": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "content": "<p>Swarovski pela inovação, design e o domínio do corte de cristal definiram a marca líder em acessórios.</p>"
           }
         },
         "button_YaBcRy": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "style": "solid",
             "text": "Veja Mais",
@@ -422,11 +425,12 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
-        "image": "shopify://shop_images/7be99f65da4aeac44dd7447b4fb3ef00.jpg",
+        "image": "shopify://shop_images/2af68c075f4c7eefda3a52e40854782a.jpg",
+        "mobile_image": "shopify://shop_images/2af68c075f4c7eefda3a52e40854782a.jpg",
         "reveal_on_scroll": false,
-        "image_position": "start",
+        "image_position": "end",
         "content_width": "sm",
-        "remove_vertical_spacing": false
+        "remove_vertical_spacing": true
       }
     },
     "collection_list_nVz8kJ": {
