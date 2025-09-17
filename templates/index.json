@@ -140,6 +140,36 @@
         "controls_color": "#ffffff"
       }
     },
+    "featured_collections_aVbznB": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_ChmGwk": {
+          "type": "collection",
+          "settings": {
+            "collection": "descontos-do-mes",
+            "products_count": 8,
+            "title": "OFERTAS DO MÊS",
+            "link_url": "",
+            "link_text": "VER TODOS"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ChmGwk"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "<strong>Setembro - 10%OFF</strong>"
+      }
+    },
     "multiple_media_with_text_qUg4nz": {
       "type": "multiple-media-with-text",
       "blocks": {
@@ -335,36 +365,6 @@
         "title": "",
         "content": "",
         "popover_title": "Poucas unidades disponíveis"
-      }
-    },
-    "featured_collections_aVbznB": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_ChmGwk": {
-          "type": "collection",
-          "settings": {
-            "collection": "descontos-do-mes",
-            "products_count": 8,
-            "title": "OFERTAS DO MÊS",
-            "link_url": "",
-            "link_text": "VER TODOS"
-          }
-        }
-      },
-      "block_order": [
-        "collection_ChmGwk"
-      ],
-      "name": "t:sections.featured_collections.presets.featured_collections.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "hide_product_information": true,
-        "stack_products": true,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "<strong>Setembro - 10%OFF</strong>"
       }
     },
     "text_with_icons_jgYnYM": {
@@ -724,6 +724,36 @@
         "remove_vertical_spacing": true
       }
     },
+    "featured_collections_Ujh3MC": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_8bCxbx": {
+          "type": "collection",
+          "settings": {
+            "collection": "ultimas-unidades",
+            "products_count": 14,
+            "title": "Ultimas unidades",
+            "link_url": "",
+            "link_text": "Descubra mais"
+          }
+        }
+      },
+      "block_order": [
+        "collection_8bCxbx"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "hide_product_information": true,
+        "stack_products": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 2,
+        "vertical_spacing_factor": 0.2,
+        "subheading": "MENOS DE 5 UNIDADES DISPONÍVEIS"
+      }
+    },
     "collection_list_Qd99kw": {
       "type": "collection-list",
       "blocks": {
@@ -798,43 +828,13 @@
         "title": "",
         "content": ""
       }
-    },
-    "featured_collections_Ujh3MC": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_8bCxbx": {
-          "type": "collection",
-          "settings": {
-            "collection": "ultimas-unidades",
-            "products_count": 14,
-            "title": "Ultimas unidades",
-            "link_url": "",
-            "link_text": "Descubra mais"
-          }
-        }
-      },
-      "block_order": [
-        "collection_8bCxbx"
-      ],
-      "name": "t:sections.featured_collections.presets.featured_collections.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "hide_product_information": true,
-        "stack_products": true,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 2,
-        "vertical_spacing_factor": 0.2,
-        "subheading": "MENOS DE 5 UNIDADES DISPONÍVEIS"
-      }
     }
   },
   "order": [
     "image_with_text_overlay_VjDQtD",
     "scrolling_content_6CAnJm",
     "slideshow_Cr6bfE",
-    "featured_collections_aVbznB",
+    "featured_collections_Ujh3MC",
     "multiple_media_with_text_qUg4nz",
     "image_with_text_x6jHxF",
     "collection_list_ACYycD",
@@ -846,6 +846,6 @@
     "featured_product_AHC9XD",
     "image_with_text_Mr6VPW",
     "collection_list_Qd99kw",
-    "featured_collections_Ujh3MC"
+    "featured_collections_aVbznB"
   ]
 }
