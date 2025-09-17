@@ -209,6 +209,24 @@
         "max_image_zoom_level": 3
       }
     },
+    "related_products_YeJtHg": {
+      "type": "related-products",
+      "name": "t:sections.related_products.presets.related_products.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "hide_product_information": false,
+        "stack_products": false,
+        "recommendations_count": 10,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "title": "Indicados para você",
+        "content": ""
+      }
+    },
     "featured_collections_yByfCc": {
       "type": "featured-collections",
       "blocks": {
@@ -229,7 +247,7 @@
       "custom_css": [],
       "name": "t:sections.featured_collections.presets.featured_collections.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "hide_product_information": false,
         "stack_products": false,
@@ -291,6 +309,7 @@
   "order": [
     "media_grid_776mrJ",
     "main",
+    "related_products_YeJtHg",
     "featured_collections_yByfCc",
     "image_with_text_pXa4rn"
   ]
