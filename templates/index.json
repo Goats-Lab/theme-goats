@@ -254,7 +254,7 @@
           "settings": {
             "color_scheme": "scheme-4",
             "collection": "pandoras",
-            "image": "shopify://shop_images/8f3526c5511cb2049470df5374d10c6c.jpg",
+            "image": "shopify://shop_images/d468dab1c201074a996afa55e0a04acb.jpg",
             "expand_collection": true,
             "content_position": "place-self-end-center text-center",
             "subheading": "",
@@ -431,6 +431,23 @@
           "type": "collection",
           "settings": {
             "color_scheme": "",
+            "collection": "colecao-swarovski",
+            "image": "shopify://shop_images/e8bd3026829807d6c78ba763f3a9fa51.jpg",
+            "expand_collection": false,
+            "content_position": "place-self-end-center text-center",
+            "subheading": "",
+            "title": "",
+            "button_text": "todas- Swarovski",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 15
+          }
+        },
+        "collection_fLtEH3": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
             "collection": "swarovski-braceletes",
             "image": "shopify://shop_images/45e008139e084f1afd01f446f7c9da1c.jpg",
             "expand_collection": false,
@@ -481,6 +498,7 @@
       },
       "block_order": [
         "collection_ajgUHF",
+        "collection_fLtEH3",
         "collection_WgjLHF",
         "collection_kWPcJ7"
       ],
@@ -702,6 +720,23 @@
           "type": "collection",
           "settings": {
             "color_scheme": "",
+            "collection": "tiffany",
+            "image": "shopify://shop_images/674d81becbd5dda4505cadc9d43707ea.jpg",
+            "expand_collection": false,
+            "content_position": "place-self-end-center text-center",
+            "subheading": "",
+            "title": "",
+            "button_text": "Todas - Tiffany",
+            "button_link": "",
+            "button_style": "outline",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_fejUBG": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
             "collection": "tiffany-anel",
             "image": "shopify://shop_images/96e08654e0ff06dbe143338d96d55af2.jpg",
             "expand_collection": false,
@@ -752,6 +787,7 @@
       },
       "block_order": [
         "collection_8R6QWW",
+        "collection_fejUBG",
         "collection_g4Q9CL",
         "collection_WLTNLG"
       ],
