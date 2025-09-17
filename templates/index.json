@@ -142,6 +142,7 @@
     },
     "blog_posts_EVQ3UF": {
       "type": "blog-posts",
+      "disabled": true,
       "name": "t:sections.blog_posts.presets.blog_posts.name",
       "settings": {
         "color_scheme": "scheme-2",
