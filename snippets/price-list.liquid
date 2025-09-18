@@ -1,6 +1,6 @@
 <price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
   {%- if variant != blank -%}
-    {%- assign pix_price = variant.price | times: 0.85 -%}
+    {%- assign pix_price = variant.price | times: 0.95 -%}
 
     {%- if context == 'product' -%}
       <div class="PixPriceBox" style="margin-bottom: 4px;">
