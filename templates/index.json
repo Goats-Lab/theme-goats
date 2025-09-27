@@ -67,6 +67,7 @@
     },
     "custom_liquid_BfxMgU": {
       "type": "custom-liquid",
+      "disabled": true,
       "custom_css": [
         "#mc-countdown .mc-badge {width: 110px; height: 110px; border-radius: 50%; background: #fff; /* fundo rosa */ color: #000; /* texto preto */ display: grid; place-items: center; font-weight: 800; box-shadow: 0 8px 24px rgba(255, 156, 205, 0.5);}",
         "#mc-countdown .mc-timer {justify-content: center !important; margin: 0 auto !important;}"
@@ -126,27 +127,6 @@
         "cycle_speed": 7,
         "background": "#ffffff",
         "controls_color": "#ffffff"
-      }
-    },
-    "blog_posts_EVQ3UF": {
-      "type": "blog-posts",
-      "disabled": true,
-      "name": "t:sections.blog_posts.presets.blog_posts.name",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "separate_section_with_border": true,
-        "blog": "news",
-        "posts_count": 3,
-        "stack_on_mobile": false,
-        "show_category": true,
-        "show_date": false,
-        "show_excerpt": false,
-        "show_read_more": false,
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "button_link": "shopify://blogs/news",
-        "button_text": "Ver todos"
       }
     },
     "featured_collections_Ujh3MC": {
@@ -286,44 +266,6 @@
         "content": ""
       }
     },
-    "shop_the_look_Rj7meD": {
-      "type": "shop-the-look",
-      "blocks": {
-        "look_EaNmWn": {
-          "type": "look",
-          "settings": {
-            "image": "shopify://shop_images/Shop_the_Look.png",
-            "hot_spots_background": "#ffffff",
-            "product_1": "anel-coracao-brilhante",
-            "product_1_horizontal_position": 17,
-            "product_1_vertical_position": 32,
-            "product_2": "colar-coracao-de-halo-cintilante",
-            "product_2_horizontal_position": 44,
-            "product_2_vertical_position": 73,
-            "product_3": "anel-coracao-vermelho-cintilante",
-            "product_3_horizontal_position": 18,
-            "product_3_vertical_position": 23,
-            "product_4": "",
-            "product_4_horizontal_position": 85,
-            "product_4_vertical_position": 85
-          }
-        }
-      },
-      "block_order": [
-        "look_EaNmWn"
-      ],
-      "disabled": true,
-      "custom_css": [],
-      "name": "t:sections.shop_the_look.presets.shop_the_look.name",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "subheading": "Faça como a Anitta, USE PANDORA.",
-        "title": "",
-        "content": "",
-        "popover_title": "Poucas unidades disponíveis"
-      }
-    },
     "image_with_text_FicW9t": {
       "type": "image-with-text",
       "blocks": {
@@ -461,155 +403,6 @@
         "collections_per_row_desktop": 3,
         "subheading": "",
         "title": "",
-        "content": ""
-      }
-    },
-    "shop_the_look_x8xCEe": {
-      "type": "shop-the-look",
-      "blocks": {
-        "look_ryAeXn": {
-          "type": "look",
-          "settings": {
-            "image": "shopify://shop_images/5c5148cc45b6b7616f76ead8bb735013.jpg",
-            "hot_spots_background": "#f4f4f4",
-            "product_1": "brincos-de-argola-gema",
-            "product_1_horizontal_position": 90,
-            "product_1_vertical_position": 33,
-            "product_2": "brincos-gema",
-            "product_2_horizontal_position": 13,
-            "product_2_vertical_position": 32,
-            "product_3": "colar-de-pedras-preciosas-banhado-a-rodio-multicolorido",
-            "product_3_horizontal_position": 63,
-            "product_3_vertical_position": 63,
-            "product_4": "pulseira-de-pedras-multicoloridas-banhada-a-rodio",
-            "product_4_horizontal_position": 17,
-            "product_4_vertical_position": 95
-          }
-        }
-      },
-      "block_order": [
-        "look_ryAeXn"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".content-over-media {background-color: #ffffff !important;}"
-      ],
-      "name": "t:sections.shop_the_look.presets.shop_the_look.name",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "subheading": "SWAROVSKI - Conjunto Gemas",
-        "title": "",
-        "content": "",
-        "popover_title": "Poucas unidades disponíveis"
-      }
-    },
-    "featured_product_AHC9XD": {
-      "type": "featured-product",
-      "blocks": {
-        "vendor_yVJAWi": {
-          "type": "vendor",
-          "settings": {}
-        },
-        "title_dccccB": {
-          "type": "title",
-          "settings": {
-            "heading_tag": "h3"
-          }
-        },
-        "badges_jXTWVL": {
-          "type": "badges",
-          "settings": {}
-        },
-        "price_3FpcWJ": {
-          "type": "price",
-          "settings": {
-            "show_taxes_notice": false
-          }
-        },
-        "payment_terms_4gPBJN": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "separator_hiimp3": {
-          "type": "separator",
-          "settings": {}
-        },
-        "inventory_79nNBB": {
-          "type": "inventory",
-          "settings": {
-            "show_in_stock_quantity": true,
-            "low_inventory_threshold": 0,
-            "show_progress_bar": true,
-            "progress_bar_max_value": 50
-          }
-        },
-        "globo_product_option_app_block_fTRYqw": {
-          "type": "shopify://apps/globo-product-options-variant/blocks/app-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
-          "settings": {}
-        },
-        "variant_picker_VPw7Hg": {
-          "type": "variant_picker",
-          "settings": {
-            "hide_sold_out_variants": false,
-            "selector_style": "block",
-            "swatch_selector_style": "swatch",
-            "variant_image_options": "",
-            "size_chart_page": ""
-          }
-        },
-        "quantity_selector_6pTgmE": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_fBxzxa": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": false,
-            "show_gift_card_recipient": false,
-            "atc_button_background": "#ff9ccd",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
-          }
-        },
-        "pickup_availability_ryi6tP": {
-          "type": "pickup_availability",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "vendor_yVJAWi",
-        "title_dccccB",
-        "badges_jXTWVL",
-        "price_3FpcWJ",
-        "payment_terms_4gPBJN",
-        "separator_hiimp3",
-        "inventory_79nNBB",
-        "globo_product_option_app_block_fTRYqw",
-        "variant_picker_VPw7Hg",
-        "quantity_selector_6pTgmE",
-        "buy_buttons_fBxzxa",
-        "pickup_availability_ryi6tP"
-      ],
-      "disabled": true,
-      "name": "t:sections.featured_product.presets.featured_product.name",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "product": "pulseira-attract-soul-heart-branco-prata-925",
-        "separate_section_with_border": true,
-        "container_size": "lg",
-        "product_info_size": 34,
-        "center_basic_info": false,
-        "desktop_media_layout": "carousel_thumbnails_bottom",
-        "desktop_media_grid_gap": 21,
-        "mobile_controls": "thumbnails",
-        "enable_media_autoplay": false,
-        "enable_video_looping": true,
-        "enable_image_zoom": false,
-        "max_image_zoom_level": 1,
-        "subheading": "",
-        "title": "Ultimas unidades",
         "content": ""
       }
     },
@@ -878,15 +671,11 @@
     "scrolling_content_6CAnJm",
     "custom_liquid_BfxMgU",
     "slideshow_Cr6bfE",
-    "blog_posts_EVQ3UF",
     "featured_collections_Ujh3MC",
     "image_with_text_x6jHxF",
     "collection_list_ACYycD",
-    "shop_the_look_Rj7meD",
     "image_with_text_FicW9t",
     "collection_list_nVz8kJ",
-    "shop_the_look_x8xCEe",
-    "featured_product_AHC9XD",
     "image_with_text_Mr6VPW",
     "collection_list_Qd99kw",
     "text_with_icons_jgYnYM",
