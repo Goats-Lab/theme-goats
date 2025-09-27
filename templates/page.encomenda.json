@@ -9,6 +9,112 @@
  */
 {
   "sections": {
+    "encomenda_timeline_6mFT6M": {
+      "type": "encomenda-timeline",
+      "blocks": {
+        "step_PkwG8T": {
+          "type": "step",
+          "settings": {
+            "badge": "1",
+            "title": "Pedido",
+            "desc": "Recebemos seu pedido e confirmamos os dados."
+          }
+        },
+        "step_kMYgDx": {
+          "type": "step",
+          "settings": {
+            "badge": "2",
+            "title": "Produção",
+            "desc": "Joia feita sob medida conforme a disponibilidade."
+          }
+        },
+        "step_xdHxUK": {
+          "type": "step",
+          "settings": {
+            "badge": "3",
+            "title": "Acabamento",
+            "desc": "Polimento e revisão de detalhes."
+          }
+        },
+        "step_yYkA4Q": {
+          "type": "step",
+          "settings": {
+            "badge": "4",
+            "title": "Qualidade",
+            "desc": "Inspeção final de qualidade e acondicionamento."
+          }
+        },
+        "step_bWnmNC": {
+          "type": "step",
+          "settings": {
+            "badge": "5",
+            "title": "Envio",
+            "desc": "Código de rastreio e entrega no seu endereço."
+          }
+        },
+        "faq_DVGRcY": {
+          "type": "faq",
+          "settings": {
+            "q": "Como acompanho minha encomenda?",
+            "a": "Atualizamos internamente a cada  2 dias e cada etapa é enviada para seu e-mail, e por fim seu código de rastreio ao despachar."
+          }
+        },
+        "faq_wNceW3": {
+          "type": "faq",
+          "settings": {
+            "q": "Qual o prazo total?",
+            "a": "Até 50 dias úteis, variando por modelo e disponibilidade. Nossa estratégia logística garante que sempre chegará antes!"
+          }
+        },
+        "faq_QcWX6q": {
+          "type": "faq",
+          "settings": {
+            "q": "Qual a vantagem de encomendar?",
+            "a": "Encomendar é garantir a sua joia exclusiva MyCharms, feita sob medida e inspecionada com todo o cuidado — mesmo que não esteja em estoque imediato."
+          }
+        },
+        "trust_izwCdA": {
+          "type": "trust",
+          "settings": {
+            "icon": "🔒",
+            "text": "Compra segura"
+          }
+        },
+        "trust_kG6ag9": {
+          "type": "trust",
+          "settings": {
+            "icon": "💬",
+            "text": "Atendimento rápido"
+          }
+        }
+      },
+      "block_order": [
+        "step_PkwG8T",
+        "step_kMYgDx",
+        "step_xdHxUK",
+        "step_yYkA4Q",
+        "step_bWnmNC",
+        "faq_DVGRcY",
+        "faq_wNceW3",
+        "faq_QcWX6q",
+        "trust_izwCdA",
+        "trust_kG6ag9"
+      ],
+      "name": "Encomenda (Timeline)",
+      "settings": {
+        "pill": "ENCOMENDAS MYCHARMS",
+        "title": "Como funciona",
+        "subtitle": "Peças reservadas e produzidas sob demanda especialmente para você.",
+        "align": "center",
+        "steps_layout": "row",
+        "note": "Prazo estimado total: até 50 dias úteis, podendo variar por modelo e disponibilidade.",
+        "cta_label": "Ver peças sob encomenda",
+        "cta_url": "",
+        "cta2_label": "Falar com atendimento",
+        "cta2_url": "",
+        "color_scheme": "light"
+      }
+    },
     "rich_text_jYfmH9": {
       "type": "rich-text",
       "blocks": {
@@ -555,6 +661,7 @@
     }
   },
   "order": [
+    "encomenda_timeline_6mFT6M",
     "rich_text_jYfmH9",
     "custom_liquid_diLRq4",
     "collection_list_tyHBMA",
