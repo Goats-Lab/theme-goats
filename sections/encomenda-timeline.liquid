@@ -1,0 +1,170 @@
+{% comment %} MyCharms — Encomenda Timeline (Section) {% endcomment %}
+<section id="mc-encomenda-{{ section.id }}" class="mc-encomenda" data-scheme="{{ section.settings.color_scheme }}">
+  <div class="mc-wrap">
+    <header class="mc-head" style="text-align:{{ section.settings.align }}">
+      {% if section.settings.pill != blank %}<span class="mc-pill">{{ section.settings.pill }}</span>{% endif %}
+      <h2 class="mc-title">{{ section.settings.title }}</h2>
+      {% if section.settings.subtitle != blank %}<p class="mc-sub">{{ section.settings.subtitle }}</p>{% endif %}
+    </header>
+
+    {% assign steps = section.blocks | where: 'type', 'step' %}
+    {% if steps.size > 0 %}
+      <ol class="mc-steps" role="list" data-layout="{{ section.settings.steps_layout }}">
+        {% for block in steps %}
+          <li class="mc-step" {{ block.shopify_attributes }}>
+            <div class="mc-node">{{ block.settings.badge | default: forloop.index }}</div>
+            <div class="mc-copy">
+              <div class="mc-label">{{ block.settings.title }}</div>
+              {% if block.settings.desc != blank %}<div class="mc-desc">{{ block.settings.desc }}</div>{% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    {% endif %}
+
+    {% if section.settings.note != blank or section.settings.cta_label != blank or section.settings.cta2_label != blank %}
+      <div class="mc-foot" style="text-align:{{ section.settings.align }}">
+        {% if section.settings.note != blank %}<p class="mc-note">{{ section.settings.note }}</p>{% endif %}
+        <div class="mc-ctas">
+          {% if section.settings.cta_label != blank %}
+            {% assign cta_href = section.settings.cta_url | default: routes.all_products_collection_url %}
+            <a class="mc-btn" href="{{ cta_href }}">{{ section.settings.cta_label }}</a>
+          {% endif %}
+          {% if section.settings.cta2_label != blank and section.settings.cta2_url != blank %}
+            <a class="mc-link" href="{{ section.settings.cta2_url }}" target="_blank" rel="noopener">{{ section.settings.cta2_label }}</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% assign faqs = section.blocks | where: 'type', 'faq' %}
+    {% if faqs.size > 0 %}
+      <div class="mc-faqs">
+        {% for block in faqs %}
+          <details class="mc-faq" {{ block.shopify_attributes }}>
+            <summary>{{ block.settings.q }}</summary>
+            <div class="mc-faq-body">{{ block.settings.a }}</div>
+          </details>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% assign trust = section.blocks | where: 'type', 'trust' %}
+    {% if trust.size > 0 %}
+      <ul class="mc-trust" role="list">
+        {% for block in trust %}
+          <li class="mc-trust-item" {{ block.shopify_attributes }}>
+            {% if block.settings.icon != blank %}<span class="mc-ic">{{ block.settings.icon }}</span>{% endif %}
+            <span class="mc-t">{{ block.settings.text }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  #mc-encomenda-{{ section.id }}{
+    --ink:#1f1f1f; --muted:#666; --line:#e9e9e9; --soft:#fff; --bg:#fff; --accent:#ff9ccd; --radius:16px;
+  }
+  #mc-encomenda-{{ section.id }}[data-scheme="dark"]{ --ink:#ececec; --muted:#b5b5b5; --line:#2b2b2b; --soft:#151515; --bg:#101010; }
+  #mc-encomenda-{{ section.id }} .mc-wrap{max-width:1100px;margin:24px auto;padding:clamp(16px,3vw,28px);background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 12px 28px rgba(0,0,0,.04);color:var(--ink)}
+  #mc-encomenda-{{ section.id }} .mc-head{margin-bottom:18px}
+  #mc-encomenda-{{ section.id }} .mc-pill{display:inline-block;background:rgba(255,156,205,.16);color:var(--accent);border:1px solid rgba(255,156,205,.35);border-radius:999px;padding:6px 10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  #mc-encomenda-{{ section.id }} .mc-title{margin:10px 0 6px;font-size:clamp(1.3rem,3.4vw,2rem);font-weight:800}
+  #mc-encomenda-{{ section.id }} .mc-sub{margin:0;color:var(--muted)}
+
+  /* Steps */
+  #mc-encomenda-{{ section.id }} .mc-steps{list-style:none;margin:26px 0 4px;padding:0;display:grid;gap:18px}
+  #mc-encomenda-{{ section.id }} .mc-steps[data-layout="row"]{grid-template-columns:repeat(5,1fr);position:relative}
+  #mc-encomenda-{{ section.id }} .mc-steps[data-layout="row"]::before{content:"";position:absolute;left:calc(10% - 2px);right:calc(10% - 2px);top:28px;height:2px;background:linear-gradient(90deg, rgba(255,156,205,.55), rgba(255,156,205,.2) 40%, rgba(255,156,205,.55));border-radius:2px;filter:blur(.15px)}
+  #mc-encomenda-{{ section.id }} .mc-step{text-align:left;display:flex;gap:12px;align-items:flex-start}
+  #mc-encomenda-{{ section.id }} .mc-node{min-width:56px;height:56px;display:grid;place-items:center;border-radius:50%;background:radial-gradient(120% 120% at 70% 30%, rgba(255,156,205,.25), rgba(255,156,205,.1) 60%, transparent 100%), var(--soft);border:2px solid var(--accent);font-weight:800;color:var(--accent)}
+  #mc-encomenda-{{ section.id }} .mc-label{font-weight:800}
+  #mc-encomenda-{{ section.id }} .mc-desc{color:var(--muted);margin-top:2px}
+
+  /* Footer / CTAs */
+  #mc-encomenda-{{ section.id }} .mc-foot{margin-top:18px}
+  #mc-encomenda-{{ section.id }} .mc-note{margin:0 0 12px;color:var(--muted)}
+  #mc-encomenda-{{ section.id }} .mc-ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  #mc-encomenda-{{ section.id }} .mc-btn{display:inline-block;padding:.8rem 1.2rem;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+  #mc-encomenda-{{ section.id }} .mc-link{display:inline-block;padding:.8rem 1rem;border-radius:999px;border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:700}
+
+  /* FAQs */
+  #mc-encomenda-{{ section.id }} .mc-faqs{margin-top:18px;display:grid;gap:10px}
+  #mc-encomenda-{{ section.id }} .mc-faq summary{cursor:pointer;padding:10px 12px;background:var(--soft);border:1px solid var(--line);border-radius:12px;font-weight:700}
+  #mc-encomenda-{{ section.id }} .mc-faq-body{border:1px solid var(--line);border-top:0;padding:10px 14px;border-radius:0 0 12px 12px;color:var(--muted)}
+
+  /* Trust row */
+  #mc-encomenda-{{ section.id }} .mc-trust{margin:18px 0 0;padding:0;list-style:none;display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+  #mc-encomenda-{{ section.id }} .mc-trust-item{display:flex;align-items:center;gap:8px;padding:8px 12px;border:1px dashed var(--line);border-radius:999px;color:var(--muted)}
+  #mc-encomenda-{{ section.id }} .mc-trust-item .mc-ic{font-size:18px}
+
+  /* Responsive */
+  @media (max-width: 960px){
+    #mc-encomenda-{{ section.id }} .mc-steps[data-layout="row"]{grid-template-columns:1fr}
+    #mc-encomenda-{{ section.id }} .mc-steps[data-layout="row"]::before{display:none}
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Encomenda (Timeline)",
+  "settings": [
+    { "type": "text", "id": "pill", "label": "Pílula", "default": "ENCOMENDAS MYCHARMS" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Como funciona" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtítulo", "default": "Peças reservadas e produzidas sob demanda especialmente para você." },
+    { "type": "select", "id": "align", "label": "Alinhamento do cabeçalho", "options": [{"value":"left","label":"Esquerda"},{"value":"center","label":"Centralizado"}], "default": "center" },
+    { "type": "select", "id": "steps_layout", "label": "Layout das etapas", "options": [{"value":"row","label":"Linha (desktop) → coluna (mobile)"}], "default": "row" },
+    { "type": "text", "id": "note", "label": "Nota de prazo", "default": "Prazo estimado total: até 50 dias úteis, podendo variar por modelo e disponibilidade." },
+    { "type": "text", "id": "cta_label", "label": "CTA principal — texto", "default": "Ver peças sob encomenda" },
+    { "type": "url",  "id": "cta_url",  "label": "CTA principal — link" },
+    { "type": "text", "id": "cta2_label", "label": "CTA secundário — texto", "default": "Falar com atendimento" },
+    { "type": "url",  "id": "cta2_url", "label": "CTA secundário — link" },
+    { "type": "select", "id": "color_scheme", "label": "Esquema de cor", "options": [{"value":"light","label":"Claro"},{"value":"dark","label":"Escuro"}], "default": "light" }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Etapa",
+      "settings": [
+        { "type":"text", "id":"badge", "label":"Número/ícone do selo", "default":"1" },
+        { "type":"text", "id":"title", "label":"Título da etapa", "default":"Pedido" },
+        { "type":"textarea", "id":"desc", "label":"Descrição", "default":"Recebemos seu pedido e confirmamos os dados." }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": [
+        { "type":"text", "id":"q", "label":"Pergunta", "default":"Como acompanho minha encomenda?" },
+        { "type":"textarea", "id":"a", "label":"Resposta", "default":"Atualizamos internamente cada etapa e enviamos seu código de rastreio ao despachar." }
+      ]
+    },
+    {
+      "type": "trust",
+      "name": "Selo/Confiança",
+      "settings": [
+        { "type":"text", "id":"icon", "label":"Ícone (emoji opcional)", "default":"✅" },
+        { "type":"text", "id":"text", "label":"Texto", "default":"Garantia e suporte humanizado" }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Encomenda (Timeline)",
+      "blocks": [
+        { "type":"step", "settings":{ "badge":"1", "title":"Pedido", "desc":"Recebemos seu pedido e confirmamos os dados." } },
+        { "type":"step", "settings":{ "badge":"2", "title":"Produção", "desc":"Joia feita sob medida conforme a disponibilidade." } },
+        { "type":"step", "settings":{ "badge":"3", "title":"Acabamento", "desc":"Polimento e revisão de detalhes." } },
+        { "type":"step", "settings":{ "badge":"4", "title":"Qualidade", "desc":"Inspeção final de qualidade e acondicionamento." } },
+        { "type":"step", "settings":{ "badge":"5", "title":"Envio", "desc":"Código de rastreio e entrega no seu endereço." } },
+        { "type":"faq",  "settings":{ "q":"Qual o prazo total?", "a":"Até 50 dias úteis, variando por modelo e disponibilidade." } },
+        { "type":"trust","settings":{ "icon":"🔒", "text":"Compra segura" } },
+        { "type":"trust","settings":{ "icon":"💬", "text":"Atendimento rápido" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
