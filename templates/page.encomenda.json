@@ -72,20 +72,6 @@
             "q": "Qual a vantagem de encomendar?",
             "a": "Encomendar é garantir a sua joia exclusiva MyCharms, feita sob medida e inspecionada com todo o cuidado — mesmo que não esteja em estoque imediato."
           }
-        },
-        "trust_izwCdA": {
-          "type": "trust",
-          "settings": {
-            "icon": "🔒",
-            "text": "Compra segura"
-          }
-        },
-        "trust_kG6ag9": {
-          "type": "trust",
-          "settings": {
-            "icon": "💬",
-            "text": "Atendimento rápido"
-          }
         }
       },
       "block_order": [
@@ -96,19 +82,17 @@
         "step_bWnmNC",
         "faq_DVGRcY",
         "faq_wNceW3",
-        "faq_QcWX6q",
-        "trust_izwCdA",
-        "trust_kG6ag9"
+        "faq_QcWX6q"
       ],
       "name": "Encomenda (Timeline)",
       "settings": {
         "pill": "ENCOMENDAS MYCHARMS",
-        "title": "Como funciona",
+        "title": "Como funciona?",
         "subtitle": "Peças reservadas e produzidas sob demanda especialmente para você.",
         "align": "center",
         "steps_layout": "row",
         "note": "Prazo estimado total: até 50 dias úteis, podendo variar por modelo e disponibilidade.",
-        "cta_label": "Ver peças sob encomenda",
+        "cta_label": "",
         "cta_url": "",
         "cta2_label": "Falar com atendimento",
         "cta2_url": "",
