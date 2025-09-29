@@ -1,5 +1,5 @@
 {% comment %}
-  TIKTOK FEED – robusto com fallback + script sempre
+  TIKTOK FEED – robusto com fallback
 {% endcomment %}
 
 <section class="tiktok-feed color-scheme color-scheme--scheme-2" style="--gap: {{ section.settings.gap }}px;">
@@ -25,13 +25,6 @@
         {% assign raw = block.settings.tiktok_url | strip %}
         {% if raw != blank %}
 
-          {%- comment -%} Alerta para links curtos (não extraem ID) {%- endcomment -%}
-          {%- assign is_short = false -%}
-          {%- if raw contains 'vm.tiktok.com' or raw contains 'vt.tiktok.com' -%}
-            {%- assign is_short = true -%}
-          {%- endif -%}
-
-          {%- comment -%} Normaliza e tenta extrair o ID após "video/" {%- endcomment -%}
           {%- assign url = raw
             | replace: '%2F', '/'
             | replace: '%3F', '?'
@@ -48,30 +41,34 @@
           {%- assign video_id = id_candidate | split: '/' | first | strip -%}
 
           <article class="tiktok-feed__item" {{ block.shopify_attributes }}>
-            {% if is_short %}
-              <div style="padding:12px;border:1px dashed #e2e2e2;border-radius:8px;font-size:.9rem;">
-                O link parece ser curto (<code>vm.tiktok.com</code>). Abra o vídeo no navegador e cole o
-                link completo neste formato: <em>https://www.tiktok.com/@usuario/video/1234567890123456789</em>.
-              </div>
-            {% else %}
-              <div class="tiktok-embed-wrapper" style="aspect-ratio: {{ section.settings.aspect_ratio }}; border-radius: {{ section.settings.radius }}px; overflow: hidden; min-height: 320px;">
-                {% if video_id != blank and section.settings.embed_mode == 'iframe' %}
+            <div class="tiktok-embed-wrapper"
+                 style="aspect-ratio: {{ section.settings.aspect_ratio }}; border-radius: {{ section.settings.radius }}px; overflow: hidden; min-height: 320px;">
+
+              {% if video_id != blank and section.settings.embed_mode == 'iframe' %}
+                {% if raw contains '/video/' and raw contains 'tiktok.com/@' %}
                   <iframe
                     src="https://www.tiktok.com/embed/v2/{{ video_id }}?lang=pt-BR"
                     allowfullscreen
                     loading="lazy"
                     referrerpolicy="strict-origin-when-cross-origin"
-                    style="width:100%; height:100%; border:0;"
-                  ></iframe>
+                    style="width:100%; height:100%; border:0;">
+                  </iframe>
                 {% else %}
-                  {%- comment -%} Fallback oficial (blockquote + embed.js) {%- endcomment -%}
-                  <blockquote class="tiktok-embed" cite="{{ raw }}" data-video-id="{{ video_id }}" style="margin:0; width:100%; height:100%;">
+                  <blockquote class="tiktok-embed"
+                              cite="{{ raw }}"
+                              style="margin:0; width:100%; height:100%;">
                     <section>Carregando TikTok…</section>
                   </blockquote>
                 {% endif %}
-              </div>
-            {% endif %}
+              {% else %}
+                <blockquote class="tiktok-embed"
+                            cite="{{ raw }}"
+                            style="margin:0; width:100%; height:100%;">
+                  <section>Carregando TikTok…</section>
+                </blockquote>
+              {% endif %}
 
+            </div>
             {% if block.settings.caption != blank %}
               <p class="tiktok-feed__caption">{{ block.settings.caption }}</p>
             {% endif %}
@@ -123,7 +120,7 @@
       "type": "video",
       "name": "Vídeo do TikTok",
       "settings": [
-        { "type": "text", "id": "tiktok_url", "label": "URL do vídeo do TikTok", "info": "Cole o link completo do navegador (evite vm.tiktok.com / vt.tiktok.com)." },
+        { "type": "text", "id": "tiktok_url", "label": "URL do vídeo do TikTok", "info": "Cole o link completo do navegador (evite vm.tiktok.com/vt.tiktok.com)." },
         { "type": "text", "id": "caption", "label": "Legenda curta (opcional)" }
       ]
     }
@@ -132,8 +129,4 @@
 }
 {% endschema %}
 
-{%- comment -%}
- Carrega SEMPRE o script do TikTok para o fallback funcionar,
- inclusive no Theme Editor.
-{%- endcomment -%}
 <script async src="https://www.tiktok.com/embed.js"></script>
