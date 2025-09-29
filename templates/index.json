@@ -129,6 +129,44 @@
         "controls_color": "#ffffff"
       }
     },
+    "tiktok_feed_6P3RAF": {
+      "type": "tiktok-feed",
+      "blocks": {
+        "video_nFVq7d": {
+          "type": "video",
+          "settings": {
+            "tiktok_url": "https://vm.tiktok.com/ZMAaRd4Ln",
+            "caption": ""
+          }
+        },
+        "video_QypMfy": {
+          "type": "video",
+          "settings": {
+            "tiktok_url": "https://vm.tiktok.com/ZMAaReC4L/",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_nFVq7d",
+        "video_QypMfy"
+      ],
+      "name": "TikTok – Mural de Vídeos",
+      "settings": {
+        "kicker": "Feedbacks reais",
+        "title": "O que a galera posta no TikTok",
+        "subtitle": "Conteúdo criado por clientes e pela nossa equipe.",
+        "heading_align": "center",
+        "handle": "",
+        "profile_url": "",
+        "cols_mobile": "1",
+        "cols_desktop": 3,
+        "gap": 16,
+        "aspect_ratio": "9/16",
+        "radius": 12,
+        "embed_mode": "iframe"
+      }
+    },
     "featured_collections_Ujh3MC": {
       "type": "featured-collections",
       "blocks": {
@@ -671,6 +709,7 @@
     "scrolling_content_6CAnJm",
     "custom_liquid_BfxMgU",
     "slideshow_Cr6bfE",
+    "tiktok_feed_6P3RAF",
     "featured_collections_Ujh3MC",
     "image_with_text_x6jHxF",
     "collection_list_ACYycD",
