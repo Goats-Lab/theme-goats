@@ -1,10 +1,6 @@
 {% comment %}
-  TIKTOK FEED – seção custom
-  Cole links do TikTok no editor do tema (um por bloco).
-  Aceita URLs do tipo: https://www.tiktok.com/@usuario/video/1234567890123456789
-  O código extrai o ID do vídeo e usa o embed v2 do TikTok.
+  TIKTOK FEED – robusto com fallback
 {% endcomment %}
-
 
 <section class="tiktok-feed color-scheme color-scheme--scheme-2" style="--gap: {{ section.settings.gap }}px;">
   <div class="container">
@@ -13,7 +9,6 @@
         {% if section.settings.kicker != blank %}<p class="h6">{{ section.settings.kicker }}</p>{% endif %}
         {% if section.settings.title != blank %}<h2 class="h2">{{ section.settings.title }}</h2>{% endif %}
         {% if section.settings.subtitle != blank %}<p class="prose">{{ section.settings.subtitle }}</p>{% endif %}
-
         {% if section.settings.profile_url != blank %}
           <p style="margin-top:.5rem">
             <a class="link-faded-reverse" href="{{ section.settings.profile_url }}" target="_blank" rel="noopener">
@@ -27,28 +22,45 @@
     <div class="tiktok-feed__grid"
          style="--cols-mobile: {{ section.settings.cols_mobile }}; --cols-desktop: {{ section.settings.cols_desktop }};">
       {% for block in section.blocks %}
-        {% assign url = block.settings.tiktok_url | strip %}
-        {% if url != blank %}
-          {%- assign parts = url | split: '/video/' -%}
-          {%- assign id_with_query = parts | last -%}
-          {%- assign video_id = id_with_query | split: '?' | first | strip -%}
+        {% assign raw = block.settings.tiktok_url | strip %}
+        {% if raw != blank %}
+          {%- comment -%}Normaliza URL e extrai ID após "video/".{%- endcomment -%}
+          {%- assign url = raw
+            | replace: '%2F', '/'
+            | replace: '%3F', '?'
+            | replace: '%3D', '='
+            | replace: '%26', '&'
+          -%}
+          {%- assign after_video = '' -%}
+          {%- if url contains '/video/' -%}
+            {%- assign after_video = url | split: '/video/' | last -%}
+          {%- elsif url contains 'video/' -%}
+            {%- assign after_video = url | split: 'video/' | last -%}
+          {%- endif -%}
+          {%- assign id_candidate = after_video | split: '?' | first | strip -%}
+          {%- assign video_id = id_candidate | split: '/' | first | strip -%}
 
-          {% if video_id != blank %}
-            <article class="tiktok-feed__item" {{ block.shopify_attributes }}>
-              <div class="tiktok-embed-wrapper" style="aspect-ratio: {{ section.settings.aspect_ratio }}; border-radius: {{ section.settings.radius }}px; overflow: hidden;">
+          <article class="tiktok-feed__item" {{ block.shopify_attributes }}>
+            <div class="tiktok-embed-wrapper" style="aspect-ratio: {{ section.settings.aspect_ratio }}; border-radius: {{ section.settings.radius }}px; overflow: hidden;">
+              {% if video_id != blank and section.settings.embed_mode == 'iframe' %}
                 <iframe
-                  src="https://www.tiktok.com/embed/v2/{{ video_id }}"
+                  src="https://www.tiktok.com/embed/v2/{{ video_id }}?lang=pt-BR"
                   allowfullscreen
                   loading="lazy"
                   referrerpolicy="strict-origin-when-cross-origin"
                   style="width:100%; height:100%; border:0;"
                 ></iframe>
-              </div>
-              {% if block.settings.caption != blank %}
-                <p class="tiktok-feed__caption">{{ block.settings.caption }}</p>
+              {% else %}
+                {%- comment -%}Fallback oficial (blockquote + embed.js){%- endcomment -%}
+                <blockquote class="tiktok-embed" cite="{{ raw }}" data-video-id="{{ video_id }}" style="margin:0; width:100%; height:100%;">
+                  <section>Carregando TikTok…</section>
+                </blockquote>
               {% endif %}
-            </article>
-          {% endif %}
+            </div>
+            {% if block.settings.caption != blank %}
+              <p class="tiktok-feed__caption">{{ block.settings.caption }}</p>
+            {% endif %}
+          </article>
         {% endif %}
       {% endfor %}
     </div>
@@ -57,14 +69,8 @@
 
 <style>
 .tiktok-feed .container { max-width: var(--container-xl-max-width); margin-inline: auto; padding-inline: var(--container-gutter); }
-.tiktok-feed__grid {
-  display: grid;
-  gap: var(--gap, 16px);
-  grid-template-columns: repeat(var(--cols-mobile, 1), 1fr);
-}
-@media (min-width: 700px) {
-  .tiktok-feed__grid { grid-template-columns: repeat(var(--cols-desktop, 3), 1fr); }
-}
+.tiktok-feed__grid { display: grid; gap: var(--gap, 16px); grid-template-columns: repeat(var(--cols-mobile, 1), 1fr); }
+@media (min-width: 700px) { .tiktok-feed__grid { grid-template-columns: repeat(var(--cols-desktop, 3), 1fr); } }
 .tiktok-feed__header .prose { opacity:.8; }
 .tiktok-feed__caption { margin-top:.5rem; font-size: var(--text-sm); opacity:.8; }
 </style>
@@ -77,48 +83,40 @@
     { "type": "text", "id": "title", "label": "Título", "default": "O que a galera posta no TikTok" },
     { "type": "textarea", "id": "subtitle", "label": "Subtítulo", "default": "Conteúdo criado por clientes e pela nossa equipe." },
     { "type": "select", "id": "heading_align", "label": "Alinhamento do título", "default": "center",
-      "options": [
-        { "value": "left", "label": "Esquerda" },
-        { "value": "center", "label": "Centro" },
-        { "value": "right", "label": "Direita" }
-      ]
+      "options": [ { "value": "left", "label": "Esquerda" }, { "value": "center", "label": "Centro" }, { "value": "right", "label": "Direita" } ]
     },
     { "type": "text", "id": "handle", "label": "@ da marca (opcional)" },
     { "type": "url", "id": "profile_url", "label": "Link do perfil (opcional)" },
 
-    {
-      "type": "select",
-      "id": "cols_mobile",
-      "label": "Colunas no mobile",
-      "default": "1",
-      "options": [
-        { "value": "1", "label": "1 coluna" },
-        { "value": "2", "label": "2 colunas" }
-      ]
+    { "type": "select", "id": "cols_mobile", "label": "Colunas no mobile", "default": "1",
+      "options": [ { "value": "1", "label": "1 coluna" }, { "value": "2", "label": "2 colunas" } ]
     },
     { "type": "range", "id": "cols_desktop", "min": 2, "max": 4, "step": 1, "label": "Colunas no desktop", "default": 3 },
     { "type": "range", "id": "gap", "min": 8, "max": 32, "step": 2, "label": "Espaçamento entre cards (px)", "default": 16 },
+
     { "type": "select", "id": "aspect_ratio", "label": "Proporção do vídeo", "default": "9/16",
-      "options": [
-        { "value": "9/16", "label": "Vertical (9:16)" },
-        { "value": "3/4",  "label": "3:4" },
-        { "value": "1/1",  "label": "Quadrado (1:1)" }
-      ]
+      "options": [ { "value": "9/16", "label": "Vertical (9:16)" }, { "value": "3/4",  "label": "3:4" }, { "value": "1/1",  "label": "Quadrado (1:1)" } ]
     },
-    { "type": "range", "id": "radius", "min": 0, "max": 24, "step": 2, "label": "Arredondamento dos cantos (px)", "default": 12 }
+    { "type": "range", "id": "radius", "min": 0, "max": 24, "step": 2, "label": "Arredondamento dos cantos (px)", "default": 12 },
+
+    { "type": "select", "id": "embed_mode", "label": "Modo de embed", "default": "iframe",
+      "options": [ { "value": "iframe", "label": "Iframe v2 (rápido)" }, { "value": "script", "label": "Fallback oficial (blockquote)" } ]
+    }
   ],
   "blocks": [
     {
       "type": "video",
       "name": "Vídeo do TikTok",
       "settings": [
-        { "type": "text", "id": "tiktok_url", "label": "URL do vídeo do TikTok", "info": "Ex.: https://www.tiktok.com/@xogangbr/video/1234567890123456789" },
+        { "type": "text", "id": "tiktok_url", "label": "URL do vídeo do TikTok", "info": "Use o link completo do navegador (não o link curto vm.tiktok.com/vt.tiktok.com)." },
         { "type": "text", "id": "caption", "label": "Legenda curta (opcional)" }
       ]
     }
   ],
-  "presets": [
-    { "name": "TikTok – Mural de Vídeos", "category": "Social / UGC" }
-  ]
+  "presets": [ { "name": "TikTok – Mural de Vídeos", "category": "Social / UGC" } ]
 }
 {% endschema %}
+
+{% if section.settings.embed_mode == 'script' %}
+  <script async src="https://www.tiktok.com/embed.js"></script>
+{% endif %}
