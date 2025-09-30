@@ -8,7 +8,7 @@
     {% if section.settings.subtitle != blank %}<span class="mc-bs__kicker">{{ section.settings.subtitle }}</span>{% endif %}
     {% if section.settings.title != blank %}<h2 class="mc-bs__title">{{ section.settings.title }}</h2>{% endif %}
   </div>
-
+  
   {% assign coll = collections[section.settings.collection] %}
   {% if coll and coll.products_count > 0 %}
     <div class="mc-bs__rail-wrap">
