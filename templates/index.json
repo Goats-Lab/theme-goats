@@ -129,27 +129,43 @@
         "controls_color": "#ffffff"
       }
     },
+    "custom_liquid_nL4PjV": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "liquid": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br\" data-unique-id=\"my.charms.br\" data-embed-type=\"creator\" style=\"max-width: 780px; min-width: 288px;\" > <section> <a target=\"_blank\" href=\"https://www.tiktok.com/@my.charms.br?refer=creator_embed\">@my.charms.br</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
+        "text_alignment": "center"
+      }
+    },
+    "custom_liquid_N4YBjp": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7555571198193569035\" data-video-id=\"7555571198193569035\" style=\"max-width: 605px;min-width: 325px;\" > <section> <a target=\"_blank\" title=\"@my.charms.br\" href=\"https://www.tiktok.com/@my.charms.br?refer=embed\">@my.charms.br</a> Tiffany pandora e Swarovski e só na MyCharms mesmo… <a title=\"pandora\" target=\"_blank\" href=\"https://www.tiktok.com/tag/pandora?refer=embed\">#pandora</a> <a title=\"tiffany\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tiffany?refer=embed\">#tiffany</a> <a title=\"swarovski\" target=\"_blank\" href=\"https://www.tiktok.com/tag/swarovski?refer=embed\">#swarovski</a> <a target=\"_blank\" title=\"♬ som original - My Charms 🩷\" href=\"https://www.tiktok.com/music/som-original-7555571192414620427?refer=embed\">♬ som original - My Charms 🩷</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
+        "text_alignment": "center"
+      }
+    },
     "tiktok_feed_6P3RAF": {
       "type": "tiktok-feed",
       "blocks": {
-        "video_nFVq7d": {
+        "video_hq6WzM": {
           "type": "video",
           "settings": {
-            "tiktok_url": "https://vm.tiktok.com/ZMAaRd4Ln",
-            "caption": ""
-          }
-        },
-        "video_QypMfy": {
-          "type": "video",
-          "settings": {
-            "tiktok_url": "https://vm.tiktok.com/ZMAaReC4L/",
+            "tiktok_url": "",
             "caption": ""
           }
         }
       },
       "block_order": [
-        "video_nFVq7d",
-        "video_QypMfy"
+        "video_hq6WzM"
       ],
       "name": "TikTok – Mural de Vídeos",
       "settings": {
@@ -709,6 +725,8 @@
     "scrolling_content_6CAnJm",
     "custom_liquid_BfxMgU",
     "slideshow_Cr6bfE",
+    "custom_liquid_nL4PjV",
+    "custom_liquid_N4YBjp",
     "tiktok_feed_6P3RAF",
     "featured_collections_Ujh3MC",
     "image_with_text_x6jHxF",
