@@ -93,24 +93,6 @@
         "text_color": "#ffffff"
       }
     },
-    "recently_viewed_products_PdfYr6": {
-      "type": "recently-viewed-products",
-      "name": "t:sections.recently_viewed_products.presets.recently_viewed_products.name",
-      "settings": {
-        "separate_section_with_border": true,
-        "color_scheme": "scheme-2",
-        "hide_product_information": false,
-        "stack_products": false,
-        "products_count": 9,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "<strong>Recomendados para você! </strong>",
-        "title": "",
-        "content": ""
-      }
-    },
     "slideshow_Cr6bfE": {
       "type": "slideshow",
       "blocks": {
@@ -156,6 +138,56 @@
         "cycle_speed": 7,
         "background": "#ffffff",
         "controls_color": "#ffffff"
+      }
+    },
+    "custom_liquid_WpMAQh": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "",
+        "text_alignment": "center"
+      }
+    },
+    "mais_vendidos_YK4hpG": {
+      "type": "mais-vendidos",
+      "name": "Mais vendidos",
+      "settings": {
+        "kicker": "",
+        "title": "Mais vendidos",
+        "subtitle": "Confira as peças mais queridas da My Charms",
+        "heading_align": "center",
+        "collection": "mais-vendidos-my-charms",
+        "products_to_show": 24,
+        "as_carousel": true,
+        "show_arrows": true,
+        "gap": 16,
+        "item_w_mobile": 80,
+        "item_w_desktop": 24,
+        "cols_mobile": 2,
+        "cols_desktop": 4,
+        "view_all": false
+      }
+    },
+    "recently_viewed_products_PdfYr6": {
+      "type": "recently-viewed-products",
+      "name": "t:sections.recently_viewed_products.presets.recently_viewed_products.name",
+      "settings": {
+        "separate_section_with_border": true,
+        "color_scheme": "scheme-2",
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_count": 9,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "<strong>Recomendados para você! </strong>",
+        "title": "",
+        "content": ""
       }
     },
     "custom_liquid_nL4PjV": {
@@ -770,6 +802,8 @@
     "image_with_text_overlay_VjDQtD",
     "scrolling_content_6CAnJm",
     "slideshow_Cr6bfE",
+    "custom_liquid_WpMAQh",
+    "mais_vendidos_YK4hpG",
     "recently_viewed_products_PdfYr6",
     "custom_liquid_nL4PjV",
     "tiktok_feed_kaBWXT",
