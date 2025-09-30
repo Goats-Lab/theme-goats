@@ -239,10 +239,10 @@
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
         "color_scheme": "scheme-2",
-        "separate_section_with_border": false,
-        "image_size": "auto",
+        "separate_section_with_border": true,
+        "image_size": "sm",
         "show_text_outside": false,
-        "space_items": true,
+        "space_items": false,
         "stack_collections": false,
         "collections_per_row_mobile": "1",
         "collections_per_row_desktop": 3,
@@ -697,6 +697,36 @@
         "item_w_desktop": 32
       }
     },
+    "featured_collections_aVbznB": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_ChmGwk": {
+          "type": "collection",
+          "settings": {
+            "collection": "descontos-do-mes",
+            "products_count": 8,
+            "title": "OFERTAS DO MÊS",
+            "link_url": "",
+            "link_text": "VER TODOS"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ChmGwk"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "<strong>Setembro - 10%OFF</strong>"
+      }
+    },
     "featured_collections_Ujh3MC": {
       "type": "featured-collections",
       "blocks": {
@@ -827,36 +857,6 @@
         "button_2_text": "",
         "button_2_link": "",
         "button_2_style": "solid"
-      }
-    },
-    "featured_collections_aVbznB": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_ChmGwk": {
-          "type": "collection",
-          "settings": {
-            "collection": "descontos-do-mes",
-            "products_count": 8,
-            "title": "OFERTAS DO MÊS",
-            "link_url": "",
-            "link_text": "VER TODOS"
-          }
-        }
-      },
-      "block_order": [
-        "collection_ChmGwk"
-      ],
-      "name": "t:sections.featured_collections.presets.featured_collections.name",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "separate_section_with_border": true,
-        "hide_product_information": true,
-        "stack_products": true,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "<strong>Setembro - 10%OFF</strong>"
       }
     }
   },
