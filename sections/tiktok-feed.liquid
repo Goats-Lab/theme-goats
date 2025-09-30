@@ -1,132 +1,149 @@
 {% comment %}
-  TIKTOK FEED – robusto com fallback
+  TIKTOK – Carrossel (Embed) • MyCharms styling (#ff9ccd)
+  Cada bloco aceita o <blockquote class="tiktok-embed">...</blockquote> oficial do TikTok.
 {% endcomment %}
 
-<section class="tiktok-feed color-scheme color-scheme--scheme-2" style="--gap: {{ section.settings.gap }}px;">
+<section class="tiktok-carousel color-scheme color-scheme--scheme-2"
+         style="--gap: {{ section.settings.gap }}px;
+                --item-w-mobile: {{ section.settings.item_w_mobile }}%;
+                --item-w-desktop: {{ section.settings.item_w_desktop }}%;
+                --radius: {{ section.settings.radius }}px;
+                --brand: #ff9ccd;">
   <div class="container">
     {% if section.settings.title != blank or section.settings.subtitle != blank %}
-      <div class="tiktok-feed__header" style="text-align: {{ section.settings.heading_align }};">
+      <div class="tk-header" style="text-align: {{ section.settings.heading_align }};">
         {% if section.settings.kicker != blank %}<p class="h6">{{ section.settings.kicker }}</p>{% endif %}
-        {% if section.settings.title != blank %}<h2 class="h2">{{ section.settings.title }}</h2>{% endif %}
+        {% if section.settings.title  != blank %}<h2 class="h2">{{ section.settings.title }}</h2>{% endif %}
         {% if section.settings.subtitle != blank %}<p class="prose">{{ section.settings.subtitle }}</p>{% endif %}
-        {% if section.settings.profile_url != blank %}
-          <p style="margin-top:.5rem">
-            <a class="link-faded-reverse" href="{{ section.settings.profile_url }}" target="_blank" rel="noopener">
-              Ver mais no TikTok {% if section.settings.handle != blank %}(@{{ section.settings.handle }}){% endif %}
-            </a>
-          </p>
-        {% endif %}
       </div>
     {% endif %}
 
-    <div class="tiktok-feed__grid"
-         style="--cols-mobile: {{ section.settings.cols_mobile }}; --cols-desktop: {{ section.settings.cols_desktop }};">
-      {% for block in section.blocks %}
-        {% assign raw = block.settings.tiktok_url | strip %}
-        {% if raw != blank %}
+    <div class="tk-wrap">
+      {% if section.settings.show_arrows %}
+        <button class="tk-arrow tk-prev" type="button" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+      {% endif %}
 
-          {%- assign url = raw
-            | replace: '%2F', '/'
-            | replace: '%3F', '?'
-            | replace: '%3D', '='
-            | replace: '%26', '&'
-          -%}
-          {%- assign after_video = '' -%}
-          {%- if url contains '/video/' -%}
-            {%- assign after_video = url | split: '/video/' | last -%}
-          {%- elsif url contains 'video/' -%}
-            {%- assign after_video = url | split: 'video/' | last -%}
-          {%- endif -%}
-          {%- assign id_candidate = after_video | split: '?' | first | strip -%}
-          {%- assign video_id = id_candidate | split: '/' | first | strip -%}
-
-          <article class="tiktok-feed__item" {{ block.shopify_attributes }}>
-            <div class="tiktok-embed-wrapper"
-                 style="aspect-ratio: {{ section.settings.aspect_ratio }}; border-radius: {{ section.settings.radius }}px; overflow: hidden; min-height: 320px;">
-
-              {% if video_id != blank and section.settings.embed_mode == 'iframe' %}
-                {% if raw contains '/video/' and raw contains 'tiktok.com/@' %}
-                  <iframe
-                    src="https://www.tiktok.com/embed/v2/{{ video_id }}?lang=pt-BR"
-                    allowfullscreen
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    style="width:100%; height:100%; border:0;">
-                  </iframe>
-                {% else %}
-                  <blockquote class="tiktok-embed"
-                              cite="{{ raw }}"
-                              style="margin:0; width:100%; height:100%;">
-                    <section>Carregando TikTok…</section>
-                  </blockquote>
-                {% endif %}
-              {% else %}
-                <blockquote class="tiktok-embed"
-                            cite="{{ raw }}"
-                            style="margin:0; width:100%; height:100%;">
-                  <section>Carregando TikTok…</section>
-                </blockquote>
-              {% endif %}
-
-            </div>
+      <div class="tk-track" id="tk-{{ section.id }}" tabindex="0">
+        {% for block in section.blocks %}
+          <article class="tk-item" {{ block.shopify_attributes }}>
+            <div class="tk-embed">{{ block.settings.embed_code }}</div>
             {% if block.settings.caption != blank %}
-              <p class="tiktok-feed__caption">{{ block.settings.caption }}</p>
+              <p class="tk-caption">{{ block.settings.caption }}</p>
             {% endif %}
           </article>
-        {% endif %}
-      {% endfor %}
+        {% endfor %}
+      </div>
+
+      {% if section.settings.show_arrows %}
+        <button class="tk-arrow tk-next" type="button" aria-label="Próximo">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="m10 6 1.41 1.41L7.83 11H18v2H7.83l3.58 3.59L10 18l-6-6z"/></svg>
+        </button>
+      {% endif %}
     </div>
   </div>
 </section>
 
 <style>
-.tiktok-feed .container { max-width: var(--container-xl-max-width); margin-inline: auto; padding-inline: var(--container-gutter); }
-.tiktok-feed__grid { display: grid; gap: var(--gap, 16px); grid-template-columns: repeat(var(--cols-mobile, 1), 1fr); }
-@media (min-width: 700px) { .tiktok-feed__grid { grid-template-columns: repeat(var(--cols-desktop, 3), 1fr); } }
-.tiktok-feed__header .prose { opacity:.8; }
-.tiktok-feed__caption { margin-top:.5rem; font-size: var(--text-sm); opacity:.8; }
+.tiktok-carousel .container { max-width: var(--container-xl-max-width); margin-inline:auto; padding-inline: var(--container-gutter); }
+.tk-header .prose { opacity:.8; }
+
+.tk-wrap { position: relative; }
+.tk-track {
+  display: flex; gap: var(--gap, 16px);
+  overflow-x: auto; overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory; scroll-padding-inline: 8px;
+  padding: 2px 2px 8px;
+}
+.tk-track::-webkit-scrollbar { height: 8px; }
+.tk-track::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 999px; }
+
+.tk-item { flex: 0 0 var(--item-w-mobile, 88%); scroll-snap-align: start; min-width: 240px; }
+@media (min-width: 900px){ .tk-item { flex-basis: var(--item-w-desktop, 32%); } }
+
+.tk-embed {
+  border-radius: var(--radius, 12px);
+  overflow: hidden;
+  background: #fff;
+  min-height: 320px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.tk-caption { margin-top:.5rem; font-size: var(--text-sm); opacity:.85; }
+
+.tk-arrow {
+  position: absolute; top: 42%; transform: translateY(-50%);
+  z-index: 2; width: 42px; height: 42px;
+  border-radius: 999px; border: 0;
+  background: var(--brand); color:#fff;
+  display: grid; place-items: center; cursor: pointer;
+  box-shadow: 0 8px 18px rgba(255,156,205,.35);
+  transition: transform .15s ease, opacity .2s ease, box-shadow .2s;
+}
+.tk-arrow:hover { transform: translateY(-50%) scale(1.04); box-shadow: 0 10px 20px rgba(255,156,205,.45); }
+.tk-prev { left: -6px; } .tk-next { right: -6px; }
+@media (hover: none){ .tk-arrow { display: none; } }
+
+.tk-track:focus { outline: 2px solid var(--brand); outline-offset: 2px; border-radius: 10px; }
 </style>
 
 {% schema %}
 {
-  "name": "TikTok – Mural de Vídeos",
+  "name": "TikTok Carousel",
   "settings": [
     { "type": "text", "id": "kicker", "label": "Kicker (pequeno)", "default": "Feedbacks reais" },
     { "type": "text", "id": "title", "label": "Título", "default": "O que a galera posta no TikTok" },
     { "type": "textarea", "id": "subtitle", "label": "Subtítulo", "default": "Conteúdo criado por clientes e pela nossa equipe." },
+
     { "type": "select", "id": "heading_align", "label": "Alinhamento do título", "default": "center",
       "options": [ { "value": "left", "label": "Esquerda" }, { "value": "center", "label": "Centro" }, { "value": "right", "label": "Direita" } ]
     },
-    { "type": "text", "id": "handle", "label": "@ da marca (opcional)" },
-    { "type": "url", "id": "profile_url", "label": "Link do perfil (opcional)" },
 
-    { "type": "select", "id": "cols_mobile", "label": "Colunas no mobile", "default": "1",
-      "options": [ { "value": "1", "label": "1 coluna" }, { "value": "2", "label": "2 colunas" } ]
-    },
-    { "type": "range", "id": "cols_desktop", "min": 2, "max": 4, "step": 1, "label": "Colunas no desktop", "default": 3 },
+    { "type": "checkbox", "id": "show_arrows", "label": "Mostrar setas", "default": true },
     { "type": "range", "id": "gap", "min": 8, "max": 32, "step": 2, "label": "Espaçamento entre cards (px)", "default": 16 },
-
-    { "type": "select", "id": "aspect_ratio", "label": "Proporção do vídeo", "default": "9/16",
-      "options": [ { "value": "9/16", "label": "Vertical (9:16)" }, { "value": "3/4",  "label": "3:4" }, { "value": "1/1",  "label": "Quadrado (1:1)" } ]
-    },
     { "type": "range", "id": "radius", "min": 0, "max": 24, "step": 2, "label": "Arredondamento dos cantos (px)", "default": 12 },
-
-    { "type": "select", "id": "embed_mode", "label": "Modo de embed", "default": "iframe",
-      "options": [ { "value": "iframe", "label": "Iframe v2 (rápido)" }, { "value": "script", "label": "Fallback oficial (blockquote)" } ]
-    }
+    { "type": "range", "id": "item_w_mobile", "min": 60, "max": 100, "step": 2, "label": "Largura do card no mobile (%)", "default": 88 },
+    { "type": "range", "id": "item_w_desktop", "min": 20, "max": 50, "step": 2, "label": "Largura do card no desktop (%)", "default": 32 }
   ],
   "blocks": [
     {
-      "type": "video",
-      "name": "Vídeo do TikTok",
+      "type": "embed",
+      "name": "Código TikTok",
       "settings": [
-        { "type": "text", "id": "tiktok_url", "label": "URL do vídeo do TikTok", "info": "Cole o link completo do navegador (evite vm.tiktok.com/vt.tiktok.com)." },
+        { "type": "textarea", "id": "embed_code", "label": "Código de incorporação", "info": "Cole o <blockquote class='tiktok-embed'>…</blockquote> do TikTok (vídeo, perfil, hashtag)." },
         { "type": "text", "id": "caption", "label": "Legenda curta (opcional)" }
       ]
     }
   ],
-  "presets": [ { "name": "TikTok – Mural de Vídeos", "category": "Social / UGC" } ]
+  "presets": [ { "name": "TikTok Carousel", "category": "Social" } ]
 }
 {% endschema %}
 
+{%- comment -%} Necessário para todos os embeds do TikTok {%- endcomment -%}
 <script async src="https://www.tiktok.com/embed.js"></script>
+
+{%- comment -%} Setas movem 1 card por vez {%- endcomment -%}
+<script>
+(() => {
+  const track = document.getElementById('tk-{{ section.id }}');
+  if (!track) return;
+
+  function stepWidth(){
+    const item = track.querySelector('.tk-item');
+    if (!item) return 300;
+    const styles = getComputedStyle(track);
+    const gap = parseFloat(styles.gap || 0);
+    return item.getBoundingClientRect().width + gap;
+  }
+  function go(dir){ track.scrollBy({ left: dir * stepWidth(), behavior: 'smooth' }); }
+
+  const root = document.getElementById('shopify-section-{{ section.id }}');
+  const prev = root ? root.querySelector('.tk-prev') : null;
+  const next = root ? root.querySelector('.tk-next') : null;
+
+  if (prev) prev.addEventListener('click', () => go(-1));
+  if (next) next.addEventListener('click', () => go(1));
+})();
+</script>
