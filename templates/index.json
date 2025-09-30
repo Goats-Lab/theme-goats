@@ -42,11 +42,39 @@
           "settings": {
             "text": "- Tudo Contém Prata 925 -"
           }
+        },
+        "text_hLHnBF": {
+          "type": "text",
+          "settings": {
+            "text": "FRETE GRATIS ACIMA DE R$350"
+          }
+        },
+        "text_rX344r": {
+          "type": "text",
+          "settings": {
+            "text": "FRETE EXPRESSO PARA TODO O BRASIL"
+          }
+        },
+        "text_wQgJwT": {
+          "type": "text",
+          "settings": {
+            "text": "5% OFF VIA PIX"
+          }
+        },
+        "text_RaF4Eb": {
+          "type": "text",
+          "settings": {
+            "text": "troque ou devolva em ate 7 dias após a entrega"
+          }
         }
       },
       "block_order": [
         "text_cbbhWi",
-        "text_kMYXfE"
+        "text_kMYXfE",
+        "text_hLHnBF",
+        "text_rX344r",
+        "text_wQgJwT",
+        "text_RaF4Eb"
       ],
       "name": "t:sections.scrolling_content.presets.scrolling_content.name",
       "settings": {
@@ -61,8 +89,8 @@
         "section_vertical_spacing_desktop": 10,
         "item_horizontal_spacing_mobile": 10,
         "item_horizontal_spacing_desktop": 10,
-        "background": "",
-        "text_color": ""
+        "background": "#1c1c1c",
+        "text_color": "#ffffff"
       }
     },
     "custom_liquid_BfxMgU": {
