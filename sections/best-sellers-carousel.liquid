@@ -1,15 +1,12 @@
 {% comment %}
-  Best Sellers Carousel — MyCharms
+  Best Sellers Carousel — MyCharms (com setas, dots, autoplay e quick add)
+  - Ordene a coleção por "Mais vendidos" no admin p/ refletir corretamente.
 {% endcomment %}
 
 <section class="mc-bs">
   <div class="mc-bs__head">
-    {% if section.settings.subtitle != blank %}
-      <span class="mc-bs__kicker">{{ section.settings.subtitle }}</span>
-    {% endif %}
-    {% if section.settings.title != blank %}
-      <h2 class="mc-bs__title">{{ section.settings.title }}</h2>
-    {% endif %}
+    {% if section.settings.subtitle != blank %}<span class="mc-bs__kicker">{{ section.settings.subtitle }}</span>{% endif %}
+    {% if section.settings.title != blank %}<h2 class="mc-bs__title">{{ section.settings.title }}</h2>{% endif %}
   </div>
 
   {% assign coll = collections[section.settings.collection] %}
@@ -20,7 +17,7 @@
         <button class="mc-bs__arrow mc-bs__arrow--next" aria-label="Próximo" data-dir="1">›</button>
       {% endif %}
 
-      <div class="mc-bs__rail" id="rail-{{ section.id }}">
+      <div class="mc-bs__rail" id="rail-{{ section.id }}" tabindex="0" aria-label="Mais vendidos - carrossel">
         {% for product in coll.products limit: section.settings.limit %}
           <article class="mc-bs__card snap-start">
             <a class="mc-bs__imglink" href="{{ product.url }}">
@@ -43,9 +40,7 @@
             </a>
 
             <div class="mc-bs__info">
-              <h3 class="mc-bs__name">
-                <a href="{{ product.url }}">{{ product.title }}</a>
-              </h3>
+              <h3 class="mc-bs__name"><a href="{{ product.url }}">{{ product.title }}</a></h3>
 
               <div class="mc-bs__price">
                 <span class="now">
@@ -70,6 +65,14 @@
         {% endfor %}
       </div>
     </div>
+
+    {% if section.settings.show_dots %}<div class="mc-bs__dots" id="dots-{{ section.id }}"></div>{% endif %}
+
+    {% if section.settings.show_view_all and coll.url %}
+      <div class="mc-bs__cta">
+        <a class="mc-bs__all" href="{{ coll.url }}{% if section.settings.force_best_selling_link %}?sort_by=best-selling{% endif %}">Ver todos</a>
+      </div>
+    {% endif %}
   {% else %}
     <p class="mc-bs__empty">Escolha uma coleção com produtos.</p>
   {% endif %}
@@ -80,20 +83,132 @@
     .mc-bs__head { text-align:center; margin: 0 16px 14px; }
     .mc-bs__kicker { display:inline-block; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--mc-muted); }
     .mc-bs__title { margin:.25rem 0 0; font-size:clamp(1.25rem,2.6vw,1.8rem); }
-    .mc-bs__rail { display:grid; grid-auto-flow:column; grid-auto-columns: minmax(64%, 1fr); gap:14px; overflow:auto; scroll-snap-type:x mandatory; padding:4px 16px 8px; }
+
+    .mc-bs__rail-wrap { position:relative; }
+    .mc-bs__rail {
+      display:grid; grid-auto-flow:column; grid-auto-columns: minmax(64%, 1fr);
+      gap:14px; overflow:auto; overscroll-behavior-x: contain; scroll-snap-type:x mandatory;
+      scroll-padding:16px; padding:4px 16px 8px; -webkit-overflow-scrolling:touch;
+    }
     @media (min-width:540px){ .mc-bs__rail{ grid-auto-columns: minmax(42%,1fr);} }
     @media (min-width:990px){ .mc-bs__rail{ grid-auto-columns: minmax(24%,1fr);} }
-    .mc-bs__card { background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:18px; overflow:hidden; scroll-snap-align:start; box-shadow:0 6px 20px rgba(0,0,0,.06); }
-    .mc-bs__media{ position:relative; aspect-ratio:1/1; background:#f9f9fb; }
-    .mc-bs__img{ width:100%; height:100%; object-fit:contain; }
-    .mc-bs__badge{ position:absolute; top:10px; left:10px; background:var(--mc-pink); padding:.3rem .5rem; border-radius:999px; font-size:.7rem; }
+
+    .mc-bs__card { background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:18px; overflow:hidden; scroll-snap-align:start; box-shadow:0 6px 20px rgba(0,0,0,.06); transition:transform .2s, box-shadow .2s; }
+    .mc-bs__card:hover{ transform:translateY(-2px); box-shadow:0 10px 26px rgba(0,0,0,.09); }
+
+    .mc-bs__media{ position:relative; aspect-ratio:1/1; background:linear-gradient(180deg,#fff 0%,#f9f9fb 100%); }
+    .mc-bs__img{ width:100%; height:100%; object-fit:contain; display:block; }
+    .mc-bs__ph{ width:100%; height:100%; display:grid; place-items:center; color:var(--mc-muted); }
+    .mc-bs__badge{ position:absolute; top:10px; left:10px; background:var(--mc-pink); color:#111; font-weight:600; padding:.28rem .5rem; border-radius:999px; font-size:.72rem; box-shadow:0 2px 8px var(--mc-ring); }
+
     .mc-bs__info{ padding:10px 12px 14px; }
-    .mc-bs__name{ font-size:.95rem; margin:0 0 .35rem; }
-    .mc-bs__price{ display:flex; gap:.5rem; }
+    .mc-bs__name{ font-size:.95rem; line-height:1.3; margin:0 0 .35rem; }
+    .mc-bs__name a{ color:inherit; text-decoration:none; }
+    .mc-bs__price{ display:flex; align-items:baseline; gap:.5rem; }
+    .mc-bs .now{ font-weight:700; }
     .mc-bs .was{ text-decoration:line-through; opacity:.55; }
-    .mc-bs__btn{ margin-top:.6rem; width:100%; border:1px solid var(--mc-ink); background:var(--mc-ink); color:#fff; padding:.6rem; border-radius:12px; font-size:.8rem; }
-    .mc-bs__btn--ghost{ background:#fff; border:1px solid var(--mc-ink); color:var(--mc-ink); text-align:center; padding:.6rem; border-radius:12px; display:block; }
+
+    .mc-bs__btn{ margin-top:.6rem; width:100%; border:1px solid var(--mc-ink); background:var(--mc-ink); color:#fff; padding:.6rem .9rem; border-radius:12px; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; }
+    .mc-bs__btn--ghost{ background:transparent; border:1px solid var(--mc-ink); color:var(--mc-ink); display:block; text-align:center; padding:.6rem .9rem; border-radius:12px; font-size:.8rem; text-decoration:none; }
+
+    .mc-bs__arrow{ position:absolute; top:50%; transform:translateY(-50%); width:38px; height:38px; border-radius:999px; border:1px solid rgba(0,0,0,.1); background:#fff; box-shadow:0 4px 16px rgba(0,0,0,.08); display:grid; place-items:center; font-size:20px; cursor:pointer; z-index:2; transition: box-shadow .2s; }
+    .mc-bs__arrow:hover{ box-shadow:0 6px 20px rgba(0,0,0,.12); }
+    .mc-bs__arrow--prev{ left:6px; } .mc-bs__arrow--next{ right:6px; }
+
+    .mc-bs__dots{ display:flex; gap:6px; justify-content:center; margin:10px 0 0; }
+    .mc-bs__dot{ width:8px; height:8px; border-radius:999px; background:#e5e7eb; }
+    .mc-bs__dot.is-active{ background:var(--mc-pink); box-shadow:0 0 0 6px var(--mc-ring); border-radius:999px; }
+
+    .mc-bs__cta{ text-align:center; margin:14px 0 0; }
+    .mc-bs__all{ display:inline-block; padding:.7rem 1.1rem; border:1px solid var(--mc-ink); border-radius:12px; text-decoration:none; }
+    .mc-bs__empty{ text-align:center; opacity:.7; padding:10px; }
+
+    .mc-bs__rail:focus-visible{ outline:2px solid var(--mc-pink); outline-offset:2px; }
   </style>
+
+  {% if coll and coll.products_count > 0 %}
+  <script>
+    (function(){
+      const rail = document.getElementById('rail-{{ section.id }}');
+      if(!rail) return;
+
+      // Arraste mouse/touch
+      let isDown=false, startX=0, scrollL=0;
+      const start = x => { isDown=true; startX=x; scrollL=rail.scrollLeft; rail.classList.add('dragging'); };
+      const move  = x => { if(!isDown) return; rail.scrollLeft = scrollL - (x - startX); };
+      const end   = () => { isDown=false; rail.classList.remove('dragging'); };
+      rail.addEventListener('mousedown',e=>{ if(e.button!==0) return; start(e.pageX); });
+      window.addEventListener('mousemove',e=>move(e.pageX));
+      window.addEventListener('mouseup',end);
+      rail.addEventListener('touchstart',e=>start(e.touches[0].clientX),{passive:true});
+      rail.addEventListener('touchmove',e=>move(e.touches[0].clientX),{passive:true});
+      rail.addEventListener('touchend',end);
+
+      // Setas
+      const wrap = rail.parentElement;
+      wrap.querySelectorAll('.mc-bs__arrow').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const dir = parseInt(btn.dataset.dir,10) || 1;
+          const step = Math.max(rail.clientWidth * {{ section.settings.scroll_step | divided_by: 100.0 }}, 200);
+          rail.scrollBy({ left: step * dir, behavior:'smooth' });
+        });
+      });
+
+      // Dots
+      {% if section.settings.show_dots %}
+      const dotsWrap = document.getElementById('dots-{{ section.id }}');
+      const gap = 14;
+      const cardW = () => rail.querySelector('.mc-bs__card')?.getBoundingClientRect().width || 300;
+      const perView = () => Math.max(1, Math.round(rail.clientWidth / (cardW()+gap)));
+      const pages = () => Math.ceil(rail.children.length / perView());
+      const renderDots = ()=>{
+        const n = pages(); dotsWrap.innerHTML='';
+        for(let i=0;i<n;i++){ const d=document.createElement('span'); d.className='mc-bs__dot'; d.dataset.index=i; dotsWrap.appendChild(d); }
+        activate();
+      };
+      const activate = ()=>{
+        const idx = Math.round(rail.scrollLeft / (cardW()+gap));
+        const pv = perView();
+        const page = Math.min(pages()-1, Math.round(idx / pv));
+        dotsWrap.querySelectorAll('.mc-bs__dot').forEach((el,i)=>el.classList.toggle('is-active', i===page));
+      };
+      renderDots();
+      rail.addEventListener('scroll', ()=>requestAnimationFrame(activate));
+      window.addEventListener('resize', renderDots);
+      dotsWrap?.addEventListener('click', e=>{
+        const dot = e.target.closest('.mc-bs__dot'); if(!dot) return;
+        const pv = perView(); const target = (parseInt(dot.dataset.index,10)||0) * pv;
+        const x = target * (cardW()+gap);
+        rail.scrollTo({left:x, behavior:'smooth'});
+      });
+      {% endif %}
+
+      // Quick add
+      {% if section.settings.show_quick_add %}
+      document.addEventListener('click', async (e)=>{
+        const b = e.target.closest('.mc-bs__btn[data-handle]'); if(!b) return;
+        b.disabled=true; const t=b.textContent; b.textContent='Adicionando…';
+        try{
+          const h=b.dataset.handle;
+          const pj=await fetch(`/products/${h}.js`).then(r=>r.json());
+          const v = pj.variants.find(v=>v.available) || pj.variants[0];
+          const ok = await fetch('/cart/add.js',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:v.id,quantity:1})});
+          if(!ok.ok) throw 0;
+          b.textContent='Adicionado!';
+        }catch(_){ b.textContent='Erro'; }
+        finally{ setTimeout(()=>{ b.textContent=t; b.disabled=false; },1200); }
+      });
+      {% endif %}
+
+      // Autoplay (pausa no hover)
+      {% if section.settings.autoplay %}
+      let at = setInterval(()=>{ rail.scrollBy({left: rail.clientWidth * {{ section.settings.scroll_step | divided_by: 100.0 }}, behavior:'smooth'}); }, {{ section.settings.autoplay_ms }});
+      rail.addEventListener('mouseenter', ()=>clearInterval(at));
+      rail.addEventListener('mouseleave', ()=> at = setInterval(()=>{ rail.scrollBy({left: rail.clientWidth * {{ section.settings.scroll_step | divided_by: 100.0 }}, behavior:'smooth'}); }, {{ section.settings.autoplay_ms }}));
+      {% endif %}
+    })();
+  </script>
+  {% endif %}
 </section>
 
 {% schema %}
@@ -105,15 +220,12 @@
     { "type": "collection", "id": "collection", "label": "Coleção" },
     { "type": "range", "id": "limit", "label": "Qtd. de itens", "min": 4, "max": 20, "step": 1, "default": 12 },
     { "type": "checkbox", "id": "show_arrows", "label": "Mostrar setas", "default": true },
+    { "type": "checkbox", "id": "show_dots", "label": "Mostrar bolinhas (páginas)", "default": true },
     { "type": "checkbox", "id": "show_quick_add", "label": "Botão Adicionar rápido", "default": true },
     { "type": "checkbox", "id": "show_view_all", "label": "Mostrar botão \"Ver todos\"", "default": true },
     { "type": "checkbox", "id": "force_best_selling_link", "label": "Forçar ?sort_by=best-selling no link", "default": true },
     { "type": "checkbox", "id": "autoplay", "label": "Autoplay", "default": false },
-    {
-      "type": "select",
-      "id": "autoplay_ms",
-      "label": "Velocidade autoplay (ms)",
-      "default": "4000",
+    { "type": "select", "id": "autoplay_ms", "label": "Velocidade autoplay (ms)", "default": "4000",
       "options": [
         { "value": "2500", "label": "2,5 s" },
         { "value": "3000", "label": "3 s" },
@@ -122,7 +234,8 @@
         { "value": "8000", "label": "8 s" },
         { "value": "9000", "label": "9 s" }
       ]
-    }
+    },
+    { "type": "range", "id": "scroll_step", "label": "Avanço por clique (% da largura)", "min": 30, "max": 100, "step": 5, "default": 90 }
   ],
   "presets": [
     { "name": "Mais vendidos (Carrossel)", "category": "Produtos" }
