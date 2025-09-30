@@ -195,8 +195,8 @@
         "heading_align": "center",
         "show_arrows": true,
         "gap": 12,
-        "radius": 24,
-        "item_w_mobile": 100,
+        "radius": 16,
+        "item_w_mobile": 90,
         "item_w_desktop": 32
       }
     },
