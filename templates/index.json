@@ -143,6 +143,7 @@
     },
     "custom_liquid_N4YBjp": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom_liquid.presets.custom_liquid.name",
       "settings": {
         "color_scheme": "",
@@ -151,36 +152,6 @@
         "remove_horizontal_spacing": false,
         "liquid": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7555571198193569035\" data-video-id=\"7555571198193569035\" style=\"max-width: 605px;min-width: 325px;\" > <section> <a target=\"_blank\" title=\"@my.charms.br\" href=\"https://www.tiktok.com/@my.charms.br?refer=embed\">@my.charms.br</a> Tiffany pandora e Swarovski e só na MyCharms mesmo… <a title=\"pandora\" target=\"_blank\" href=\"https://www.tiktok.com/tag/pandora?refer=embed\">#pandora</a> <a title=\"tiffany\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tiffany?refer=embed\">#tiffany</a> <a title=\"swarovski\" target=\"_blank\" href=\"https://www.tiktok.com/tag/swarovski?refer=embed\">#swarovski</a> <a target=\"_blank\" title=\"♬ som original - My Charms 🩷\" href=\"https://www.tiktok.com/music/som-original-7555571192414620427?refer=embed\">♬ som original - My Charms 🩷</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
         "text_alignment": "center"
-      }
-    },
-    "tiktok_feed_6P3RAF": {
-      "type": "tiktok-feed",
-      "blocks": {
-        "video_hq6WzM": {
-          "type": "video",
-          "settings": {
-            "tiktok_url": "",
-            "caption": ""
-          }
-        }
-      },
-      "block_order": [
-        "video_hq6WzM"
-      ],
-      "name": "TikTok – Mural de Vídeos",
-      "settings": {
-        "kicker": "Feedbacks reais",
-        "title": "O que a galera posta no TikTok",
-        "subtitle": "Conteúdo criado por clientes e pela nossa equipe.",
-        "heading_align": "center",
-        "handle": "",
-        "profile_url": "",
-        "cols_mobile": "1",
-        "cols_desktop": 3,
-        "gap": 16,
-        "aspect_ratio": "9/16",
-        "radius": 12,
-        "embed_mode": "iframe"
       }
     },
     "featured_collections_Ujh3MC": {
@@ -727,7 +698,6 @@
     "slideshow_Cr6bfE",
     "custom_liquid_nL4PjV",
     "custom_liquid_N4YBjp",
-    "tiktok_feed_6P3RAF",
     "featured_collections_Ujh3MC",
     "image_with_text_x6jHxF",
     "collection_list_ACYycD",
