@@ -152,24 +152,54 @@
         "text_alignment": "center"
       }
     },
-    "mais_vendidos_YK4hpG": {
+    "featured_collections_cdyWWX": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_WETE7H": {
+          "type": "collection",
+          "settings": {
+            "collection": "mais-vendidos-my-charms",
+            "products_count": 50,
+            "title": "MAIS VENDIDAS",
+            "link_url": "",
+            "link_text": "VEJA TODOS"
+          }
+        }
+      },
+      "block_order": [
+        "collection_WETE7H"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 6,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 0.2,
+        "subheading": ""
+      }
+    },
+    "mais_vendidos_r8473E": {
       "type": "mais-vendidos",
       "name": "Mais vendidos",
       "settings": {
-        "kicker": "",
-        "title": "Mais vendidas",
-        "subtitle": "Confira as peças mais queridas da My Charms",
+        "kicker": "Top sellers",
+        "title": "Mais vendidos",
+        "subtitle": "Mais vendidos",
         "heading_align": "center",
         "collection": "mais-vendidos-my-charms",
-        "products_to_show": 24,
+        "products_to_show": 15,
         "as_carousel": true,
-        "show_arrows": true,
-        "gap": 16,
-        "item_w_mobile": 80,
-        "item_w_desktop": 24,
-        "cols_mobile": 2,
-        "cols_desktop": 4,
-        "view_all": false
+        "show_arrows": false,
+        "gap": 32,
+        "item_w_mobile": 100,
+        "item_w_desktop": 50,
+        "cols_mobile": 3,
+        "cols_desktop": 5,
+        "view_all": true
       }
     },
     "recently_viewed_products_PdfYr6": {
@@ -803,7 +833,8 @@
     "scrolling_content_6CAnJm",
     "slideshow_Cr6bfE",
     "custom_liquid_WpMAQh",
-    "mais_vendidos_YK4hpG",
+    "featured_collections_cdyWWX",
+    "mais_vendidos_r8473E",
     "recently_viewed_products_PdfYr6",
     "custom_liquid_nL4PjV",
     "tiktok_feed_kaBWXT",

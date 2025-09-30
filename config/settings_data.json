@@ -27,7 +27,7 @@
     "currency_code_enabled": true,
     "stagger_products_apparition": true,
     "stagger_blog_posts_apparition": true,
-    "product_image_aspect_ratio": "square",
+    "product_image_aspect_ratio": "natural",
     "show_secondary_image": false,
     "show_vendor": true,
     "product_card_text_font": "body",
