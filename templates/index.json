@@ -152,54 +152,27 @@
         "text_alignment": "center"
       }
     },
-    "featured_collections_cdyWWX": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_WETE7H": {
-          "type": "collection",
-          "settings": {
-            "collection": "mais-vendidos-my-charms",
-            "products_count": 50,
-            "title": "MAIS VENDIDAS",
-            "link_url": "",
-            "link_text": "VEJA TODOS"
-          }
-        }
-      },
-      "block_order": [
-        "collection_WETE7H"
+    "best_sellers_carousel_rMXcKh": {
+      "type": "best-sellers-carousel",
+      "custom_css": [
+        ".mc-lx__card {display: flex; flex-direction: column;}",
+        ".mc-lx__info {display: flex; flex-direction: column; flex: 1; /* faz o bloco ocupar todo espaço restante */}",
+        ".mc-lx__btn,.mc-lx__btn--ghost {margin-top: auto; /* empurra o botão pro final do card */}"
       ],
-      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "name": "Mais vendidos (Carrossel) — MyCharms",
       "settings": {
-        "color_scheme": "scheme-2",
-        "separate_section_with_border": true,
-        "hide_product_information": true,
-        "stack_products": false,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 6,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 0.2,
-        "subheading": ""
-      }
-    },
-    "mais_vendidos_r8473E": {
-      "type": "mais-vendidos",
-      "name": "Mais vendidos",
-      "settings": {
-        "kicker": "Top sellers",
-        "title": "Mais vendidos",
-        "subtitle": "Mais vendidos",
-        "heading_align": "center",
+        "subtitle": "TOP VENDIDOS",
+        "title": "Favoritos da MyCharms",
         "collection": "mais-vendidos-my-charms",
-        "products_to_show": 15,
-        "as_carousel": true,
-        "show_arrows": false,
-        "gap": 32,
-        "item_w_mobile": 100,
-        "item_w_desktop": 50,
-        "cols_mobile": 3,
-        "cols_desktop": 5,
-        "view_all": true
+        "limit": 12,
+        "show_arrows": true,
+        "show_dots": true,
+        "show_quick_add": false,
+        "show_view_all": true,
+        "force_best_selling_link": false,
+        "autoplay": false,
+        "autoplay_ms": "4000",
+        "scroll_step": 85
       }
     },
     "recently_viewed_products_PdfYr6": {
@@ -833,8 +806,7 @@
     "scrolling_content_6CAnJm",
     "slideshow_Cr6bfE",
     "custom_liquid_WpMAQh",
-    "featured_collections_cdyWWX",
-    "mais_vendidos_r8473E",
+    "best_sellers_carousel_rMXcKh",
     "recently_viewed_products_PdfYr6",
     "custom_liquid_nL4PjV",
     "tiktok_feed_kaBWXT",
