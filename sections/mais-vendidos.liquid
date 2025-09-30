@@ -1,0 +1,199 @@
+{% comment %}
+  Seção: Mais vendidos (coleção + carrossel opcional)
+  Dica: crie/edite uma coleção e defina a ordenação como "Mais vendidos".
+{% endcomment %}
+
+<section class="mc-bests color-scheme color-scheme--scheme-2"
+  style="--gap: {{ section.settings.gap }}px;
+         --item-w-mobile: {{ section.settings.item_w_mobile }}%;
+         --item-w-desktop: {{ section.settings.item_w_desktop }}%;">
+  <div class="container">
+    {% if section.settings.title != blank or section.settings.subtitle != blank %}
+      <div class="mc-head" style="text-align: {{ section.settings.heading_align }};">
+        {% if section.settings.kicker != blank %}<p class="h6">{{ section.settings.kicker }}</p>{% endif %}
+        {% if section.settings.title != blank %}<h2 class="h2">{{ section.settings.title }}</h2>{% endif %}
+        {% if section.settings.subtitle != blank %}<p class="prose">{{ section.settings.subtitle }}</p>{% endif %}
+      </div>
+    {% endif %}
+
+    {% assign coll = section.settings.collection %}
+    {% if coll == blank %}
+      <p>Selecione uma coleção nas configurações desta seção.</p>
+    {% else %}
+      {% assign collection_obj = collections[coll] %}
+      {% if collection_obj == nil %}
+        <p>Coleção inválida.</p>
+      {% else %}
+        {% assign limit = section.settings.products_to_show %}
+        {% assign prods = collection_obj.products | slice: 0, limit %}
+
+        {% if section.settings.as_carousel %}
+          <div class="mc-wrap">
+            {% if section.settings.show_arrows %}
+              <button class="mc-arrow mc-prev" type="button" aria-label="Anterior">‹</button>
+            {% endif %}
+
+            <div class="mc-track" id="mc-{{ section.id }}" tabindex="0">
+              {% for product in prods %}
+                <article class="mc-item" {{ block.shopify_attributes }}>
+                  <a class="mc-card" href="{{ product.url }}">
+                    <div class="mc-img">
+                      {% assign img = product.featured_image %}
+                      {% if img %}
+                        <img loading="lazy" src="{{ img | image_url: width: 600 }}" alt="{{ img.alt | escape }}">
+                      {% endif %}
+                      {% if product.compare_at_price_max > product.price %}
+                        <span class="mc-badge">-{{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | round }}%</span>
+                      {% endif %}
+                    </div>
+                    <div class="mc-info">
+                      <h3 class="mc-title">{{ product.title }}</h3>
+                      <div class="mc-price">
+                        <span class="mc-now">{{ product.price | money }}</span>
+                        {% if product.compare_at_price_max > product.price %}
+                          <s class="mc-was">{{ product.compare_at_price_max | money }}</s>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              {% endfor %}
+            </div>
+
+            {% if section.settings.show_arrows %}
+              <button class="mc-arrow mc-next" type="button" aria-label="Próximo">›</button>
+            {% endif %}
+          </div>
+        {% else %}
+          <div class="mc-grid" style="--cols-mobile: {{ section.settings.cols_mobile }}; --cols-desktop: {{ section.settings.cols_desktop }};">
+            {% for product in prods %}
+              <article class="mc-tile">
+                <a class="mc-card" href="{{ product.url }}">
+                  <div class="mc-img">
+                    {% assign img = product.featured_image %}
+                    {% if img %}
+                      <img loading="lazy" src="{{ img | image_url: width: 600 }}" alt="{{ img.alt | escape }}">
+                    {% endif %}
+                    {% if product.compare_at_price_max > product.price %}
+                      <span class="mc-badge">-{{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | round }}%</span>
+                    {% endif %}
+                  </div>
+                  <div class="mc-info">
+                    <h3 class="mc-title">{{ product.title }}</h3>
+                    <div class="mc-price">
+                      <span class="mc-now">{{ product.price | money }}</span>
+                      {% if product.compare_at_price_max > product.price %}
+                        <s class="mc-was">{{ product.compare_at_price_max | money }}</s>
+                      {% endif %}
+                    </div>
+                  </div>
+                </a>
+              </article>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if section.settings.view_all and collection_obj.url %}
+          <div class="mc-cta">
+            <a class="mc-button" href="{{ collection_obj.url }}?sort_by=best-selling">Ver todos</a>
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  </div>
+</section>
+
+<style>
+.mc-bests .container{max-width:var(--container-xl-max-width);margin-inline:auto;padding-inline:var(--container-gutter)}
+.mc-head .prose{opacity:.8}
+
+/* GRID */
+.mc-grid{display:grid;gap:var(--gap,16px);grid-template-columns:repeat(var(--cols-mobile,2),1fr)}
+@media(min-width:900px){.mc-grid{grid-template-columns:repeat(var(--cols-desktop,4),1fr)}}
+
+/* CARROSSEL */
+.mc-wrap{position:relative}
+.mc-track{display:flex;gap:var(--gap,16px);overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding:2px 2px 8px}
+.mc-track::-webkit-scrollbar{height:8px}
+.mc-track::-webkit-scrollbar-thumb{background:#ff9ccd;border-radius:999px}
+.mc-item{flex:0 0 var(--item-w-mobile,80%);scroll-snap-align:start;min-width:220px}
+@media(min-width:900px){.mc-item{flex-basis:var(--item-w-desktop,24%)}}
+
+.mc-arrow{position:absolute;top:42%;transform:translateY(-50%);z-index:2;width:40px;height:40px;border:0;border-radius:999px;background:#ff9ccd;color:#fff;box-shadow:0 8px 18px rgba(255,156,205,.35);cursor:pointer}
+.mc-prev{left:-6px}.mc-next{right:-6px}
+@media(hover:none){.mc-arrow{display:none}}
+
+/* CARD */
+.mc-card{display:block;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.06);text-decoration:none;color:inherit}
+.mc-img{position:relative;aspect-ratio:1/1;background:#f7f7f7}
+.mc-img img{width:100%;height:100%;object-fit:cover}
+.mc-badge{position:absolute;top:8px;left:8px;background:#ff9ccd;color:#fff;font-size:.75rem;padding:.2rem .45rem;border-radius:999px}
+.mc-info{padding:.75rem .9rem}
+.mc-title{font-size:.95rem;line-height:1.35;margin:0 0 .35rem}
+.mc-price{display:flex;gap:.5rem;align-items:center}
+.mc-now{font-weight:700}
+.mc-was{opacity:.6}
+.mc-cta{text-align:center;margin-top:16px}
+.mc-button{display:inline-block;background:#ff9ccd;color:#fff;border-radius:999px;padding:.7rem 1.1rem;font-weight:700;text-decoration:none}
+.mc-button:hover{opacity:.95}
+</style>
+
+{% schema %}
+{
+  "name": "Mais vendidos",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Top sellers" },
+    { "type": "text", "id": "title", "label": "Título", "default": "Mais vendidos" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtítulo", "default": "Mais vendidos" },
+
+    { "type": "select", "id": "heading_align", "label": "Alinhamento do título", "default": "center",
+      "options": [
+        { "value": "left", "label": "Esquerda" },
+        { "value": "center", "label": "Centro" },
+        { "value": "right", "label": "Direita" }
+      ]
+    },
+
+    { "type": "collection", "id": "collection", "label": "Coleção (ordenada por 'Mais vendidos')" },
+    { "type": "range", "id": "products_to_show", "min": 4, "max": 24, "step": 1, "label": "Qtd. de produtos", "default": 12 },
+
+    { "type": "checkbox", "id": "as_carousel", "label": "Mostrar como carrossel horizontal", "default": true },
+    { "type": "checkbox", "id": "show_arrows", "label": "Setas no carrossel", "default": true },
+
+    { "type": "range", "id": "gap", "min": 8, "max": 32, "step": 2, "label": "Espaçamento (px)", "default": 16 },
+
+    { "type": "range", "id": "item_w_mobile", "min": 60, "max": 100, "step": 2, "label": "Largura card (mobile %)", "default": 80 },
+    { "type": "range", "id": "item_w_desktop", "min": 20, "max": 50, "step": 1, "label": "Largura card (desktop %)", "default": 24 },
+
+    { "type": "range", "id": "cols_mobile", "min": 1, "max": 3, "step": 1, "label": "Colunas no mobile (modo grade)", "default": 2 },
+    { "type": "range", "id": "cols_desktop", "min": 2, "max": 5, "step": 1, "label": "Colunas no desktop (modo grade)", "default": 4 },
+
+    
+    { "type": "checkbox", "id": "view_all", "label": "Mostrar botão 'Ver todos'", "default": true }
+  ],
+  "presets": [
+    { "name": "Mais vendidos", "category": "Coleções" }
+  ]
+}
+{% endschema %}
+
+{% if section.settings.as_carousel %}
+<script>
+(() => {
+  const track = document.getElementById('mc-{{ section.id }}');
+  if (!track) return;
+  function stepWidth(){
+    const item = track.querySelector('.mc-item');
+    if (!item) return 300;
+    const gap = parseFloat(getComputedStyle(track).gap || 0);
+    return item.getBoundingClientRect().width + gap;
+  }
+  function go(dir){ track.scrollBy({ left: dir * stepWidth(), behavior: 'smooth' }); }
+  const root = document.getElementById('shopify-section-{{ section.id }}');
+  const prev = root ? root.querySelector('.mc-prev') : null;
+  const next = root ? root.querySelector('.mc-next') : null;
+  if (prev) prev.addEventListener('click', () => go(-1));
+  if (next) next.addEventListener('click', () => go(1));
+})();
+</script>
+{% endif %}
