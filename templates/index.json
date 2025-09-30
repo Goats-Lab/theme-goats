@@ -184,7 +184,7 @@
             "color_scheme": "scheme-2",
             "collection": "pandoras",
             "image": "shopify://shop_images/ChatGPT_Image_30_de_set._de_2025_18_54_49.png",
-            "expand_collection": false,
+            "expand_collection": true,
             "content_position": "place-self-end-center text-center",
             "subheading": "",
             "title": "",
@@ -198,16 +198,16 @@
         "collection_8jdgE6": {
           "type": "collection",
           "settings": {
-            "color_scheme": "",
+            "color_scheme": "scheme-2",
             "collection": "colecao-swarovski",
             "image": "shopify://shop_images/ChatGPT_Image_30_de_set._de_2025_18_55_34.png",
-            "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
+            "expand_collection": true,
+            "content_position": "place-self-end-center text-center",
             "subheading": "",
             "title": "",
-            "button_text": "View products",
+            "button_text": "VER TODOS",
             "button_link": "",
-            "button_style": "link",
+            "button_style": "solid",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -218,13 +218,13 @@
             "color_scheme": "",
             "collection": "tiffany",
             "image": "shopify://shop_images/ChatGPT_Image_30_de_set._de_2025_18_54_55.png",
-            "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
+            "expand_collection": true,
+            "content_position": "place-self-end-center text-center",
             "subheading": "",
             "title": "",
-            "button_text": "View products",
+            "button_text": "VER TODOS",
             "button_link": "",
-            "button_style": "link",
+            "button_style": "solid",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
