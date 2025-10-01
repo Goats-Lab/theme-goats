@@ -187,7 +187,7 @@
           "settings": {
             "color_scheme": "scheme-2",
             "collection": "pandoras",
-            "image": "shopify://shop_images/ChatGPT_Image_30_de_set._de_2025_18_54_49.png",
+            "image": "shopify://shop_images/6F2F14A7-4DE5-431C-B660-CC0592BB2A53.png",
             "expand_collection": true,
             "content_position": "place-self-end-center text-center",
             "subheading": "",
@@ -204,7 +204,7 @@
           "settings": {
             "color_scheme": "scheme-2",
             "collection": "colecao-swarovski",
-            "image": "shopify://shop_images/ChatGPT_Image_30_de_set._de_2025_18_55_34.png",
+            "image": "shopify://shop_images/935E202E-C6C6-4159-8753-046904EA0E39.png",
             "expand_collection": true,
             "content_position": "place-self-end-center text-center",
             "subheading": "",
@@ -221,7 +221,7 @@
           "settings": {
             "color_scheme": "scheme-2",
             "collection": "tiffany",
-            "image": "shopify://shop_images/ChatGPT_Image_30_de_set._de_2025_18_54_55.png",
+            "image": "shopify://shop_images/D9CF6A7D-0053-49A6-A08B-E7B93465CBF0.png",
             "expand_collection": true,
             "content_position": "place-self-end-center text-center",
             "subheading": "",
@@ -355,8 +355,8 @@
         "separate_section_with_border": false,
         "image": "shopify://shop_images/2af68c075f4c7eefda3a52e40854782a.jpg",
         "mobile_image": "shopify://shop_images/2af68c075f4c7eefda3a52e40854782a.jpg",
-        "reveal_on_scroll": false,
-        "image_position": "end",
+        "reveal_on_scroll": true,
+        "image_position": "start",
         "content_width": "sm",
         "remove_vertical_spacing": true
       }
@@ -462,7 +462,7 @@
         "separate_section_with_border": false,
         "image": "shopify://shop_images/3c31c2c44d54af6e014c309cfb2f85c9.jpg",
         "mobile_image": "shopify://shop_images/3c31c2c44d54af6e014c309cfb2f85c9.jpg",
-        "reveal_on_scroll": false,
+        "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
         "remove_vertical_spacing": true
@@ -602,7 +602,7 @@
         "separate_section_with_border": false,
         "image": "shopify://shop_images/cb5646d37eaf7cbaac6259988f5f8555.jpg",
         "mobile_image": "shopify://shop_images/cb5646d37eaf7cbaac6259988f5f8555.jpg",
-        "reveal_on_scroll": false,
+        "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
         "remove_vertical_spacing": true
