@@ -182,6 +182,23 @@
     "collection_list_etBtnt": {
       "type": "collection-list",
       "blocks": {
+        "collection_bgeNcx": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "collection": "pandoras",
+            "image": "shopify://shop_images/6F2F14A7-4DE5-431C-B660-CC0592BB2A53.png",
+            "expand_collection": true,
+            "content_position": "place-self-end-center text-center",
+            "subheading": "",
+            "title": "",
+            "button_text": "VER TODOS",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
         "collection_AkraEB": {
           "type": "collection",
           "settings": {
@@ -215,29 +232,12 @@
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
-        },
-        "collection_bgeNcx": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "scheme-2",
-            "collection": "pandoras",
-            "image": "shopify://shop_images/6F2F14A7-4DE5-431C-B660-CC0592BB2A53.png",
-            "expand_collection": true,
-            "content_position": "place-self-end-center text-center",
-            "subheading": "",
-            "title": "",
-            "button_text": "VER TODOS",
-            "button_link": "",
-            "button_style": "solid",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
         }
       },
       "block_order": [
+        "collection_bgeNcx",
         "collection_AkraEB",
-        "collection_8jdgE6",
-        "collection_bgeNcx"
+        "collection_8jdgE6"
       ],
       "custom_css": [
         "img[alt=\"Pandora\"],img[alt=\"Swarovski\"],img[alt=\"Tiffany & Co.\"] {height: 40px !important; width: auto !important; object-fit: contain;}"
