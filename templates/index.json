@@ -179,6 +179,46 @@
         "scroll_step": 85
       }
     },
+    "multiple_media_with_text_qUg4nz": {
+      "type": "multiple-media-with-text",
+      "blocks": {
+        "image_Fng8nE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Criativo_2_1080x1080_8fae71b4-471b-40d6-8df1-234ba44e6ea5.png",
+            "rotation": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_Fng8nE"
+      ],
+      "custom_css": [
+        ".button-container {display: flex; justify-content: center; /* centraliza horizontalmente */}"
+      ],
+      "name": "t:sections.multiple_media_with_text.presets.multiple_media_with_text.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "reveal_on_scroll": true,
+        "separate_section_with_border": true,
+        "media_position_desktop": "before_text",
+        "media_position_mobile": "before_text",
+        "media_layout": "overlap",
+        "media_alignment": "center",
+        "media_alignment_offset": 0,
+        "media_mobile_alignment_offset": 0,
+        "text_alignment": "center",
+        "subheading": "",
+        "title": "SUA JOIA ESTA ESGOTADA?",
+        "content": "<p>Agora é possivel encomendar sua peça e ter ela reservada somente para você sem precisar esperar pela pronta entrega!</p>",
+        "button_1_text": "QUERO ENCOMENDAR",
+        "button_1_link": "shopify://pages/all-encomenda",
+        "button_1_style": "solid",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_2_style": "solid"
+      }
+    },
     "collection_list_etBtnt": {
       "type": "collection-list",
       "blocks": {
@@ -824,46 +864,6 @@
         "text_color": "",
         "text_alignment": "center"
       }
-    },
-    "multiple_media_with_text_qUg4nz": {
-      "type": "multiple-media-with-text",
-      "blocks": {
-        "image_Fng8nE": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Criativo_2_1080x1080_8fae71b4-471b-40d6-8df1-234ba44e6ea5.png",
-            "rotation": 0
-          }
-        }
-      },
-      "block_order": [
-        "image_Fng8nE"
-      ],
-      "custom_css": [
-        ".button-container {display: flex; justify-content: center; /* centraliza horizontalmente */}"
-      ],
-      "name": "t:sections.multiple_media_with_text.presets.multiple_media_with_text.name",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "reveal_on_scroll": true,
-        "separate_section_with_border": true,
-        "media_position_desktop": "before_text",
-        "media_position_mobile": "before_text",
-        "media_layout": "overlap",
-        "media_alignment": "center",
-        "media_alignment_offset": 0,
-        "media_mobile_alignment_offset": 0,
-        "text_alignment": "center",
-        "subheading": "",
-        "title": "como encomendar",
-        "content": "<p>Agora é possivel encomendar sua peça e ter ela reservada somente para você sem precisar esperar pela pronta entrega!</p>",
-        "button_1_text": "QUERO ENCOMENDAR",
-        "button_1_link": "shopify://pages/all-encomenda",
-        "button_1_style": "solid",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_2_style": "solid"
-      }
     }
   },
   "order": [
@@ -872,6 +872,7 @@
     "slideshow_Cr6bfE",
     "custom_liquid_xjiT6d",
     "best_sellers_carousel_rMXcKh",
+    "multiple_media_with_text_qUg4nz",
     "collection_list_etBtnt",
     "tiktok_feed_kaBWXT",
     "image_with_text_FicW9t",
@@ -883,7 +884,6 @@
     "featured_collections_aVbznB",
     "featured_collections_Ujh3MC",
     "custom_liquid_nL4PjV",
-    "text_with_icons_jgYnYM",
-    "multiple_media_with_text_qUg4nz"
+    "text_with_icons_jgYnYM"
   ]
 }
