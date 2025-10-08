@@ -142,6 +142,7 @@
     },
     "custom_liquid_xjiT6d": {
       "type": "custom-liquid",
+      "disabled": true,
       "custom_css": [
         "#mc-countdown .mc-badge {width: 110px; height: 110px; border-radius: 50%; background: #fff; /* fundo rosa */ color: #000; /* texto preto */ display: grid; place-items: center; font-weight: 800; box-shadow: 0 8px 24px rgba(255, 156, 205, 0.5);}",
         "#mc-countdown .mc-timer {justify-content: center !important; margin: 0 auto !important;}"
