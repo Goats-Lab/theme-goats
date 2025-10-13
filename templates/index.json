@@ -96,33 +96,6 @@
     "slideshow_Cr6bfE": {
       "type": "slideshow",
       "blocks": {
-        "image_XUBPm9": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Banner_1.png",
-            "mobile_image": "shopify://shop_images/Banner_1.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-start-center text-center",
-            "desktop_text_position": "sm:place-self-start-center sm:text-center",
-            "content_max_width": 400,
-            "button_1_text": "",
-            "button_1_link": "shopify://pages/all-encomenda",
-            "button_1_style": "link",
-            "button_1_background": "#ff6eb6",
-            "button_1_text_color": "#ff9ccd",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "#ff6eb6",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        },
         "image_64MVwC": {
           "type": "image",
           "settings": {
@@ -149,11 +122,38 @@
             "border_color": "",
             "gradient_overlay": ""
           }
+        },
+        "image_XUBPm9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1.png",
+            "mobile_image": "shopify://shop_images/Banner_1.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-start-center text-center",
+            "desktop_text_position": "sm:place-self-start-center sm:text-center",
+            "content_max_width": 400,
+            "button_1_text": "",
+            "button_1_link": "shopify://pages/all-encomenda",
+            "button_1_style": "link",
+            "button_1_background": "#ff6eb6",
+            "button_1_text_color": "#ff9ccd",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "#ff6eb6",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
         }
       },
       "block_order": [
-        "image_XUBPm9",
-        "image_64MVwC"
+        "image_64MVwC",
+        "image_XUBPm9"
       ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
