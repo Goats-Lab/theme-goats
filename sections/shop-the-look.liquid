@@ -1,14 +1,17 @@
 {%- if section.blocks.size > 0 -%}
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
-  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+  <div class="section-spacing mc-section color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
     <div class="container container--xl">
       <div class="section-stack">
-        {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content -%}
+        {%- render 'section-header',
+          subheading: section.settings.subheading,
+          heading: section.settings.title,
+          content: section.settings.content
+        -%}
 
         {%- comment -%}
-          IMPLEMENTATION NOTE: Mobile and desktop are sharing many similarities in the markup, but the way elements are transitioned differs.
-          Therefore, in order to minimize the amount of duplicated code, we do a for loop where the first iteration renders the mobile while the second iteration renders the desktop.
+          Render duplo para mobile e desktop aproveitando o mesmo conteúdo.
         {%- endcomment -%}
         {%- for i in (1..2) -%}
           {%- capture device -%}{% cycle 'mobile', 'desktop' %}{%- endcapture -%}
@@ -26,7 +29,6 @@
 
                 for product_index in (1..4)
                   assign product_id = 'product_' | append: product_index
-
                   if block.settings[product_id] != blank
                     assign products_count = products_count | plus: 1
                   endif
@@ -38,11 +40,25 @@
                 endif
               -%}
 
-              <div class="shop-the-look__item snap-start {% if forloop.first %}is-selected{% endif %} w-full" {% if device == 'mobile' %}data-popover-id="shop-the-look-item-popover-{{ block.id }}"{% endif %} {% if forloop.parentloop.last %}{{ block.shopify_attributes }}{% endif %}>
+              <div class="shop-the-look__item snap-start {% if forloop.first %}is-selected{% endif %} w-full"
+                   {% if device == 'mobile' %}data-popover-id="shop-the-look-item-popover-{{ block.id }}"{% endif %}
+                   {% if forloop.parentloop.last %}{{ block.shopify_attributes }}{% endif %}>
                 <div class="shop-the-look__image-wrapper">
                   {%- if block.settings.image != blank -%}
                     {%- capture sizes -%}(max-width: 999px) 100vw, min(60vw, 550px){%- endcapture -%}
-                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: look_image_loading_strategy, widths: '400,500,600,700,800,1000,1200,1400,1600,1800', sizes: sizes, class: 'image-cover' -}}
+                    {%- assign fetch_priority = 'auto' -%}
+                    {%- if forloop.parentloop.first and device == 'desktop' -%}
+                      {%- assign fetch_priority = 'high' -%}
+                    {%- endif -%}
+                    {{- block.settings.image
+                      | image_url: width: block.settings.image.width
+                      | image_tag:
+                          loading: look_image_loading_strategy,
+                          widths: '400,500,600,700,800,1000,1200,1400,1600,1800',
+                          sizes: sizes,
+                          class: 'image-cover',
+                          fetchpriority: fetch_priority
+                    -}}
                   {%- else -%}
                     {%- capture placeholder -%}{% cycle 'collection-1', 'collection-2', 'collection-3', 'collection-4' %}{%- endcapture -%}
                     {{- placeholder | placeholder_svg_tag: 'placeholder--invert' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
@@ -53,7 +69,12 @@
                       {%- capture horizontal_position_id -%}product_{{ product_index }}_horizontal_position{%- endcapture -%}
                       {%- capture vertical_position_id -%}product_{{ product_index }}_vertical_position{%- endcapture -%}
 
-                      <button class="shop-the-look__hot-spot" style="--shop-the-look-hot-spot-top: {{ block.settings[vertical_position_id] }}%; --shop-the-look-hot-spot-left: {{ block.settings[horizontal_position_id] }}%; {% render 'surface', background: block.settings.hot_spots_background %}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="{{ 'general.accessibility.go_to_item' | t: index: product_index | escape }}">
+                      <button class="shop-the-look__hot-spot tap-area"
+                        style="--shop-the-look-hot-spot-top: {{ block.settings[vertical_position_id] }}%;
+                               --shop-the-look-hot-spot-left: {{ block.settings[horizontal_position_id] }}%;
+                               {% render 'surface', background: block.settings.hot_spots_background %}"
+                        aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+                        aria-label="{{ 'general.accessibility.go_to_item' | t: index: product_index | escape }}">
                         <span class="sr-only">{{- 'general.accessibility.go_to_item' | t: index: product_index -}}</span>
                       </button>
                     {%- endfor -%}
@@ -70,7 +91,6 @@
                           {%- unless show_placeholder -%}
                             {%- capture product_id -%}product_{{ product_index }}{%- endcapture -%}
                             {%- capture quick_buy_context -%}mobile-{{ block.id }}{%- endcapture -%}
-
                             {%- render 'product-card', product: block.settings[product_id], show_vendor: settings.show_vendor, show_rating: settings.show_rating, quick_buy_context: quick_buy_context -%}
                           {%- else -%}
                             {%- render 'product-card-placeholder', loop_index: forloop.index0, show_vendor: settings.show_vendor, show_rating: settings.show_rating -%}
@@ -87,7 +107,6 @@
                           {%- unless show_placeholder -%}
                             {%- capture product_id -%}product_{{ product_index }}{%- endcapture -%}
                             {%- capture quick_buy_context -%}desktop-{{ block.id }}{%- endcapture -%}
-
                             {%- render 'product-card', product: block.settings[product_id], show_vendor: settings.show_vendor, show_rating: settings.show_rating, quick_buy_context: quick_buy_context -%}
                           {%- else -%}
                             {%- render 'product-card-placeholder', loop_index: forloop.index0, show_vendor: settings.show_vendor, show_rating: settings.show_rating -%}
@@ -96,8 +115,8 @@
                       {%- endfor -%}
                     </shop-the-look-product-list-carousel>
 
-                    {%- comment -%}The link of the first product is re-assigned in JS when the product changes{%- endcomment -%}
-                    {%- assign button_text = 'sections.shop_the_look.view_product' | t -%}
+                    {%- comment -%} Link reatribuído via JS ao trocar o produto selecionado {%- endcomment -%}
+                    {%- assign button_text = 'Ver produto' -%}
                     {%- assign href_attribute = block.settings.product_1.url | default: '#' -%}
                     {%- render 'button', href: href_attribute, content: button_text -%}
 
@@ -123,7 +142,7 @@
                   {{- content -}}
                 </shop-the-look-mobile-carousel>
 
-                {%- assign button_text = 'sections.shop_the_look.view_products' | t -%}
+                {%- assign button_text = 'Ver produtos' -%}
                 {%- render 'button', type: 'button', content: button_text, stretch: true -%}
               </div>
             {%- else -%}
@@ -156,217 +175,131 @@
       </div>
     </div>
   </div>
+
+  <style>
+    /* Toque visual MyCharms (pode mover para seu CSS global) */
+    .shop-the-look__hot-spot{
+      width:18px;height:18px;border-radius:999px;
+      box-shadow:0 4px 14px rgba(0,0,0,.12);
+      transition:transform .18s ease;
+    }
+    @media (hover:hover){ .shop-the-look__hot-spot:hover{ transform:scale(1.06);} }
+    .shop-the-look__hot-spot:focus-visible{ outline:2px solid #ff9ccd; outline-offset:2px; }
+  </style>
 {%- endif -%}
 
 {% schema %}
-  {
-    "name": "t:sections.shop_the_look.name",
-    "class": "shopify-section--shop-the-look",
-    "tag": "section",
-    "max_blocks": 5,
-    "disabled_on": {
-      "groups": ["header", "custom.overlay"]
+{
+  "name": "Compre o look (MyCharms)",
+  "class": "shopify-section--shop-the-look",
+  "tag": "section",
+  "max_blocks": 5,
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de cores",
+      "default": "scheme-2"
     },
-    "settings": [
-      {
-        "type": "color_scheme",
-        "id": "color_scheme",
-        "label": "t:global.colors.scheme",
-        "default": "scheme-1"
-      },
-      {
-        "type": "checkbox",
-        "id": "separate_section_with_border",
-        "label": "t:global.section.separate_section_with_border",
-        "default": true
-      },
-      {
-        "type": "inline_richtext",
-        "id": "subheading",
-        "label": "t:global.text.subheading"
-      },
-      {
-        "type": "inline_richtext",
-        "id": "title",
-        "label": "t:global.text.heading",
-        "default": "Shop the look"
-      },
-      {
-        "type": "richtext",
-        "id": "content",
-        "label": "t:global.text.content"
-      },
-      {
-        "type": "inline_richtext",
-        "id": "popover_title",
-        "label": "t:sections.shop_the_look.popover_title",
-        "default": "Shop the look"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "look",
-        "name": "t:sections.shop_the_look.blocks.look.name",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "t:global.image.image",
-            "info": "t:sections.shop_the_look.blocks.look.image_size_recommendation"
-          },
-          {
-            "type": "color",
-            "id": "hot_spots_background",
-            "label": "t:sections.shop_the_look.blocks.look.hot_spots_background",
-            "default": "#ffffff"
-          },
-          {
-            "type": "header",
-            "content": "t:sections.shop_the_look.blocks.look.product_1_category"
-          },
-          {
-            "type": "product",
-            "id": "product_1",
-            "label": "t:sections.shop_the_look.blocks.look.product"
-          },
-          {
-            "type": "range",
-            "id": "product_1_horizontal_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_horizontal_position",
-            "min": 5,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 55
-          },
-          {
-            "type": "range",
-            "id": "product_1_vertical_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_vertical_position",
-            "min": 5,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 30
-          },
-          {
-            "type": "header",
-            "content": "t:sections.shop_the_look.blocks.look.product_2_category"
-          },
-          {
-            "type": "product",
-            "id": "product_2",
-            "label": "t:sections.shop_the_look.blocks.look.product"
-          },
-          {
-            "type": "range",
-            "id": "product_2_horizontal_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_horizontal_position",
-            "min": 5,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 25
-          },
-          {
-            "type": "range",
-            "id": "product_2_vertical_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_vertical_position",
-            "min": 5,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 40
-          },
-          {
-            "type": "header",
-            "content": "t:sections.shop_the_look.blocks.look.product_3_category"
-          },
-          {
-            "type": "product",
-            "id": "product_3",
-            "label": "t:sections.shop_the_look.blocks.look.product"
-          },
-          {
-            "type": "range",
-            "id": "product_3_horizontal_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_horizontal_position",
-            "min": 5,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 65
-          },
-          {
-            "type": "range",
-            "id": "product_3_vertical_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_vertical_position",
-            "min": 10,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 60
-          },
-          {
-            "type": "header",
-            "content": "t:sections.shop_the_look.blocks.look.product_4_category"
-          },
-          {
-            "type": "product",
-            "id": "product_4",
-            "label": "t:sections.shop_the_look.blocks.look.product"
-          },
-          {
-            "type": "range",
-            "id": "product_4_horizontal_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_horizontal_position",
-            "min": 5,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 85
-          },
-          {
-            "type": "range",
-            "id": "product_4_vertical_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_vertical_position",
-            "min": 10,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 85
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "Separar seção com borda",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subtítulo"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Título",
+      "default": "Compre o look"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Descrição"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "popover_title",
+      "label": "Título do popover",
+      "default": "Compre o look"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "look",
+      "name": "Look",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagem",
+          "info": "Use foto vertical de alta resolução para melhor recorte"
+        },
+        {
+          "type": "color",
+          "id": "hot_spots_background",
+          "label": "Cor dos marcadores",
+          "default": "#ff9ccd"
+        },
+        { "type": "header", "content": "Produto 1" },
+        { "type": "product", "id": "product_1", "label": "Produto" },
+        { "type": "range", "id": "product_1_horizontal_position", "label": "Posição horizontal (%)", "min": 5, "max": 95, "step": 1, "unit": "%", "default": 55 },
+        { "type": "range", "id": "product_1_vertical_position", "label": "Posição vertical (%)", "min": 5, "max": 95, "step": 1, "unit": "%", "default": 30 },
+
+        { "type": "header", "content": "Produto 2" },
+        { "type": "product", "id": "product_2", "label": "Produto" },
+        { "type": "range", "id": "product_2_horizontal_position", "label": "Posição horizontal (%)", "min": 5, "max": 95, "step": 1, "unit": "%", "default": 25 },
+        { "type": "range", "id": "product_2_vertical_position", "label": "Posição vertical (%)", "min": 5, "max": 95, "step": 1, "unit": "%", "default": 40 },
+
+        { "type": "header", "content": "Produto 3" },
+        { "type": "product", "id": "product_3", "label": "Produto" },
+        { "type": "range", "id": "product_3_horizontal_position", "label": "Posição horizontal (%)", "min": 5, "max": 95, "step": 1, "unit": "%", "default": 65 },
+        { "type": "range", "id": "product_3_vertical_position", "label": "Posição vertical (%)", "min": 10, "max": 95, "step": 1, "unit": "%", "default": 60 },
+
+        { "type": "header", "content": "Produto 4" },
+        { "type": "product", "id": "product_4", "label": "Produto" },
+        { "type": "range", "id": "product_4_horizontal_position", "label": "Posição horizontal (%)", "min": 5, "max": 95, "step": 1, "unit": "%", "default": 85 },
+        { "type": "range", "id": "product_4_vertical_position", "label": "Posição vertical (%)", "min": 10, "max": 95, "step": 1, "unit": "%", "default": 85 }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Compre o look",
+      "blocks": [
+        {
+          "type": "look",
+          "settings": {
+            "product_1_horizontal_position": 35,
+            "product_1_vertical_position": 35,
+            "product_2_horizontal_position": 34,
+            "product_2_vertical_position": 65,
+            "product_3_horizontal_position": 66,
+            "product_3_vertical_position": 42
           }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "t:sections.shop_the_look.presets.shop_the_look.name",
-        "blocks": [
-          {
-            "type": "look",
-            "settings": {
-              "product_1_horizontal_position": 35,
-              "product_1_vertical_position": 35,
-              "product_2_horizontal_position": 34,
-              "product_2_vertical_position": 65,
-              "product_3_horizontal_position": 66,
-              "product_3_vertical_position": 42
-            }
-          },
-          {
-            "type": "look",
-            "settings": {
-              "product_1_horizontal_position": 30,
-              "product_1_vertical_position": 35,
-              "product_2_horizontal_position": 70,
-              "product_2_vertical_position": 30,
-              "product_3_horizontal_position": 60,
-              "product_3_vertical_position": 65
-            }
+        },
+        {
+          "type": "look",
+          "settings": {
+            "product_1_horizontal_position": 30,
+            "product_1_vertical_position": 35,
+            "product_2_horizontal_position": 70,
+            "product_2_vertical_position": 30,
+            "product_3_horizontal_position": 60,
+            "product_3_vertical_position": 65
           }
-        ]
-      }
-    ]
-  }
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
