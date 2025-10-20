@@ -194,6 +194,24 @@
       ],
       "name": "Mais vendidos (Carrossel) — MyCharms",
       "settings": {
+        "subtitle": "LANÇAMENTO",
+        "title": "ARIANA GRANDE & SWAROVSKI",
+        "collection": "swarovski-ariana-grande",
+        "limit": 12,
+        "show_arrows": true,
+        "show_dots": true,
+        "show_quick_add": false,
+        "show_view_all": true,
+        "force_best_selling_link": false,
+        "autoplay": false,
+        "autoplay_ms": "4000",
+        "scroll_step": 85
+      }
+    },
+    "best_sellers_carousel_QCTYGq": {
+      "type": "best-sellers-carousel",
+      "name": "Mais vendidos (Carrossel) — MyCharms",
+      "settings": {
         "subtitle": "TOP VENDIDOS",
         "title": "Favoritos da MyCharms",
         "collection": "mais-vendidos-my-charms",
@@ -901,6 +919,7 @@
     "slideshow_Cr6bfE",
     "custom_liquid_xjiT6d",
     "best_sellers_carousel_rMXcKh",
+    "best_sellers_carousel_QCTYGq",
     "multiple_media_with_text_qUg4nz",
     "collection_list_etBtnt",
     "tiktok_feed_kaBWXT",
