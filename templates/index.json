@@ -185,6 +185,42 @@
         "text_alignment": "center"
       }
     },
+    "shop_the_look_TVaLVR": {
+      "type": "shop-the-look",
+      "blocks": {
+        "look_YEkGpP": {
+          "type": "look",
+          "settings": {
+            "image": "shopify://shop_images/cc75c4414865dd9fe9381e810d2fad21.jpg",
+            "hot_spots_background": "#f4f4f4",
+            "product_1": "bracelete-coracao-tennis-ariana-grande-swarovski-encomenda",
+            "product_1_horizontal_position": 18,
+            "product_1_vertical_position": 79,
+            "product_2": "conjunto-ariana-grande-x-swarovski-encomenda",
+            "product_2_horizontal_position": 85,
+            "product_2_vertical_position": 66,
+            "product_3": "colar-tennis-ariana-grande-x-swarovski-encomenda",
+            "product_3_horizontal_position": 66,
+            "product_3_vertical_position": 63,
+            "product_4": "brincos-de-mola-ariana-grande-swarovski-encomenda",
+            "product_4_horizontal_position": 53,
+            "product_4_vertical_position": 47
+          }
+        }
+      },
+      "block_order": [
+        "look_YEkGpP"
+      ],
+      "name": "t:sections.shop_the_look.presets.shop_the_look.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "popover_title": "Shop the look"
+      }
+    },
     "best_sellers_carousel_rMXcKh": {
       "type": "best-sellers-carousel",
       "custom_css": [
@@ -918,6 +954,7 @@
     "scrolling_content_6CAnJm",
     "slideshow_Cr6bfE",
     "custom_liquid_xjiT6d",
+    "shop_the_look_TVaLVR",
     "best_sellers_carousel_rMXcKh",
     "best_sellers_carousel_QCTYGq",
     "multiple_media_with_text_qUg4nz",
