@@ -28,14 +28,14 @@
     "stagger_products_apparition": true,
     "stagger_blog_posts_apparition": true,
     "product_image_aspect_ratio": "natural",
-    "show_secondary_image": false,
+    "show_secondary_image": true,
     "show_vendor": true,
     "product_card_text_font": "body",
     "product_color_display": "swatch",
-    "show_product_rating": false,
+    "show_product_rating": true,
     "show_quick_buy": false,
     "show_sold_out_badge": true,
-    "show_discount": false,
+    "show_discount": true,
     "discount_mode": "percentage",
     "cart_type": "page",
     "cart_icon": "shopping_bag",
@@ -50,11 +50,6 @@
     "blocks": {
       "3720565183479497137": {
         "type": "shopify://apps/globo-product-option/blocks/app-embed-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
-        "disabled": false,
-        "settings": {}
-      },
-      "11349500561483629931": {
-        "type": "shopify://apps/notify-me/blocks/app-embed/b399b727-6c85-44fc-9e21-63114bd72054",
         "disabled": false,
         "settings": {}
       },

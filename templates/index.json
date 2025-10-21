@@ -214,7 +214,7 @@
       "name": "t:sections.shop_the_look.presets.shop_the_look.name",
       "settings": {
         "color_scheme": "scheme-2",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "subheading": "",
         "title": "",
         "content": "",
