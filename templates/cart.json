@@ -9,6 +9,43 @@
  */
 {
   "sections": {
+    "rich_text_qp6GhH": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_DUFFpW": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_7wpWQN": {
+          "type": "heading",
+          "settings": {
+            "text": "CUPOM FRETE GRATIS: <strong>FRETE500</strong>",
+            "heading_tag": "h3"
+          }
+        },
+        "richtext_gGPx6F": {
+          "type": "richtext",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_DUFFpW",
+        "heading_7wpWQN",
+        "richtext_gGPx6F"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "content_width": "xs",
+        "text_position": "center",
+        "remove_vertical_spacing": true
+      }
+    },
     "main": {
       "type": "main-cart",
       "custom_css": [
@@ -22,11 +59,13 @@
         "show_order_weight": false,
         "show_shipping_text": false,
         "show_accelerated_buttons": true,
-        "show_shipping_estimator": false
+        "show_shipping_estimator": false,
+        "show_influencer_note": true
       }
     }
   },
   "order": [
+    "rich_text_qp6GhH",
     "main"
   ]
 }
