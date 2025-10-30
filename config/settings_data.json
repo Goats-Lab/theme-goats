@@ -60,7 +60,7 @@
       },
       "15188581332139481108": {
         "type": "shopify://apps/scala-descontos/blocks/cartButton/24748891-1ee0-454d-bfde-d80e65983c18",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "textSelector": "FINALIZAR PEDIDO",
           "textSelector2": "Check out",
