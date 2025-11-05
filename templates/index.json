@@ -371,7 +371,7 @@
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "image_size": "sm",
         "show_text_outside": false,
@@ -911,7 +911,7 @@
             "icon_width": 16,
             "mobile_icon_width": 16,
             "title": "<strong>Frete Grátis </strong>",
-            "content": "<p>Ganhe <strong>frete grátis</strong> em pedidos acima de <strong>R$260</strong>! Aproveite para garantir suas joias favoritas e economizar no envio.📦<br/><br/></p>"
+            "content": "<p>Ganhe <strong>frete grátis</strong> em pedidos acima de <strong>R$500</strong>! Aproveite para garantir suas joias favoritas e economizar no envio.📦<br/><br/></p>"
           }
         },
         "item_CWfgen": {
@@ -942,7 +942,7 @@
       ],
       "name": "t:sections.text_with_icons.presets.text_with_icons.name",
       "settings": {
-        "color_scheme": "scheme-9fd2f508-0e58-4780-aa25-7b903dcdde2a",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": true,
         "stack_on_mobile": false,
         "icon_color": "",
