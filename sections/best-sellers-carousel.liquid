@@ -88,49 +88,6 @@
   {% endif %}
 
   <style>
-    <style>
-  /* Textos brancos só nesta seção */
-  #shopify-section-{{ section.id }} .mc-lx{
-    --mc-ink: #ffffff;                 /* cor principal do texto */
-    --mc-muted: rgba(255,255,255,.75); /* textos secundários */
-    --mc-hair: rgba(255,255,255,.22);  /* linhas/bordas suaves */
-    --mc-soft: rgba(255,255,255,.10);  /* sombras suaves */
-  }
-
-  /* Ajustes finos para botões, setas e dots quando em branco */
-  #shopify-section-{{ section.id }} .mc-lx .mc-lx__btn{
-    border-color: var(--mc-ink);
-    color: var(--mc-ink);
-  }
-  #shopify-section-{{ section.id }} .mc-lx .mc-lx__btn:hover{
-    background: var(--mc-ink);
-    color: #000; /* ou #111 p/ contraste ao inverter */
-  }
-
-  #shopify-section-{{ section.id }} .mc-lx .mc-lx__btn--ghost{
-    border-color: var(--mc-hair);
-    color: var(--mc-ink);
-  }
-
-  #shopify-section-{{ section.id }} .mc-lx .mc-lx__arrow{
-    color: var(--mc-ink);
-    background: transparent;
-    border-color: var(--mc-hair);
-  }
-
-  #shopify-section-{{ section.id }} .mc-lx .mc-lx__dot{
-    background: rgba(255,255,255,.28);
-  }
-  #shopify-section-{{ section.id }} .mc-lx .mc-lx__dot.is-active{
-    background: #fff;
-    box-shadow: 0 0 0 6px rgba(255,255,255,.18);
-  }
-
-  /* Preços riscados e links */
-  #shopify-section-{{ section.id }} .mc-lx .was{ opacity: .65; }
-  #shopify-section-{{ section.id }} .mc-lx .mc-lx__name a{ color: inherit; }
-</style>
-
     /* —— Design tokens MyCharms (suave e elegante) —— */
     :root{
       --mc-ink:#111111;
@@ -246,6 +203,36 @@
     /* Acessibilidade */
     .mc-lx__rail:focus-visible{ outline:2px solid var(--mc-pink); outline-offset:2px; }
   </style>
+<style>
+  /* Força textos brancos só nesta seção */
+  #shopify-section-{{ section.id }} .mc-lx,
+  #shopify-section-{{ section.id }} .mc-lx *:not(svg):not(path){
+    color: #fff !important;
+  }
+
+  /* Bordas/botões/ícones ajustados para fundo escuro */
+  #shopify-section-{{ section.id }} .mc-lx .mc-lx__btn{
+    border-color: #fff !important;
+  }
+  #shopify-section-{{ section.id }} .mc-lx .mc-lx__btn:hover{
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  #shopify-section-{{ section.id }} .mc-lx .mc-lx__arrow{
+    color: #fff !important;
+    background: transparent !important;
+    border-color: rgba(255,255,255,.22) !important;
+  }
+
+  #shopify-section-{{ section.id }} .mc-lx .mc-lx__dot{
+    background: rgba(255,255,255,.28) !important;
+  }
+  #shopify-section-{{ section.id }} .mc-lx .mc-lx__dot.is-active{
+    background: #fff !important;
+    box-shadow: 0 0 0 6px rgba(255,255,255,.18) !important;
+  }
+</style>
 
   {% if coll and coll.products_count > 0 %}
   <script>
