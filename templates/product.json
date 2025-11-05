@@ -15,7 +15,7 @@
         "video_RQrFRb": {
           "type": "video",
           "settings": {
-            "color_scheme": "scheme-4",
+            "color_scheme": "scheme-3",
             "video": "{{ product.metafields.custom.v_deo.value }}",
             "autoplay": true,
             "show_controls": false,
@@ -39,7 +39,7 @@
       "custom_css": [],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": true,
         "desktop_row_height": 400,
         "mobile_row_height": 400,
@@ -101,7 +101,7 @@
           }
         },
         "globo_product_option_app_block_RtewJL": {
-          "type": "shopify://apps/globo-product-option/blocks/app-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
+          "type": "shopify://apps/globo-product-options/blocks/app-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
           "settings": {}
         },
         "buy_buttons": {
@@ -195,7 +195,7 @@
         "liquid_aGfn7y"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "container_size": "full",
         "product_info_size": 40,
         "show_sticky_add_to_cart": true,
@@ -213,7 +213,7 @@
       "type": "related-products",
       "name": "t:sections.related_products.presets.related_products.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "hide_product_information": false,
         "stack_products": false,
@@ -247,7 +247,7 @@
       "custom_css": [],
       "name": "t:sections.featured_collections.presets.featured_collections.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "hide_product_information": false,
         "stack_products": false,
@@ -296,7 +296,7 @@
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": true,
         "image": "shopify://shop_images/IMG_0879.jpg",
         "reveal_on_scroll": true,

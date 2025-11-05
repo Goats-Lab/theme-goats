@@ -48,7 +48,7 @@
         ".footer__aside {display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 35px; /* espaço entre os elementos */}"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "show_social_media": true,
         "show_payment_icons": true,

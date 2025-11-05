@@ -164,7 +164,7 @@
         "autoplay": true,
         "autoplay_pause_on_video": false,
         "cycle_speed": 7,
-        "background": "#ffffff",
+        "background": "#000000",
         "controls_color": "#ffffff"
       }
     },
@@ -213,7 +213,7 @@
       ],
       "name": "t:sections.shop_the_look.presets.shop_the_look.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "subheading": "",
         "title": "",
@@ -226,7 +226,8 @@
       "custom_css": [
         ".mc-lx__card {display: flex; flex-direction: column;}",
         ".mc-lx__info {display: flex; flex-direction: column; flex: 1; /* faz o bloco ocupar todo espaço restante */}",
-        ".mc-lx__btn,.mc-lx__btn--ghost {margin-top: auto; /* empurra o botão pro final do card */}"
+        ".mc-lx__btn,.mc-lx__btn--ghost {margin-top: auto; /* empurra o botão pro final do card */}",
+        ".texto-branco {color: #ffffff; /* branco puro */}"
       ],
       "name": "Mais vendidos (Carrossel) — MyCharms",
       "settings": {
@@ -246,6 +247,9 @@
     },
     "best_sellers_carousel_QCTYGq": {
       "type": "best-sellers-carousel",
+      "custom_css": [
+        ".txt {color: #ffffff; /* branco puro */}"
+      ],
       "name": "Mais vendidos (Carrossel) — MyCharms",
       "settings": {
         "subtitle": "TOP VENDIDOS",
@@ -281,7 +285,7 @@
       ],
       "name": "t:sections.multiple_media_with_text.presets.multiple_media_with_text.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "reveal_on_scroll": true,
         "separate_section_with_border": true,
         "media_position_desktop": "before_text",
@@ -308,7 +312,7 @@
         "collection_bgeNcx": {
           "type": "collection",
           "settings": {
-            "color_scheme": "scheme-2",
+            "color_scheme": "scheme-3",
             "collection": "pandoras",
             "image": "shopify://shop_images/Screenshot_2025-10-08_144626.png",
             "expand_collection": true,
@@ -325,7 +329,7 @@
         "collection_AkraEB": {
           "type": "collection",
           "settings": {
-            "color_scheme": "scheme-2",
+            "color_scheme": "scheme-3",
             "collection": "tiffany",
             "image": "shopify://shop_images/Screenshot_2025-10-08_144717.png",
             "expand_collection": true,
@@ -342,7 +346,7 @@
         "collection_8jdgE6": {
           "type": "collection",
           "settings": {
-            "color_scheme": "scheme-2",
+            "color_scheme": "scheme-3",
             "collection": "colecao-swarovski",
             "image": "shopify://shop_images/Screenshot_2025-10-08_144810.png",
             "expand_collection": true,
@@ -367,7 +371,7 @@
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": true,
         "image_size": "sm",
         "show_text_outside": false,
@@ -476,7 +480,7 @@
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "image": "shopify://shop_images/2af68c075f4c7eefda3a52e40854782a.jpg",
         "mobile_image": "shopify://shop_images/2af68c075f4c7eefda3a52e40854782a.jpg",
@@ -566,7 +570,7 @@
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "image_size": "sm",
         "show_text_outside": false,
@@ -583,7 +587,7 @@
       "type": "image-with-text",
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "image": "shopify://shop_images/3c31c2c44d54af6e014c309cfb2f85c9.jpg",
         "mobile_image": "shopify://shop_images/3c31c2c44d54af6e014c309cfb2f85c9.jpg",
@@ -673,7 +677,7 @@
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "image_size": "sm",
         "show_text_outside": false,
@@ -723,7 +727,7 @@
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "image": "shopify://shop_images/cb5646d37eaf7cbaac6259988f5f8555.jpg",
         "mobile_image": "shopify://shop_images/cb5646d37eaf7cbaac6259988f5f8555.jpg",
@@ -813,7 +817,7 @@
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "image_size": "sm",
         "show_text_outside": false,
@@ -845,7 +849,7 @@
       ],
       "name": "t:sections.featured_collections.presets.featured_collections.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": true,
         "hide_product_information": true,
         "stack_products": true,
@@ -891,7 +895,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom_liquid.presets.custom_liquid.name",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": true,

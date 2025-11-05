@@ -52,14 +52,14 @@
     "header": {
       "type": "header",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "enable_sticky": false,
         "hide_on_scroll": false,
         "show_separation_border": true,
         "reduce_padding": true,
-        "logo": "shopify://shop_images/Design_sem_nome__2_-removebg-preview.png",
-        "logo_max_width": 45,
-        "logo_mobile_max_width": 35,
+        "logo": "shopify://shop_images/IMG_0759.png",
+        "logo_max_width": 300,
+        "logo_mobile_max_width": 45,
         "menu": "header",
         "sidebar_menu": "header",
         "menu_open_trigger": "hover",
