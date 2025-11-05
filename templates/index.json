@@ -226,8 +226,7 @@
       "custom_css": [
         ".mc-lx__card {display: flex; flex-direction: column;}",
         ".mc-lx__info {display: flex; flex-direction: column; flex: 1; /* faz o bloco ocupar todo espaço restante */}",
-        ".mc-lx__btn,.mc-lx__btn--ghost {margin-top: auto; /* empurra o botão pro final do card */}",
-        ".texto-branco {color: #ffffff; /* branco puro */}"
+        ".mc-lx__btn,.mc-lx__btn--ghost {margin-top: auto; /* empurra o botão pro final do card */}"
       ],
       "name": "Mais vendidos (Carrossel) — MyCharms",
       "settings": {
@@ -247,9 +246,7 @@
     },
     "best_sellers_carousel_QCTYGq": {
       "type": "best-sellers-carousel",
-      "custom_css": [
-        ".txt {color: #ffffff; /* branco puro */}"
-      ],
+      "custom_css": [],
       "name": "Mais vendidos (Carrossel) — MyCharms",
       "settings": {
         "subtitle": "TOP VENDIDOS",
@@ -483,7 +480,6 @@
         "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "image": "shopify://shop_images/2af68c075f4c7eefda3a52e40854782a.jpg",
-        "mobile_image": "shopify://shop_images/2af68c075f4c7eefda3a52e40854782a.jpg",
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
@@ -590,7 +586,6 @@
         "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "image": "shopify://shop_images/3c31c2c44d54af6e014c309cfb2f85c9.jpg",
-        "mobile_image": "shopify://shop_images/3c31c2c44d54af6e014c309cfb2f85c9.jpg",
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
@@ -729,8 +724,7 @@
       "settings": {
         "color_scheme": "scheme-3",
         "separate_section_with_border": false,
-        "image": "shopify://shop_images/cb5646d37eaf7cbaac6259988f5f8555.jpg",
-        "mobile_image": "shopify://shop_images/cb5646d37eaf7cbaac6259988f5f8555.jpg",
+        "image": "shopify://shop_images/tiffany_invert.png",
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
