@@ -213,7 +213,7 @@
       "type": "related-products",
       "name": "t:sections.related_products.presets.related_products.name",
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "hide_product_information": false,
         "stack_products": false,

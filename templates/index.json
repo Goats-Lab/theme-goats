@@ -185,6 +185,29 @@
         "text_alignment": "center"
       }
     },
+    "best_sellers_carousel_rMXcKh": {
+      "type": "best-sellers-carousel",
+      "custom_css": [
+        ".mc-lx__card {display: flex; flex-direction: column;}",
+        ".mc-lx__info {display: flex; flex-direction: column; flex: 1; /* faz o bloco ocupar todo espaço restante */}",
+        ".mc-lx__btn,.mc-lx__btn--ghost {margin-top: auto; /* empurra o botão pro final do card */}"
+      ],
+      "name": "Mais vendidos (Carrossel) — MyCharms",
+      "settings": {
+        "subtitle": "LANÇAMENTO",
+        "title": "ARIANA GRANDE & SWAROVSKI",
+        "collection": "swarovski-ariana-grande",
+        "limit": 12,
+        "show_arrows": true,
+        "show_dots": true,
+        "show_quick_add": false,
+        "show_view_all": true,
+        "force_best_selling_link": false,
+        "autoplay": false,
+        "autoplay_ms": "4000",
+        "scroll_step": 85
+      }
+    },
     "shop_the_look_TVaLVR": {
       "type": "shop-the-look",
       "blocks": {
@@ -219,29 +242,6 @@
         "title": "",
         "content": "",
         "popover_title": "ESCOLHA SUA JOIA"
-      }
-    },
-    "best_sellers_carousel_rMXcKh": {
-      "type": "best-sellers-carousel",
-      "custom_css": [
-        ".mc-lx__card {display: flex; flex-direction: column;}",
-        ".mc-lx__info {display: flex; flex-direction: column; flex: 1; /* faz o bloco ocupar todo espaço restante */}",
-        ".mc-lx__btn,.mc-lx__btn--ghost {margin-top: auto; /* empurra o botão pro final do card */}"
-      ],
-      "name": "Mais vendidos (Carrossel) — MyCharms",
-      "settings": {
-        "subtitle": "LANÇAMENTO",
-        "title": "ARIANA GRANDE & SWAROVSKI",
-        "collection": "swarovski-ariana-grande",
-        "limit": 12,
-        "show_arrows": true,
-        "show_dots": true,
-        "show_quick_add": false,
-        "show_view_all": true,
-        "force_best_selling_link": false,
-        "autoplay": false,
-        "autoplay_ms": "4000",
-        "scroll_step": 85
       }
     },
     "best_sellers_carousel_QCTYGq": {
@@ -956,8 +956,8 @@
     "scrolling_content_6CAnJm",
     "slideshow_Cr6bfE",
     "custom_liquid_xjiT6d",
-    "shop_the_look_TVaLVR",
     "best_sellers_carousel_rMXcKh",
+    "shop_the_look_TVaLVR",
     "best_sellers_carousel_QCTYGq",
     "multiple_media_with_text_qUg4nz",
     "collection_list_etBtnt",
