@@ -203,36 +203,6 @@
     /* Acessibilidade */
     .mc-lx__rail:focus-visible{ outline:2px solid var(--mc-pink); outline-offset:2px; }
   </style>
-<style>
-  /* Força textos brancos só nesta seção */
-  #shopify-section-{{ section.id }} .mc-lx,
-  #shopify-section-{{ section.id }} .mc-lx *:not(svg):not(path){
-    color: #fff !important;
-  }
-
-  /* Bordas/botões/ícones ajustados para fundo escuro */
-  #shopify-section-{{ section.id }} .mc-lx .mc-lx__btn{
-    border-color: #fff !important;
-  }
-  #shopify-section-{{ section.id }} .mc-lx .mc-lx__btn:hover{
-    background: #fff !important;
-    color: #111 !important;
-  }
-
-  #shopify-section-{{ section.id }} .mc-lx .mc-lx__arrow{
-    color: #fff !important;
-    background: transparent !important;
-    border-color: rgba(255,255,255,.22) !important;
-  }
-
-  #shopify-section-{{ section.id }} .mc-lx .mc-lx__dot{
-    background: rgba(255,255,255,.28) !important;
-  }
-  #shopify-section-{{ section.id }} .mc-lx .mc-lx__dot.is-active{
-    background: #fff !important;
-    box-shadow: 0 0 0 6px rgba(255,255,255,.18) !important;
-  }
-</style>
 
   {% if coll and coll.products_count > 0 %}
   <script>
