@@ -11,7 +11,7 @@
   "current": {
     "icon_stroke_width": 2,
     "section_vertical_spacing": "md",
-    "default_color_scheme": "scheme-3",
+    "default_color_scheme": "scheme-2",
     "modal_color_scheme": "scheme-3",
     "product_rating_color": "#1c1c1c",
     "product_on_sale_accent": "#000000",
@@ -100,8 +100,8 @@
           "background": "#000000",
           "background_gradient": "",
           "text_color": "#ffffff",
-          "primary_button_background": "#ffffff",
-          "primary_button_text_color": "#1c1c1c",
+          "primary_button_background": "#ff9ccd",
+          "primary_button_text_color": "#000000",
           "circle_button_background": "#ffffff",
           "circle_button_icon": "#ff6eb6"
         }

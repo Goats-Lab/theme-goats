@@ -246,7 +246,10 @@
     },
     "best_sellers_carousel_QCTYGq": {
       "type": "best-sellers-carousel",
-      "custom_css": [],
+      "custom_css": [
+        ".mc-lx__card:hover .mc-lx__name a {color: #111111;}",
+        " /* já está escuro; posso trocar pra #7d3d5a (rosa-ink) se quiser */"
+      ],
       "name": "Mais vendidos (Carrossel) — MyCharms",
       "settings": {
         "subtitle": "TOP VENDIDOS",
@@ -479,7 +482,7 @@
       "settings": {
         "color_scheme": "scheme-3",
         "separate_section_with_border": false,
-        "image": "shopify://shop_images/2af68c075f4c7eefda3a52e40854782a.jpg",
+        "image": "shopify://shop_images/swarovski_invert.png",
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
@@ -585,7 +588,7 @@
       "settings": {
         "color_scheme": "scheme-3",
         "separate_section_with_border": false,
-        "image": "shopify://shop_images/3c31c2c44d54af6e014c309cfb2f85c9.jpg",
+        "image": "shopify://shop_images/pandora_invert.png",
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
@@ -720,6 +723,7 @@
         "richtext_QryQ8A",
         "button_xJ9QRr"
       ],
+      "custom_css": [],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "scheme-3",
@@ -843,7 +847,7 @@
       ],
       "name": "t:sections.featured_collections.presets.featured_collections.name",
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "hide_product_information": true,
         "stack_products": true,
