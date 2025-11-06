@@ -9,16 +9,37 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "color_scheme": "",
-        "show_title": true,
-        "page_width": "xs"
-      }
+    "bf-hero": {
+      "type": "custom-liquid",
+      "settings": {}
+    },
+    "bf-countdown": {
+      "type": "custom-liquid",
+      "settings": {}
+    },
+    "bf-collection-grid": {
+      "type": "custom-liquid",
+      "settings": {}
+    },
+    "bf-usps": {
+      "type": "custom-liquid",
+      "settings": {}
+    },
+    "bf-cta": {
+      "type": "custom-liquid",
+      "settings": {}
+    },
+    "bf-newsletter": {
+      "type": "custom-liquid",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "bf-hero",
+    "bf-countdown",
+    "bf-collection-grid",
+    "bf-usps",
+    "bf-cta",
+    "bf-newsletter"
   ]
 }
