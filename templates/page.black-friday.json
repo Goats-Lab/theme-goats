@@ -11,35 +11,153 @@
   "sections": {
     "bf-hero": {
       "type": "custom-liquid",
-      "settings": {}
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "",
+        "text_alignment": "center"
+      }
     },
-    "bf-countdown": {
-      "type": "custom-liquid",
-      "settings": {}
+    "before_after_6e8kEj": {
+      "type": "before-after",
+      "blocks": {
+        "before_RcyfLa": {
+          "type": "before",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Imagem_do_WhatsApp_de_2025-11-05_a_s_22.46.35_b292bf51.jpg",
+            "text": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link"
+          }
+        },
+        "after_MC4bck": {
+          "type": "after",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/banner_black_1_84b4f857-13ba-46cc-aca1-70f6bcd47e51.jpg",
+            "text": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "before_RcyfLa",
+        "after_MC4bck"
+      ],
+      "name": "t:sections.before_after.presets.before_after.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "cursor_direction": "horizontal",
+        "cursor_initial_position": 50,
+        "cursor_background": "#ffffff",
+        "cursor_arrows_color": "#000000"
+      }
     },
-    "bf-collection-grid": {
-      "type": "custom-liquid",
-      "settings": {}
+    "best_sellers_carousel_rAqJre": {
+      "type": "best-sellers-carousel",
+      "name": "Mais vendidos (Carrossel) — MyCharms",
+      "settings": {
+        "subtitle": "TOP VENDIDOS",
+        "title": "Favoritos da MyCharms",
+        "collection": "pandoras",
+        "limit": 12,
+        "show_arrows": true,
+        "show_dots": true,
+        "show_quick_add": true,
+        "show_view_all": true,
+        "force_best_selling_link": true,
+        "autoplay": false,
+        "autoplay_ms": "4000",
+        "scroll_step": 85
+      }
     },
-    "bf-usps": {
-      "type": "custom-liquid",
-      "settings": {}
-    },
-    "bf-cta": {
-      "type": "custom-liquid",
-      "settings": {}
-    },
-    "bf-newsletter": {
-      "type": "custom-liquid",
-      "settings": {}
+    "collection_list_xeBEhX": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_8eYQCP": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_rRLPVH": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_8dt7ti": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_8eYQCP",
+        "collection_rRLPVH",
+        "collection_8dt7ti"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image_size": "auto",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": ""
+      }
     }
   },
   "order": [
     "bf-hero",
-    "bf-countdown",
-    "bf-collection-grid",
-    "bf-usps",
-    "bf-cta",
-    "bf-newsletter"
+    "before_after_6e8kEj",
+    "best_sellers_carousel_rAqJre",
+    "collection_list_xeBEhX"
   ]
 }
