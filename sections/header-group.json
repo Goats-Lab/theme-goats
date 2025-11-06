@@ -58,7 +58,7 @@
         "show_separation_border": true,
         "reduce_padding": true,
         "logo": "shopify://shop_images/IMG_0759.png",
-        "logo_max_width": 300,
+        "logo_max_width": 45,
         "logo_mobile_max_width": 45,
         "menu": "header",
         "sidebar_menu": "header",
