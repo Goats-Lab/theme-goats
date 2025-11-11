@@ -14,7 +14,7 @@
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "scheme-3",
-        "separate_section_with_border": false,
+        "separate_section_with_border": true,
         "image": "shopify://shop_images/Imagem_do_WhatsApp_de_2025-11-05_a_s_22.46.35_b292bf51.jpg",
         "mobile_image": "shopify://shop_images/Imagem_do_WhatsApp_de_2025-11-05_a_s_22.46.35_b292bf51.jpg",
         "reveal_on_scroll": false,
