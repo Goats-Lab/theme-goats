@@ -237,6 +237,46 @@
         "content": ""
       }
     },
+    "multiple_media_with_text_qUg4nz": {
+      "type": "multiple-media-with-text",
+      "blocks": {
+        "image_Fng8nE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_5_de_nov._de_2025_20_36_18.png",
+            "rotation": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_Fng8nE"
+      ],
+      "custom_css": [
+        ".button-container {display: flex; justify-content: center; /* centraliza horizontalmente */}"
+      ],
+      "name": "t:sections.multiple_media_with_text.presets.multiple_media_with_text.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "reveal_on_scroll": true,
+        "separate_section_with_border": true,
+        "media_position_desktop": "before_text",
+        "media_position_mobile": "before_text",
+        "media_layout": "overlap",
+        "media_alignment": "center",
+        "media_alignment_offset": 0,
+        "media_mobile_alignment_offset": 0,
+        "text_alignment": "center",
+        "subheading": "",
+        "title": "SUA JOIA ESTA ESGOTADA?",
+        "content": "<p>Agora é possivel encomendar sua peça e ter ela reservada somente para você sem precisar esperar pela pronta entrega!</p>",
+        "button_1_text": "QUERO ENCOMENDAR",
+        "button_1_link": "shopify://pages/all-encomenda",
+        "button_1_style": "solid",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_2_style": "solid"
+      }
+    },
     "shop_the_look_TVaLVR": {
       "type": "shop-the-look",
       "blocks": {
@@ -293,46 +333,6 @@
         "autoplay": false,
         "autoplay_ms": "4000",
         "scroll_step": 85
-      }
-    },
-    "multiple_media_with_text_qUg4nz": {
-      "type": "multiple-media-with-text",
-      "blocks": {
-        "image_Fng8nE": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_5_de_nov._de_2025_20_36_18.png",
-            "rotation": 0
-          }
-        }
-      },
-      "block_order": [
-        "image_Fng8nE"
-      ],
-      "custom_css": [
-        ".button-container {display: flex; justify-content: center; /* centraliza horizontalmente */}"
-      ],
-      "name": "t:sections.multiple_media_with_text.presets.multiple_media_with_text.name",
-      "settings": {
-        "color_scheme": "scheme-3",
-        "reveal_on_scroll": true,
-        "separate_section_with_border": true,
-        "media_position_desktop": "before_text",
-        "media_position_mobile": "before_text",
-        "media_layout": "overlap",
-        "media_alignment": "center",
-        "media_alignment_offset": 0,
-        "media_mobile_alignment_offset": 0,
-        "text_alignment": "center",
-        "subheading": "",
-        "title": "SUA JOIA ESTA ESGOTADA?",
-        "content": "<p>Agora é possivel encomendar sua peça e ter ela reservada somente para você sem precisar esperar pela pronta entrega!</p>",
-        "button_1_text": "QUERO ENCOMENDAR",
-        "button_1_link": "shopify://pages/all-encomenda",
-        "button_1_style": "solid",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_2_style": "solid"
       }
     },
     "tiktok_feed_kaBWXT": {
@@ -906,11 +906,11 @@
     "scrolling_content_6CAnJm",
     "slideshow_Cr6bfE",
     "custom_liquid_xjiT6d",
-    "best_sellers_carousel_rMXcKh",
-    "collection_list_etBtnt",
-    "shop_the_look_TVaLVR",
     "best_sellers_carousel_QCTYGq",
+    "collection_list_etBtnt",
+    "best_sellers_carousel_rMXcKh",
     "multiple_media_with_text_qUg4nz",
+    "shop_the_look_TVaLVR",
     "tiktok_feed_kaBWXT",
     "image_with_text_FicW9t",
     "collection_list_nVz8kJ",
