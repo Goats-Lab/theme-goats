@@ -14,7 +14,8 @@
         </button>
       </dialog-close-button>
 
-      <div class="v-stack gap-8">
+      <div class="v-stack gap-8" style="text-align:center; width:100%;">
+        
         {%- if section.settings.title != blank or section.settings.content != blank -%}
           <div class="v-stack gap-4 text-center">
             {%- if section.settings.title != blank -%}
@@ -22,141 +23,75 @@
             {%- endif -%}
 
             {%- if section.settings.content != blank -%}
-              <div class="prose">
+              <div class="prose" style="text-align:center;">
                 {{ section.settings.content }}
               </div>
             {%- endif -%}
           </div>
         {%- endif -%}
 
-        <div class="v-stack gap-4">
-          <div class="h-stack justify-center gap-4">
-            {%- if section.settings.instagram_url != blank -%}
-              {%- render 'button',
-                href: section.settings.instagram_url,
-                content: section.settings.instagram_button_text
-              -%}
-            {%- endif -%}
-
-            {%- if section.settings.whatsapp_url != blank -%}
-              {%- render 'button',
-                href: section.settings.whatsapp_url,
-                content: section.settings.whatsapp_button_text
-              -%}
-            {%- endif -%}
-          </div>
-
-          {%- if section.settings.helper_text != blank -%}
-            <p class="text-subdued text-center">
-              {{ section.settings.helper_text }}
-            </p>
+        <!-- BOTÕES CENTRALIZADOS -->
+        <div class="h-stack gap-4" style="justify-content:center; width:100%; text-align:center;">
+          {%- if section.settings.instagram_url != blank -%}
+            {%- render 'button',
+              href: section.settings.instagram_url,
+              content: section.settings.instagram_button_text
+            -%}
           {%- endif -%}
 
-          {%- if section.settings.show_only_once -%}
-            <script>
-              // Marca como "preenchido" quando o usuário clicar em qualquer botão
-              document.addEventListener('click', function (event) {
-                var target = event.target.closest('a');
-                if (!target) return;
-                if (target.closest('newsletter-popup')) {
-                  try {
-                    localStorage.setItem('theme:popup-filled', 'true');
-                  } catch(e) {}
-                }
-              }, { passive: true });
-            </script>
+          {%- if section.settings.whatsapp_url != blank -%}
+            {%- render 'button',
+              href: section.settings.whatsapp_url,
+              content: section.settings.whatsapp_button_text
+            -%}
           {%- endif -%}
         </div>
+
+        {%- if section.settings.helper_text != blank -%}
+          <p class="text-subdued text-center">
+            {{ section.settings.helper_text }}
+          </p>
+        {%- endif -%}
+
+        {%- if section.settings.show_only_once -%}
+          <script>
+            document.addEventListener('click', function (event) {
+              var target = event.target.closest('a');
+              if (!target) return;
+              if (target.closest('newsletter-popup')) {
+                try { localStorage.setItem('theme:popup-filled', 'true'); } catch(e) {}
+              }
+            }, { passive: true });
+          </script>
+        {%- endif -%}
       </div>
+
+      <!-- ESTILO PARA ALINHAMENTO E RESPONSIVIDADE -->
+      <style>
+        newsletter-popup a.button {
+          text-align: center !important;
+          min-width: 180px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        newsletter-popup .h-stack {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        @media (max-width: 600px) {
+          newsletter-popup .h-stack {
+            flex-direction: column !important;
+            gap: 12px !important;
+          }
+          newsletter-popup a.button {
+            width: 100% !important;
+          }
+        }
+      </style>
+
     </newsletter-popup>
   {%- endunless -%}
 {%- endunless -%}
-
-{% schema %}
-{
-  "name": "Popup comunidade MyCharms",
-  "class": "shopify-section--popup",
-  "settings": [
-    {
-      "type": "paragraph",
-      "content": "Convide clientes para entrar na comunidade do Instagram e WhatsApp para receber novidades, atualizações e cupons exclusivos."
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:global.colors.scheme",
-      "default": "scheme-3"
-    },
-    {
-      "type": "range",
-      "id": "apparition_delay",
-      "min": 0,
-      "max": 15,
-      "step": 1,
-      "unit": "sec",
-      "label": "Tempo para aparecer (segundos)",
-      "default": 5
-    },
-    {
-      "type": "checkbox",
-      "id": "show_only_on_index",
-      "label": "Mostrar apenas na página inicial",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "hide_for_account_holders",
-      "label": "Esconder para clientes logados",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_only_once",
-      "label": "Mostrar apenas uma vez por visitante",
-      "default": true
-    },
-    {
-      "type": "inline_richtext",
-      "id": "title",
-      "label": "Título",
-      "default": "Entre para a comunidade MyCharms 💕"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "content",
-      "label": "Texto",
-      "default": "Entre na nossa comunidade exclusiva do Instagram e do WhatsApp para receber em primeira mão novidades, atualizações de reposição, lançamentos e cupons secretos. ✨"
-    },
-    {
-      "type": "text",
-      "id": "instagram_url",
-      "label": "Link da comunidade no Instagram",
-      "default": "https://instagram.com/mycharms"
-    },
-    {
-      "type": "text",
-      "id": "instagram_button_text",
-      "label": "Texto do botão Instagram",
-      "default": "Entrar na comunidade do Instagram"
-    },
-    {
-      "type": "text",
-      "id": "whatsapp_url",
-      "label": "Link da comunidade no WhatsApp",
-      "default": "https://wa.me/SEU_NUMERO_OU_GRUPO"
-    },
-    {
-      "type": "text",
-      "id": "whatsapp_button_text",
-      "label": "Texto do botão WhatsApp",
-      "default": "Entrar na comunidade do WhatsApp"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "helper_text",
-      "label": "Texto auxiliar",
-      "default": "Lá você recebe cupons relâmpago, novidades e bastidores da MyCharms em primeira mão. 💎"
-    }
-  ]
-}
-{% endschema %}
