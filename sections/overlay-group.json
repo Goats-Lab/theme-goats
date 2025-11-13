@@ -29,13 +29,17 @@
       "type": "newsletter-popup",
       "settings": {
         "color_scheme": "scheme-4",
-        "apparition_delay": 5,
+        "apparition_delay": 3,
         "show_only_on_index": true,
         "hide_for_account_holders": true,
         "show_only_once": true,
         "title": "Signup for our newsletter",
         "content": "",
-        "button_text": "Subscribe"
+        "instagram_url": "https://instagram.com/mycharms",
+        "instagram_button_text": "Entrar na comunidade do Instagram",
+        "whatsapp_url": "https://wa.me/SEU_NUMERO_OU_GRUPO",
+        "whatsapp_button_text": "Entrar na comunidade do WhatsApp",
+        "helper_text": "Lá você recebe cupons relâmpago, novidades e bastidores da MyCharms em primeira mão. 💎"
       }
     },
     "privacy-banner": {
