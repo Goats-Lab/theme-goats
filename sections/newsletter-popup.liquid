@@ -1,15 +1,12 @@
 {%- unless request.page_type == 'captcha' or section.settings.show_only_on_index and template != 'index' -%}
-  {%- unless section.settings.show_only_for_visitors and customer -%}
-    {%- assign posted_successfully = false -%}
-    {%- assign newsletter_id = 'newsletter-' | append: section.id -%}
-
-    {%- capture _temporary -%}
-      {%- form 'customer', id: newsletter_id, class: 'form' -%}
-        {%- assign posted_successfully = form.posted_successfully? -%}
-      {%- endform -%}
-    {%- endcapture -%}
-
-    <newsletter-popup class="pop-in newsletter-popup color-scheme color-scheme--{{ section.settings.color_scheme.id }}" title="Newsletter popup" {% if section.settings.show_only_once %}only-once{% endif %} apparition-delay="{{ section.settings.apparition_delay }}" {% if posted_successfully %}open{% endif %} handle-editor-events>
+  {%- unless section.settings.hide_for_account_holders and customer -%}
+    <newsletter-popup
+      class="pop-in newsletter-popup color-scheme color-scheme--{{ section.settings.color_scheme.id }}"
+      title="Comunidade MyCharms"
+      {% if section.settings.show_only_once %}only-once{% endif %}
+      apparition-delay="{{ section.settings.apparition_delay }}"
+      handle-editor-events
+    >
       <dialog-close-button class="contents">
         <button class="pop-in__close-button tap-area">
           <span class="sr-only">{{ 'general.accessibility.close' | t }}</span>
@@ -32,30 +29,44 @@
           </div>
         {%- endif -%}
 
-        {%- form 'customer', id: newsletter_id, class: 'form' -%}
-          {%- if form.posted_successfully? -%}
-            {%- capture success_message -%}{{ 'general.newsletter.subscribed_successfully' | t }}{%- endcapture -%}
-            {%- render 'banner', content: success_message, status: 'success', text_alignment: 'center' -%}
-
-            <script>
-              localStorage.setItem('theme:popup-filled', 'true');
-            </script>
-          {%- else -%}
-            {%- if form.errors -%}
-              {%- assign content = form.errors | default_errors -%}
-              {%- render 'banner', status: 'error', content: content, text_alignment: 'center' -%}
+        <div class="v-stack gap-4">
+          <div class="h-stack justify-center gap-4">
+            {%- if section.settings.instagram_url != blank -%}
+              {%- render 'button',
+                href: section.settings.instagram_url,
+                content: section.settings.instagram_button_text
+              -%}
             {%- endif -%}
 
-            <div class="fieldset">
-              <input type="hidden" name="contact[tags]" value="newsletter">
+            {%- if section.settings.whatsapp_url != blank -%}
+              {%- render 'button',
+                href: section.settings.whatsapp_url,
+                content: section.settings.whatsapp_button_text
+              -%}
+            {%- endif -%}
+          </div>
 
-              {%- assign label = 'blog.comments.email' | t -%}
-              {%- render 'input', type: 'email', name: 'contact[email]', label: label, value: customer.email, required: true, autocomplete: 'email' -%}
-            </div>
-
-            {%- render 'button', content: section.settings.button_text, type: 'submit' -%}
+          {%- if section.settings.helper_text != blank -%}
+            <p class="text-subdued text-center">
+              {{ section.settings.helper_text }}
+            </p>
           {%- endif -%}
-        {%- endform -%}
+
+          {%- if section.settings.show_only_once -%}
+            <script>
+              // Marca como "preenchido" quando o usuário clicar em qualquer botão
+              document.addEventListener('click', function (event) {
+                var target = event.target.closest('a');
+                if (!target) return;
+                if (target.closest('newsletter-popup')) {
+                  try {
+                    localStorage.setItem('theme:popup-filled', 'true');
+                  } catch(e) {}
+                }
+              }, { passive: true });
+            </script>
+          {%- endif -%}
+        </div>
       </div>
     </newsletter-popup>
   {%- endunless -%}
@@ -63,12 +74,12 @@
 
 {% schema %}
 {
-  "name": "t:sections.newsletter_popup.name",
+  "name": "Popup comunidade MyCharms",
   "class": "shopify-section--popup",
   "settings": [
     {
       "type": "paragraph",
-      "content": "t:sections.newsletter_popup.instructions"
+      "content": "Convide clientes para entrar na comunidade do Instagram e WhatsApp para receber novidades, atualizações e cupons exclusivos."
     },
     {
       "type": "color_scheme",
@@ -83,44 +94,68 @@
       "max": 15,
       "step": 1,
       "unit": "sec",
-      "label": "t:sections.newsletter_popup.delay",
+      "label": "Tempo para aparecer (segundos)",
       "default": 5
     },
     {
       "type": "checkbox",
       "id": "show_only_on_index",
-      "label": "t:sections.newsletter_popup.show_only_on_home_page",
+      "label": "Mostrar apenas na página inicial",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "hide_for_account_holders",
-      "label": "t:sections.newsletter_popup.hide_for_account_holders",
+      "label": "Esconder para clientes logados",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "show_only_once",
-      "label": "t:sections.newsletter_popup.show_only_once",
+      "label": "Mostrar apenas uma vez por visitante",
       "default": true
     },
     {
       "type": "inline_richtext",
       "id": "title",
-      "label": "t:global.text.heading",
-      "default": "Signup for our newsletter"
+      "label": "Título",
+      "default": "Entre para a comunidade MyCharms 💕"
     },
     {
       "type": "inline_richtext",
       "id": "content",
-      "label": "t:global.text.content",
-      "default": "Describe what your customers will receive when subscribing to your newsletter."
+      "label": "Texto",
+      "default": "Entre na nossa comunidade exclusiva do Instagram e do WhatsApp para receber em primeira mão novidades, atualizações de reposição, lançamentos e cupons secretos. ✨"
     },
     {
       "type": "text",
-      "id": "button_text",
-      "label": "t:global.text.button_text",
-      "default": "Subscribe"
+      "id": "instagram_url",
+      "label": "Link da comunidade no Instagram",
+      "default": "https://instagram.com/mycharms"
+    },
+    {
+      "type": "text",
+      "id": "instagram_button_text",
+      "label": "Texto do botão Instagram",
+      "default": "Entrar na comunidade do Instagram"
+    },
+    {
+      "type": "text",
+      "id": "whatsapp_url",
+      "label": "Link da comunidade no WhatsApp",
+      "default": "https://wa.me/SEU_NUMERO_OU_GRUPO"
+    },
+    {
+      "type": "text",
+      "id": "whatsapp_button_text",
+      "label": "Texto do botão WhatsApp",
+      "default": "Entrar na comunidade do WhatsApp"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "helper_text",
+      "label": "Texto auxiliar",
+      "default": "Lá você recebe cupons relâmpago, novidades e bastidores da MyCharms em primeira mão. 💎"
     }
   ]
 }
