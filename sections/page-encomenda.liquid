@@ -1,0 +1,736 @@
+{% comment %}
+  Section: Página de Encomendas MyCharms
+  Uso: chamada pelo template "page.encomenda"
+{% endcomment %}
+
+<section class="mc-encomenda">
+  <style>
+    .mc-encomenda {
+      background: #050509;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, -system-ui, sans-serif;
+    }
+
+    .mc-encomenda a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .mc-encomenda__wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 16px 72px;
+    }
+
+    /* HERO */
+    .mc-encomenda__hero {
+      border-radius: 24px;
+      padding: 32px 24px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at top left, rgba(255, 192, 230, 0.15), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(255, 120, 196, 0.15), transparent 55%),
+                  #050509;
+      border: 1px solid rgba(255, 192, 230, 0.2);
+    }
+
+    .mc-encomenda__kicker {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #ffb6df;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .mc-encomenda__title {
+      font-size: 28px;
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    .mc-encomenda__subtitle {
+      font-size: 15px;
+      color: #f7e0f0;
+      max-width: 520px;
+      margin-bottom: 20px;
+    }
+
+    .mc-encomenda__hero-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mc-encomenda__brands {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .mc-encomenda__brand-pill {
+      border-radius: 999px;
+      padding: 6px 14px;
+      border: 1px solid rgba(255, 182, 223, 0.6);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffe3f5;
+      background: rgba(5, 5, 9, 0.7);
+      backdrop-filter: blur(10px);
+    }
+
+    .mc-encomenda__cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .mc-encomenda__cta-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ffb6df, #ff77c8);
+      color: #1a0512;
+      font-weight: 600;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+      box-shadow: 0 10px 30px rgba(255, 119, 200, 0.35);
+    }
+
+    .mc-encomenda__cta-primary:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+      box-shadow: 0 14px 40px rgba(255, 119, 200, 0.45);
+    }
+
+    .mc-encomenda__cta-note {
+      font-size: 12px;
+      color: #f8dff4;
+      opacity: 0.9;
+    }
+
+    .mc-encomenda__badge-prazo {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px dashed rgba(255, 182, 223, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #ffe3f7;
+      background: rgba(5, 5, 9, 0.8);
+    }
+
+    /* SELINHOS */
+    .mc-encomenda__trust {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .mc-encomenda__trust-item {
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 182, 223, 0.12);
+      background: rgba(15, 15, 30, 0.72);
+      font-size: 13px;
+      line-height: 1.4;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mc-encomenda__trust-label {
+      font-weight: 600;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .mc-encomenda__trust-emoji {
+      font-size: 14px;
+    }
+
+    .mc-encomenda__trust-text {
+      opacity: 0.86;
+      font-size: 12px;
+      color: #f3d7eb;
+    }
+
+    /* COMO FUNCIONA */
+    .mc-encomenda__section-title {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .mc-encomenda__section-sub {
+      font-size: 13px;
+      opacity: 0.85;
+      margin-bottom: 18px;
+      color: #f7e0f2;
+    }
+
+    .mc-encomenda__steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .mc-encomenda__step {
+      padding: 16px 14px;
+      border-radius: 18px;
+      background: radial-gradient(circle at top left, rgba(255, 182, 223, 0.14), transparent 65%),
+                  rgba(15, 15, 30, 0.9);
+      border: 1px solid rgba(255, 182, 223, 0.18);
+      font-size: 13px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mc-encomenda__step-index {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      opacity: 0.8;
+      margin-bottom: 4px;
+      color: #ffbce6;
+    }
+
+    .mc-encomenda__step-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .mc-encomenda__step-text {
+      font-size: 12px;
+      opacity: 0.9;
+      color: #f4dbe9;
+    }
+
+    /* VITRINE */
+    .mc-encomenda__products {
+      margin-bottom: 40px;
+    }
+
+    .mc-encomenda__grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .mc-encomenda__card {
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(12, 12, 24, 0.96);
+      border: 1px solid rgba(255, 182, 223, 0.14);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+    }
+
+    .mc-encomenda__card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 182, 223, 0.6);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .mc-encomenda__media-wrap {
+      position: relative;
+      padding-top: 100%;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #1b1122, #050509);
+    }
+
+    .mc-encomenda__media-wrap img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+    }
+
+    .mc-encomenda__tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: rgba(5, 5, 9, 0.75);
+      border: 1px solid rgba(255, 182, 223, 0.7);
+      color: #ffe3f7;
+    }
+
+    .mc-encomenda__body {
+      padding: 12px 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mc-encomenda__product-title {
+      font-size: 13px;
+      line-height: 1.3;
+      min-height: 34px;
+    }
+
+    .mc-encomenda__price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .mc-encomenda__price {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .mc-encomenda__prazo-mini {
+      font-size: 11px;
+      opacity: 0.85;
+      color: #f3d7eb;
+    }
+
+    /* BARRA PRAZO */
+    .mc-encomenda__bar {
+      border-radius: 18px;
+      padding: 14px 16px;
+      margin-bottom: 40px;
+      background: linear-gradient(90deg, rgba(255, 182, 223, 0.16), rgba(255, 119, 200, 0.04));
+      border: 1px solid rgba(255, 182, 223, 0.45);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px 14px;
+      font-size: 13px;
+    }
+
+    .mc-encomenda__bar-main {
+      font-weight: 500;
+    }
+
+    .mc-encomenda__bar-note {
+      font-size: 12px;
+      opacity: 0.9;
+      color: #f5d9eb;
+    }
+
+    /* FAQ */
+    .mc-encomenda__faq {
+      border-radius: 24px;
+      padding: 24px 18px;
+      background: rgba(12, 12, 24, 0.96);
+      border: 1px solid rgba(255, 182, 223, 0.22);
+    }
+
+    .mc-encomenda__faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 24px;
+    }
+
+    .mc-encomenda__faq details {
+      border-radius: 16px;
+      padding: 10px 12px;
+      background: rgba(5, 5, 9, 0.9);
+      border: 1px solid rgba(255, 182, 223, 0.18);
+      font-size: 13px;
+    }
+
+    .mc-encomenda__faq summary {
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .mc-encomenda__faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .mc-encomenda__faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 500;
+    }
+
+    .mc-encomenda__faq-icon {
+      font-size: 16px;
+      opacity: 0.8;
+    }
+
+    .mc-encomenda__faq-answer {
+      margin-top: 8px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #f3d7eb;
+      opacity: 0.95;
+    }
+
+    .mc-encomenda__faq-title {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .mc-encomenda__faq-sub {
+      font-size: 12px;
+      opacity: 0.84;
+      margin-bottom: 18px;
+      color: #f7e0f2;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .mc-encomenda__hero {
+        padding: 24px 18px;
+      }
+
+      .mc-encomenda__hero-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .mc-encomenda__title {
+        font-size: 22px;
+      }
+
+      .mc-encomenda__trust {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .mc-encomenda__steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .mc-encomenda__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .mc-encomenda__faq-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .mc-encomenda__wrap {
+        padding-inline: 14px;
+      }
+
+      .mc-encomenda__trust {
+        grid-template-columns: 1fr;
+      }
+
+      .mc-encomenda__steps {
+        grid-template-columns: 1fr;
+      }
+
+      .mc-encomenda__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+
+  <div class="mc-encomenda__wrap">
+    <!-- HERO -->
+    <div class="mc-encomenda__hero">
+      <div class="mc-encomenda__hero-row">
+        <div>
+          <span class="mc-encomenda__kicker">Coleção sob encomenda</span>
+          <h1 class="mc-encomenda__title">
+            Encomendas especiais MyCharms ✨
+          </h1>
+          <p class="mc-encomenda__subtitle">
+            Peças importadas inspiradas em Tiffany, Pandora e Swarovski, feitas sob encomenda para você. Produção, importação e envio em até <strong>50 dias úteis</strong>.
+          </p>
+
+          <div class="mc-encomenda__cta-row">
+            <a href="{% if section.settings.encomenda_collection != blank %}{{ collections[section.settings.encomenda_collection].url }}{% else %}/pages/all-encomenda{% endif %}" class="mc-encomenda__cta-primary">
+              Ver todas as peças de encomenda
+            </a>
+            <div class="mc-encomenda__cta-note">
+              Pagamento seguro em até 12x • Rastreio do início ao fim
+            </div>
+          </div>
+
+          <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+            <span class="mc-encomenda__badge-prazo">
+              ⏰ Prazo médio: até 50 dias úteis
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <div class="mc-encomenda__brands">
+            <span class="mc-encomenda__brand-pill">Tiffany</span>
+            <span class="mc-encomenda__brand-pill">Pandora</span>
+            <span class="mc-encomenda__brand-pill">Swarovski</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SELINHOS DE CONFIANÇA -->
+    <div class="mc-encomenda__trust">
+      <div class="mc-encomenda__trust-item">
+        <div class="mc-encomenda__trust-label">
+          <span class="mc-encomenda__trust-emoji">💎</span>
+          Qualidade premium
+        </div>
+        <div class="mc-encomenda__trust-text">
+          Peças em prata S925 e banho de alta durabilidade, com acabamento de joalheria.
+        </div>
+      </div>
+      <div class="mc-encomenda__trust-item">
+        <div class="mc-encomenda__trust-label">
+          <span class="mc-encomenda__trust-emoji">🌎</span>
+          Importação assistida
+        </div>
+        <div class="mc-encomenda__trust-text">
+          Nós cuidamos de produção, importação, conferência e envio até chegar em você.
+        </div>
+      </div>
+      <div class="mc-encomenda__trust-item">
+        <div class="mc-encomenda__trust-label">
+          <span class="mc-encomenda__trust-emoji">📦</span>
+          Rastreio completo
+        </div>
+        <div class="mc-encomenda__trust-text">
+          Acompanhe cada etapa pelo código de rastreio após a postagem nacional.
+        </div>
+      </div>
+      <div class="mc-encomenda__trust-item">
+        <div class="mc-encomenda__trust-label">
+          <span class="mc-encomenda__trust-emoji">🛡️</span>
+          Compra segura
+        </div>
+        <div class="mc-encomenda__trust-text">
+          Atendimento humanizado, suporte pelo WhatsApp e política de suporte em caso de imprevistos.
+        </div>
+      </div>
+    </div>
+
+    <!-- COMO FUNCIONA -->
+    <div style="margin-bottom: 24px;">
+      <h2 class="mc-encomenda__section-title">Como funciona a sua encomenda?</h2>
+      <p class="mc-encomenda__section-sub">
+        De forma simples e transparente: você escolhe sua peça, nós cuidamos do resto. Tudo pensado para você receber com segurança.
+      </p>
+    </div>
+
+    <div class="mc-encomenda__steps">
+      <div class="mc-encomenda__step">
+        <div class="mc-encomenda__step-index">Etapa 1</div>
+        <div class="mc-encomenda__step-title">Você escolhe sua peça</div>
+        <div class="mc-encomenda__step-text">
+          Selecione o modelo, tamanho e detalhes da sua peça na coleção de encomendas MyCharms.
+        </div>
+      </div>
+      <div class="mc-encomenda__step">
+        <div class="mc-encomenda__step-index">Etapa 2</div>
+        <div class="mc-encomenda__step-title">Produção & separação</div>
+        <div class="mc-encomenda__step-text">
+          Seu pedido entra em produção ou é separado com carinho na nossa curadoria especial internacional.
+        </div>
+      </div>
+      <div class="mc-encomenda__step">
+        <div class="mc-encomenda__step-index">Etapa 3</div>
+        <div class="mc-encomenda__step-title">Importação até o Brasil</div>
+        <div class="mc-encomenda__step-text">
+          Realizamos toda a parte logística e de importação, incluindo eventuais trâmites alfandegários.
+        </div>
+      </div>
+      <div class="mc-encomenda__step">
+        <div class="mc-encomenda__step-index">Etapa 4</div>
+        <div class="mc-encomenda__step-title">Envio nacional para você</div>
+        <div class="mc-encomenda__step-text">
+          Assim que o produto chega ao nosso centro de distribuição no Brasil, ele é conferido e enviado para o seu endereço.
+        </div>
+      </div>
+    </div>
+
+    <!-- VITRINE DE PRODUTOS DE ENCOMENDA -->
+    <div class="mc-encomenda__products">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:10px; margin-bottom:14px;">
+        <div>
+          <h2 class="mc-encomenda__section-title">Peças sob encomenda</h2>
+          <p class="mc-encomenda__section-sub">
+            Uma curadoria especial com as peças mais desejadas para você encomendar com segurança.
+          </p>
+        </div>
+        <div style="font-size:12px; opacity:0.8;">
+          {% if section.settings.encomenda_collection != blank and collections[section.settings.encomenda_collection] %}
+            {{ collections[section.settings.encomenda_collection].all_products_count }} modelos disponíveis
+          {% endif %}
+        </div>
+      </div>
+
+      {% assign coll = collections[section.settings.encomenda_collection] %}
+      {% if coll and coll.products_count > 0 %}
+        <div class="mc-encomenda__grid">
+          {% for product in coll.products limit: 12 %}
+            <a href="{{ product.url }}" class="mc-encomenda__card">
+              <div class="mc-encomenda__media-wrap">
+                {% if product.featured_image %}
+                  <img
+                    src="{{ product.featured_image | image_url: width: 600 }}"
+                    alt="{{ product.featured_image.alt | escape }}"
+                    loading="lazy">
+                {% endif %}
+                <span class="mc-encomenda__tag">Encomenda</span>
+              </div>
+              <div class="mc-encomenda__body">
+                <div class="mc-encomenda__product-title">
+                  {{ product.title }}
+                </div>
+                <div class="mc-encomenda__price-row">
+                  <span class="mc-encomenda__price">
+                    {{ product.price | money }}
+                  </span>
+                </div>
+                <div class="mc-encomenda__prazo-mini">
+                  Prazo médio: até 50 dias úteis
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p style="font-size:13px; opacity:0.85; color:#f3d7eb;">
+          Configure uma coleção de encomendas nas configurações desta seção para exibir os produtos aqui.
+        </p>
+      {% endif %}
+    </div>
+
+    <!-- BARRA DE PRAZO / POLÍTICA -->
+    <div class="mc-encomenda__bar">
+      <div class="mc-encomenda__bar-main">
+        ⏳ Prazo estimado de <strong>até 50 dias úteis</strong> para produção, importação e envio.
+      </div>
+      <div class="mc-encomenda__bar-note">
+        Contamos esse prazo a partir da confirmação do pagamento. Em imprevistos logísticos, você será avisada pelo nosso time de suporte.
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="mc-encomenda__faq">
+      <h2 class="mc-encomenda__faq-title">Dúvidas sobre encomendas</h2>
+      <p class="mc-encomenda__faq-sub">
+        Se ainda ficar alguma dúvida, nosso suporte no WhatsApp está pronto para te ajudar antes e depois da compra.
+      </p>
+
+      <div class="mc-encomenda__faq-grid">
+        <details open>
+          <summary>
+            <div class="mc-encomenda__faq-question">
+              <span>Por que o prazo é de até 50 dias úteis?</span>
+              <span class="mc-encomenda__faq-icon">⏰</span>
+            </div>
+          </summary>
+          <div class="mc-encomenda__faq-answer">
+            Porque a sua peça passa por várias etapas: produção/seleção, envio internacional, desembaraço no Brasil, conferência e, só então, o envio para o seu endereço. Preferimos informar o prazo com folga para você se programar com tranquilidade.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <div class="mc-encomenda__faq-question">
+              <span>Consigo acompanhar o andamento do meu pedido?</span>
+              <span class="mc-encomenda__faq-icon">🔍</span>
+            </div>
+          </summary>
+          <div class="mc-encomenda__faq-answer">
+            Sim! Assim que o seu pedido é postado no Brasil, você recebe um código de rastreio para acompanhar a entrega. Em etapas internas (produção/importação), nossa equipe entra em contato em caso de qualquer atualização importante.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <div class="mc-encomenda__faq-question">
+              <span>Posso cancelar uma encomenda?</span>
+              <span class="mc-encomenda__faq-icon">📄</span>
+            </div>
+          </summary>
+          <div class="mc-encomenda__faq-answer">
+            Como se trata de uma peça sob encomenda, o cancelamento normalmente só é possível em até 24h após a confirmação do pedido. Depois disso, o pedido já entra em fluxo de produção/importação. Em qualquer situação específica, nosso suporte vai te orientar da melhor forma.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <div class="mc-encomenda__faq-question">
+              <span>Tem risco de taxa ou cobrança extra?</span>
+              <span class="mc-encomenda__faq-icon">💰</span>
+            </div>
+          </summary>
+          <div class="mc-encomenda__faq-answer">
+            A MyCharms já estrutura o processo de encomenda considerando os custos de importação. Caso exista qualquer necessidade de cobrança adicional ou taxa específica, isso será informado de forma transparente e antecipada ao cliente.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <div class="mc-encomenda__faq-question">
+              <span>As peças são de pronta entrega?</span>
+              <span class="mc-encomenda__faq-icon">📦</span>
+            </div>
+          </summary>
+          <div class="mc-encomenda__faq-answer">
+            Nesta página você está vendo apenas as peças de <strong>encomenda</strong>, que possuem prazo maior de produção e entrega. Itens de pronta entrega ficam em seções específicas da nossa loja, com prazo reduzido de envio.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <div class="mc-encomenda__faq-question">
+              <span>Qual o material das peças?</span>
+              <span class="mc-encomenda__faq-icon">💎</span>
+            </div>
+          </summary>
+          <div class="mc-encomenda__faq-answer">
+            Trabalhamos com peças em prata S925 e banho de alta qualidade, sempre descrito na página de cada produto. Em caso de dúvida sobre um modelo específico, é só chamar a gente no WhatsApp antes de finalizar.
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Encomenda MC",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "encomenda_collection",
+      "label": "Coleção de encomenda",
+      "info": "Selecione a coleção de produtos sob encomenda."
+    }
+  ]
+}
+{% endschema %}
