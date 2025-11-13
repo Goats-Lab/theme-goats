@@ -28,8 +28,8 @@
     "newsletter-popup": {
       "type": "newsletter-popup",
       "settings": {
-        "color_scheme": "",
-        "apparition_delay": 5,
+        "color_scheme": "scheme-4",
+        "apparition_delay": 2,
         "show_only_on_index": true,
         "hide_for_account_holders": false,
         "show_only_once": false,
