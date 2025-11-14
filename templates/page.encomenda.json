@@ -11,8 +11,12 @@
   "sections": {
     "main": {
       "type": "page-encomenda",
-      "settings": {}
+      "settings": {
+        "encomenda_collection": "all-tiffany-encomenda"
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
