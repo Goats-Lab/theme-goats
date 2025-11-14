@@ -169,19 +169,21 @@ LIQUID
           <height-observer variable="collection-toolbar" class="collection-toolbar full-bleed">
             <div class="collection-toolbar__button-list">
               {%- if show_filters -%}
-               <div class="mc-filter-button-wrap {% if section.settings.filter_layout == 'sidebar' %}md:hidden{% endif %}">
+               <div class="collection-toolbar__button-container {% if section.settings.filter_layout == 'sidebar' %}md:hidden{% endif %}">
   <button
     type="button"
     aria-controls="facets-drawer"
-    class="mc-filter-button"
+    class="collection-toolbar__button heading mc-filter-button"
   >
     <span class="mc-filter-icon">🔍</span>
-    Filtrar tipo de peça
+    <span class="mc-filter-label">Filtrar tipo de peça</span>
+
     {%- if active_values_count > 0 -%}
       <span class="mc-filter-badge">{{ active_values_count }}</span>
     {%- endif -%}
   </button>
 </div>
+
 
 
               {%- endif -%}
