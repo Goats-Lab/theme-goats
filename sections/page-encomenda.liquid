@@ -648,6 +648,108 @@
         Contamos esse prazo a partir da confirmação do pagamento. Em imprevistos logísticos, você será avisada pelo nosso time de suporte.
       </div>
   
+      <!-- CARDS DE MARCAS PARA ENCOMENDA -->
+<style>
+  .mc-brandcards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin: 50px 0;
+  }
+
+  .mc-brandcard {
+    background: radial-gradient(circle at top left, rgba(255,182,223,0.18), transparent 60%),
+                rgba(12,12,22,0.92);
+    border: 1px solid rgba(255,182,223,0.25);
+    border-radius: 20px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .15s ease;
+  }
+
+  .mc-brandcard:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255,182,223,0.6);
+    box-shadow: 0 8px 30px rgba(255, 105, 180, 0.25);
+  }
+
+  .mc-brandcard-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffe7f4;
+  }
+
+  .mc-brandcard-sub {
+    font-size: 14px;
+    opacity: 0.85;
+    color: #f7d9eb;
+    margin-bottom: 18px;
+  }
+
+  .mc-brandcard-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ffb6df, #ff77c8);
+    color: #1a0512;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(255,119,200,0.35);
+    transition: .15s;
+  }
+
+  .mc-brandcard-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+  }
+
+  @media (max-width: 900px) {
+    .mc-brandcards {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="mc-brandcards">
+  <!-- PANDORA -->
+  <div class="mc-brandcard">
+    <div>
+      <div class="mc-brandcard-title">Pandora – Encomenda</div>
+      <div class="mc-brandcard-sub">
+        Todas as peças de encomenda da Pandora em um só lugar. Filtre por anéis, colares, brincos e pulseiras.
+      </div>
+    </div>
+    <a href="/collections/encomenda-pandora" class="mc-brandcard-btn">Ver coleção Pandora</a>
+  </div>
+
+  <!-- TIFFANY -->
+  <div class="mc-brandcard">
+    <div>
+      <div class="mc-brandcard-title">Tiffany – Encomenda</div>
+      <div class="mc-brandcard-sub">
+        Descubra os modelos Tiffany disponíveis sob encomenda. Elegância clássica com filtragem por categoria.
+      </div>
+    </div>
+    <a href="/collections/encomenda-tiffany" class="mc-brandcard-btn">Ver coleção Tiffany</a>
+  </div>
+
+  <!-- SWAROVSKI -->
+  <div class="mc-brandcard">
+    <div>
+      <div class="mc-brandcard-title">Swarovski – Encomenda</div>
+      <div class="mc-brandcard-sub">
+        Produtos Swarovski sob encomenda, separados por anéis, brincos, colares e muito mais.
+      </div>
+    </div>
+    <a href="/collections/encomenda-swarovski" class="mc-brandcard-btn">Ver coleção Swarovski</a>
+  </div>
+</div>
+
 
     <!-- FAQ -->
     <div class="mc-encomenda__faq">
