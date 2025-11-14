@@ -574,59 +574,68 @@
       </div>
     </div>
 
-        <!-- VITRINE DE PRODUTOS DE ENCOMENDA -->
-    <div class="mc-encomenda__products">
-      <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:10px; margin-bottom:14px;">
-        <div>
-          <h2 class="mc-encomenda__section-title">Peças sob encomenda</h2>
-          <p class="mc-encomenda__section-sub">
-            Uma curadoria especial com as peças mais desejadas para você encomendar com segurança.
-          </p>
-        </div>
-        <div style="font-size:12px; opacity:0.8;">
-          {% if section.settings.encomenda_collection != blank and collections[section.settings.encomenda_collection] %}
-            {{ collections[section.settings.encomenda_collection].all_products_count }} modelos disponíveis
-          {% endif %}
-        </div>
-      </div>
+        <!-- VITRINES DE ENCOMENDA (VÁRIAS COLEÇÕES) -->
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        {% assign coll = collections[block.settings.collection] %}
 
-      {% assign coll = collections[section.settings.encomenda_collection] %}
-
-      {% if coll and coll.products.size > 0 %}
-        <div class="mc-encomenda__grid">
-          {% for product in coll.products limit: 12 %}
-            <a href="{{ product.url }}" class="mc-encomenda__card">
-              <div class="mc-encomenda__media-wrap">
-                {% if product.featured_image %}
-                  <img
-                    src="{{ product.featured_image | image_url: width: 600 }}"
-                    alt="{{ product.featured_image.alt | escape }}"
-                    loading="lazy">
+        {% if coll and coll.products.size > 0 %}
+          <div class="mc-encomenda__products" id="encomenda-block-{{ block.id }}">
+            <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:10px; margin-bottom:14px;">
+              <div>
+                <h2 class="mc-encomenda__section-title">
+                  {{ block.settings.title | default: coll.title }}
+                </h2>
+                {% if block.settings.subtext != blank %}
+                  <p class="mc-encomenda__section-sub">
+                    {{ block.settings.subtext }}
+                  </p>
                 {% endif %}
-                <span class="mc-encomenda__tag">Encomenda</span>
               </div>
-              <div class="mc-encomenda__body">
-                <div class="mc-encomenda__product-title">
-                  {{ product.title }}
-                </div>
-                <div class="mc-encomenda__price-row">
-                  <span class="mc-encomenda__price">
-                    {{ product.price | money }}
-                  </span>
-                </div>
-                <div class="mc-encomenda__prazo-mini">
-                  Prazo médio: até 50 dias úteis
-                </div>
+              <div style="font-size:12px; opacity:0.8;">
+                {{ coll.all_products_count }} modelos disponíveis
               </div>
-            </a>
-          {% endfor %}
-        </div>
-      {% else %}
-        <p style="font-size:13px; opacity:0.85; color:#f3d7eb;">
-          Configure uma coleção de encomendas nas configurações desta seção para exibir os produtos aqui.
+            </div>
+
+            <div class="mc-encomenda__grid">
+              {% for product in coll.products limit: block.settings.limit %}
+                <a href="{{ product.url }}" class="mc-encomenda__card">
+                  <div class="mc-encomenda__media-wrap">
+                    {% if product.featured_image %}
+                      <img
+                        src="{{ product.featured_image | image_url: width: 600 }}"
+                        alt="{{ product.featured_image.alt | escape }}"
+                        loading="lazy">
+                    {% endif %}
+                    <span class="mc-encomenda__tag">Encomenda</span>
+                  </div>
+                  <div class="mc-encomenda__body">
+                    <div class="mc-encomenda__product-title">
+                      {{ product.title }}
+                    </div>
+                    <div class="mc-encomenda__price-row">
+                      <span class="mc-encomenda__price">
+                        {{ product.price | money }}
+                      </span>
+                    </div>
+                    <div class="mc-encomenda__prazo-mini">
+                      Prazo médio: até 50 dias úteis
+                    </div>
+                  </div>
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <div class="mc-encomenda__products">
+        <h2 class="mc-encomenda__section-title">Peças sob encomenda</h2>
+        <p class="mc-encomenda__section-sub">
+          Adicione blocos de coleção nas configurações desta seção para exibir seus produtos de encomenda.
         </p>
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
 
     </div>
 
