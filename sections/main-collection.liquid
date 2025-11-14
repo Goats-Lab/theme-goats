@@ -101,7 +101,7 @@ CSS
     }
   }
 
-  /* BOTÃO DE FILTRO MYCHARMS */
+  /* BOTÃO DE FILTRO MYCHARMS — versão vibrante */
   #shopify-section-{{ section.id }} .collection-toolbar__button-container.mc-filter-button-container {
     flex: 0 0 auto;
     padding-left: 0.75rem;
@@ -114,41 +114,51 @@ CSS
     align-items: center;
     justify-content: center;
     gap: 0.45rem;
-    padding: 0.45rem 1rem;      /* mais baixinho */
-    margin-top: 0.25rem;        /* desce um pouco dentro da barra */
+
+    padding: 0.5rem 1.3rem;
+    margin-top: 0.25rem;
+
     border-radius: 999px;
-    border: 1px solid #f7c7dd;
-    background: #ffe9f3;
-    font-size: 12px;
+    border: none;
+
+    /* 💖 Degradê estilo MyCharms */
+    background: linear-gradient(90deg, #ff9ad0 0%, #ff4fb7 100%);
+
+    /* 💫 Glow leve */
+    box-shadow:
+      0 4px 12px rgba(255, 105, 180, 0.35),
+      0 0 12px rgba(255, 77, 160, 0.25);
+
+    color: #fff;
+    font-size: 13px;
     font-weight: 600;
     text-transform: none;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-    transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+
+    transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.15s ease;
   }
 
   #shopify-section-{{ section.id }} .collection-toolbar__button.mc-filter-button:hover {
-    background: #ffd3e6;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+    box-shadow:
+      0 6px 16px rgba(255, 105, 180, 0.5),
+      0 0 14px rgba(255, 77, 160, 0.35);
+    opacity: .95;
   }
 
   #shopify-section-{{ section.id }} .mc-filter-icon {
     font-size: 14px;
     line-height: 1;
-  }
-
-  #shopify-section-{{ section.id }} .mc-filter-label {
-    white-space: nowrap;
+    filter: brightness(2);
   }
 
   #shopify-section-{{ section.id }} .mc-filter-badge {
-    background: #111;
+    background: rgba(0,0,0,0.55);
     color: #fff;
     border-radius: 999px;
     padding: 2px 6px;
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
   }
 
 </style>
