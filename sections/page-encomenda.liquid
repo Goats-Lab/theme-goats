@@ -574,7 +574,7 @@
       </div>
     </div>
 
-    <!-- VITRINE DE PRODUTOS DE ENCOMENDA -->
+        <!-- VITRINE DE PRODUTOS DE ENCOMENDA -->
     <div class="mc-encomenda__products">
       <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:10px; margin-bottom:14px;">
         <div>
@@ -591,7 +591,8 @@
       </div>
 
       {% assign coll = collections[section.settings.encomenda_collection] %}
-      {% if coll and coll.products_count > 0 %}
+
+      {% if coll and coll.products.size > 0 %}
         <div class="mc-encomenda__grid">
           {% for product in coll.products limit: 12 %}
             <a href="{{ product.url }}" class="mc-encomenda__card">
@@ -627,6 +628,8 @@
       {% endif %}
     </div>
 
+    </div>
+
     <!-- BARRA DE PRAZO / POLÍTICA -->
     <div class="mc-encomenda__bar">
       <div class="mc-encomenda__bar-main">
@@ -635,7 +638,7 @@
       <div class="mc-encomenda__bar-note">
         Contamos esse prazo a partir da confirmação do pagamento. Em imprevistos logísticos, você será avisada pelo nosso time de suporte.
       </div>
-    </div>
+  
 
     <!-- FAQ -->
     <div class="mc-encomenda__faq">
