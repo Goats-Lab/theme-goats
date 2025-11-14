@@ -10,18 +10,25 @@
         margin: 0 auto;
       }
 
-      #shopify-section-{{ section.id }} .mc-popup {
-        background:
-          radial-gradient(circle at top left, rgba(255, 120, 200, 0.35) 0, transparent 45%),
-          radial-gradient(circle at bottom right, rgba(255, 120, 200, 0.25) 0, transparent 45%),
-          #050816;
-        border-radius: 24px;
-        padding: 2.4rem 2rem 2rem;
-        color: #f9fafb;
-        box-shadow:
-          0 18px 45px rgba(0, 0, 0, 0.65),
-          0 0 30px rgba(255, 77, 160, 0.35);
-        position: relative;
+      #shopify-section-{{ section.id }} .newsletter-popup {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#shopify-section-{{ section.id }} .mc-popup {
+  background:
+    linear-gradient(180deg, rgba(20,20,35,0.85) 0%, rgba(15,15,25,0.92) 100%);
+  border-radius: 28px;
+  padding: 2.2rem 1.8rem 2rem;
+  color: #f9fafb;
+
+  /* glow leve e só no painel */
+  box-shadow:
+    0 0 22px rgba(255, 77, 160, 0.25),
+    0 8px 28px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
       }
 
       #shopify-section-{{ section.id }} .mc-popup__title {
