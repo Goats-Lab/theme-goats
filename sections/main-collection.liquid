@@ -100,49 +100,54 @@ CSS
       {%- endif -%}
     }
   }
-    #shopify-section-{{ section.id }} .collection-toolbar__button--filters {
-    font-size: 12px;
-    font-weight: 600;
-    padding: 0.7rem 1rem;
-    border-radius: 999px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    background: #fdf0f8; /* aquele mood MyCharms */
-    text-transform: none;
+
+  /* BOTÃO DE FILTRO MYCHARMS */
+  #shopify-section-{{ section.id }} .collection-toolbar__button-container.mc-filter-button-container {
+    flex: 0 0 auto;
+  }
+
+  #shopify-section-{{ section.id }} .collection-toolbar__button.mc-filter-button {
+    width: auto;
+    min-width: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid #f7c7dd;
+    background: #ffe9f3;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: none;
     cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.06);
     transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
   }
 
-  #shopify-section-{{ section.id }} .collection-toolbar__button--filters:hover {
-    background: #fbd9ec;
+  #shopify-section-{{ section.id }} .collection-toolbar__button.mc-filter-button:hover {
+    background: #ffd3e6;
     transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
   }
 
-  #shopify-section-{{ section.id }} .collection-toolbar__button--filters:active {
-    transform: translateY(0);
-    box-shadow: none;
+  #shopify-section-{{ section.id }} .mc-filter-icon {
+    font-size: 15px;
+    line-height: 1;
   }
 
-  #shopify-section-{{ section.id }} .collection-toolbar__button-badge {
-    min-width: 1.5rem;
-    padding: 0.1rem 0.5rem;
-    border-radius: 999px;
-    font-size: 11px;
-    font-weight: 600;
+  #shopify-section-{{ section.id }} .mc-filter-label {
+    white-space: nowrap;
+  }
+
+  #shopify-section-{{ section.id }} .mc-filter-badge {
     background: #111;
     color: #fff;
-    text-align: center;
+    border-radius: 999px;
+    padding: 2px 6px;
+    font-size: 11px;
+    font-weight: 600;
   }
-
-  #shopify-section-{{ section.id }} .collection-toolbar__button-label {
-    white-space: normal;
-    text-align: center;
-  }
-
 </style>
 
 {%- comment -%}
@@ -169,25 +174,19 @@ LIQUID
           <height-observer variable="collection-toolbar" class="collection-toolbar full-bleed">
             <div class="collection-toolbar__button-list">
               {%- if show_filters -%}
-<div class="collection-toolbar__button-container mc-filter-button-container {% if section.settings.filter_layout == 'sidebar' %}md:hidden{% endif %}">
-  <button
-    type="button"
-    aria-controls="facets-drawer"
-    class="collection-toolbar__button heading mc-filter-button"
-  >
-    <span class="mc-filter-icon">🔍</span>
-    <span class="mc-filter-label">Filtrar tipo de peça</span>
-
-    {%- if active_values_count > 0 -%}
-      <span class="mc-filter-badge">{{ active_values_count }}</span>
-    {%- endif -%}
-  </button>
-</div>
-
-
-
-
-
+                <div class="collection-toolbar__button-container mc-filter-button-container {% if section.settings.filter_layout == 'sidebar' %}md:hidden{% endif %}">
+                  <button
+                    type="button"
+                    aria-controls="facets-drawer"
+                    class="collection-toolbar__button heading mc-filter-button"
+                  >
+                    <span class="mc-filter-icon">🔍</span>
+                    <span class="mc-filter-label">Filtrar tipo de peça</span>
+                    {%- if active_values_count > 0 -%}
+                      <span class="mc-filter-badge">{{ active_values_count }}</span>
+                    {%- endif -%}
+                  </button>
+                </div>
               {%- endif -%}
 
               {%- if section.settings.show_sort_by -%}
@@ -246,15 +245,16 @@ LIQUID
                 <p class="h4" slot="header">{{ 'collection.faceting.filters' | t }}</p>
 
                 {%- render 'facets',
-  results: collection,
-  show_filters: section.settings.show_filters,
-  open_filters_by_default: section.settings.open_filters_by_default,
-  show_filter_group_name: section.settings.show_filter_group_name,
-  show_filter_values_count: section.settings.show_filter_values_count,
-  update_on_change: false,
-  quick_links_menu: section.settings.quick_links_menu,
-  context: 'drawer'
--%}
+                  results: collection,
+                  show_filters: section.settings.show_filters,
+                  open_filters_by_default: section.settings.open_filters_by_default,
+                  show_filter_group_name: section.settings.show_filter_group_name,
+                  show_filter_values_count: section.settings.show_filter_values_count,
+                  update_on_change: false,
+                  quick_links_menu: section.settings.quick_links_menu,
+                  context: 'drawer'
+                -%}
+
                 <div slot="footer">
                   {%- assign button_content = 'collection.faceting.apply_filters' | t -%}
 
@@ -266,17 +266,16 @@ LIQUID
 
               {%- if section.settings.filter_layout == 'sidebar' -%}
                 <safe-sticky class="facets-sidebar md-max:hidden">
-               {%- render 'facets',
-  results: collection,
-  show_filters: section.settings.show_filters,
-  open_filters_by_default: section.settings.open_filters_by_default,
-  show_filter_group_name: section.settings.show_filter_group_name,
-  show_filter_values_count: section.settings.show_filter_values_count,
-  update_on_change: true,
-  quick_links_menu: section.settings.quick_links_menu,
-  context: 'sidebar'
--%}
-
+                  {%- render 'facets',
+                    results: collection,
+                    show_filters: section.settings.show_filters,
+                    open_filters_by_default: section.settings.open_filters_by_default,
+                    show_filter_group_name: section.settings.show_filter_group_name,
+                    show_filter_values_count: section.settings.show_filter_values_count,
+                    update_on_change: true,
+                    quick_links_menu: section.settings.quick_links_menu,
+                    context: 'sidebar'
+                  -%}
                 </safe-sticky>
               {%- endif -%}
             {%- endif -%}
@@ -407,7 +406,7 @@ LIQUID
       "min": 0.2,
       "max": 2,
       "step": 0.1,
-      "id": "vertical_spacing_factor",  
+      "id": "vertical_spacing_factor",
       "label": "t:global.product_list.vertical_spacing_factor",
       "default": 1
     },
