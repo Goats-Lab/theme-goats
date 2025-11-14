@@ -11,9 +11,41 @@
   "sections": {
     "main": {
       "type": "page-encomenda",
-      "settings": {
-        "encomenda_collection": "all-tiffany-encomenda"
-      }
+      "blocks": {
+        "encomenda_collection_HD4bWz": {
+          "type": "encomenda_collection",
+          "settings": {
+            "collection": "all-tiffany-encomenda",
+            "title": "Tiffany & Co",
+            "subtext": "Todos os produtos da tiffany disponíveis para encomendar!",
+            "limit": 12
+          }
+        },
+        "encomenda_collection_yByEeL": {
+          "type": "encomenda_collection",
+          "settings": {
+            "collection": "all-pandora-encomenda",
+            "title": "Pandora",
+            "subtext": "Todos os produtos da Pandora disponíveis para encomendar!",
+            "limit": 12
+          }
+        },
+        "encomenda_collection_YQREfL": {
+          "type": "encomenda_collection",
+          "settings": {
+            "collection": "all-swarovski-encomenda",
+            "title": "Swarovski",
+            "subtext": "Todos os produtos da Swarovski disponíveis para encomendar!",
+            "limit": 12
+          }
+        }
+      },
+      "block_order": [
+        "encomenda_collection_HD4bWz",
+        "encomenda_collection_yByEeL",
+        "encomenda_collection_YQREfL"
+      ],
+      "settings": {}
     }
   },
   "order": [
