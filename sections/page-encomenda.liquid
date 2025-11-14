@@ -736,13 +736,48 @@
 {% schema %}
 {
   "name": "Encomenda MC",
-  "settings": [
+  "settings": [],
+  "blocks": [
     {
-      "type": "collection",
-      "id": "encomenda_collection",
-      "label": "Coleção de encomenda",
-      "info": "Selecione a coleção de produtos sob encomenda."
+      "type": "encomenda_collection",
+      "name": "Coleção de encomenda",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Coleção",
+          "info": "Escolha a coleção (ex: Pandora - Pulseiras, Tiffany - Anéis, etc.)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título da seção",
+          "default": "Peças sob encomenda"
+        },
+        {
+          "type": "text",
+          "id": "subtext",
+          "label": "Texto abaixo do título",
+          "default": "Uma curadoria especial para você encomendar com segurança."
+        },
+        {
+          "type": "range",
+          "id": "limit",
+          "label": "Quantidade de produtos",
+          "min": 4,
+          "max": 24,
+          "step": 4,
+          "default": 12
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Encomenda MC"
     }
   ]
 }
 {% endschema %}
+
