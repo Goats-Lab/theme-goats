@@ -1,5 +1,115 @@
 {%- unless request.page_type == 'captcha' or section.settings.show_only_on_index and template != 'index' -%}
   {%- unless section.settings.hide_for_account_holders and customer -%}
+
+    {%- comment -%}
+    ESTILO POPUP COMUNIDADE MYCHARMS (fundo escuro + botões rosa vibrante)
+    {%- endcomment -%}
+    <style>
+      #shopify-section-{{ section.id }} .newsletter-popup {
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      #shopify-section-{{ section.id }} .mc-popup {
+        background:
+          radial-gradient(circle at top left, rgba(255, 120, 200, 0.35) 0, transparent 45%),
+          radial-gradient(circle at bottom right, rgba(255, 120, 200, 0.25) 0, transparent 45%),
+          #050816;
+        border-radius: 24px;
+        padding: 2.4rem 2rem 2rem;
+        color: #f9fafb;
+        box-shadow:
+          0 18px 45px rgba(0, 0, 0, 0.65),
+          0 0 30px rgba(255, 77, 160, 0.35);
+        position: relative;
+      }
+
+      #shopify-section-{{ section.id }} .mc-popup__title {
+        font-size: 1.3rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #fdf2ff;
+      }
+
+      #shopify-section-{{ section.id }} .mc-popup__title span {
+        display: block;
+      }
+
+      #shopify-section-{{ section.id }} .mc-popup__text {
+        color: #e5e7eb;
+        font-size: 0.9rem;
+      }
+
+      #shopify-section-{{ section.id }} .mc-popup__text p {
+        margin: 0;
+      }
+
+      #shopify-section-{{ section.id }} .mc-popup__buttons {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 0.75rem;
+      }
+
+      #shopify-section-{{ section.id }} .mc-popup__btn {
+        flex: 1 1 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.85rem 0.4rem;
+        border-radius: 999px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.78rem;
+        font-weight: 700;
+        border: none;
+        color: #fff;
+        background: linear-gradient(90deg, #ff9ad0 0%, #ff4fb7 100%);
+        box-shadow:
+          0 8px 20px rgba(255, 77, 160, 0.55),
+          0 0 16px rgba(255, 77, 160, 0.4);
+        transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.15s ease;
+        white-space: nowrap;
+      }
+
+      #shopify-section-{{ section.id }} .mc-popup__btn:hover {
+        transform: translateY(-2px);
+        box-shadow:
+          0 10px 26px rgba(255, 77, 160, 0.75),
+          0 0 20px rgba(255, 77, 160, 0.5);
+        opacity: 0.96;
+      }
+
+      #shopify-section-{{ section.id }} .mc-popup__helper {
+        margin-top: 0.9rem;
+        font-size: 0.8rem;
+        color: #d1d5db;
+      }
+
+      #shopify-section-{{ section.id }} .mc-popup__helper strong,
+      #shopify-section-{{ section.id }} .mc-popup__helper b {
+        color: #ffffff;
+      }
+
+      #shopify-section-{{ section.id }} .pop-in__close-button {
+        color: #f9fafb;
+      }
+
+      @media (max-width: 480px) {
+        #shopify-section-{{ section.id }} .mc-popup {
+          padding-inline: 1.4rem;
+        }
+
+        #shopify-section-{{ section.id }} .mc-popup__buttons {
+          flex-direction: column;
+        }
+
+        #shopify-section-{{ section.id }} .mc-popup__btn {
+          width: 100%;
+        }
+      }
+    </style>
+
     <newsletter-popup
       class="pop-in newsletter-popup color-scheme color-scheme--{{ section.settings.color_scheme.id }}"
       title="Comunidade MyCharms"
@@ -14,40 +124,50 @@
         </button>
       </dialog-close-button>
 
-      <div class="v-stack gap-8">
+      <div class="v-stack gap-6 mc-popup">
         {%- if section.settings.title != blank or section.settings.content != blank -%}
           <div class="v-stack gap-4 text-center">
             {%- if section.settings.title != blank -%}
-              <p class="h4">{{ section.settings.title }}</p>
+              <p class="h4 mc-popup__title">
+                {{ section.settings.title }}
+              </p>
             {%- endif -%}
 
             {%- if section.settings.content != blank -%}
-              <div class="prose">
+              <div class="prose mc-popup__text">
                 {{ section.settings.content }}
               </div>
             {%- endif -%}
           </div>
         {%- endif -%}
 
-        <div class="v-stack gap-4">
-          <div class="h-stack justify-center gap-4 text-center" style="width:100%; justify-content:center;">
+        <div class="v-stack gap-3">
+          <div class="mc-popup__buttons">
             {%- if section.settings.instagram_url != blank -%}
-              {%- render 'button',
-                href: section.settings.instagram_url,
-                content: section.settings.instagram_button_text
-              -%}
+              <a
+                href="{{ section.settings.instagram_url }}"
+                class="mc-popup__btn"
+                target="_blank"
+                rel="noopener"
+              >
+                {{ section.settings.instagram_button_text }}
+              </a>
             {%- endif -%}
 
             {%- if section.settings.whatsapp_url != blank -%}
-              {%- render 'button',
-                href: section.settings.whatsapp_url,
-                content: section.settings.whatsapp_button_text
-              -%}
+              <a
+                href="{{ section.settings.whatsapp_url }}"
+                class="mc-popup__btn"
+                target="_blank"
+                rel="noopener"
+              >
+                {{ section.settings.whatsapp_button_text }}
+              </a>
             {%- endif -%}
           </div>
 
           {%- if section.settings.helper_text != blank -%}
-            <p class="text-subdued text-center">
+            <p class="mc-popup__helper text-center">
               {{ section.settings.helper_text }}
             </p>
           {%- endif -%}
@@ -61,7 +181,7 @@
                 if (target.closest('newsletter-popup')) {
                   try {
                     localStorage.setItem('theme:popup-filled', 'true');
-                  } catch(e) {}
+                  } catch (e) {}
                 }
               }, { passive: true });
             </script>
@@ -119,43 +239,43 @@
       "type": "inline_richtext",
       "id": "title",
       "label": "Título",
-      "default": "Entre para a comunidade MyCharms 💕"
+      "default": "Entre para a Comunidade MyCharms 💕"
     },
     {
       "type": "inline_richtext",
       "id": "content",
       "label": "Texto",
-      "default": "Entre na nossa comunidade exclusiva do Instagram e do WhatsApp para receber em primeira mão novidades, atualizações de reposição, lançamentos e cupons secretos. ✨"
+      "default": "Entre na nossa comunidade exclusiva do Instagram e do WhatsApp para receber em primeira mão novidades, reposições, lançamentos e cupons secretos. ✨"
     },
     {
       "type": "text",
       "id": "instagram_url",
       "label": "Link da comunidade no Instagram",
-      "default": "https://instagram.com/mycharms"
+      "default": "https://www.instagram.com/channel/AbZRHtqyJ2f76Zvw/"
     },
     {
       "type": "text",
       "id": "instagram_button_text",
       "label": "Texto do botão Instagram",
-      "default": "Entrar na comunidade do Instagram"
+      "default": "GRUPO INSTAGRAM"
     },
     {
       "type": "text",
       "id": "whatsapp_url",
       "label": "Link da comunidade no WhatsApp",
-      "default": "https://wa.me/SEU_NUMERO_OU_GRUPO"
+      "default": "https://whatsapp.com/channel/0029VbAy6Ix0gcfA9FBlhA2y"
     },
     {
       "type": "text",
       "id": "whatsapp_button_text",
       "label": "Texto do botão WhatsApp",
-      "default": "Entrar na comunidade do WhatsApp"
+      "default": "CANAL WHATSAPP"
     },
     {
       "type": "inline_richtext",
       "id": "helper_text",
       "label": "Texto auxiliar",
-      "default": "Lá você recebe cupons relâmpago, novidades e bastidores da MyCharms em primeira mão. 💎"
+      "default": "Lançaremos cupons na <b>Black Friday</b>, fique de olho! ✨"
     }
   ]
 }
