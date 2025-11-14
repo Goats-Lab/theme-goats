@@ -28,9 +28,7 @@
     },
     "main": {
       "type": "main-collection",
-      "custom_css": [
-        ".badge--sold-out {background-color: #ff9ccd; color: #ffffff; padding: 4px 10px; border-radius: 20px; font-weight: 500; font-size: 11px; text-transform: uppercase; text-align: center; display: inline-block; margin: 0 auto 8px auto; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);}"
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-2",
         "hide_product_information": false,

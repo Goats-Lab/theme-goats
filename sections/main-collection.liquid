@@ -169,7 +169,7 @@ LIQUID
           <height-observer variable="collection-toolbar" class="collection-toolbar full-bleed">
             <div class="collection-toolbar__button-list">
               {%- if show_filters -%}
-               <div class="collection-toolbar__button-container {% if section.settings.filter_layout == 'sidebar' %}md:hidden{% endif %}">
+<div class="collection-toolbar__button-container mc-filter-button-container {% if section.settings.filter_layout == 'sidebar' %}md:hidden{% endif %}">
   <button
     type="button"
     aria-controls="facets-drawer"
@@ -183,6 +183,8 @@ LIQUID
     {%- endif -%}
   </button>
 </div>
+
+
 
 
 
