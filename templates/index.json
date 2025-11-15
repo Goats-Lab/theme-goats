@@ -85,7 +85,7 @@
             "title": "",
             "mobile_text_position": "place-self-start-center text-center",
             "desktop_text_position": "sm:place-self-start-center sm:text-center",
-            "content_max_width": 400,
+            "content_max_width": 1200,
             "button_1_text": "",
             "button_1_link": "shopify://pages/all-encomenda",
             "button_1_style": "link",
