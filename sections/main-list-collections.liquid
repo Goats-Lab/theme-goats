@@ -257,7 +257,7 @@ LIQUID
                   {%- if collection.featured_image == blank or section.settings.collections == empty and collection.handle == 'frontpage' -%}
                     {%- continue -%}
                   {%- endif -%}
-                  {%- if collection.title contains 'Pandora' or collection.handle contains 'pandora' -%}
+                  {%- if collection.title contains 'Pandora' -%}
                     <a href="{{ collection.url }}" class="mc-collections-card group">
                       <div class="mc-collections-card__media">
                         {%- capture sizes -%}
