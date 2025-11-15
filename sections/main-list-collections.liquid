@@ -6,7 +6,7 @@ CSS
 
 <style>
   #shopify-section-{{ section.id }} {
-    --collection-list-gap: 1.75rem;
+    --collection-list-gap: 1.5rem;
   }
 
   .mc-collections {
@@ -21,16 +21,82 @@ CSS
     }
   }
 
-  .mc-collections__grid {
-    display: grid;
+  .mc-collections__head {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .mc-collections__eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: #ff9be9;
+    margin-bottom: 0.25rem;
+  }
+
+  .mc-collections__title {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .mc-collections__subtitle {
+    margin: 0.5rem auto 0;
+    max-width: 540px;
+    font-size: 0.9rem;
+    color: #e7d7ff;
+    opacity: 0.9;
+  }
+
+  .mc-collections__brand-group {
+    margin-top: 2.25rem;
+  }
+
+  .mc-collections__brand-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .mc-collections__brand-chip {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    color: #ffb7f1;
+  }
+
+  .mc-collections__brand-title {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .mc-collections__rail {
+    display: flex;
     gap: var(--collection-list-gap);
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(220px, 1fr)
-    );
+    overflow-x: auto;
+    padding-bottom: 0.75rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .mc-collections__rail::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .mc-collections__rail::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .mc-collections__rail::-webkit-scrollbar-thumb {
+    background: rgba(255, 155, 233, 0.5);
+    border-radius: 999px;
   }
 
   .mc-collections-card {
+    scroll-snap-align: start;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -45,6 +111,9 @@ CSS
       0 0 28px rgba(255, 120, 210, 0.22);
     overflow: hidden;
     transition: transform .18s ease, box-shadow .18s ease;
+    min-width: 250px;
+    max-width: 280px;
+    flex: 0 0 auto;
   }
 
   .mc-collections-card:hover {
@@ -94,10 +163,10 @@ CSS
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 0.25rem;
   }
 
-  .mc-collections-card__brand {
+  .mc-collections-card__brand-pill {
     display: inline-flex;
     align-items: center;
     padding: 0.1rem 0.65rem;
@@ -107,11 +176,12 @@ CSS
     text-transform: uppercase;
     background: rgba(5, 3, 18, 0.85);
     border: 1px solid rgba(255, 163, 232, 0.6);
+    align-self: flex-start;
   }
 
   .mc-collections-card__title {
     margin: 0;
-    font-size: 1.02rem;
+    font-size: 0.98rem;
     font-weight: 650;
   }
 
@@ -119,33 +189,6 @@ CSS
     margin: 0;
     font-size: 0.8rem;
     color: #f4dcff;
-    opacity: 0.9;
-  }
-
-  .mc-collections__head {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .mc-collections__eyebrow {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: .18em;
-    color: #ff9be9;
-    margin-bottom: 0.25rem;
-  }
-
-  .mc-collections__title {
-    font-size: 1.6rem;
-    color: #ffffff;
-    margin: 0;
-  }
-
-  .mc-collections__subtitle {
-    margin: 0.5rem auto 0;
-    max-width: 540px;
-    font-size: 0.9rem;
-    color: #e7d7ff;
     opacity: 0.9;
   }
 </style>
@@ -189,68 +232,211 @@ LIQUID
         {%- endif -%}
 
         {%- paginate collections by 48 -%}
-          <div class="mc-collections__grid">
-            {%- assign collections_to_show = section.settings.collections | default: collections -%}
+          {%- assign collections_to_show = section.settings.collections | default: collections -%}
 
-            {%- for collection in collections_to_show -%}
-              {%- if collection.featured_image == blank or section.settings.collections == empty and collection.handle == 'frontpage' -%}
-                {%- continue -%}
-              {%- endif -%}
+          {%- comment -%}
+            BLOCO PANDORA
+          {%- endcomment -%}
+          {%- assign has_pandora = false -%}
+          {%- for c in collections_to_show -%}
+            {%- if c.title contains 'Pandora' -%}
+              {%- assign has_pandora = true -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
 
-              {%- comment -%}
-                Detecta marca só para exibir um "chip".
-              {%- endcomment -%}
-              {%- assign brand = '' -%}
-              {%- if collection.title contains 'Pandora' -%}
-                {%- assign brand = 'Pandora' -%}
-              {%- elsif collection.title contains 'Tiffany' -%}
-                {%- assign brand = 'Tiffany' -%}
-              {%- elsif collection.title contains 'Swarovski' -%}
-                {%- assign brand = 'Swarovski' -%}
-              {%- endif -%}
+          {%- if has_pandora -%}
+            <section class="mc-collections__brand-group">
+              <div class="mc-collections__brand-head">
+                <span class="mc-collections__brand-chip">Marca</span>
+                <h2 class="mc-collections__brand-title">Pandora</h2>
+              </div>
 
-              <a href="{{ collection.url }}" class="mc-collections-card group">
-                <div class="mc-collections-card__media">
-                  {%- capture sizes -%}
-                    (max-width: 699px) 100vw,
-                    (max-width: 1149px) 50vw,
-                    33vw
-                  {%- endcapture -%}
-
-                  {%- assign loading_strategy = nil -%}
-                  {%- if forloop.index > 3 -%}
-                    {%- assign loading_strategy = 'lazy' -%}
+              <div class="mc-collections__rail">
+                {%- for collection in collections_to_show -%}
+                  {%- if collection.featured_image == blank or section.settings.collections == empty and collection.handle == 'frontpage' -%}
+                    {%- continue -%}
                   {%- endif -%}
+                  {%- if collection.title contains 'Pandora' -%}
+                    <a href="{{ collection.url }}" class="mc-collections-card group">
+                      <div class="mc-collections-card__media">
+                        {%- capture sizes -%}
+                          (max-width: 699px) 80vw,
+                          (max-width: 1149px) 40vw,
+                          320px
+                        {%- endcapture -%}
 
-                  {{- collection.featured_image
-                    | image_url: width: collection.featured_image.width
-                    | image_tag:
-                        loading: loading_strategy,
-                        sizes: sizes,
-                        widths: '300,400,600,800,1000,1200,1400,1600,1800,2000',
-                        class: 'mc-collections-card__img',
-                        draggable: 'false'
-                  -}}
+                        {%- assign loading_strategy = nil -%}
+                        {%- if forloop.index > 3 -%}
+                          {%- assign loading_strategy = 'lazy' -%}
+                        {%- endif -%}
 
-                  <div class="mc-collections-card__overlay"></div>
+                        {{- collection.featured_image
+                          | image_url: width: collection.featured_image.width
+                          | image_tag:
+                              loading: loading_strategy,
+                              sizes: sizes,
+                              widths: '300,400,600,800,1000,1200',
+                              class: 'mc-collections-card__img',
+                              draggable: 'false'
+                        -}}
 
-                  <div class="mc-collections-card__body">
-                    {%- if brand != '' -%}
-                      <span class="mc-collections-card__brand">{{ brand }}</span>
-                    {%- endif -%}
-                    <p class="mc-collections-card__title">
-                      {{ collection.title }}
-                    </p>
-                    {%- if collection.description != blank -%}
-                      <p class="mc-collections-card__subtitle">
-                        {{ collection.description | strip_html | truncate: 80 }}
-                      </p>
-                    {%- endif -%}
-                  </div>
-                </div>
-              </a>
-            {%- endfor -%}
-          </div>
+                        <div class="mc-collections-card__overlay"></div>
+
+                        <div class="mc-collections-card__body">
+                          <span class="mc-collections-card__brand-pill">Pandora</span>
+                          <p class="mc-collections-card__title">
+                            {{ collection.title }}
+                          </p>
+                          {%- if collection.description != blank -%}
+                            <p class="mc-collections-card__subtitle">
+                              {{ collection.description | strip_html | truncate: 80 }}
+                            </p>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    </a>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            </section>
+          {%- endif -%}
+
+          {%- comment -%}
+            BLOCO TIFFANY
+          {%- endcomment -%}
+          {%- assign has_tiffany = false -%}
+          {%- for c in collections_to_show -%}
+            {%- if c.title contains 'Tiffany' -%}
+              {%- assign has_tiffany = true -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- if has_tiffany -%}
+            <section class="mc-collections__brand-group">
+              <div class="mc-collections__brand-head">
+                <span class="mc-collections__brand-chip">Marca</span>
+                <h2 class="mc-collections__brand-title">Tiffany</h2>
+              </div>
+
+              <div class="mc-collections__rail">
+                {%- for collection in collections_to_show -%}
+                  {%- if collection.featured_image == blank or section.settings.collections == empty and collection.handle == 'frontpage' -%}
+                    {%- continue -%}
+                  {%- endif -%}
+                  {%- if collection.title contains 'Tiffany' -%}
+                    <a href="{{ collection.url }}" class="mc-collections-card group">
+                      <div class="mc-collections-card__media">
+                        {%- capture sizes -%}
+                          (max-width: 699px) 80vw,
+                          (max-width: 1149px) 40vw,
+                          320px
+                        {%- endcapture -%}
+
+                        {%- assign loading_strategy = nil -%}
+                        {%- if forloop.index > 3 -%}
+                          {%- assign loading_strategy = 'lazy' -%}
+                        {%- endif -%}
+
+                        {{- collection.featured_image
+                          | image_url: width: collection.featured_image.width
+                          | image_tag:
+                              loading: loading_strategy,
+                              sizes: sizes,
+                              widths: '300,400,600,800,1000,1200',
+                              class: 'mc-collections-card__img',
+                              draggable: 'false'
+                        -}}
+
+                        <div class="mc-collections-card__overlay"></div>
+
+                        <div class="mc-collections-card__body">
+                          <span class="mc-collections-card__brand-pill">Tiffany</span>
+                          <p class="mc-collections-card__title">
+                            {{ collection.title }}
+                          </p>
+                          {%- if collection.description != blank -%}
+                            <p class="mc-collections-card__subtitle">
+                              {{ collection.description | strip_html | truncate: 80 }}
+                            </p>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    </a>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            </section>
+          {%- endif -%}
+
+          {%- comment -%}
+            BLOCO SWAROVSKI
+          {%- endcomment -%}
+          {%- assign has_swarovski = false -%}
+          {%- for c in collections_to_show -%}
+            {%- if c.title contains 'Swarovski' -%}
+              {%- assign has_swarovski = true -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- if has_swarovski -%}
+            <section class="mc-collections__brand-group">
+              <div class="mc-collections__brand-head">
+                <span class="mc-collections__brand-chip">Marca</span>
+                <h2 class="mc-collections__brand-title">Swarovski</h2>
+              </div>
+
+              <div class="mc-collections__rail">
+                {%- for collection in collections_to_show -%}
+                  {%- if collection.featured_image == blank or section.settings.collections == empty and collection.handle == 'frontpage' -%}
+                    {%- continue -%}
+                  {%- endif -%}
+                  {%- if collection.title contains 'Swarovski' -%}
+                    <a href="{{ collection.url }}" class="mc-collections-card group">
+                      <div class="mc-collections-card__media">
+                        {%- capture sizes -%}
+                          (max-width: 699px) 80vw,
+                          (max-width: 1149px) 40vw,
+                          320px
+                        {%- endcapture -%}
+
+                        {%- assign loading_strategy = nil -%}
+                        {%- if forloop.index > 3 -%}
+                          {%- assign loading_strategy = 'lazy' -%}
+                        {%- endif -%}
+
+                        {{- collection.featured_image
+                          | image_url: width: collection.featured_image.width
+                          | image_tag:
+                              loading: loading_strategy,
+                              sizes: sizes,
+                              widths: '300,400,600,800,1000,1200',
+                              class: 'mc-collections-card__img',
+                              draggable: 'false'
+                        -}}
+
+                        <div class="mc-collections-card__overlay"></div>
+
+                        <div class="mc-collections-card__body">
+                          <span class="mc-collections-card__brand-pill">Swarovski</span>
+                          <p class="mc-collections-card__title">
+                            {{ collection.title }}
+                          </p>
+                          {%- if collection.description != blank -%}
+                            <p class="mc-collections-card__subtitle">
+                              {{ collection.description | strip_html | truncate: 80 }}
+                            </p>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    </a>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            </section>
+          {%- endif -%}
 
           {%- if section.settings.collections == empty -%}
             {%- render 'pagination', paginate: paginate -%}
