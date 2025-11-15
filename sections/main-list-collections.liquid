@@ -6,21 +6,147 @@ CSS
 
 <style>
   #shopify-section-{{ section.id }} {
-    --collection-list-items-per-row: {{ section.settings.collections_per_row_mobile | times: 1 }};
-    --collection-list-gap: 1.5rem;
+    --collection-list-gap: 1.75rem;
   }
 
-  @media screen and (min-width: 700px) {
-    #shopify-section-{{ section.id }} {
-      --collection-list-items-per-row: {{ 2 | at_most: section.settings.collections_per_row_desktop }};
+  .mc-collections {
+    background: #05030f;
+    border-radius: 28px;
+    padding: 2.5rem 1.5rem;
+  }
+
+  @media screen and (min-width: 900px) {
+    .mc-collections {
+      padding: 3.25rem 2rem;
     }
   }
 
-  @media screen and (min-width: 1150px) {
-    #shopify-section-{{ section.id }} {
-      --collection-list-items-per-row: {{ section.settings.collections_per_row_desktop }};
-      --collection-list-gap: 1.875rem;
-    }
+  .mc-collections__grid {
+    display: grid;
+    gap: var(--collection-list-gap);
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    );
+  }
+
+  .mc-collections-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border-radius: 22px;
+    padding: 0.75rem;
+    background:
+      radial-gradient(circle at top left, #1e1237 0, #05030f 40%, #05030f 100%);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.02),
+      0 18px 40px rgba(0, 0, 0, 0.85),
+      0 0 28px rgba(255, 120, 210, 0.22);
+    overflow: hidden;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+
+  .mc-collections-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 24px 50px rgba(0, 0, 0, 0.95),
+      0 0 32px rgba(255, 120, 210, 0.5);
+  }
+
+  .mc-collections-card__media {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #0b0815;
+    aspect-ratio: 4 / 5;
+  }
+
+  .mc-collections-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.03);
+    transition: transform .4s ease;
+    display: block;
+  }
+
+  .mc-collections-card:hover .mc-collections-card__media img {
+    transform: scale(1.07);
+  }
+
+  .mc-collections-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 12, 0.1) 0%,
+      rgba(2, 0, 12, 0.35) 45%,
+      rgba(2, 0, 12, 0.9) 100%
+    );
+  }
+
+  .mc-collections-card__body {
+    position: absolute;
+    inset-inline: 0.9rem;
+    bottom: 0.9rem;
+    color: #fff;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .mc-collections-card__brand {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.1rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(5, 3, 18, 0.85);
+    border: 1px solid rgba(255, 163, 232, 0.6);
+  }
+
+  .mc-collections-card__title {
+    margin: 0;
+    font-size: 1.02rem;
+    font-weight: 650;
+  }
+
+  .mc-collections-card__subtitle {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #f4dcff;
+    opacity: 0.9;
+  }
+
+  .mc-collections__head {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .mc-collections__eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: #ff9be9;
+    margin-bottom: 0.25rem;
+  }
+
+  .mc-collections__title {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .mc-collections__subtitle {
+    margin: 0.5rem auto 0;
+    max-width: 540px;
+    font-size: 0.9rem;
+    color: #e7d7ff;
+    opacity: 0.9;
   }
 </style>
 
@@ -32,7 +158,7 @@ LIQUID
 
 {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
-<div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
+<div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
   {%- if collections.size == 0 -%}
     <div class="container container--xs">
       <div class="empty-state">
@@ -47,51 +173,88 @@ LIQUID
     </div>
   {%- else -%}
     <div class="container">
-      <div class="section-stack">
+      <div class="mc-collections">
         {%- if section.settings.show_title -%}
-          <div class="section-header justify-self-center text-center">
+          <header class="mc-collections__head">
+            <div class="mc-collections__eyebrow">Catálogo por marca</div>
             {%- if request.page_type == 'list-collections' -%}
-              <h1 class="h2">{{ 'collection.general.all_collections' | t }}</h1>
+              <h1 class="mc-collections__title">{{ 'collection.general.all_collections' | t }}</h1>
             {%- else -%}
-              <h1 class="h2">{{ page.title }}</h1>
+              <h1 class="mc-collections__title">{{ page.title }}</h1>
             {%- endif -%}
-          </div>
+            <p class="mc-collections__subtitle">
+              Escolha a marca e o tipo de joia para filtrar facilmente entre Pandora, Tiffany e Swarovski.
+            </p>
+          </header>
         {%- endif -%}
 
         {%- paginate collections by 48 -%}
-          <div class="v-stack gap-6 sm:gap-8">
-            <div class="collection-list wrap">
-              {%- assign collections_to_show = section.settings.collections | default: collections -%}
+          <div class="mc-collections__grid">
+            {%- assign collections_to_show = section.settings.collections | default: collections -%}
 
-              {%- for collection in collections_to_show -%}
-                {%- if collection.featured_image == blank or section.settings.collections == empty and collection.handle == 'frontpage' -%}
-                  {%- continue -%}
-                {%- endif -%}
+            {%- for collection in collections_to_show -%}
+              {%- if collection.featured_image == blank or section.settings.collections == empty and collection.handle == 'frontpage' -%}
+                {%- continue -%}
+              {%- endif -%}
 
-                <a href="{{ collection.url }}" class="collection-card group">
-                  <div class="content-over-media content-over-media--{{ section.settings.image_size }}" style="--content-over-media-overlay: {{ section.settings.overlay_color.rgb }} / {{ section.settings.overlay_opacity | divided_by: 100.0 }};">
-                    {%- capture sizes -%}(max-width: 699px) 100vw, (max-width: 1149px) {{ 100 | divided_by: section.settings.collections_per_row_desktop | at_least: 50 }}vw, {{ 100 | divided_by: section.settings.collections_per_row_desktop }}vw{%- endcapture -%}
+              {%- comment -%}
+                Detecta marca só para exibir um "chip".
+              {%- endcomment -%}
+              {%- assign brand = '' -%}
+              {%- if collection.title contains 'Pandora' -%}
+                {%- assign brand = 'Pandora' -%}
+              {%- elsif collection.title contains 'Tiffany' -%}
+                {%- assign brand = 'Tiffany' -%}
+              {%- elsif collection.title contains 'Swarovski' -%}
+                {%- assign brand = 'Swarovski' -%}
+              {%- endif -%}
 
-                    {%- assign loading_strategy = nil -%}
+              <a href="{{ collection.url }}" class="mc-collections-card group">
+                <div class="mc-collections-card__media">
+                  {%- capture sizes -%}
+                    (max-width: 699px) 100vw,
+                    (max-width: 1149px) 50vw,
+                    33vw
+                  {%- endcapture -%}
 
-                    {%- if forloop.index > 3 -%}
-                      {%- assign loading_strategy = 'lazy' -%}
+                  {%- assign loading_strategy = nil -%}
+                  {%- if forloop.index > 3 -%}
+                    {%- assign loading_strategy = 'lazy' -%}
+                  {%- endif -%}
+
+                  {{- collection.featured_image
+                    | image_url: width: collection.featured_image.width
+                    | image_tag:
+                        loading: loading_strategy,
+                        sizes: sizes,
+                        widths: '300,400,600,800,1000,1200,1400,1600,1800,2000',
+                        class: 'mc-collections-card__img',
+                        draggable: 'false'
+                  -}}
+
+                  <div class="mc-collections-card__overlay"></div>
+
+                  <div class="mc-collections-card__body">
+                    {%- if brand != '' -%}
+                      <span class="mc-collections-card__brand">{{ brand }}</span>
                     {%- endif -%}
-
-                    {{- collection.featured_image | image_url: width: collection.featured_image.width | image_tag: loading: loading_strategy, sizes: sizes, widths: '200,300,400,500,600,800,1000,1200,1400,1600,1800,2000,2200,2400', class: 'zoom-image group-hover:zoom', draggable: 'false' -}}
-
-                    <div class="collection-card__content prose prose--tight {{ section.settings.content_position }}" style="{% render 'surface', text_color: section.settings.text_color %}">
-                      <p class="h3">{{ collection.title }}</p>
-                    </div>
+                    <p class="mc-collections-card__title">
+                      {{ collection.title }}
+                    </p>
+                    {%- if collection.description != blank -%}
+                      <p class="mc-collections-card__subtitle">
+                        {{ collection.description | strip_html | truncate: 80 }}
+                      </p>
+                    {%- endif -%}
                   </div>
-                </a>
-              {%- endfor -%}
-            </div>
-
-            {%- if section.settings.collections == empty -%}
-              {%- render 'pagination', paginate: paginate -%}
-            {%- endif -%}
+                </div>
+              </a>
+            {%- endfor -%}
           </div>
+
+          {%- if section.settings.collections == empty -%}
+            {%- render 'pagination', paginate: paginate -%}
+          {%- endif -%}
         {%- endpaginate -%}
       </div>
     </div>
@@ -248,4 +411,3 @@ LIQUID
   ]
 }
 {% endschema %}
-
