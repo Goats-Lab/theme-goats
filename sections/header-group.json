@@ -64,7 +64,7 @@
         "sidebar_menu": "header",
         "menu_open_trigger": "hover",
         "enable_search": true,
-        "sidebar_color_scheme": "",
+        "sidebar_color_scheme": "scheme-3",
         "sidebar_text_font": "heading",
         "sidebar_show_dividers": true,
         "layout": "logo_center_navigation_below",
