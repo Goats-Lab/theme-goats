@@ -12,7 +12,7 @@
     "main": {
       "type": "main-list-collections",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "show_title": true,
         "collections": [
           "aneis-pandora",
