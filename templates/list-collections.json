@@ -9,10 +9,22 @@
  */
 {
   "sections": {
+    "custom_liquid_rKnMJD": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<!-- CARDS DE MARCAS PARA ENCOMENDA -->\n<style>\n  .mc-brandcards {\n    display: grid;\n    grid-template-columns: repeat(3, minmax(0, 1fr));\n    gap: 20px;\n    margin: 50px 0;\n  }\n\n  .mc-brandcard {\n    background: radial-gradient(circle at top left, rgba(255,182,223,0.18), transparent 60%),\n                rgba(12,12,22,0.92);\n    border: 1px solid rgba(255,182,223,0.25);\n    border-radius: 20px;\n    padding: 26px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    transition: .15s ease;\n  }\n\n  .mc-brandcard:hover {\n    transform: translateY(-3px);\n    border-color: rgba(255,182,223,0.6);\n    box-shadow: 0 8px 30px rgba(255, 105, 180, 0.25);\n  }\n\n  .mc-brandcard-title {\n    font-size: 22px;\n    font-weight: 600;\n    margin-bottom: 10px;\n    color: #ffe7f4;\n  }\n\n  .mc-brandcard-sub {\n    font-size: 14px;\n    opacity: 0.85;\n    color: #f7d9eb;\n    margin-bottom: 18px;\n  }\n\n  .mc-brandcard-btn {\n    display: inline-block;\n    padding: 10px 20px;\n    border-radius: 999px;\n    background: linear-gradient(135deg, #ffb6df, #ff77c8);\n    color: #1a0512;\n    font-weight: 600;\n    text-align: center;\n    font-size: 14px;\n    text-decoration: none;\n    box-shadow: 0 6px 24px rgba(255,119,200,0.35);\n    transition: .15s;\n  }\n\n  .mc-brandcard-btn:hover {\n    transform: translateY(-2px);\n    opacity: 0.95;\n  }\n\n  @media (max-width: 900px) {\n    .mc-brandcards {\n      grid-template-columns: 1fr;\n    }\n  }\n</style>\n\n<div class=\"mc-brandcards\">\n  <!-- PANDORA -->\n  <div class=\"mc-brandcard\">\n    <div>\n      <div class=\"mc-brandcard-title\">Pandora – Encomenda</div>\n      <div class=\"mc-brandcard-sub\">\n        Todas as peças de encomenda da Pandora em um só lugar. Filtre por anéis, colares, brincos e pulseiras.\n      </div>\n    </div>\n    <a href=\"/collections/all-pandora-encomenda\" class=\"mc-brandcard-btn\">Ver coleção Pandora</a>\n  </div>\n\n  <!-- TIFFANY -->\n  <div class=\"mc-brandcard\">\n    <div>\n      <div class=\"mc-brandcard-title\">Tiffany – Encomenda</div>\n      <div class=\"mc-brandcard-sub\">\n        Descubra os modelos Tiffany disponíveis sob encomenda. Elegância clássica com filtragem por categoria.\n      </div>\n    </div>\n    <a href=\"/collections/all-tiffany-encomenda\" class=\"mc-brandcard-btn\">Ver coleção Tiffany</a>\n  </div>\n\n  <!-- SWAROVSKI -->\n  <div class=\"mc-brandcard\">\n    <div>\n      <div class=\"mc-brandcard-title\">Swarovski – Encomenda</div>\n      <div class=\"mc-brandcard-sub\">\n        Produtos Swarovski sob encomenda, separados por anéis, brincos, colares e muito mais.\n      </div>\n    </div>\n    <a href=\"/collections/all-swarovski-encomenda\" class=\"mc-brandcard-btn\">Ver coleção Swarovski</a>\n  </div>\n</div>",
+        "text_alignment": "center"
+      }
+    },
     "main": {
       "type": "main-list-collections",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "show_title": true,
         "collections": [
           "aneis-pandora",
@@ -28,9 +40,9 @@
           "tiffany-pulseira"
         ],
         "collections_per_row_mobile": "2",
-        "collections_per_row_desktop": 3,
+        "collections_per_row_desktop": 4,
         "image_size": "xs",
-        "content_position": "place-self-center text-center",
+        "content_position": "place-self-start text-start",
         "text_color": "#ffffff",
         "overlay_color": "#1c1c1c",
         "overlay_opacity": 20
@@ -38,6 +50,7 @@
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_rKnMJD"
   ]
 }
