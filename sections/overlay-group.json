@@ -31,7 +31,7 @@
         "color_scheme": "scheme-4",
         "apparition_delay": 2,
         "show_only_on_index": true,
-        "hide_for_account_holders": false,
+        "hide_for_account_holders": true,
         "show_only_once": false,
         "title": "Entre para a comunidade MyCharms 💕",
         "content": "Entre na nossa comunidade exclusiva do Instagram e do WhatsApp para receber em primeira mão novidades, atualizações de reposição, lançamentos e cupons secretos. ✨",
