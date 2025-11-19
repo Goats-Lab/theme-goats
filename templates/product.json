@@ -169,12 +169,6 @@
             "liquid": "",
             "page": "{{ product.metafields.custom.compatibilidade.value }}"
           }
-        },
-        "liquid_aGfn7y": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<div class=\"ra-badges\" style=\"display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:center;align-items:center;gap:16px;margin:0;padding:0;border:0;background:none\">\n  <!-- Verificado -->\n  <div id=\"ra-verified-seal\" style=\"display:inline-flex\">\n    <script type=\"text/javascript\" id=\"ra-embed-verified-seal\"\n      src=\"https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js\"\n      data-id=\"LWpvSVBwRVdPSWdIVmF5RTpteS1jaGFybXMtMTY3OTc2NQ==\"\n      data-target=\"ra-verified-seal\"\n      data-model=\"compact_2\"></script>\n  </div>\n\n  <!-- Reputação (pode usar model 1 ou 2) -->\n  <div id=\"reputation-ra\" style=\"display:inline-flex\">\n    <script type=\"text/javascript\" id=\"ra-embed-reputation\"\n      src=\"https://s3.amazonaws.com/raichu-beta/selos/bundle.js\"\n      data-id=\"LWpvSVBwRVdPSWdIVmF5RTpteS1jaGFybXMtMTY3OTc2NQ==\"\n      data-target=\"reputation-ra\"\n      data-model=\"1\"></script>\n  </div>\n</div>\n\n<script>\n(function(){\n  function prune(containerId){\n    const el = document.getElementById(containerId);\n    if(!el) return;\n    // pega só elementos renderizados (ignora <script>)\n    const widgets = Array.from(el.children).filter(n => n.tagName !== 'SCRIPT');\n    // se houver 2+, remove os extras\n    if (widgets.length > 1) widgets.slice(1).forEach(n => n.remove());\n  }\n  // roda agora e observa novas injeções\n  ['ra-verified-seal','reputation-ra'].forEach(id=>{\n    prune(id);\n    const el = document.getElementById(id);\n    if(!el) return;\n    new MutationObserver(()=>prune(id)).observe(el,{childList:true,subtree:false});\n  });\n})();\n</script>\n\n<style>\n  /* garante lado a lado e sem quebra */\n  .ra-badges { gap:16px }\n  #ra-verified-seal, #reputation-ra { white-space:nowrap }\n  @media (max-width:640px){ .ra-badges{ flex-direction:column } }\n</style>"
-          }
         }
       },
       "block_order": [
@@ -191,8 +185,7 @@
         "accordion_CMFYpn",
         "accordion_RDnbEJ",
         "accordion_ycDW7r",
-        "accordion_CwAYGz",
-        "liquid_aGfn7y"
+        "accordion_CwAYGz"
       ],
       "settings": {
         "color_scheme": "scheme-2",
