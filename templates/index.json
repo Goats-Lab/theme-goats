@@ -781,7 +781,7 @@
       "settings": {
         "color_scheme": "scheme-3",
         "separate_section_with_border": false,
-        "remove_vertical_spacing": true,
+        "remove_vertical_spacing": false,
         "remove_horizontal_spacing": true,
         "liquid": "<div class=\"mc-tiktok-wrapper\">\n  <blockquote class=\"tiktok-embed\"\n              cite=\"https://www.tiktok.com/@my.charms.br\"\n              data-unique-id=\"my.charms.br\"\n              data-embed-type=\"creator\"\n              style=\"max-width:780px; min-width:288px;\">\n    <section>\n      <a target=\"_blank\" href=\"https://www.tiktok.com/@my.charms.br?refer=creator_embed\">@my.charms.br</a>\n    </section>\n  </blockquote>\n</div>\n<script async src=\"https://www.tiktok.com/embed.js\"></script>\n\n<style>\n/* Container geral */\n.mc-tiktok-wrapper {\n  display: flex;\n  justify-content: center;\n  margin: 2rem auto;\n  max-width: 820px;\n  padding: 12px;\n  background: #fff;\n  border-radius: 20px;\n  box-shadow: 0 8px 24px rgba(0,0,0,0.08);\n  border: 2px solid #ff9ccd20; /* borda rosa bem suave */\n}\n\n/* Bordas arredondadas no player */\n.mc-tiktok-wrapper .tiktok-embed {\n  border-radius: 16px !important;\n  overflow: hidden;\n  flex: 1;\n}\n\n/* Ajustes de responsividade */\n@media (max-width: 600px) {\n  .mc-tiktok-wrapper {\n    padding: 8px;\n    border-radius: 16px;\n  }\n  .mc-tiktok-wrapper .tiktok-embed {\n    border-radius: 12px !important;\n  }\n}\n\n/* Toque MyCharms na barra inferior do TikTok embed */\n.mc-tiktok-wrapper .tiktok-embed a {\n  color: #ff9ccd !important;\n  font-weight: 600;\n  transition: color .2s ease;\n}\n.mc-tiktok-wrapper .tiktok-embed a:hover {\n  color: #d14788 !important;\n}\n</style>",
         "text_alignment": "center"
@@ -835,6 +835,18 @@
         "text_color": "",
         "text_alignment": "center"
       }
+    },
+    "custom_liquid_fmAezf": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .mc-trust-strong {\n    margin: 2.8rem 0;\n    padding: 2rem 1.8rem;\n    border-radius: 22px;\n    background: #0b0718;\n    border: 1px solid rgba(255, 156, 205, 0.45);\n    color: #fff;\n    position: relative;\n    overflow: hidden;\n  }\n\n  .mc-trust-strong::before {\n    content: \"\";\n    position: absolute;\n    inset: 0;\n    background: radial-gradient(\n                circle at top left,\n                rgba(255, 156, 205, 0.18),\n                transparent 60%\n              ),\n              radial-gradient(\n                circle at bottom right,\n                rgba(102, 51, 153, 0.22),\n                transparent 60%\n              );\n    pointer-events: none;\n  }\n\n  .mc-trust-strong__tag {\n    display: inline-flex;\n    align-items: center;\n    gap: .4rem;\n    padding: .22rem .75rem;\n    border-radius: 999px;\n    background: rgba(255, 156, 205, 0.12);\n    border: 1px solid rgba(255, 156, 205, 0.35);\n    color: #ff9ccd;\n    font-size: .67rem;\n    text-transform: uppercase;\n    letter-spacing: .14em;\n    margin-bottom: .75rem;\n  }\n\n  .mc-trust-strong__title {\n    margin: 0 0 .6rem;\n    font-size: 1.4rem;\n    font-weight: 600;\n    color: #fff;\n  }\n\n  .mc-trust-strong__text {\n    margin: 0 0 .5rem;\n    font-size: .92rem;\n    line-height: 1.55;\n    color: #e9defa;\n  }\n\n  .mc-trust-strong__highlight {\n    color: #ffd7f0;\n    font-weight: 600;\n  }\n\n  .mc-trust-strong__box {\n    margin: 1rem 0 1.4rem;\n    padding: 1rem 1.1rem;\n    background: rgba(255, 156, 205, 0.08);\n    border-left: 3px solid #ff9ccd;\n    border-radius: 8px;\n    font-size: .88rem;\n    line-height: 1.5;\n  }\n\n  .mc-trust-strong__bullets {\n    margin: 0 0 1.4rem;\n    padding: 0;\n    list-style: none;\n    display: grid;\n    gap: .35rem;\n    font-size: .88rem;\n  }\n\n  .mc-trust-strong__bullets li::before {\n    content: \"✔\";\n    margin-right: .5rem;\n    color: #ff9ccd;\n    font-size: .82rem;\n  }\n\n  .mc-trust-strong__footer {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 0.6rem;\n    align-items: center;\n    justify-content: space-between;\n    font-size: .8rem;\n    opacity: .9;\n  }\n\n  .mc-trust-strong__link {\n    color: #ff9ccd;\n    font-size: .82rem;\n    text-decoration: none;\n    display: inline-flex;\n    align-items: center;\n    gap: .3rem;\n    font-weight: 500;\n  }\n</style>\n\n<section class=\"mc-trust-strong\">\n  <div class=\"mc-trust-strong__tag\">Transparência MyCharms</div>\n\n  <h2 class=\"mc-trust-strong__title\">Sobre nossa reputação e segurança</h2>\n\n  <p class=\"mc-trust-strong__text\">\n    Clientes atentos podem notar que, no Reclame Aqui, a MyCharms aparece como \n    <span class=\"mc-trust-strong__highlight\">“empresa suspensa”</span>.  \n    Esse status <strong>NÃO</strong> significa golpe, risco ou falta de entrega — ele é aplicado \n    automaticamente pelo Reclame Aqui quando a empresa decide \n    <span class=\"mc-trust-strong__highlight\">não utilizar o painel comercial deles</span>.\n  </p>\n\n  <div class=\"mc-trust-strong__box\">\n    Isso acontece com centenas de lojas reais, porque o RA não é um órgão regulador —  \n    é apenas uma plataforma privada. A suspensão NÃO tem relação com confiança, e sim \n    com participação comercial dentro da plataforma.\n  </div>\n\n  <p class=\"mc-trust-strong__text\">\n    A MyCharms segue atendendo normalmente, com estrutura real, envios diários e suporte humano.\n  </p>\n\n  <ul class=\"mc-trust-strong__bullets\">\n    <li>Mais de X mil pedidos entregues em todo o Brasil</li>\n    <li>Loja verificada e hospedada pela Shopify (a maior plataforma do mundo)</li>\n    <li>Pagamentos 100% seguros (cartão, Pix, Mercado Pago, Shopify Payments)</li>\n    <li>Garantia real em todas as peças e atendimento ativo</li>\n  </ul>\n\n  <div class=\"mc-trust-strong__footer\">\n    <span>Qualquer dúvida, fale com a nossa equipe 💗</span>\n    <a href=\"/pages/sobre-nos\" class=\"mc-trust-strong__link\">Conheça a MyCharms</a>\n  </div>\n</section>",
+        "text_alignment": "start"
+      }
     }
   },
   "order": [
@@ -857,6 +869,7 @@
     "featured_collections_aVbznB",
     "featured_collections_Ujh3MC",
     "custom_liquid_nL4PjV",
-    "text_with_icons_jgYnYM"
+    "text_with_icons_jgYnYM",
+    "custom_liquid_fmAezf"
   ]
 }
