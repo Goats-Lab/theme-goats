@@ -9,6 +9,18 @@
  */
 {
   "sections": {
+    "custom_liquid_r7W9ix": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<!-- bloco compacto -->\n<section id=\"mc-bf-mini\" style=\"max-width:680px;margin:14px auto;padding:16px;border-radius:14px;background:#07040a;color:#fff;text-align:center;\">\n  <div style=\"font-size:13px;color:#ffb2d6;letter-spacing:.12em\">SÓ ATÉ 28/11</div>\n  <h3 style=\"margin:8px 0 4px;font-size:20px\">MYWEEK — 10% + 15% em 3+ peças</h3>\n  <div style=\"display:flex;gap:8px;justify-content:center;margin:12px 0\">\n    <div style=\"min-width:62px;background:#0f0a12;padding:10px;border-radius:10px\"><strong id=\"d1\">00</strong><div style=\"font-size:11px\">dias</div></div>\n    <div style=\"min-width:62px;background:#0f0a12;padding:10px;border-radius:10px\"><strong id=\"h1\">00</strong><div style=\"font-size:11px\">hrs</div></div>\n    <div style=\"min-width:62px;background:#0f0a12;padding:10px;border-radius:10px\"><strong id=\"m1\">00</strong><div style=\"font-size:11px\">min</div></div>\n  </div>\n  <a href=\"/discount/MYWEEK?redirect=/\" style=\"display:inline-block;background:#ff3b7a;color:#000;padding:12px 18px;border-radius:999px;font-weight:800;text-decoration:none\">ATIVAR CUPOM</a>\n</section>\n<script>\n  const end = new Date('2025-11-28T02:59:00Z').getTime();\n  function t(){\n    const now=Date.now(); let diff=Math.max(0,end-now);\n    const d=Math.floor(diff/86400000); diff-=d*86400000;\n    const h=Math.floor(diff/3600000); diff-=h*3600000;\n    const m=Math.floor(diff/60000);\n    document.getElementById('d1').textContent=String(d).padStart(2,'0');\n    document.getElementById('h1').textContent=String(h).padStart(2,'0');\n    document.getElementById('m1').textContent=String(m).padStart(2,'0');\n  }\n  t(); setInterval(t,1000);\n</script>",
+        "text_alignment": "center"
+      }
+    },
     "media_grid_776mrJ": {
       "type": "media-grid",
       "blocks": {
@@ -361,6 +373,7 @@
     }
   },
   "order": [
+    "custom_liquid_r7W9ix",
     "media_grid_776mrJ",
     "main",
     "tiktok_feed_UbR7KW",
