@@ -11,6 +11,7 @@
   "sections": {
     "custom_liquid_r7W9ix": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom_liquid.presets.custom_liquid.name",
       "settings": {
         "color_scheme": "scheme-4",
@@ -85,6 +86,12 @@
           "type": "text",
           "settings": {
             "text": "<h6><br/>  Em até <strong>12x no cartão</strong> ou <strong>2x sem juros</strong>.<br/><br/></h6>"
+          }
+        },
+        "liquid_XEtrqC": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<!-- MyCharms – Compact Product Banner (SEM FOTO) -->\n<div id=\"mc-bf-product\" style=\"max-width:360px; margin:12px 0; font-family:inherit;\">\n  <div style=\"\n    display:flex;\n    flex-direction:column;\n    gap:10px;\n    background:linear-gradient(180deg,#070308,#0b0710);\n    padding:16px 14px;\n    border-radius:14px;\n    border:1px solid rgba(255,59,122,.10);\n    box-shadow:0 8px 24px rgba(255,59,122,.10);\n  \">\n    \n    <!-- Header -->\n    <div style=\"display:flex;justify-content:space-between;align-items:center;\">\n      <div style=\"font-size:12px;color:#ff9ccd;font-weight:700;letter-spacing:.12em;text-transform:uppercase\">\n        SÓ ATÉ 28/11\n      </div>\n      <div style=\"font-size:11px;color:#ffd6ea;font-weight:600;\">\n        10% + 15% OFF\n      </div>\n    </div>\n\n    <!-- Timer -->\n    <div style=\"display:flex;gap:8px;justify-content:center;margin-top:2px;\">\n      <div style=\"background:#120a14;padding:8px 10px;border-radius:10px;min-width:54px;text-align:center;border:1px solid rgba(255,59,122,.08);\">\n        <div id=\"mcpd-d\" style=\"font-size:16px;font-weight:800;color:#ff3b7a;\">00</div>\n        <small style=\"font-size:10px;color:#f3d6e6;\">dias</small>\n      </div>\n\n      <div style=\"background:#120a14;padding:8px 10px;border-radius:10px;min-width:54px;text-align:center;border:1px solid rgba(255,59,122,.08);\">\n        <div id=\"mcpd-h\" style=\"font-size:16px;font-weight:800;color:#ff3b7a;\">00</div>\n        <small style=\"font-size:10px;color:#f3d6e6;\">hrs</small>\n      </div>\n\n      <div style=\"background:#120a14;padding:8px 10px;border-radius:10px;min-width:54px;text-align:center;border:1px solid rgba(255,59,122,.08);\">\n        <div id=\"mcpd-m\" style=\"font-size:16px;font-weight:800;color:#ff3b7a;\">00</div>\n        <small style=\"font-size:10px;color:#f3d6e6;\">min</small>\n      </div>\n    </div>\n\n    <!-- CTA -->\n    <a id=\"mcpd-cta\" \n       href=\"/discount/MYWEEK?redirect={{ product.url | url_encode }}\" \n       style=\"\n         display:block;\n         text-align:center;\n         background:#ff3b7a;\n         color:#000;\n         padding:12px 16px;\n         border-radius:999px;\n         font-weight:900;\n         font-size:14px;\n         letter-spacing:.03em;\n         text-decoration:none;\n         margin-top:6px;\n         box-shadow:0 10px 26px rgba(255,59,122,.22);\n         transition:0.2s;\n       \"\n       onmouseover=\"this.style.filter='brightness(1.07)'\"\n       onmouseout=\"this.style.filter='brightness(1)'\"\n    >\n      ATIVAR CUPOM MYWEEK\n    </a>\n\n  </div>\n\n  <div style=\"font-size:11px;color:#f0cfe0;margin-top:6px;line-height:1.25\">\n    <strong style=\"color:#ffd8ea;\">+15% OFF</strong> ao adicionar <strong>3+ peças</strong> (automático no carrinho).\n  </div>\n</div>\n\n<script>\n(function(){\n  const END = new Date('2025-11-28T02:59:00Z').getTime();\n  const pad = n => String(n).padStart(2,'0');\n\n  function tick(){\n    const now = Date.now();\n    let diff = Math.max(0, END - now);\n\n    const d = Math.floor(diff / 86400000); diff -= d*86400000;\n    const h = Math.floor(diff / 3600000);  diff -= h*3600000;\n    const m = Math.floor(diff / 60000);\n\n    document.getElementById('mcpd-d').textContent = pad(d);\n    document.getElementById('mcpd-h').textContent = pad(h);\n    document.getElementById('mcpd-m').textContent = pad(m);\n\n    // Urgency pulse when < 48h\n    const cta = document.getElementById('mcpd-cta');\n    if(cta){\n      if(END - now <= 48 * 3600000){\n        cta.style.transform = 'scale(1.03)';\n        cta.style.boxShadow = '0 14px 32px rgba(255,59,122,.28)';\n      } else {\n        cta.style.transform = '';\n        cta.style.boxShadow = '0 10px 26px rgba(255,59,122,.22)';\n      }\n    }\n  }\n\n  tick();\n  setInterval(tick, 1000);\n})();\n</script>"
           }
         },
         "inventory_xjpgDg": {
@@ -188,6 +195,7 @@
         "title",
         "price",
         "text_QVmHQ7",
+        "liquid_XEtrqC",
         "inventory_xjpgDg",
         "liquid_dReAVB",
         "variant_picker",
