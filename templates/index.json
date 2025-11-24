@@ -77,32 +77,6 @@
     "slideshow_AF8imh": {
       "type": "slideshow",
       "blocks": {
-        "image_FYnGfL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/WhatsApp_Image_2025-11-05_at_21.05.32.jpg",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-start text-start",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
-          }
-        },
         "image_pKnDiD": {
           "type": "image",
           "settings": {
@@ -131,7 +105,6 @@
         }
       },
       "block_order": [
-        "image_FYnGfL",
         "image_pKnDiD"
       ],
       "name": "t:sections.slideshow.presets.slideshow.name",
