@@ -103,38 +103,10 @@
             "border_color": "",
             "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
           }
-        },
-        "image_pKnDiD": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/WhatsApp_Image_2025-11-05_at_21.05.32_fa087a93-608f-4fd0-96c2-8d42f3cec86e.jpg",
-            "mobile_image": "shopify://shop_images/WhatsApp_Image_2025-11-10_at_23.38.49.jpg",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 1200,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
-          }
         }
       },
       "block_order": [
-        "image_hErh4g",
-        "image_pKnDiD"
+        "image_hErh4g"
       ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
@@ -151,38 +123,6 @@
     },
     "slideshow_G9HC6M": {
       "type": "slideshow",
-      "blocks": {
-        "image_3dHkwr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_10_de_nov._de_2025_23_42_24.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-start-center text-center",
-            "desktop_text_position": "sm:place-self-start-center sm:text-center",
-            "content_max_width": 1200,
-            "button_1_text": "",
-            "button_1_link": "shopify://pages/all-encomenda",
-            "button_1_style": "link",
-            "button_1_background": "#ff6eb6",
-            "button_1_text_color": "#ff9ccd",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "#ff6eb6",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_3dHkwr"
-      ],
-      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
