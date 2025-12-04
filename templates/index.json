@@ -77,6 +77,59 @@
     "slideshow_AF8imh": {
       "type": "slideshow",
       "blocks": {
+        "image_AhWXfK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-04_142415.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 1200,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 0), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        },
+        "image_ez384U": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_otimizado_Shopify.jpg",
+            "mobile_image": "shopify://shop_images/Banner_1_otimizado_Shopify.jpg",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-start-center text-center",
+            "desktop_text_position": "sm:place-self-start-center sm:text-center",
+            "content_max_width": 400,
+            "button_1_text": "",
+            "button_1_link": "shopify://pages/all-encomenda",
+            "button_1_style": "link",
+            "button_1_background": "#ff6eb6",
+            "button_1_text_color": "#ff9ccd",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "#ff6eb6",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        },
         "image_hErh4g": {
           "type": "image",
           "settings": {
@@ -106,6 +159,8 @@
         }
       },
       "block_order": [
+        "image_AhWXfK",
+        "image_ez384U",
         "image_hErh4g"
       ],
       "name": "t:sections.slideshow.presets.slideshow.name",
@@ -121,19 +176,26 @@
         "controls_color": "#ffffff"
       }
     },
-    "slideshow_G9HC6M": {
-      "type": "slideshow",
-      "name": "t:sections.slideshow.presets.slideshow.name",
+    "best_sellers_carousel_QCTYGq": {
+      "type": "best-sellers-carousel",
+      "custom_css": [
+        ".mc-lx__card:hover .mc-lx__name a {color: #111111;}",
+        " /* já está escuro; posso trocar pra #7d3d5a (rosa-ink) se quiser */"
+      ],
+      "name": "Mais vendidos (Carrossel) — MyCharms",
       "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": false,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": false,
-        "cycle_speed": 7,
-        "background": "#000000",
-        "controls_color": "#ffffff"
+        "subtitle": "TOP VENDIDOS",
+        "title": "Favoritos da MyCharms",
+        "collection": "mais-vendidos-my-charms",
+        "limit": 12,
+        "show_arrows": true,
+        "show_dots": true,
+        "show_quick_add": false,
+        "show_view_all": true,
+        "force_best_selling_link": false,
+        "autoplay": false,
+        "autoplay_ms": "4000",
+        "scroll_step": 85
       }
     },
     "custom_liquid_xjiT6d": {
@@ -181,6 +243,57 @@
         "remove_horizontal_spacing": false,
         "liquid": "<style>\n  .mc-col-car {\n    background: #05030f;\n    border-radius: 28px;\n    padding: 2.4rem 1.4rem;\n    margin: 2rem 0;\n  }\n\n  @media (min-width: 900px) {\n    .mc-col-car {\n      padding: 3rem 2rem;\n    }\n  }\n\n  .mc-col-car__head {\n    display: flex;\n    justify-content: space-between;\n    align-items: flex-end;\n    gap: 1rem;\n    margin-bottom: 1.6rem;\n  }\n\n  .mc-col-car__kicker {\n    font-size: .78rem;\n    text-transform: uppercase;\n    letter-spacing: .18em;\n    color: #ff9be9;\n    margin-bottom: .2rem;\n  }\n\n  .mc-col-car__title {\n    margin: 0;\n    font-size: 1.5rem;\n    color: #fff;\n  }\n\n  .mc-col-car__subtitle {\n    margin: .2rem 0 0;\n    font-size: .88rem;\n    color: #e7d7ff;\n    opacity: .9;\n  }\n\n  .mc-col-car__arrows {\n    display: flex;\n    gap: .5rem;\n  }\n\n  .mc-col-car__arrow-btn {\n    width: 32px;\n    height: 32px;\n    border-radius: 999px;\n    border: 1px solid rgba(255,155,233,.7);\n    background: rgba(10,5,24,.9);\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    cursor: pointer;\n    color: #fff;\n    font-size: 1rem;\n    transition: background .15s ease, transform .15s ease, opacity .15s ease;\n  }\n\n  .mc-col-car__arrow-btn:hover {\n    background: rgba(255,155,233,.18);\n    transform: translateY(-1px);\n  }\n\n  .mc-col-car__rail {\n    display: flex;\n    gap: 1.5rem;\n    overflow-x: auto;\n    padding-bottom: .8rem;\n    -webkit-overflow-scrolling: touch;\n    scroll-snap-type: x mandatory;\n  }\n\n  .mc-col-car__rail::-webkit-scrollbar {\n    height: 6px;\n  }\n\n  .mc-col-car__rail::-webkit-scrollbar-track {\n    background: transparent;\n  }\n\n  .mc-col-car__rail::-webkit-scrollbar-thumb {\n    background: rgba(255,155,233,.5);\n    border-radius: 999px;\n  }\n\n  .mc-col-car__card {\n    scroll-snap-align: start;\n    min-width: 240px;\n    max-width: 260px;\n    flex: 0 0 auto;\n    border-radius: 22px;\n    padding: .75rem;\n    background: radial-gradient(circle at top left,#1e1237 0,#05030f 40%,#05030f 100%);\n    box-shadow:\n      0 0 0 1px rgba(255,255,255,.02),\n      0 18px 40px rgba(0,0,0,.85),\n      0 0 28px rgba(255,120,210,.22);\n    text-decoration: none;\n    color: #fff;\n    transition: transform .18s ease, box-shadow .18s ease;\n  }\n\n  .mc-col-car__card:hover {\n    transform: translateY(-4px);\n    box-shadow:\n      0 24px 50px rgba(0,0,0,.95),\n      0 0 32px rgba(255,120,210,.5);\n  }\n\n  .mc-col-car__media {\n    position: relative;\n    border-radius: 18px;\n    overflow: hidden;\n    background: #0b0815;\n    aspect-ratio: 4/5;\n    margin-bottom: .7rem;\n  }\n\n  .mc-col-car__media img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    transform: scale(1.03);\n    transition: transform .4s ease;\n    display: block;\n  }\n\n  .mc-col-car__card:hover .mc-col-car__media img {\n    transform: scale(1.07);\n  }\n\n  .mc-col-car__overlay {\n    position: absolute;\n    inset: 0;\n    background: linear-gradient(\n      180deg,\n      rgba(2,0,12,.05) 0%,\n      rgba(2,0,12,.15) 40%,\n      rgba(2,0,12,.85) 100%\n    );\n  }\n\n  .mc-col-car__body {\n    position: absolute;\n    inset-inline: .85rem;\n    bottom: .7rem;\n    z-index: 1;\n  }\n\n  .mc-col-car__pill {\n    display: inline-flex;\n    align-items: center;\n    padding: 0.08rem .6rem;\n    border-radius: 999px;\n    font-size: .68rem;\n    letter-spacing: .08em;\n    text-transform: uppercase;\n    background: rgba(5,3,18,.9);\n    border: 1px solid rgba(255,163,232,.7);\n    margin-bottom: .25rem;\n  }\n\n  .mc-col-car__name {\n    margin: 0;\n    font-size: .95rem;\n    font-weight: 650;\n  }\n\n  .mc-col-car__desc {\n    margin: .55rem 0 0;\n    font-size: .8rem;\n    color: #f4dcff;\n    opacity: .9;\n  }\n\n  /* --- BOTÃO \"VER TODAS AS ENCOMENDAS\" --- */\n  .mc-col-car__cta-wrap {\n    margin-top: 1.4rem;\n    display: flex;\n    justify-content: center;\n  }\n\n  .mc-col-car__cta {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    padding: .7rem 1.6rem;\n    border-radius: 999px;\n    border: 1px solid rgba(255,155,233,.9);\n    background: linear-gradient(120deg,#ff9be9 0%,#ffc5f3 35%,#ff9be9 100%);\n    color: #05030f;\n    font-size: .82rem;\n    font-weight: 600;\n    letter-spacing: .08em;\n    text-transform: uppercase;\n    text-decoration: none;\n    box-shadow: 0 10px 25px rgba(0,0,0,.7);\n    transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;\n  }\n\n  .mc-col-car__cta:hover {\n    transform: translateY(-2px);\n    box-shadow: 0 16px 32px rgba(0,0,0,.85);\n    opacity: .95;\n  }\n</style>\n\n{%- comment -%}\n  Trocar os handles abaixo pelos das coleções que você quer exibir\n{%- endcomment -%}\n{%- assign handles = \"all-tiffany-encomenda, all-pandora-encomenda, all-swarovski-encomenda\" | split: \", \" -%}\n\n<div class=\"mc-col-car\" id=\"mc-col-car-home\">\n  <div class=\"mc-col-car__head\">\n    <div>\n      <div class=\"mc-col-car__kicker\">Catálogo MyCharms</div>\n      <h2 class=\"mc-col-car__title\">Encomendas</h2>\n      <p class=\"mc-col-car__subtitle\">\n        Explore sem se preocupar com estoque,\n mais de 5 mil peças disponíveis.\n      </p>\n    </div>\n\n    <div class=\"mc-col-car__arrows\">\n      <button type=\"button\" class=\"mc-col-car__arrow-btn\" data-dir=\"-1\" aria-label=\"Anterior\">‹</button>\n      <button type=\"button\" class=\"mc-col-car__arrow-btn\" data-dir=\"1\" aria-label=\"Próximo\">›</button>\n    </div>\n  </div>\n\n  <div class=\"mc-col-car__rail\" data-rail>\n    {%- for handle in handles -%}\n      {%- assign coll = collections[handle] -%}\n      {%- if coll and coll.featured_image -%}\n        <a href=\"{{ coll.url }}\" class=\"mc-col-car__card\">\n          <div class=\"mc-col-car__media\">\n            {{ coll.featured_image\n              | image_url: width: coll.featured_image.width\n              | image_tag:\n                  sizes: \"260px\",\n                  widths: \"300,400,600,800\",\n                  loading: \"lazy\",\n                  class: \"mc-col-car__img\",\n                  draggable: \"false\"\n            }}\n            <div class=\"mc-col-car__overlay\"></div>\n\n            <div class=\"mc-col-car__body\">\n              {%- assign pill_brand = '' -%}\n              {%- if coll.title contains 'Pandora' -%}\n                {%- assign pill_brand = 'Pandora' -%}\n              {%- elsif coll.title contains 'Tiffany' -%}\n                {%- assign pill_brand = 'Tiffany' -%}\n              {%- elsif coll.title contains 'Swarovski' -%}\n                {%- assign pill_brand = 'Swarovski' -%}\n              {%- endif -%}\n\n              {%- if pill_brand != '' -%}\n                <span class=\"mc-col-car__pill\">{{ pill_brand }}</span>\n              {%- endif -%}\n\n              <p class=\"mc-col-car__name\">{{ coll.title }}</p>\n            </div>\n          </div>\n\n          {%- if coll.description != blank -%}\n            <p class=\"mc-col-car__desc\">\n              {{ coll.description | strip_html | truncate: 80 }}\n            </p>\n          {%- endif -%}\n        </a>\n      {%- endif -%}\n    {%- endfor -%}\n  </div>\n\n  <!-- BOTÃO VER TODAS AS ENCOMENDAS -->\n  <div class=\"mc-col-car__cta-wrap\">\n    <a href=\"/pages/all-encomenda\" class=\"mc-col-car__cta\">\n      Ver todas as encomendas\n    </a>\n  </div>\n</div>\n\n<script>\n  (() => {\n    const root = document.querySelector('#mc-col-car-home');\n    if (!root) return;\n\n    const rail = root.querySelector('[data-rail]');\n    const buttons = root.querySelectorAll('.mc-col-car__arrow-btn');\n    if (!rail || !buttons.length) return;\n\n    buttons.forEach(btn => {\n      btn.addEventListener('click', () => {\n        const dir = parseInt(btn.getAttribute('data-dir'), 10) || 1;\n        const card = rail.querySelector('.mc-col-car__card');\n        const amount = card ? (card.offsetWidth + 24) : 260;\n        rail.scrollBy({ left: dir * amount, behavior: 'smooth' });\n      });\n    });\n  })();\n</script>",
         "text_alignment": "start"
+      }
+    },
+    "image_with_text_6zgD6X": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_hRYzhH": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_bQKfcn": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>STRANGER THINGS COM ATÉ 70% OFF</strong>",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_98njYH": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Descubra joias inspiradas no Mundo Invertido. Entre no clima para novas aventuras.</p>"
+          }
+        },
+        "button_gRkCRp": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "COMPRAR AGORA",
+            "url": "shopify://collections/stranger-things",
+            "background": "#cb2b2b",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_hRYzhH",
+        "heading_bQKfcn",
+        "richtext_98njYH",
+        "button_gRkCRp"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/81630bd0-f937-4f68-ba7c-ae71e7bc7048___f49daf4255781100b2a484597c7b0e2a.gif",
+        "mobile_image": "shopify://shop_images/81630bd0-f937-4f68-ba7c-ae71e7bc7048___f49daf4255781100b2a484597c7b0e2a.gif",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
       }
     },
     "best_sellers_carousel_rMXcKh": {
@@ -234,28 +347,6 @@
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
         "subheading": "Lançamentos"
-      }
-    },
-    "best_sellers_carousel_QCTYGq": {
-      "type": "best-sellers-carousel",
-      "custom_css": [
-        ".mc-lx__card:hover .mc-lx__name a {color: #111111;}",
-        " /* já está escuro; posso trocar pra #7d3d5a (rosa-ink) se quiser */"
-      ],
-      "name": "Mais vendidos (Carrossel) — MyCharms",
-      "settings": {
-        "subtitle": "TOP VENDIDOS",
-        "title": "Favoritos da MyCharms",
-        "collection": "mais-vendidos-my-charms",
-        "limit": 12,
-        "show_arrows": true,
-        "show_dots": true,
-        "show_quick_add": false,
-        "show_view_all": true,
-        "force_best_selling_link": false,
-        "autoplay": false,
-        "autoplay_ms": "4000",
-        "scroll_step": 85
       }
     },
     "custom_liquid_bUpbnA": {
@@ -887,13 +978,13 @@
   "order": [
     "scrolling_content_6CAnJm",
     "slideshow_AF8imh",
-    "slideshow_G9HC6M",
+    "best_sellers_carousel_QCTYGq",
     "custom_liquid_xjiT6d",
     "best_sellers_carousel_w6ic8a",
     "custom_liquid_axGYf8",
+    "image_with_text_6zgD6X",
     "best_sellers_carousel_rMXcKh",
     "featured_collections_zGtrXM",
-    "best_sellers_carousel_QCTYGq",
     "custom_liquid_bUpbnA",
     "shop_the_look_TVaLVR",
     "tiktok_feed_kaBWXT",
