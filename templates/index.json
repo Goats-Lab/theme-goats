@@ -818,9 +818,9 @@
         "collection_ChmGwk": {
           "type": "collection",
           "settings": {
-            "collection": "descontos-do-mes",
+            "collection": "ultimas-unidades",
             "products_count": 8,
-            "title": "OFERTAS DO MÊS",
+            "title": "Ultimas UNIDADES – pode acabar a qualquer momento.",
             "link_url": "",
             "link_text": "VER TODOS"
           }
@@ -839,7 +839,7 @@
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "subheading": "<strong>NOVEMBRO WEEK - 15%OFF</strong>"
+        "subheading": ""
       }
     },
     "featured_collections_Ujh3MC": {
