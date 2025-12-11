@@ -465,6 +465,7 @@
         "richtext_DCzzap",
         "button_YaBcRy"
       ],
+      "disabled": true,
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "scheme-3",
@@ -553,6 +554,7 @@
         "collection_WgjLHF",
         "collection_kWPcJ7"
       ],
+      "disabled": true,
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
         "color_scheme": "scheme-3",
@@ -570,6 +572,7 @@
     },
     "image_with_text_x6jHxF": {
       "type": "image-with-text",
+      "disabled": true,
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "scheme-3",
@@ -658,6 +661,7 @@
         "collection_PERGbH",
         "collection_PyhUAe"
       ],
+      "disabled": true,
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
         "color_scheme": "scheme-3",
@@ -708,6 +712,7 @@
         "richtext_QryQ8A",
         "button_xJ9QRr"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
@@ -797,6 +802,7 @@
         "collection_g4Q9CL",
         "collection_WLTNLG"
       ],
+      "disabled": true,
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
         "color_scheme": "scheme-3",
