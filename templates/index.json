@@ -191,7 +191,7 @@
       "type": "best-sellers-carousel",
       "custom_css": [
         "/* Some com qualquer bloco de preço dentro dos cards */.price,.price__container,.price-item,.price-item--regular,.price-item--sale,.money,.card__information .price,.card__information .price__container,.card__content .price,.card__content .price__container {display: none !important;}",
-        "/* Reforço: esconde qualquer elemento que contenha \"price\" no class */[class*=\"price\"] {display: none !important;}"
+        " /* Reforço: esconde qualquer elemento que contenha \"price\" no class */[class*=\"price\"] {display: none !important;}"
       ],
       "name": "Mais vendidos (Carrossel) — MyCharms",
       "settings": {
@@ -301,7 +301,7 @@
         "collection_NTxAbw": {
           "type": "collection",
           "settings": {
-            "collection": "all-swarovski-encomenda",
+            "collection": "pandoras",
             "products_count": 6,
             "title": "",
             "link_url": "",
