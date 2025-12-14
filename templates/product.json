@@ -15,7 +15,7 @@
         "video_RQrFRb": {
           "type": "video",
           "settings": {
-            "color_scheme": "scheme-3",
+            "color_scheme": "scheme-1",
             "video": "{{ product.metafields.custom.v_deo.value }}",
             "autoplay": true,
             "show_controls": false,
@@ -39,7 +39,7 @@
       "custom_css": [],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": true,
         "desktop_row_height": 400,
         "mobile_row_height": 400,
