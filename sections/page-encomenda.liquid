@@ -23,6 +23,162 @@
     }
 
     /* HERO */
+    <style>
+/* ======================
+   MYCHARMS FINDER
+====================== */
+.mc-finder {
+  margin: 56px 0;
+  padding: 28px 22px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at top left, rgba(255,182,223,.16), transparent 55%),
+    rgba(8,8,18,.96);
+  border: 1px solid rgba(255,182,223,.28);
+}
+
+.mc-finder__title {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.mc-finder__sub {
+  font-size: 14px;
+  opacity: .85;
+  margin-bottom: 22px;
+  color: #f5d9eb;
+}
+
+.mc-finder__steps {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+
+.mc-finder__label {
+  font-size: 13px;
+  margin-bottom: 8px;
+  opacity: .85;
+}
+
+.mc-finder__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mc-finder__options button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(5,5,9,.9);
+  border: 1px solid rgba(255,182,223,.45);
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.mc-finder__options button.active {
+  background: linear-gradient(135deg,#ffb6df,#ff77c8);
+  color: #1a0512;
+  border-color: transparent;
+}
+
+.mc-finder__cta {
+  margin-top: 22px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg,#ffb6df,#ff77c8);
+  color: #1a0512;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  opacity: .4;
+}
+
+.mc-finder__cta.enabled {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .mc-finder__steps {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<div class="mc-finder">
+  <h2 class="mc-finder__title">Encontre sua peça de encomenda</h2>
+  <p class="mc-finder__sub">
+    Responda em segundos e vá direto para a coleção ideal.
+  </p>
+
+  <div class="mc-finder__steps">
+
+    <div class="mc-finder__step" data-step="tipo">
+      <div class="mc-finder__label">Tipo de joia</div>
+      <div class="mc-finder__options">
+        <button data-value="anel">Anéis</button>
+        <button data-value="colar">Colares</button>
+        <button data-value="pulseira">Pulseiras</button>
+        <button data-value="brinco">Brincos</button>
+      </div>
+    </div>
+
+    <div class="mc-finder__step" data-step="marca">
+      <div class="mc-finder__label">Marca</div>
+      <div class="mc-finder__options">
+        <button data-value="pandora">Pandora</button>
+        <button data-value="tiffany">Tiffany</button>
+        <button data-value="swarovski">Swarovski</button>
+      </div>
+    </div>
+
+    <div class="mc-finder__step" data-step="uso">
+      <div class="mc-finder__label">Ocasião</div>
+      <div class="mc-finder__options">
+        <button data-value="dia">Dia a dia</button>
+        <button data-value="presente">Presente</button>
+        <button data-value="especial">Ocasião especial</button>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="mc-finder__cta" disabled>
+    Ver coleção ideal ✨
+  </button>
+</div>
+
+<script>
+(() => {
+  const selections = {};
+  const steps = document.querySelectorAll('.mc-finder__step');
+  const cta = document.querySelector('.mc-finder__cta');
+
+  steps.forEach(step => {
+    step.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        step.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selections[step.dataset.step] = btn.dataset.value;
+
+        if (Object.keys(selections).length === 3) {
+          cta.classList.add('enabled');
+          cta.disabled = false;
+        }
+      });
+    });
+  });
+
+  cta.addEventListener('click', () => {
+    const tipo = selections.tipo;
+    const marca = selections.marca;
+    window.location.href = `/collections/all-${marca}-${tipo}-encomenda`;
+  });
+})();
+</script>
+
     .mc-encomenda__hero {
       border-radius: 24px;
       padding: 32px 24px;
