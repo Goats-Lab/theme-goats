@@ -202,6 +202,18 @@
         "max_image_zoom_level": 3
       }
     },
+    "custom_liquid_FwmAJF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .mc-cross-apice {\n    margin: 30px 0 10px;\n    padding: 22px 18px;\n    border-top: 1px solid rgba(0,0,0,.06);\n    border-bottom: 1px solid rgba(0,0,0,.06);\n    text-align: center;\n  }\n\n  .mc-cross-apice__kicker {\n    font-size: 10px;\n    letter-spacing: .25em;\n    text-transform: uppercase;\n    opacity: .5;\n    margin-bottom: 10px;\n  }\n\n  .mc-cross-apice__title {\n    font-size: 14px;\n    font-weight: 500;\n    margin-bottom: 8px;\n  }\n\n  .mc-cross-apice__text {\n    font-size: 13px;\n    opacity: .75;\n    line-height: 1.5;\n    max-width: 420px;\n    margin: 0 auto 16px auto;\n  }\n\n  .mc-cross-apice__btn {\n    display: inline-block;\n    padding: 10px 22px;\n    font-size: 11px;\n    letter-spacing: .15em;\n    text-transform: uppercase;\n    font-weight: 600;\n    text-decoration: none;\n    border: 1px solid rgba(0,0,0,.15);\n    transition: all .2s ease;\n  }\n\n  .mc-cross-apice__btn:hover {\n    background: #000;\n    color: #fff;\n  }\n</style>\n\n<div class=\"mc-cross-apice\">\n\n  <div class=\"mc-cross-apice__kicker\">\n    ÁPICE \n  </div>\n\n  <div class=\"mc-cross-apice__title\">\n    Dos mesmos criadores da MyCharms.\n  </div>\n\n  <div class=\"mc-cross-apice__text\">\n    Conheça a Ápice Parfum nossa marca dedicada à perfumaria de alto padrão.\n    Fragrâncias intensas, elegantes e marcantes.\n  </div>\n\n  <a href=\"https://apiceperfumes.com.br/\" target=\"_blank\" class=\"mc-cross-apice__btn\">\n    Conhecer Ápice\n  </a>\n\n</div>",
+        "text_alignment": "center"
+      }
+    },
     "tiktok_feed_UbR7KW": {
       "type": "tiktok-feed",
       "blocks": {
@@ -363,6 +375,7 @@
   "order": [
     "media_grid_776mrJ",
     "main",
+    "custom_liquid_FwmAJF",
     "tiktok_feed_UbR7KW",
     "related_products_YeJtHg",
     "featured_collections_yByfCc",
