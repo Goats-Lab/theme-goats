@@ -941,6 +941,18 @@
         "text_alignment": "center"
       }
     },
+    "custom_liquid_C9h3nN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .mc-apice-footer {\n    margin-top: 60px;\n    padding: 50px 20px;\n    border-top: 1px solid rgba(255,255,255,.06);\n    background: #0b0c12;\n  }\n\n  .mc-apice-footer__wrap {\n    max-width: 1200px;\n    margin: 0 auto;\n    text-align: center;\n  }\n\n  .mc-apice-footer__kicker {\n    font-size: 11px;\n    letter-spacing: .3em;\n    text-transform: uppercase;\n    opacity: .5;\n    margin-bottom: 14px;\n  }\n\n  .mc-apice-footer__title {\n    font-size: 20px;\n    font-weight: 500;\n    margin-bottom: 12px;\n  }\n\n  .mc-apice-footer__text {\n    font-size: 14px;\n    opacity: .7;\n    max-width: 520px;\n    margin: 0 auto 24px auto;\n    line-height: 1.6;\n  }\n\n  .mc-apice-footer__buttons {\n    display: flex;\n    justify-content: center;\n    gap: 14px;\n    flex-wrap: wrap;\n  }\n\n  .mc-apice-footer__btn {\n    padding: 12px 26px;\n    font-size: 12px;\n    letter-spacing: .12em;\n    text-transform: uppercase;\n    text-decoration: none;\n    font-weight: 600;\n    transition: all .2s ease;\n  }\n\n  .mc-apice-footer__btn--primary {\n    background: #ffffff;\n    color: #0b0c12;\n  }\n\n  .mc-apice-footer__btn--primary:hover {\n    opacity: .9;\n    transform: translateY(-2px);\n  }\n\n  .mc-apice-footer__btn--ghost {\n    border: 1px solid rgba(255,255,255,.2);\n    color: #ffffff;\n  }\n\n  .mc-apice-footer__btn--ghost:hover {\n    background: rgba(255,255,255,.08);\n  }\n</style>\n\n<div class=\"mc-apice-footer\">\n  <div class=\"mc-apice-footer__wrap\">\n\n    <div class=\"mc-apice-footer__kicker\">\n      Novo Projeto\n    </div>\n\n    <div class=\"mc-apice-footer__title\">\n      Dos mesmos criadores da MyCharms.\n    </div>\n\n    <div class=\"mc-apice-footer__text\">\n      Conheça a Ápice Parfum nossa marca dedicada à perfumaria de alto padrão. \n      Fragrâncias intensas, elegantes e marcantes para quem busca presença e identidade.\n    </div>\n\n    <div class=\"mc-apice-footer__buttons\">\n      <a href=\"https://apiceperfumes.com.br/\" target=\"_blank\" class=\"mc-apice-footer__btn mc-apice-footer__btn--primary\">\n        Conhecer a Ápice\n      </a>\n\n      <a href=\"https://www.instagram.com/apice_parfum\" target=\"_blank\" class=\"mc-apice-footer__btn mc-apice-footer__btn--ghost\">\n        Instagram\n      </a>\n    </div>\n\n  </div>\n</div>",
+        "text_alignment": "center"
+      }
+    },
     "custom_liquid_fmAezf": {
       "type": "custom-liquid",
       "name": "t:sections.custom_liquid.presets.custom_liquid.name",
@@ -977,6 +989,7 @@
     "featured_collections_Ujh3MC",
     "custom_liquid_nL4PjV",
     "text_with_icons_jgYnYM",
+    "custom_liquid_C9h3nN",
     "custom_liquid_fmAezf"
   ]
 }
