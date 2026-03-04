@@ -8,15 +8,27 @@
 {% endschema %}
 
 <div style="display:flex; justify-content:center; align-items:center; width:100%; padding:20px 0;">
-  <div id="ra-verified-seal">
-    <script 
-      type="text/javascript"
-      id="ra-embed-verified-seal"
-      src="https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js"
-      data-id="LWpvSVBwRVdPSWdIVmF5RTpteS1jaGFybXMtMTY3OTc2NQ=="
-      data-target="ra-verified-seal"
-      data-model="horizontal_2">
-    </script>
-  </div>
-  
+  <div id="ra-verified-seal"></div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  if (!document.getElementById("ra-embed-verified-seal")) {
+
+    var script = document.createElement("script");
+
+    script.id = "ra-embed-verified-seal";
+    script.src = "https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js";
+    script.type = "text/javascript";
+
+    script.setAttribute("data-id","LWpvSVBwRVdPSWdIVmF5RTpteS1jaGFybXMtMTY3OTc2NQ==");
+    script.setAttribute("data-target","ra-verified-seal");
+    script.setAttribute("data-model","horizontal_2");
+
+    document.body.appendChild(script);
+
+  }
+
+});
+</script>
