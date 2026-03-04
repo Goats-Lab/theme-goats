@@ -1,6 +1,8 @@
-<div style="display:flex; justify-content:center; align-items:center; width:100%; padding:20px 0;">
+<section style="background: {{ section.settings.bg }}; padding: {{ section.settings.padding }}px 0; text-align:center;">
+
   <div id="ra-verified-seal"></div>
-</div>
+
+</section>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -27,14 +29,27 @@ document.addEventListener("DOMContentLoaded", function() {
 {% schema %}
 {
   "name": "Reclame Aqui",
-  "tag": "section",
-  "class": "reclame-aqui-section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Cor de fundo",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Espaçamento vertical",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 40
+    }
+  ],
   "presets": [
     {
       "name": "Reclame Aqui"
     }
   ]
-  
 }
 {% endschema %}
