@@ -11,6 +11,18 @@
   "type": "footer",
   "name": "Footer group",
   "sections": {
+    "custom_liquid_pE4ypY": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "",
+        "text_alignment": "center"
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -60,6 +72,7 @@
     }
   },
   "order": [
+    "custom_liquid_pE4ypY",
     "footer"
   ]
 }
