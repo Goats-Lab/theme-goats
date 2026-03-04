@@ -115,6 +115,12 @@
             "payment_button_text_color": ""
           }
         },
+        "liquid_myjBgk": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div id=\"ra-verified-seal\"><script type=\"text/javascript\" id=\"ra-embed-verified-seal\" src=\"https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js\" data-id=\"LWpvSVBwRVdPSWdIVmF5RTpteS1jaGFybXMtMTY3OTc2NQ==\" data-target=\"ra-verified-seal\" data-model=\"horizontal_2\"></script></div>"
+          }
+        },
         "accordion_89TReN": {
           "type": "accordion",
           "settings": {
@@ -170,6 +176,7 @@
         "variant_picker",
         "globo_product_option_app_block_RtewJL",
         "buy_buttons",
+        "liquid_myjBgk",
         "accordion_89TReN",
         "accordion_CMFYpn",
         "accordion_RDnbEJ",
