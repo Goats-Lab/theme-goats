@@ -1,9 +1,24 @@
 {%- if section.blocks.size > 0 -%}
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+    /* ══════════════════════════════════════════
+       FEATURED COLLECTIONS — MyCharms Override
+       Scoped: #shopify-section-{{ section.id }}
+       ══════════════════════════════════════════ */
+
     #shopify-section-{{ section.id }} {
       --product-list-items-per-row: {{ section.settings.products_per_row_mobile | times: 1 }};
       --product-list-horizontal-spacing-factor: {{ section.settings.horizontal_spacing_factor }};
       --product-list-vertical-spacing-factor: {{ section.settings.vertical_spacing_factor }};
+      --mc-accent: #d4638f;
+      --mc-accent-soft: rgba(212,99,143,.12);
+      --mc-accent-glow: rgba(212,99,143,.25);
+      --mc-text: #1a1a1a;
+      --mc-text-muted: #888;
+      --mc-border: #e8e8e8;
+      --mc-bg: #ffffff;
+      --mc-radius: 16px;
     }
 
     @media screen and (min-width: 700px) {
@@ -11,36 +26,394 @@
         --product-list-items-per-row: {{ section.settings.products_per_row_desktop }};
       }
     }
+
+    /* ── Section Base ── */
+    #shopify-section-{{ section.id }} {
+      background: var(--mc-bg) !important;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    #shopify-section-{{ section.id }} .section {
+      padding-block: 5rem !important;
+    }
+
+    @media (max-width: 768px) {
+      #shopify-section-{{ section.id }} .section {
+        padding-block: 3rem !important;
+      }
+    }
+
+    /* ── Header / Subheading (Kicker) ── */
+    #shopify-section-{{ section.id }} .section-stack__intro {
+      text-align: center !important;
+      align-items: center !important;
+      margin-bottom: 2.5rem !important;
+    }
+
+    #shopify-section-{{ section.id }} .section-stack__intro::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 2px;
+      background: var(--mc-accent);
+      margin: 1.2rem auto 0;
+      border-radius: 2px;
+    }
+
+    #shopify-section-{{ section.id }} .section-stack__intro .text--subdued,
+    #shopify-section-{{ section.id }} .section-stack__intro p {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: .65rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: .35em !important;
+      font-weight: 600 !important;
+      color: var(--mc-accent) !important;
+    }
+
+    /* ── Collection Tabs ── */
+    #shopify-section-{{ section.id }} .tabs-nav,
+    #shopify-section-{{ section.id }} [role="tablist"] {
+      display: flex !important;
+      justify-content: center !important;
+      gap: 2rem !important;
+      border: none !important;
+      margin-bottom: .5rem !important;
+    }
+
+    #shopify-section-{{ section.id }} .tabs-nav button,
+    #shopify-section-{{ section.id }} [role="tab"] {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: .75rem !important;
+      font-weight: 600 !important;
+      text-transform: uppercase !important;
+      letter-spacing: .15em !important;
+      color: var(--mc-text-muted) !important;
+      background: none !important;
+      border: none !important;
+      border-bottom: 2px solid transparent !important;
+      padding: .6rem 0 !important;
+      cursor: pointer;
+      transition: all .25s ease !important;
+      position: relative;
+    }
+
+    #shopify-section-{{ section.id }} .tabs-nav button:hover,
+    #shopify-section-{{ section.id }} [role="tab"]:hover {
+      color: var(--mc-text) !important;
+    }
+
+    #shopify-section-{{ section.id }} .tabs-nav button[aria-selected="true"],
+    #shopify-section-{{ section.id }} .tabs-nav button.is-active,
+    #shopify-section-{{ section.id }} [role="tab"][aria-selected="true"] {
+      color: var(--mc-accent) !important;
+      border-bottom-color: var(--mc-accent) !important;
+    }
+
+    /* Single collection title (no tabs) */
+    #shopify-section-{{ section.id }} .section-stack__intro h2,
+    #shopify-section-{{ section.id }} .section-stack__intro .h2 {
+      font-family: 'Playfair Display', serif !important;
+      font-size: 2.2rem !important;
+      font-weight: 500 !important;
+      color: var(--mc-text) !important;
+      margin: 0 !important;
+    }
+
+    @media (max-width: 768px) {
+      #shopify-section-{{ section.id }} .section-stack__intro h2,
+      #shopify-section-{{ section.id }} .section-stack__intro .h2 {
+        font-size: 1.6rem !important;
+      }
+    }
+
+    /* ── Product Cards ── */
+    #shopify-section-{{ section.id }} .product-card {
+      border-radius: var(--mc-radius) !important;
+      overflow: hidden !important;
+      background: var(--mc-bg) !important;
+      border: 1px solid rgba(0,0,0,.04) !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,.06) !important;
+      transition: transform .35s ease, box-shadow .35s ease !important;
+    }
+
+    #shopify-section-{{ section.id }} .product-card:hover {
+      transform: translateY(-6px) !important;
+      box-shadow: 0 20px 50px var(--mc-accent-soft) !important;
+    }
+
+    /* Card Image */
+    #shopify-section-{{ section.id }} .product-card__figure,
+    #shopify-section-{{ section.id }} .product-card__image-wrapper,
+    #shopify-section-{{ section.id }} .product-card .aspect-ratio {
+      border-radius: var(--mc-radius) var(--mc-radius) 0 0 !important;
+      overflow: hidden !important;
+      background: #fafafa !important;
+    }
+
+    #shopify-section-{{ section.id }} .product-card__figure img,
+    #shopify-section-{{ section.id }} .product-card__image-wrapper img,
+    #shopify-section-{{ section.id }} .product-card img {
+      transition: transform .5s cubic-bezier(.22,1,.36,1) !important;
+    }
+
+    #shopify-section-{{ section.id }} .product-card:hover img {
+      transform: scale(1.04) !important;
+    }
+
+    /* Card Info Area */
+    #shopify-section-{{ section.id }} .product-card__info,
+    #shopify-section-{{ section.id }} .product-card__content {
+      padding: 1rem 1rem 1.2rem !important;
+      text-align: center !important;
+    }
+
+    /* Vendor / Brand */
+    #shopify-section-{{ section.id }} .product-card__vendor,
+    #shopify-section-{{ section.id }} .product-card .product-card__vendor {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: .6rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: .25em !important;
+      color: var(--mc-accent) !important;
+      font-weight: 600 !important;
+      margin-bottom: .35rem !important;
+    }
+
+    /* Product Title */
+    #shopify-section-{{ section.id }} .product-card__title,
+    #shopify-section-{{ section.id }} .product-card .product-card__title {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: .85rem !important;
+      font-weight: 600 !important;
+      color: var(--mc-text) !important;
+      line-height: 1.4 !important;
+      margin-bottom: .4rem !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+    }
+
+    /* Product Price */
+    #shopify-section-{{ section.id }} .product-card__price,
+    #shopify-section-{{ section.id }} .product-card .price {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: .9rem !important;
+      font-weight: 700 !important;
+      color: var(--mc-text) !important;
+    }
+
+    /* Compare-at / Sale Price */
+    #shopify-section-{{ section.id }} .product-card .price--compare,
+    #shopify-section-{{ section.id }} .product-card .price s,
+    #shopify-section-{{ section.id }} .product-card .price del {
+      font-size: .75rem !important;
+      color: var(--mc-text-muted) !important;
+      font-weight: 400 !important;
+      text-decoration: line-through !important;
+    }
+
+    #shopify-section-{{ section.id }} .product-card .price--on-sale,
+    #shopify-section-{{ section.id }} .product-card .price--sale {
+      color: var(--mc-accent) !important;
+    }
+
+    /* Badges (Sale, Sold Out) */
+    #shopify-section-{{ section.id }} .product-card .badge,
+    #shopify-section-{{ section.id }} .product-card__badge {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: .6rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: .12em !important;
+      border-radius: 50px !important;
+      padding: .25rem .75rem !important;
+    }
+
+    #shopify-section-{{ section.id }} .product-card .badge--on-sale {
+      background: var(--mc-accent) !important;
+      color: #fff !important;
+    }
+
+    /* Quick Add / Add to Cart */
+    #shopify-section-{{ section.id }} .product-card .quick-buy-button,
+    #shopify-section-{{ section.id }} .product-card__quick-add,
+    #shopify-section-{{ section.id }} .product-card [class*="quick"] button,
+    #shopify-section-{{ section.id }} .product-card .button {
+      font-family: 'Montserrat', sans-serif !important;
+      background: var(--mc-accent) !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: 50px !important;
+      font-size: .68rem !important;
+      font-weight: 600 !important;
+      text-transform: uppercase !important;
+      letter-spacing: .15em !important;
+      padding: .6rem 1.5rem !important;
+      transition: all .25s ease !important;
+    }
+
+    #shopify-section-{{ section.id }} .product-card .quick-buy-button:hover,
+    #shopify-section-{{ section.id }} .product-card__quick-add:hover,
+    #shopify-section-{{ section.id }} .product-card [class*="quick"] button:hover,
+    #shopify-section-{{ section.id }} .product-card .button:hover {
+      background: #b8456f !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 6px 20px var(--mc-accent-glow) !important;
+    }
+
+    /* ── Carousel Arrows ── */
+    #shopify-section-{{ section.id }} .carousel button[is="prev-button"],
+    #shopify-section-{{ section.id }} .carousel button[is="next-button"],
+    #shopify-section-{{ section.id }} .prev-next-button,
+    #shopify-section-{{ section.id }} [class*="arrow"],
+    #shopify-section-{{ section.id }} .carousel .circle-button {
+      width: 44px !important;
+      height: 44px !important;
+      min-width: 44px !important;
+      min-height: 44px !important;
+      border-radius: 50% !important;
+      border: 1.5px solid var(--mc-border) !important;
+      background: var(--mc-bg) !important;
+      color: var(--mc-text) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all .25s ease !important;
+      box-shadow: none !important;
+    }
+
+    #shopify-section-{{ section.id }} .carousel button[is="prev-button"]:hover,
+    #shopify-section-{{ section.id }} .carousel button[is="next-button"]:hover,
+    #shopify-section-{{ section.id }} .prev-next-button:hover,
+    #shopify-section-{{ section.id }} [class*="arrow"]:hover,
+    #shopify-section-{{ section.id }} .carousel .circle-button:hover {
+      background: var(--mc-accent) !important;
+      border-color: var(--mc-accent) !important;
+      color: #fff !important;
+      box-shadow: 0 6px 20px var(--mc-accent-glow) !important;
+    }
+
+    #shopify-section-{{ section.id }} .carousel button svg,
+    #shopify-section-{{ section.id }} .prev-next-button svg,
+    #shopify-section-{{ section.id }} .circle-button svg {
+      width: 18px !important;
+      height: 18px !important;
+      stroke-width: 2 !important;
+    }
+
+    /* ── "View All" Button ── */
+    #shopify-section-{{ section.id }} .section-stack__main .button,
+    #shopify-section-{{ section.id }} [class*="link-text"],
+    #shopify-section-{{ section.id }} .text-with-icon {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: .72rem !important;
+      font-weight: 600 !important;
+      text-transform: uppercase !important;
+      letter-spacing: .2em !important;
+      color: var(--mc-accent) !important;
+      text-decoration: none !important;
+      padding: .7rem 2rem !important;
+      border: 1.5px solid var(--mc-accent) !important;
+      border-radius: 50px !important;
+      background: transparent !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: .5rem !important;
+      transition: all .3s ease !important;
+      margin-top: 1.5rem !important;
+    }
+
+    #shopify-section-{{ section.id }} .section-stack__main .button:hover,
+    #shopify-section-{{ section.id }} [class*="link-text"]:hover,
+    #shopify-section-{{ section.id }} .text-with-icon:hover {
+      background: var(--mc-accent) !important;
+      color: #fff !important;
+      box-shadow: 0 8px 25px var(--mc-accent-glow) !important;
+    }
+
+    /* ── Product Grid Spacing ── */
+    #shopify-section-{{ section.id }} .product-list {
+      gap: 1.25rem !important;
+    }
+
+    @media (min-width: 700px) {
+      #shopify-section-{{ section.id }} .product-list {
+        gap: 1.5rem !important;
+      }
+    }
+
+    /* ── Swatch / Color Options ── */
+    #shopify-section-{{ section.id }} .product-card .color-swatch,
+    #shopify-section-{{ section.id }} .product-card [class*="swatch"] {
+      border-radius: 50% !important;
+      border: 2px solid transparent !important;
+      transition: border-color .2s ease !important;
+    }
+
+    #shopify-section-{{ section.id }} .product-card .color-swatch:hover,
+    #shopify-section-{{ section.id }} .product-card [class*="swatch"]:hover {
+      border-color: var(--mc-accent) !important;
+    }
+
+    /* ── Remove theme default borders/separators ── */
+    #shopify-section-{{ section.id }} .section--border,
+    #shopify-section-{{ section.id }} .section[class*="border"] {
+      border: none !important;
+    }
+
+    /* ── Smooth focus states ── */
+    #shopify-section-{{ section.id }} .product-card:focus-within {
+      outline: 2px solid var(--mc-accent) !important;
+      outline-offset: 3px !important;
+      border-radius: var(--mc-radius) !important;
+    }
+
+    /* ── Loading / Placeholder shimmer ── */
+    #shopify-section-{{ section.id }} .product-card-placeholder {
+      border-radius: var(--mc-radius) !important;
+      overflow: hidden !important;
+      background: linear-gradient(90deg, #f5f5f5 25%, #ececec 50%, #f5f5f5 75%) !important;
+      background-size: 200% 100% !important;
+      animation: mc-shimmer 1.5s ease-in-out infinite !important;
+    }
+
+    @keyframes mc-shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
   </style>
 
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
-  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
-    <div class="container">
+  <div class="section {% if section.settings.separate_section_with_border %}section--border{% endif %} color-scheme color-scheme--{{ color_scheme_hash }}">
+    <div class="section-stack">
       {%- assign wrapper_carousel_id = 'featured-collections-carousel-' | append: section.id -%}
 
-      <div class="section-stack">
-        <div class="v-stack justify-self-center gap-4 text-center sm:gap-5">
+      <div class="section-stack__intro">
+        <div class="section-stack__intro-items">
           {%- if section.settings.subheading != blank -%}
-            <p class="h6 text-center">{{- section.settings.subheading -}}</p>
+            <p class="text--subdued">{{- section.settings.subheading -}}</p>
           {%- endif -%}
 
           {%- if section.blocks.size > 1 -%}
-            <carousel-navigation align-selected class="featured-collections-navigation scroll-area bleed" aria-controls="{{ wrapper_carousel_id }}">
+            <div class="tabs-nav" role="tablist" aria-controls="{{ wrapper_carousel_id }}">
               {%- for block in section.blocks -%}
-                <button class="h2" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+                <button type="button" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" {{ block.shopify_attributes }}>
                   {{- block.settings.title | default: block.settings.collection.title | default: 'Collection' -}}
                 </button>
               {%- endfor -%}
-            </carousel-navigation>
+            </div>
           {%- else -%}
-            <h2 class="h2">{{ section.blocks.first.settings.title | default: section.blocks.first.settings.collection.title | default: 'Collection' }}</h2>
+            <h2>{{ section.blocks.first.settings.title | default: section.blocks.first.settings.collection.title | default: 'Collection' }}</h2>
           {%- endif -%}
         </div>
+      </div>
 
-        <featured-collections-carousel id="{{ wrapper_carousel_id }}" class="featured-collections-carousel">
+      <div class="section-stack__main">
+        <div id="{{ wrapper_carousel_id }}" class="featured-collections-carousel">
           {%- for block in section.blocks -%}
-            <div class="featured-collections-carousel__item {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }}>
+            <div role="tabpanel" {% unless forloop.first %}hidden{% endunless %} {{ block.shopify_attributes }}>
               {%- capture product_list -%}
                 {%- assign should_reveal = false -%}
 
@@ -58,43 +431,37 @@
               {%- endcapture -%}
 
               {%- if section.settings.stack_products -%}
-                <product-list class="product-list {% if section.settings.hide_product_information %}product-list--compact{% endif %} justify-center">
+                <div class="product-list">
                   {{- product_list -}}
-                </product-list>
+                </div>
               {%- else -%}
                 {%- assign product_carousel_id = 'featured-collections-product-list-carousel-' | append: block.id -%}
 
-                <product-list class="floating-controls-container floating-controls-container--inside floating-controls-container--on-hover">
-                  <carousel-prev-button class="floating-controls-container__control" aria-controls="{{ product_carousel_id }}">
-                    <button type="button" class="prev-next-button prev-next-button--prev circle-button hover:animate-icon-inline" disabled>
-                      <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
-                      {%- render 'icon' with 'arrow-left', direction_aware: true -%}
-                    </button>
-                  </carousel-prev-button>
+                <div id="{{ product_carousel_id }}" class="carousel">
+                  <button is="prev-button" class="circle-button" aria-controls="{{ product_carousel_id }}" aria-label="{{ 'general.accessibility.previous' | t }}">
+                    {%- render 'icon' with 'arrow-left', direction_aware: true -%}
+                  </button>
 
-                  <scroll-carousel id="{{ product_carousel_id }}" group-cells allow-drag class="product-list {% if section.settings.hide_product_information %}product-list--compact{% endif %} product-list--carousel scroll-area bleed md:unbleed">
+                  <div class="product-list carousel__track">
                     {{- product_list -}}
-                  </scroll-carousel>
+                  </div>
                   
-                  <carousel-next-button class="floating-controls-container__control" aria-controls="{{ product_carousel_id }}">
-                    <button type="button" class="prev-next-button prev-next-button--next circle-button hover:animate-icon-inline">
-                      <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
-                      {%- render 'icon' with 'arrow-right', direction_aware: true -%}
-                    </button>
-                  </carousel-next-button>
-                </product-list>
+                  <button is="next-button" class="circle-button" aria-controls="{{ product_carousel_id }}" aria-label="{{ 'general.accessibility.next' | t }}">
+                    {%- render 'icon' with 'arrow-right', direction_aware: true -%}
+                  </button>
+                </div>
               {%- endif -%}
 
               {%- if block.settings.link_text != blank -%}
                 {%- assign button_link = block.settings.link_url | default: block.settings.collection.url | default: '#' -%}
 
-                <div class="justify-self-center">
+                <div class="section__footer">
                   {%- render 'button', href: button_link, content: block.settings.link_text -%}
                 </div>
               {%- endif -%}
             </div>
           {%- endfor -%}
-        </featured-collections-carousel>
+        </div>
       </div>
     </div>
   </div>
@@ -144,14 +511,8 @@
       "id": "products_per_row_mobile",
       "label": "t:global.product_list.products_per_row_mobile",
       "options": [
-        {
-          "value": "1",
-          "label": "1"
-        },
-        {
-          "value": "2",
-          "label": "2"
-        }
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
       ],
       "default": "2"
     },
