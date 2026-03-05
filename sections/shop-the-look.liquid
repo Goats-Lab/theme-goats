@@ -1,229 +1,18 @@
 {%- if section.blocks.size > 0 -%}
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
-  <style>
-    /* ═══════════════════════════════════════════════════════════ */
-    /* MyCharms — Shop the Look Overrides                        */
-    /* ═══════════════════════════════════════════════════════════ */
-
-    #shopify-section-{{ section.id }} {
-      font-family: 'Montserrat', system-ui, sans-serif;
-    }
-
-    /* ── Section Header ── */
-    #shopify-section-{{ section.id }} .section-header .h6 {
-      font-family: 'Montserrat', system-ui, sans-serif !important;
-      text-transform: uppercase !important;
-      letter-spacing: 0.35em !important;
-      color: #d4638f !important;
-      font-size: 0.7rem !important;
-      font-weight: 700 !important;
-    }
-
-    #shopify-section-{{ section.id }} .section-header .h2 {
-      font-family: 'Playfair Display', serif !important;
-      letter-spacing: -0.02em !important;
-    }
-
-    /* ── Look Image ── */
-    #shopify-section-{{ section.id }} .shop-the-look__image,
-    #shopify-section-{{ section.id }} .shop-the-look__image img {
-      border-radius: 20px !important;
-      overflow: hidden !important;
-    }
-
-    /* ── Hot Spots (marcadores) ── */
-    #shopify-section-{{ section.id }} .shop-the-look__hot-spot {
-      background: #d4638f !important;
-      border: 2px solid #fff !important;
-      border-radius: 50% !important;
-      width: 28px !important;
-      height: 28px !important;
-      box-shadow: 0 4px 15px rgba(212,99,143,.35), 0 0 0 4px rgba(212,99,143,.15) !important;
-      transition: all 0.4s cubic-bezier(0.22,1,0.36,1) !important;
-      cursor: pointer !important;
-    }
-
-    #shopify-section-{{ section.id }} .shop-the-look__hot-spot::before {
-      content: '' !important;
-      position: absolute !important;
-      inset: -6px !important;
-      border-radius: 50% !important;
-      background: rgba(212,99,143,.12) !important;
-      animation: mc-pulse 2s ease-in-out infinite !important;
-    }
-
-    @keyframes mc-pulse {
-      0%, 100% { transform: scale(1); opacity: 0.6; }
-      50% { transform: scale(1.4); opacity: 0; }
-    }
-
-    /* ── Product Cards inside Look ── */
-    #shopify-section-{{ section.id }} .product-card {
-      border-radius: 16px !important;
-      overflow: hidden !important;
-      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease !important;
-      background: #fff !important;
-    }
-
-    #shopify-section-{{ section.id }} .product-card:hover {
-      transform: translateY(-6px) !important;
-      box-shadow: 0 8px 30px rgba(212,99,143,.18) !important;
-    }
-
-    #shopify-section-{{ section.id }} .product-card__figure,
-    #shopify-section-{{ section.id }} .product-card__image {
-      border-radius: 16px 16px 0 0 !important;
-    }
-
-    #shopify-section-{{ section.id }} .product-card__title {
-      font-family: 'Montserrat', system-ui, sans-serif !important;
-      font-weight: 600 !important;
-      font-size: 0.9rem !important;
-    }
-
-    #shopify-section-{{ section.id }} .product-card__info {
-      font-family: 'Montserrat', system-ui, sans-serif !important;
-    }
-
-    /* ── Price ── */
-    #shopify-section-{{ section.id }} .price {
-      font-family: 'Montserrat', system-ui, sans-serif !important;
-      font-weight: 700 !important;
-    }
-
-    /* ── Popover / Mobile Panel ── */
-    #shopify-section-{{ section.id }} .shop-the-look__popover,
-    #shopify-section-{{ section.id }} .shop-the-look__mobile-panel {
-      border-radius: 20px !important;
-      box-shadow: 0 12px 40px rgba(0,0,0,.10) !important;
-      overflow: hidden !important;
-      background: #fff !important;
-    }
-
-    #shopify-section-{{ section.id }} .shop-the-look__popover-title,
-    #shopify-section-{{ section.id }} .shop-the-look__mobile-panel h2 {
-      font-family: 'Playfair Display', serif !important;
-      letter-spacing: -0.02em !important;
-      font-size: 1.1rem !important;
-    }
-
-    /* ── Desktop Product Sidebar ── */
-    #shopify-section-{{ section.id }} .shop-the-look__products {
-      border-radius: 20px !important;
-      background: #fafafa !important;
-      padding: 1.5rem !important;
-      box-shadow: 0 2px 15px rgba(0,0,0,.05) !important;
-    }
-
-    /* ── CTA Button ── */
-    #shopify-section-{{ section.id }} .button:not(.circle-button):not([class*="prev-next"]) {
-      background: #d4638f !important;
-      border-color: #d4638f !important;
-      border-radius: 50px !important;
-      color: #fff !important;
-      font-family: 'Montserrat', system-ui, sans-serif !important;
-      font-weight: 700 !important;
-      letter-spacing: 0.08em !important;
-      text-transform: uppercase !important;
-      font-size: 0.8rem !important;
-      padding: 0.85rem 2rem !important;
-      transition: all 0.3s cubic-bezier(0.22,1,0.36,1) !important;
-    }
-
-    #shopify-section-{{ section.id }} .button:not(.circle-button):not([class*="prev-next"]):hover {
-      background: #b84d76 !important;
-      border-color: #b84d76 !important;
-      box-shadow: 0 8px 30px rgba(212,99,143,.25) !important;
-      transform: translateY(-2px) !important;
-    }
-
-    /* ── Carousel Arrows ── */
-    #shopify-section-{{ section.id }} .prev-next-button,
-    #shopify-section-{{ section.id }} .circle-button {
-      border-radius: 50% !important;
-      border: 1px solid rgba(17,17,17,.08) !important;
-      width: 44px !important;
-      height: 44px !important;
-      background: #fff !important;
-      box-shadow: 0 2px 10px rgba(0,0,0,.06) !important;
-      transition: all 0.3s ease !important;
-    }
-
-    #shopify-section-{{ section.id }} .prev-next-button:hover,
-    #shopify-section-{{ section.id }} .circle-button:hover {
-      background: #d4638f !important;
-      border-color: #d4638f !important;
-      color: #fff !important;
-      box-shadow: 0 4px 15px rgba(212,99,143,.3) !important;
-    }
-
-    /* ── Pagination Dots ── */
-    #shopify-section-{{ section.id }} .page-dots button {
-      transition: all 0.3s ease !important;
-    }
-
-    #shopify-section-{{ section.id }} .page-dots button[aria-current="true"] {
-      color: #d4638f !important;
-    }
-
-    #shopify-section-{{ section.id }} .page-dots .circular-progress circle:last-child {
-      stroke: #d4638f !important;
-    }
-
-    /* ── Badges ── */
-    #shopify-section-{{ section.id }} .badge {
-      border-radius: 999px !important;
-      font-family: 'Montserrat', system-ui, sans-serif !important;
-      font-weight: 700 !important;
-      letter-spacing: 0.08em !important;
-      text-transform: uppercase !important;
-      font-size: 0.65rem !important;
-    }
-
-    /* ── Discount Badge ── */
-    #shopify-section-{{ section.id }} .discount-badge {
-      background: rgba(212,99,143,.12) !important;
-      color: #d4638f !important;
-      border-radius: 999px !important;
-    }
-
-    /* ── Carousel container ── */
-    #shopify-section-{{ section.id }} .shop-the-look__carousel,
-    #shopify-section-{{ section.id }} .scroll-area {
-      border-radius: 20px !important;
-    }
-
-    /* ── Quick Buy ── */
-    #shopify-section-{{ section.id }} .product-card .quick-buy-drawer,
-    #shopify-section-{{ section.id }} .product-card .quick-buy-modal {
-      border-radius: 20px !important;
-    }
-
-    /* ── Hot spot hover ── */
-    @media (hover:hover) {
-      #shopify-section-{{ section.id }} .shop-the-look__hot-spot:hover {
-        transform: scale(1.15) !important;
-        box-shadow: 0 6px 20px rgba(212,99,143,.45), 0 0 0 6px rgba(212,99,143,.12) !important;
-      }
-    }
-
-    #shopify-section-{{ section.id }} .shop-the-look__hot-spot:focus-visible {
-      outline: 2px solid #d4638f !important;
-      outline-offset: 3px !important;
-    }
-  </style>
-
-  <div class="section-spacing {% if section.settings.separate_section_with_border %}bordered-section{% endif %} color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
-    <div class="container">
+  <div class="section-spacing mc-section color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+    <div class="container container--xl">
       <div class="section-stack">
-
         {%- render 'section-header',
           subheading: section.settings.subheading,
           heading: section.settings.title,
           content: section.settings.content
         -%}
 
+        {%- comment -%}
+          Render duplo para mobile e desktop aproveitando o mesmo conteúdo.
+        {%- endcomment -%}
         {%- for i in (1..2) -%}
           {%- capture device -%}{% cycle 'mobile', 'desktop' %}{%- endcapture -%}
 
@@ -251,8 +40,10 @@
                 endif
               -%}
 
-              <div class="shop-the-look" {{ block.shopify_attributes }}>
-                <div class="shop-the-look__image">
+              <div class="shop-the-look__item snap-start {% if forloop.first %}is-selected{% endif %} w-full"
+                   {% if device == 'mobile' %}data-popover-id="shop-the-look-item-popover-{{ block.id }}"{% endif %}
+                   {% if forloop.parentloop.last %}{{ block.shopify_attributes }}{% endif %}>
+                <div class="shop-the-look__image-wrapper">
                   {%- if block.settings.image != blank -%}
                     {%- capture sizes -%}(max-width: 999px) 100vw, min(60vw, 550px){%- endcapture -%}
                     {%- assign fetch_priority = 'auto' -%}
@@ -270,28 +61,33 @@
                     -}}
                   {%- else -%}
                     {%- capture placeholder -%}{% cycle 'collection-1', 'collection-2', 'collection-3', 'collection-4' %}{%- endcapture -%}
-                    {{- placeholder | placeholder_svg_tag: 'placeholder--invert' | replace: '<svg', '<svg preserveAspectRatio="xMidYMid slice"' -}}
+                    {{- placeholder | placeholder_svg_tag: 'placeholder--invert' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
                   {%- endif -%}
 
-                  <div class="shop-the-look__hot-spots">
+                  <carousel-navigation aria-controls="shop-the-look-item-carousel-{{ block.id }}-{% if device == 'mobile' %}md{% else %}md-max{% endif %}" class="shop-the-look__hot-spot-list">
                     {%- for product_index in (1..products_count) -%}
                       {%- capture horizontal_position_id -%}product_{{ product_index }}_horizontal_position{%- endcapture -%}
                       {%- capture vertical_position_id -%}product_{{ product_index }}_vertical_position{%- endcapture -%}
 
-                      <button type="button" class="shop-the-look__hot-spot" aria-controls="look-products" style="left:{{ block.settings[horizontal_position_id] }}%;top:{{ block.settings[vertical_position_id] }}%;--hot-spot-background:{{ block.settings.hot_spots_background }}">
-                        {{- 'general.accessibility.go_to_item' | t: index: product_index -}}
+                      <button class="shop-the-look__hot-spot tap-area"
+                        style="--shop-the-look-hot-spot-top: {{ block.settings[vertical_position_id] }}%;
+                               --shop-the-look-hot-spot-left: {{ block.settings[horizontal_position_id] }}%;
+                               {% render 'surface', background: block.settings.hot_spots_background %}"
+                        aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+                        aria-label="{{ 'general.accessibility.go_to_item' | t: index: product_index | escape }}">
+                        <span class="sr-only">{{- 'general.accessibility.go_to_item' | t: index: product_index -}}</span>
                       </button>
                     {%- endfor -%}
-                  </div>
+                  </carousel-navigation>
                 </div>
 
                 {%- if device == 'mobile' -%}
-                  <div class="shop-the-look__mobile-panel">
-                    <h2 class="shop-the-look__popover-title">{{ section.settings.popover_title }}</h2>
+                  <shop-the-look-popover id="shop-the-look-item-popover-{{ block.id }}" class="shop-the-look__popover popover">
+                    <p class="h4" slot="header">{{ section.settings.popover_title }}</p>
 
-                    <div class="shop-the-look__mobile-products">
+                    <scroll-carousel id="shop-the-look-item-carousel-{{ block.id }}-{% if device == 'mobile' %}md{% else %}md-max{% endif %}" class="shop-the-look__item-carousel scroll-area bleed snap-x">
                       {%- for product_index in (1..products_count) -%}
-                        <div class="shop-the-look__mobile-product">
+                        <div class="shop-the-look__item-product w-full snap-center {% if forloop.first %}is-selected{% endif %}">
                           {%- unless show_placeholder -%}
                             {%- capture product_id -%}product_{{ product_index }}{%- endcapture -%}
                             {%- capture quick_buy_context -%}mobile-{{ block.id }}{%- endcapture -%}
@@ -301,13 +97,13 @@
                           {%- endunless -%}
                         </div>
                       {%- endfor -%}
-                    </div>
-                  </div>
+                    </scroll-carousel>
+                  </shop-the-look-popover>
                 {%- else -%}
-                  <div class="shop-the-look__products">
-                    <div class="shop-the-look__products-list">
+                  <div class="shop-the-look__item-content">
+                    <shop-the-look-product-list-carousel class="shop-the-look__item-carousel w-full" id="shop-the-look-item-carousel-{{ block.id }}-{% if device == 'mobile' %}md{% else %}md-max{% endif %}">
                       {%- for product_index in (1..products_count) -%}
-                        <div class="shop-the-look__product-item">
+                        <div class="shop-the-look__item-product w-full snap-center {% if forloop.first %}is-selected{% endif %}">
                           {%- unless show_placeholder -%}
                             {%- capture product_id -%}product_{{ product_index }}{%- endcapture -%}
                             {%- capture quick_buy_context -%}desktop-{{ block.id }}{%- endcapture -%}
@@ -317,20 +113,21 @@
                           {%- endunless -%}
                         </div>
                       {%- endfor -%}
-                    </div>
+                    </shop-the-look-product-list-carousel>
 
+                    {%- comment -%} Link reatribuído via JS ao trocar o produto selecionado {%- endcomment -%}
                     {%- assign button_text = 'Ver produto' -%}
                     {%- assign href_attribute = block.settings.product_1.url | default: '#' -%}
                     {%- render 'button', href: href_attribute, content: button_text -%}
 
                     {%- if products_count > 1 -%}
-                      <div class="page-dots">
+                      <carousel-navigation aria-controls="shop-the-look-item-carousel-{{ block.id }}-{% if device == 'mobile' %}md{% else %}md-max{% endif %}" class="page-dots">
                         {%- for i in (1..products_count) -%}
-                          <button type="button" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
-                            {{- 'general.accessibility.go_to_item' | t: index: forloop.index -}}
+                          <button class="tap-area" aria-current="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="{{ 'general.accessibility.go_to_item' | t: index: forloop.index | escape }}">
+                            <span class="sr-only">{{- 'general.accessibility.go_to_item' | t: index: forloop.index -}}</span>
                           </button>
                         {%- endfor -%}
-                      </div>
+                      </carousel-navigation>
                     {%- endif -%}
                   </div>
                 {%- endif -%}
@@ -338,47 +135,57 @@
             {%- endfor -%}
           {% endcapture %}
 
-          <div class="shop-the-look__carousel shop-the-look__carousel--{{ device }}">
+          <div class="{% if device == 'mobile' %}md{% else %}md-max{% endif %}:hidden">
             {%- if device == 'mobile' -%}
-              <div class="shop-the-look__mobile-wrapper">
-                <div class="scroll-area">
+              <div class="v-stack gap-6">
+                <shop-the-look-mobile-carousel class="shop-the-look__carousel scroll-area snap-x bleed">
                   {{- content -}}
-                </div>
+                </shop-the-look-mobile-carousel>
 
                 {%- assign button_text = 'Ver produtos' -%}
                 {%- render 'button', type: 'button', content: button_text, stretch: true -%}
               </div>
             {%- else -%}
-              <div class="shop-the-look__desktop-wrapper">
+              <div class="floating-controls-container">
                 {%- if section.blocks.size > 1 -%}
-                  <div class="prev-next-button prev-next-button--prev">
-                    <button type="button">
-                      {{ 'general.accessibility.previous' | t }}
+                  <carousel-prev-button class="floating-controls-container__control" aria-controls="shop-the-look-carousel-{{ section.id }}-md">
+                    <button type="button" class="prev-next-button prev-next-button--prev circle-button circle-button--lg hover:animate-icon-inline">
+                      <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
                       {%- render 'icon' with 'arrow-left', direction_aware: true -%}
                     </button>
-                  </div>
+                  </carousel-prev-button>
                 {%- endif -%}
 
-                <div class="scroll-area">
+                <shop-the-look-desktop-carousel class="shop-the-look__carousel is-scrollable" id="shop-the-look-carousel-{{ section.id }}-md">
                   {{- content -}}
-                </div>
+                </shop-the-look-desktop-carousel>
 
                 {%- if section.blocks.size > 1 -%}
-                  <div class="prev-next-button prev-next-button--next">
-                    <button type="button">
-                      {{ 'general.accessibility.next' | t }}
+                  <carousel-next-button class="floating-controls-container__control" aria-controls="shop-the-look-carousel-{{ section.id }}-md">
+                    <button type="button" class="prev-next-button prev-next-button--next circle-button circle-button--lg hover:animate-icon-inline">
+                      <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
                       {%- render 'icon' with 'arrow-right', direction_aware: true -%}
                     </button>
-                  </div>
+                  </carousel-next-button>
                 {%- endif -%}
               </div>
             {%- endif -%}
           </div>
         {%- endfor -%}
-
       </div>
     </div>
   </div>
+
+  <style>
+    /* Toque visual MyCharms (pode mover para seu CSS global) */
+    .shop-the-look__hot-spot{
+      width:18px;height:18px;border-radius:999px;
+      box-shadow:0 4px 14px rgba(0,0,0,.12);
+      transition:transform .18s ease;
+    }
+    @media (hover:hover){ .shop-the-look__hot-spot:hover{ transform:scale(1.06);} }
+    .shop-the-look__hot-spot:focus-visible{ outline:2px solid #ff9ccd; outline-offset:2px; }
+  </style>
 {%- endif -%}
 
 {% schema %}
@@ -441,7 +248,7 @@
           "type": "color",
           "id": "hot_spots_background",
           "label": "Cor dos marcadores",
-          "default": "#d4638f"
+          "default": "#ff9ccd"
         },
         { "type": "header", "content": "Produto 1" },
         { "type": "product", "id": "product_1", "label": "Produto" },
