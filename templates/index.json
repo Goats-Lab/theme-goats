@@ -433,10 +433,10 @@
         "heading_align": "center",
         "brand_color": "#ff9ccd",
         "show_arrows": true,
-        "gap": 14,
+        "gap": 8,
         "radius": 24,
         "item_w_mobile": 100,
-        "item_w_desktop": 30
+        "item_w_desktop": 40
       }
     },
     "featured_collections_aVbznB": {
