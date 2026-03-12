@@ -33,13 +33,13 @@
         "show_only_on_index": true,
         "hide_for_account_holders": true,
         "show_only_once": true,
-        "title": "Entre para a comunidade MyCharms 💕",
-        "content": "Entre na nossa comunidade exclusiva do Instagram e do WhatsApp para receber em primeira mão novidades, atualizações de reposição, lançamentos e cupons secretos. ✨",
+        "title": "",
+        "content": "",
         "instagram_url": "https://www.instagram.com/channel/AbZRHtqyJ2f76Zvw/",
         "instagram_button_text": "Grupo Instagram",
         "whatsapp_url": "https://whatsapp.com/channel/0029VbAy6Ix0gcfA9FBlhA2y",
         "whatsapp_button_text": "Canal WhatsApp",
-        "helper_text": "Lançaremos Cupons no<strong> Natal! </strong>fiquem de olho!"
+        "helper_text": "Entre para a comunidades MyCharms"
       }
     },
     "privacy-banner": {

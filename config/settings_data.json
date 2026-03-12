@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "icon_stroke_width": 2,
+    "icon_stroke_width": 1.4,
     "section_vertical_spacing": "md",
     "default_color_scheme": "scheme-2",
     "modal_color_scheme": "scheme-3",
@@ -58,18 +58,6 @@
         "type": "shopify://apps/tnc-terms-and-conditions-box/blocks/app-embed/2b45c8fb-5ee2-4392-8a72-b663da1d38ad",
         "disabled": false,
         "settings": {}
-      },
-      "15188581332139481108": {
-        "type": "shopify://apps/scala-descontos/blocks/cartButton/24748891-1ee0-454d-bfde-d80e65983c18",
-        "disabled": true,
-        "settings": {
-          "textSelector": "FINALIZAR PEDIDO",
-          "textSelector2": "Check out",
-          "selector": "button[name=\"checkout\"],input[name=\"checkout\"]",
-          "message": "PAGUE COM PIX 5% OFF",
-          "position": "after",
-          "customliquid": "<style>\n#scala-button{\n  background:#ff9ccd!important;\n  color:#fff!important;\n  border:0!important;\n  border-radius:0px!important;\n  font-weight:700!important;\n  text-transform:uppercase!important;\n  letter-spacing:1px!important;\n  display:block!important;\n  width:100%!important;\n  padding:14px 0!important;\n  text-align:center!important;\n  box-sizing:border-box!important\n}\n#scala-button strong{color:#fff!important}\n</style>"
-        }
       },
       "13768625480086291342": {
         "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
