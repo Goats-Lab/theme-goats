@@ -186,8 +186,8 @@
       "name": "Mais vendidos (Carrossel) — MyCharms",
       "settings": {
         "subtitle": "TOP VENDIDOS",
-        "title": "Braceletes  mais Desejados",
-        "collection": "bracelete-pulseira-pandora",
+        "title": "Nova coleção Dourada",
+        "collection": "joias-douradas",
         "limit": 12,
         "show_arrows": true,
         "show_dots": true,
