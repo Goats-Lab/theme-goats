@@ -36,7 +36,9 @@
       "block_order": [
         "video_RQrFRb"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "video {border-radius: 20px !important;}"
+      ],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
         "color_scheme": "scheme-1",
