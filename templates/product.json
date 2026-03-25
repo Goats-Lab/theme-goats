@@ -84,12 +84,6 @@
             "progress_bar_max_value": 10
           }
         },
-        "liquid_dReAVB": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "{%- assign v = product.selected_or_first_available_variant -%}\n{%- assign tipo = product.type | downcase -%}\n\n{%- unless tipo contains 'encomenda' -%}\n<style>\n  .mc-oos { text-align:center; margin:14px 0 }\n  .mc-oos .mc-note { font-size:14px; margin-bottom:8px; }\n  .mc-oos .mc-btn {\n    display:block; width:100%; max-width:320px; margin:0 auto;\n    padding:14px 12px; border-radius:6px; font-weight:700;\n    text-transform:uppercase; letter-spacing:.08em; text-align:center;\n    transition:transform .08s ease; user-select:none;\n    background:#fff; color:#ff9ccd; border:2px solid #ff9ccd;\n  }\n  .mc-oos .mc-btn:hover { background:#ff9ccd; color:#fff }\n  .mc-oos .mc-btn:active { transform:scale(0.98) }\n</style>\n\n<div id=\"mc-esgotado-box\" class=\"mc-oos\"\n     style=\"{% if v.available %}display:none{% else %}display:block{% endif %};\">\n  <div class=\"mc-note\">Produto esgotado? Encomende agora!</div>\n  <a class=\"mc-btn\" href=\"/pages/all-encomenda\">Encomendar agora</a>\n</div>\n\n<script>\n(function(){\n  var MAP = {\n    {% for vv in product.variants %}\n      \"{{ vv.id }}\": {{ vv.available | json }}{% unless forloop.last %},{% endunless %}\n    {% endfor %}\n  };\n  var box = document.getElementById('mc-esgotado-box');\n\n  function currentVariantId(){\n    var p = new URLSearchParams(window.location.search).get('variant');\n    if (p) return p;\n    var sel = document.querySelector('form[action*=\"/cart/add\"] [name=\"id\"], select[name=\"id\"]');\n    return sel && sel.value ? sel.value : \"{{ product.variants.first.id }}\";\n  }\n\n  function update(){\n    if (!box) return;\n    box.style.display = MAP[currentVariantId()] ? 'none' : 'block';\n  }\n\n  document.addEventListener('change', function(e){\n    if (e.target && (e.target.name === 'id' || (e.target.name||'').startsWith('options'))) update();\n  });\n  document.addEventListener('variant:change', update);\n  document.addEventListener('variant:changed', update);\n  document.addEventListener('DOMContentLoaded', update);\n})();\n</script>\n{%- endunless -%}"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -124,7 +118,7 @@
         "liquid_MAnAai": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div id=\"ra-verified-seal\" style=\"display:flex; justify-content:center; align-items:center; width:100%;\">\n  <script type=\"text/javascript\"\n    id=\"ra-embed-verified-seal\"\n    src=\"https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js\"\n    data-id=\"LWpvSVBwRVdPSWdIVmF5RTpteS1jaGFybXMtMTY3OTc2NQ==\"\n    data-target=\"ra-verified-seal\"\n    data-model=\"horizontal_2\">\n  </script>\n</div>"
+            "liquid": ""
           }
         },
         "accordion_89TReN": {
@@ -178,7 +172,6 @@
         "price",
         "text_QVmHQ7",
         "inventory_xjpgDg",
-        "liquid_dReAVB",
         "variant_picker",
         "globo_product_option_app_block_RtewJL",
         "liquid_xMmiDf",
@@ -188,6 +181,9 @@
         "accordion_CMFYpn",
         "accordion_RDnbEJ",
         "accordion_ycDW7r"
+      ],
+      "custom_css": [
+        "button {border-radius: 20px !important;}"
       ],
       "settings": {
         "color_scheme": "scheme-2",
@@ -202,18 +198,6 @@
         "enable_video_looping": true,
         "enable_image_zoom": false,
         "max_image_zoom_level": 3
-      }
-    },
-    "custom_liquid_FwmAJF": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
-      "settings": {
-        "color_scheme": "scheme-4",
-        "separate_section_with_border": true,
-        "remove_vertical_spacing": true,
-        "remove_horizontal_spacing": true,
-        "liquid": "<style>\n  .mc-cross-apice {\n    margin: 30px 0 10px;\n    padding: 22px 18px;\n    border-top: 1px solid rgba(0,0,0,.06);\n    border-bottom: 1px solid rgba(0,0,0,.06);\n    text-align: center;\n  }\n\n  .mc-cross-apice__kicker {\n    font-size: 10px;\n    letter-spacing: .25em;\n    text-transform: uppercase;\n    opacity: .5;\n    margin-bottom: 10px;\n  }\n\n  .mc-cross-apice__title {\n    font-size: 14px;\n    font-weight: 500;\n    margin-bottom: 8px;\n  }\n\n  .mc-cross-apice__text {\n    font-size: 13px;\n    opacity: .75;\n    line-height: 1.5;\n    max-width: 420px;\n    margin: 0 auto 16px auto;\n  }\n\n  .mc-cross-apice__btn {\n    display: inline-block;\n    padding: 10px 22px;\n    font-size: 11px;\n    letter-spacing: .15em;\n    text-transform: uppercase;\n    font-weight: 600;\n    text-decoration: none;\n    border: 1px solid rgba(0,0,0,.15);\n    transition: all .2s ease;\n  }\n\n  .mc-cross-apice__btn:hover {\n    background: #000;\n    color: #fff;\n  }\n</style>\n\n<div class=\"mc-cross-apice\">\n\n  <div class=\"mc-cross-apice__kicker\">\n    ÁPICE \n  </div>\n\n  <div class=\"mc-cross-apice__title\">\n    Dos mesmos criadores da MyCharms.\n  </div>\n\n  <div class=\"mc-cross-apice__text\">\n    Conheça a Ápice Parfum nossa marca dedicada à perfumaria de alto padrão.\n    Fragrâncias intensas, elegantes e marcantes.\n  </div>\n\n  <a href=\"https://www.instagram.com/apice_parfum\" target=\"_blank\" class=\"mc-cross-apice__btn\">\n    Conhecer Ápice\n  </a>\n\n</div>",
-        "text_alignment": "center"
       }
     },
     "tiktok_feed_UbR7KW": {
@@ -312,7 +296,9 @@
       "block_order": [
         "collection_rQf8dU"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "button {border-radius: 12px !important;}"
+      ],
       "name": "t:sections.featured_collections.presets.featured_collections.name",
       "settings": {
         "color_scheme": "scheme-3",
@@ -377,7 +363,6 @@
   "order": [
     "media_grid_776mrJ",
     "main",
-    "custom_liquid_FwmAJF",
     "tiktok_feed_UbR7KW",
     "related_products_YeJtHg",
     "featured_collections_yByfCc",

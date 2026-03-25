@@ -10,7 +10,7 @@
 {
   "current": {
     "icon_stroke_width": 1.4,
-    "section_vertical_spacing": "md",
+    "section_vertical_spacing": "lg",
     "default_color_scheme": "scheme-2",
     "modal_color_scheme": "scheme-3",
     "product_rating_color": "#1c1c1c",
