@@ -90,7 +90,7 @@
             "hide_sold_out_variants": true,
             "selector_style": "block",
             "swatch_selector_style": "block_swatch",
-            "variant_image_options": "",
+            "variant_image_options": "tipo",
             "size_chart_page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
           }
         },
