@@ -88,7 +88,7 @@
           "type": "variant_picker",
           "settings": {
             "hide_sold_out_variants": true,
-            "selector_style": "dropdown",
+            "selector_style": "block",
             "swatch_selector_style": "swatch",
             "variant_image_options": "tipo",
             "size_chart_page": "{{ product.metafields.custom.guia_de_tamanho.value }}"
@@ -190,7 +190,8 @@
         "accordion_ycDW7r"
       ],
       "custom_css": [
-        "button {border-radius: 20px !important;}"
+        "button {border-radius: 20px !important;}",
+        "variant-picker {border-radius: 20px !important;}"
       ],
       "settings": {
         "color_scheme": "scheme-2",
