@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "icon_stroke_width": 1.4,
+    "icon_stroke_width": 2,
     "section_vertical_spacing": "lg",
     "default_color_scheme": "scheme-2",
     "modal_color_scheme": "scheme-3",
@@ -20,14 +20,16 @@
     "success_color": "#ff9ccd",
     "warning_color": "#ff9ccd",
     "error_color": "#cb2b2b",
-    "heading_font": "univers_next_n4",
+    "heading_font": "system_ui_n4",
     "heading_letter_spacing": 18,
     "text_font": "univers_next_n4",
     "text_font_size_desktop": 14,
     "button_letter_spacing": 18,
     "currency_code_enabled": true,
+    "show_page_transition": true,
     "stagger_products_apparition": true,
     "stagger_blog_posts_apparition": true,
+    "round_color_swatches": true,
     "product_image_aspect_ratio": "natural",
     "show_secondary_image": true,
     "show_vendor": true,
@@ -298,6 +300,9 @@
   },
   "platform_customizations": {
     "custom_css": [
+      ".button {border-radius: 20px !important;}",
+      "img {border-radius: 20px !important;}",
+      "quantity-selector {border-radius: 20px !important;}",
       ".button {border-radius: 20px !important;}",
       "img {border-radius: 20px !important;}"
     ]
