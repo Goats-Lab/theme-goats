@@ -190,8 +190,7 @@
         "accordion_ycDW7r"
       ],
       "custom_css": [
-        "button {border-radius: 20px !important;}",
-        "variant-picker {border-radius: 20px !important;}"
+        "button {border-radius: 20px !important;}"
       ],
       "settings": {
         "color_scheme": "scheme-2",
