@@ -173,7 +173,7 @@
         "autoplay": false,
         "autoplay_pause_on_video": false,
         "cycle_speed": 4,
-        "background": "#000000",
+        "background": "#ffffff",
         "controls_color": "#ffffff"
       }
     },
@@ -260,6 +260,10 @@
         "richtext_98njYH",
         "button_gRkCRp"
       ],
+      "custom_css": [
+        "img {border-radius: 20px !important;}",
+        ".button {border-radius: 20px !important;}"
+      ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "",
@@ -325,6 +329,9 @@
       "block_order": [
         "collection_NTxAbw"
       ],
+      "custom_css": [
+        ".button {border-radius: 20px !important;}"
+      ],
       "name": "t:sections.featured_collections.presets.featured_collections.name",
       "settings": {
         "color_scheme": "scheme-2",
@@ -375,6 +382,10 @@
       },
       "block_order": [
         "look_YEkGpP"
+      ],
+      "custom_css": [
+        ".button {border-radius: 20px !important;}",
+        "img {border-radius: 20px !important;}"
       ],
       "name": "t:sections.shop_the_look.presets.shop_the_look.name",
       "settings": {
@@ -455,6 +466,10 @@
       },
       "block_order": [
         "collection_ChmGwk"
+      ],
+      "custom_css": [
+        ".button {border-radius: 20px !important;}",
+        "img {border-radius: 20px !important;}"
       ],
       "name": "t:sections.featured_collections.presets.featured_collections.name",
       "settings": {
