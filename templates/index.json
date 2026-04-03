@@ -164,7 +164,9 @@
         "image_qjTrhd",
         "image_fwF6yx"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "img {border-radius: 0px !important;}"
+      ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
