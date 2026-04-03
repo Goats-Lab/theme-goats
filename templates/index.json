@@ -77,6 +77,33 @@
     "slideshow_AF8imh": {
       "type": "slideshow",
       "blocks": {
+        "image_zPWAmV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_f814fa66-0967-40c1-9f94-94261399cae0.png",
+            "mobile_image": "shopify://shop_images/1_7ee1b3ef-fbc8-4bd0-b88d-0b9ffad1558d.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-start-center text-center",
+            "desktop_text_position": "sm:place-self-start-center sm:text-center",
+            "content_max_width": 400,
+            "button_1_text": "",
+            "button_1_link": "https://www.mycharms.com.br/discount/MYMULHERES",
+            "button_1_style": "link",
+            "button_1_background": "#ff6eb6",
+            "button_1_text_color": "#ff9ccd",
+            "button_2_text": "",
+            "button_2_link": "https://www.mycharms.com.br/discount/MYMULHERES",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "#ff6eb6",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        },
         "image_qjTrhd": {
           "type": "image",
           "settings": {
@@ -94,33 +121,6 @@
             "button_1_text_color": "#ff9ccd",
             "button_2_text": "",
             "button_2_link": "https://apiceperfumes.com.br/",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "#ff6eb6",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        },
-        "image_zPWAmV": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/1_-_Copia.png",
-            "mobile_image": "shopify://shop_images/4_-_Copia.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-start-center text-center",
-            "desktop_text_position": "sm:place-self-start-center sm:text-center",
-            "content_max_width": 400,
-            "button_1_text": "",
-            "button_1_link": "https://www.mycharms.com.br/discount/MYMULHERES",
-            "button_1_style": "link",
-            "button_1_background": "#ff6eb6",
-            "button_1_text_color": "#ff9ccd",
-            "button_2_text": "",
-            "button_2_link": "https://www.mycharms.com.br/discount/MYMULHERES",
             "button_2_style": "outline",
             "button_2_background": "#ffffff",
             "button_2_text_color": "#000000",
@@ -160,10 +160,11 @@
         }
       },
       "block_order": [
-        "image_qjTrhd",
         "image_zPWAmV",
+        "image_qjTrhd",
         "image_fwF6yx"
       ],
+      "custom_css": [],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
