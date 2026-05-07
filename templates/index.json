@@ -80,8 +80,8 @@
         "image_fwF6yx": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Banner_1_otimizado_Shopify.jpg",
-            "mobile_image": "shopify://shop_images/Screenshot_2025-12-04_142415.png",
+            "image": "shopify://shop_images/banner_1_-_desktop.png",
+            "mobile_image": "shopify://shop_images/banner_1_-_mobile.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-start-center text-center",
@@ -107,8 +107,8 @@
         "image_zPWAmV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_f814fa66-0967-40c1-9f94-94261399cae0.png",
-            "mobile_image": "shopify://shop_images/1_7ee1b3ef-fbc8-4bd0-b88d-0b9ffad1558d.png",
+            "image": "shopify://shop_images/banner_2_-_desktop.png",
+            "mobile_image": "shopify://shop_images/banner_2_-_mobile.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-start-center text-center",
@@ -121,6 +121,33 @@
             "button_1_text_color": "#ff9ccd",
             "button_2_text": "",
             "button_2_link": "https://www.mycharms.com.br/discount/MYMULHERES",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "#ff6eb6",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        },
+        "image_Yc6yHB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_1_otimizado_Shopify.jpg",
+            "mobile_image": "shopify://shop_images/Screenshot_2025-12-04_142415.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-start-center text-center",
+            "desktop_text_position": "sm:place-self-start-center sm:text-center",
+            "content_max_width": 400,
+            "button_1_text": "",
+            "button_1_link": "shopify://pages/all-encomenda",
+            "button_1_style": "link",
+            "button_1_background": "#ff6eb6",
+            "button_1_text_color": "#ff9ccd",
+            "button_2_text": "",
+            "button_2_link": "",
             "button_2_style": "outline",
             "button_2_background": "#ffffff",
             "button_2_text_color": "#000000",
@@ -162,6 +189,7 @@
       "block_order": [
         "image_fwF6yx",
         "image_zPWAmV",
+        "image_Yc6yHB",
         "image_qjTrhd"
       ],
       "custom_css": [
