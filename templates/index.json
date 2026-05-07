@@ -201,7 +201,7 @@
         "show_next_section_button": false,
         "media_size": "auto",
         "show_initial_transition": true,
-        "autoplay": false,
+        "autoplay": true,
         "autoplay_pause_on_video": false,
         "cycle_speed": 4,
         "background": "#ffffff",
