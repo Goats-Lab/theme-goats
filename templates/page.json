@@ -29,7 +29,7 @@
             "subheading": "",
             "title": "Sobre Nós",
             "mobile_text_position": "place-self-end-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "desktop_text_position": "sm:place-self-end-center sm:text-center",
             "content_max_width": 500,
             "button_1_text": "",
             "button_1_link": "",
@@ -52,11 +52,15 @@
       "block_order": [
         "image_EqXYDx"
       ],
+      "custom_css": [
+        ".button {border-radius: 0px !important;}",
+        "img {border-radius: 0px !important;}"
+      ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
         "show_next_section_button": false,
-        "media_size": "xs",
+        "media_size": "auto",
         "show_initial_transition": false,
         "autoplay": false,
         "autoplay_pause_on_video": false,
@@ -72,9 +76,58 @@
         "color_scheme": "scheme-3",
         "separate_section_with_border": true,
         "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
+        "remove_horizontal_spacing": true,
         "liquid": "<section id=\"shopify-section-template--21524277231870__rich_text_qMbJGD\" class=\"shopify-section\">\n  <div class=\"section pt-min sec__rich-text rich-text-template--21524277231870__rich_text_qMbJGD color-scheme-4faf0e4d-27f4-4d02-bc51-617383bab1a9 gradient remove_spacing\" style=\"--section-pt: 0; --section-pb: 43;--max-width: 70%;\">\n    \n    <div class=\"container\">\n      <div class=\"sec__content-inner max-w-custom overflow-hidden mx-auto text-left\">\n\n        <motion-element data-motion=\"fade-up-lg\" hold=\"\" data-motion-delay=\"0\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 1;\">\n          <h2 class=\"mt-0 sec__content-heading heading-letter-spacing mb-custom fs-big heading_weight\" style=\"--font-size: 50; --space-bottom: 22;\">\n            Sobre nós\n          </h2>\n        </motion-element>\n\n        <motion-element data-motion=\"fade-up\" hold=\"\" data-motion-delay=\"100\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 2;\">\n          <div class=\"sec__content-des rich__text-m0 mb-custom fs-custom body_weight\" style=\"--font-size: 14; --space-bottom: 10;\">\n            \n            <p>\n              A MyCharms nasceu com um propósito simples: transformar acessórios em símbolos de estilo, personalidade e significado. \n              Cada peça é pensada para acompanhar momentos especiais e fazer parte da sua história.\n            </p>\n\n          </div>\n        </motion-element>\n\n        <motion-element data-motion=\"fade-up\" hold=\"\" data-motion-delay=\"200\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 3;\">\n          <div class=\"sec__content-des rich__text-m0 mb-custom fs-custom body_weight\" style=\"--font-size: 14; --space-bottom: 10;\">\n            \n            <p>\n              Trabalhamos com joias em prata S925 e peças selecionadas com acabamento premium, unindo elegância, qualidade e autenticidade em cada detalhe. \n              Nossa missão é oferecer uma experiência única, desde o atendimento até o momento em que sua MyCharms chega até você.\n            </p>\n\n          </div>\n        </motion-element>\n\n      </div>\n    </div>\n\n  </div>\n</section>",
         "text_alignment": "start"
+      }
+    },
+    "multiple_media_with_text_9U7mj6": {
+      "type": "multiple-media-with-text",
+      "blocks": {
+        "image_RRGwpB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/71958642-56fd-4e83-b467-2018865d6794.png",
+            "rotation": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_RRGwpB"
+      ],
+      "name": "t:sections.multiple_media_with_text.presets.multiple_media_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "reveal_on_scroll": true,
+        "separate_section_with_border": true,
+        "media_position_desktop": "before_text",
+        "media_position_mobile": "before_text",
+        "media_layout": "overlap",
+        "media_alignment": "center",
+        "media_alignment_offset": 0,
+        "media_mobile_alignment_offset": 0,
+        "text_alignment": "center",
+        "subheading": "About",
+        "title": "Showcase your product",
+        "content": "<p>Write some content about your products, collections or brand. Use image or video to create an impactful layout.</p>",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_1_style": "solid",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_2_style": "solid"
+      }
+    },
+    "custom_liquid_ggKWGe": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "",
+        "text_alignment": "center"
       }
     },
     "rich_text_9RAW9Q": {
@@ -119,6 +172,8 @@
     "main",
     "slideshow_EaAz6U",
     "custom_liquid_qMLngi",
+    "multiple_media_with_text_9U7mj6",
+    "custom_liquid_ggKWGe",
     "rich_text_9RAW9Q"
   ]
 }
