@@ -77,7 +77,7 @@
         "separate_section_with_border": true,
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": true,
-        "liquid": "<section id=\"shopify-section-template--21524277231870__rich_text_qMbJGD\" class=\"shopify-section\">\n  <div class=\"section pt-min sec__rich-text rich-text-template--21524277231870__rich_text_qMbJGD color-scheme-4faf0e4d-27f4-4d02-bc51-617383bab1a9 gradient remove_spacing\" style=\"--section-pt: 0; --section-pb: 43;--max-width: 70%;\">\n    \n    <div class=\"container\">\n      <div class=\"sec__content-inner max-w-custom overflow-hidden mx-auto text-left\">\n\n        <motion-element data-motion=\"fade-up-lg\" hold=\"\" data-motion-delay=\"0\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 1;\">\n          <h2 class=\"mt-0 sec__content-heading heading-letter-spacing mb-custom fs-big heading_weight\" style=\"--font-size: 50; --space-bottom: 22;\">\n            Sobre nós\n          </h2>\n        </motion-element>\n\n        <motion-element data-motion=\"fade-up\" hold=\"\" data-motion-delay=\"100\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 2;\">\n          <div class=\"sec__content-des rich__text-m0 mb-custom fs-custom body_weight\" style=\"--font-size: 14; --space-bottom: 10;\">\n            \n            <p>\n              A MyCharms nasceu com um propósito simples: transformar acessórios em símbolos de estilo, personalidade e significado. \n              Cada peça é pensada para acompanhar momentos especiais e fazer parte da sua história.\n            </p>\n\n          </div>\n        </motion-element>\n\n        <motion-element data-motion=\"fade-up\" hold=\"\" data-motion-delay=\"200\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 3;\">\n          <div class=\"sec__content-des rich__text-m0 mb-custom fs-custom body_weight\" style=\"--font-size: 14; --space-bottom: 10;\">\n            \n            <p>\n              Trabalhamos com joias em prata S925 e peças selecionadas com acabamento premium, unindo elegância, qualidade e autenticidade em cada detalhe. \n              Nossa missão é oferecer uma experiência única, desde o atendimento até o momento em que sua MyCharms chega até você.\n            </p>\n\n          </div>\n        </motion-element>\n\n      </div>\n    </div>\n\n  </div>\n</section>",
+        "liquid": "<section id=\"shopify-section-template--21524277231870__rich_text_qMbJGD\" class=\"shopify-section\">\n  <div class=\"section pt-min sec__rich-text rich-text-template--21524277231870__rich_text_qMbJGD color-scheme-4faf0e4d-27f4-4d02-bc51-617383bab1a9 gradient remove_spacing\" style=\"--section-pt: 0; --section-pb: 43;--max-width: 70%;\">\n    \n    <div class=\"container\">\n      <div class=\"sec__content-inner max-w-custom overflow-hidden mx-auto text-left\">\n\n        <motion-element data-motion=\"fade-up-lg\" hold=\"\" data-motion-delay=\"0\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 1;\">\n          <h2 class=\"mt-0 sec__content-heading heading-letter-spacing mb-custom fs-big heading_weight\" style=\"--font-size: 50; --space-bottom: 22;\">\n            Propósito \n          </h2>\n        </motion-element>\n\n        <motion-element data-motion=\"fade-up\" hold=\"\" data-motion-delay=\"100\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 2;\">\n          <div class=\"sec__content-des rich__text-m0 mb-custom fs-custom body_weight\" style=\"--font-size: 14; --space-bottom: 10;\">\n            \n            <p>\n              A MyCharms nasceu com um propósito simples: transformar acessórios em símbolos de estilo, personalidade e significado. \n              Cada peça é pensada para acompanhar momentos especiais e fazer parte da sua história.\n            </p>\n\n          </div>\n        </motion-element>\n\n        <motion-element data-motion=\"fade-up\" hold=\"\" data-motion-delay=\"200\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 3;\">\n          <div class=\"sec__content-des rich__text-m0 mb-custom fs-custom body_weight\" style=\"--font-size: 14; --space-bottom: 10;\">\n            \n            <p>\n              Trabalhamos com joias em prata S925 e peças selecionadas com acabamento premium, unindo elegância, qualidade e autenticidade em cada detalhe. \n              Nossa missão é oferecer uma experiência única, desde o atendimento até o momento em que sua MyCharms chega até você.\n            </p>\n\n          </div>\n        </motion-element>\n\n      </div>\n    </div>\n\n  </div>\n</section>",
         "text_alignment": "start"
       }
     },
@@ -107,9 +107,9 @@
         "media_alignment_offset": 0,
         "media_mobile_alignment_offset": 0,
         "text_alignment": "center",
-        "subheading": "About",
-        "title": "Showcase your product",
-        "content": "<p>Write some content about your products, collections or brand. Use image or video to create an impactful layout.</p>",
+        "subheading": "",
+        "title": "<strong>Nossa missão</strong>",
+        "content": "<p> Na MyCharms, nossa missão é transformar acessórios em símbolos de estilo, significado e autenticidade. <br/>  Mais do que joias, queremos proporcionar uma experiência única, desde a escolha da peça perfeita até o momento em que ela chega até você.</p>",
         "button_1_text": "",
         "button_1_link": "",
         "button_1_style": "solid",
@@ -122,49 +122,49 @@
       "type": "custom-liquid",
       "name": "t:sections.custom_liquid.presets.custom_liquid.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": true,
         "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "",
+        "remove_horizontal_spacing": true,
+        "liquid": "<style>\n  .mycharms-counter-grid{\n    display:grid;\n    grid-template-columns:repeat(3,1fr);\n    gap:30px;\n    align-items:center;\n    text-align:center;\n  }\n\n  /* MOBILE */\n  @media(max-width:768px){\n    .mycharms-counter-grid{\n      grid-template-columns:1fr;\n      gap:25px;\n    }\n  }\n</style>\n\n<section id=\"shopify-section-template--21524277231870__counter_bjDJxc\" class=\"shopify-section section\">\n  \n  <section class=\"section pt-min pb-min sec__counter color-scheme-4faf0e4d-27f4-4d02-bc51-617383bab1a9 gradient\" style=\"--section-pt: 0; --section-pb: 0;\">\n    \n    <div class=\"container\">\n\n      <div class=\"mycharms-counter-grid\">\n\n        <!-- ITEM 1 -->\n        <motion-element \n          data-motion=\"fade-up-lg\" \n          hold=\"\" \n          data-motion-delay=\"0\" \n          class=\"counter-content block scroll-trigger fade_in text-center\" \n          data-module=\"countup\">\n\n          <h3 class=\"counter-inner mt-0 mb-custom fs-medium subheading_weight\" style=\"--font-size: 36;--space-bottom: 13\">\n            <span class=\"counter-number\" data-start-number=\"1\" data-end-number=\"15\">15</span>\n            <span>mil</span>\n          </h3>\n\n          <h4 class=\"counter-heading heading-letter-spacing mt-0 mb-custom fs-custom heading_weight\" style=\"--font-size: 18;--space-bottom: 12;\">\n            Pedidos enviados\n          </h4>\n\n        </motion-element>\n\n        <!-- ITEM 2 -->\n        <motion-element \n          data-motion=\"fade-up-lg\" \n          hold=\"\" \n          data-motion-delay=\"100\" \n          class=\"counter-content block scroll-trigger fade_in text-center\" \n          data-module=\"countup\">\n\n          <h3 class=\"counter-inner mt-0 mb-custom fs-medium subheading_weight\" style=\"--font-size: 36;--space-bottom: 13\">\n            <span class=\"counter-number\" data-start-number=\"1\" data-end-number=\"45\">45</span>\n            <span>mil</span>\n          </h3>\n\n          <h4 class=\"counter-heading heading-letter-spacing mt-0 mb-custom fs-custom heading_weight\" style=\"--font-size: 18;--space-bottom: 12;\">\n            Clientes recorrentes\n          </h4>\n\n        </motion-element>\n\n        <!-- ITEM 3 -->\n        <motion-element \n          data-motion=\"fade-up-lg\" \n          hold=\"\" \n          data-motion-delay=\"200\" \n          class=\"counter-content block scroll-trigger fade_in text-center\" \n          data-module=\"countup\">\n\n          <h3 class=\"counter-inner mt-0 mb-custom fs-medium subheading_weight\" style=\"--font-size: 36;--space-bottom: 13\">\n            <span class=\"counter-number\" data-start-number=\"1\" data-end-number=\"3\">3</span>\n            <span>mil</span>\n          </h3>\n\n          <h4 class=\"counter-heading heading-letter-spacing mt-0 mb-custom fs-custom heading_weight\" style=\"--font-size: 18;--space-bottom: 12;\">\n            Variedades de produtos\n          </h4>\n\n        </motion-element>\n\n      </div>\n    </div>\n  </section>\n</section>\n\n<script type=\"module\">\n  class CountUp {\n    constructor(el) {\n      this.el = el;\n      this.init();\n    }\n\n    init() {\n      const numbers = this.el.querySelectorAll('[data-end-number]');\n      \n      if (numbers.length > 0) {\n        numbers.forEach(el => {\n          this.setupInView(el);\n        });\n      }\n    }\n\n    setupInView(el) {\n      motion.inView(el, () => {\n        const endNumber = parseFloat(el.dataset.endNumber.replace(/,/g, ''));\n        const decimals = this.countDecimals(endNumber);\n\n        motion.animate(0, endNumber, {\n          duration: 2,\n          ease: \"easeOutQuint\",\n          onUpdate: (latest) => {\n            el.innerHTML = this.formatNumber(latest, decimals);\n          }\n        });\n      });\n    }\n\n    countDecimals(val) {\n      if (Math.floor(val) === val) return 0;\n      return val.toString().split('.')[1]?.length || 0;\n    }\n\n    formatNumber(val, decimals) {\n      return val.toLocaleString('pt-BR', {\n        minimumFractionDigits: decimals,\n        maximumFractionDigits: decimals,\n      });\n    }\n  }\n\n  document.querySelectorAll('[data-module=\"countup\"]').forEach((element) => {\n    new CountUp(element);\n  });\n</script>",
         "text_alignment": "center"
       }
     },
-    "rich_text_9RAW9Q": {
-      "type": "rich-text",
+    "multiple_media_with_text_V6x8y3": {
+      "type": "multiple-media-with-text",
       "blocks": {
-        "subheading_PPJdp9": {
-          "type": "subheading",
+        "image_MHrPEf": {
+          "type": "image",
           "settings": {
-            "text": "Subheading"
-          }
-        },
-        "heading_WHWgTW": {
-          "type": "heading",
-          "settings": {
-            "text": "Heading",
-            "heading_tag": "h1"
-          }
-        },
-        "richtext_VhqFta": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "image": "shopify://shop_images/WhatsApp_Image_2026-05-12_at_17.24.49.jpg",
+            "rotation": 0
           }
         }
       },
       "block_order": [
-        "subheading_PPJdp9",
-        "heading_WHWgTW",
-        "richtext_VhqFta"
+        "image_MHrPEf"
       ],
-      "name": "t:sections.rich_text.presets.rich_text.name",
+      "name": "t:sections.multiple_media_with_text.presets.multiple_media_with_text.name",
       "settings": {
         "color_scheme": "",
+        "reveal_on_scroll": true,
         "separate_section_with_border": true,
-        "content_width": "sm",
-        "text_position": "center",
-        "remove_vertical_spacing": false
+        "media_position_desktop": "after_text",
+        "media_position_mobile": "before_text",
+        "media_layout": "overlap",
+        "media_alignment": "center",
+        "media_alignment_offset": 0,
+        "media_mobile_alignment_offset": 0,
+        "text_alignment": "center",
+        "subheading": "",
+        "title": "<strong>O que acreditamos</strong>",
+        "content": "<p>Na MyCharms, acreditamos que cada acessório carrega um significado único e tem o poder de expressar estilo, personalidade e momentos especiais. <br/>  Nosso compromisso vai além da qualidade: queremos proporcionar uma experiência marcante, com atendimento diferenciado, confiança e exclusividade em cada detalhe.<br/><br/></p>",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_1_style": "solid",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_2_style": "solid"
       }
     }
   },
@@ -174,6 +174,6 @@
     "custom_liquid_qMLngi",
     "multiple_media_with_text_9U7mj6",
     "custom_liquid_ggKWGe",
-    "rich_text_9RAW9Q"
+    "multiple_media_with_text_V6x8y3"
   ]
 }
