@@ -208,28 +208,6 @@
         "controls_color": "#ffffff"
       }
     },
-    "best_sellers_carousel_QCTYGq": {
-      "type": "best-sellers-carousel",
-      "custom_css": [
-        ".mc-lx__card:hover .mc-lx__name a {color: #111111;}",
-        " /* já está escuro; posso trocar pra #7d3d5a (rosa-ink) se quiser */"
-      ],
-      "name": "Mais vendidos (Carrossel) — MyCharms",
-      "settings": {
-        "subtitle": "TOP VENDIDOS",
-        "title": "Nova coleção Dourada",
-        "collection": "joias-douradas",
-        "limit": 12,
-        "show_arrows": true,
-        "show_dots": true,
-        "show_quick_add": false,
-        "show_view_all": true,
-        "force_best_selling_link": false,
-        "autoplay": false,
-        "autoplay_ms": "4000",
-        "scroll_step": 85
-      }
-    },
     "best_sellers_carousel_w6ic8a": {
       "type": "best-sellers-carousel",
       "custom_css": [
@@ -241,6 +219,28 @@
         "subtitle": "Acessórios Extras",
         "title": "Acessórios  & Embalagens",
         "collection": "embalagens-1",
+        "limit": 12,
+        "show_arrows": true,
+        "show_dots": true,
+        "show_quick_add": false,
+        "show_view_all": true,
+        "force_best_selling_link": false,
+        "autoplay": false,
+        "autoplay_ms": "4000",
+        "scroll_step": 85
+      }
+    },
+    "best_sellers_carousel_QCTYGq": {
+      "type": "best-sellers-carousel",
+      "custom_css": [
+        ".mc-lx__card:hover .mc-lx__name a {color: #111111;}",
+        " /* já está escuro; posso trocar pra #7d3d5a (rosa-ink) se quiser */"
+      ],
+      "name": "Mais vendidos (Carrossel) — MyCharms",
+      "settings": {
+        "subtitle": "TOP VENDIDOS",
+        "title": "Nova coleção Dourada",
+        "collection": "joias-douradas",
         "limit": 12,
         "show_arrows": true,
         "show_dots": true,
@@ -580,8 +580,8 @@
   "order": [
     "scrolling_content_6CAnJm",
     "slideshow_AF8imh",
-    "best_sellers_carousel_QCTYGq",
     "best_sellers_carousel_w6ic8a",
+    "best_sellers_carousel_QCTYGq",
     "image_with_text_6zgD6X",
     "custom_liquid_bUpbnA",
     "best_sellers_carousel_rMXcKh",
