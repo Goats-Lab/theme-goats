@@ -213,6 +213,13 @@
     "tiktok_feed_DKzipR": {
       "type": "tiktok-feed",
       "blocks": {
+        "embed_raBaPU": {
+          "type": "embed",
+          "settings": {
+            "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7626109466601114897\" data-video-id=\"7626109466601114897\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@my.charms.br\" href=\"https://www.tiktok.com/@my.charms.br?refer=embed\">@my.charms.br</a> <p>Lizx Macedo Experimentou Nossas Peças: Garanta já você também!</p> <a target=\"_blank\" title=\"♬ som original  - My Charms 🩷\" href=\"https://www.tiktok.com/music/som-original-My-Charms-%F0%9F%A9%B7-7626109548272651009?refer=embed\">♬ som original  - My Charms 🩷</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
+            "caption": ""
+          }
+        },
         "embed_ywpX6K": {
           "type": "embed",
           "settings": {
@@ -240,21 +247,14 @@
             "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7629395324787821842\" data-video-id=\"7629395324787821842\" style=\"max-width: 605px;min-width: 325px;\"> <section></section>\n</blockquote>",
             "caption": ""
           }
-        },
-        "embed_raBaPU": {
-          "type": "embed",
-          "settings": {
-            "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7626109466601114897\" data-video-id=\"7626109466601114897\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@my.charms.br\" href=\"https://www.tiktok.com/@my.charms.br?refer=embed\">@my.charms.br</a> <p>Lizx Macedo Experimentou Nossas Peças: Garanta já você também!</p> <a target=\"_blank\" title=\"♬ som original  - My Charms 🩷\" href=\"https://www.tiktok.com/music/som-original-My-Charms-%F0%9F%A9%B7-7626109548272651009?refer=embed\">♬ som original  - My Charms 🩷</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
-            "caption": ""
-          }
         }
       },
       "block_order": [
+        "embed_raBaPU",
         "embed_ywpX6K",
         "embed_RQJPHB",
         "embed_Di6BzJ",
-        "embed_GLNUen",
-        "embed_raBaPU"
+        "embed_GLNUen"
       ],
       "name": "TikTok Carousel",
       "settings": {
