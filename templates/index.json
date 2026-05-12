@@ -308,10 +308,10 @@
       ],
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-9fd2f508-0e58-4780-aa25-7b903dcdde2a",
         "separate_section_with_border": true,
         "show_categories": false,
-        "subheading": "Need help?",
+        "subheading": "",
         "title": "perguntas frequentementes",
         "content": ""
       }
