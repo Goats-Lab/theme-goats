@@ -492,67 +492,6 @@
         "popover_title": "ESCOLHA SUA JOIA"
       }
     },
-    "tiktok_feed_kaBWXT": {
-      "type": "tiktok-feed",
-      "blocks": {
-        "embed_d7z8xi": {
-          "type": "embed",
-          "settings": {
-            "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7618302598625447175\" data-video-id=\"7618302598625447175\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@my.charms.br\" href=\"https://www.tiktok.com/@my.charms.br?refer=embed\">@my.charms.br</a> @dailythatafreitas by MyCharms💗😍 Look de formatura com acessórios Ariana Grande! <a title=\"pandora\" target=\"_blank\" href=\"https://www.tiktok.com/tag/pandora?refer=embed\">#pandora</a> <a title=\"arianagrande\" target=\"_blank\" href=\"https://www.tiktok.com/tag/arianagrande?refer=embed\">#arianagrande</a> <a title=\"swarovski\" target=\"_blank\" href=\"https://www.tiktok.com/tag/swarovski?refer=embed\">#Swarovski</a> <a title=\"unboxing\" target=\"_blank\" href=\"https://www.tiktok.com/tag/unboxing?refer=embed\">#unboxing</a> <a target=\"_blank\" title=\"♬ som original - My Charms 🩷\" href=\"https://www.tiktok.com/music/som-original-7618302629977869072?refer=embed\">♬ som original - My Charms 🩷</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
-            "caption": ""
-          }
-        },
-        "embed_DjHCgt": {
-          "type": "embed",
-          "settings": {
-            "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7632423601425190151\" data-video-id=\"7632423601425190151\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@my.charms.br\" href=\"https://www.tiktok.com/@my.charms.br?refer=embed\">@my.charms.br</a> 🏷️: AKEMI | símbolo perfeitos!💗 <a title=\"girl\" target=\"_blank\" href=\"https://www.tiktok.com/tag/girl?refer=embed\">#girl</a> <a title=\"disney\" target=\"_blank\" href=\"https://www.tiktok.com/tag/disney?refer=embed\">#disney</a> <a title=\"following\" target=\"_blank\" href=\"https://www.tiktok.com/tag/following?refer=embed\">#following</a> <a title=\"pandora\" target=\"_blank\" href=\"https://www.tiktok.com/tag/pandora?refer=embed\">#pandora</a> <a target=\"_blank\" title=\"♬ som original - My Charms 🩷\" href=\"https://www.tiktok.com/music/som-original-7632423790982564628?refer=embed\">♬ som original - My Charms 🩷</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
-            "caption": ""
-          }
-        },
-        "embed_WhdAp6": {
-          "type": "embed",
-          "settings": {
-            "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7630882464876989703\" data-video-id=\"7630882464876989703\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@my.charms.br\" href=\"https://www.tiktok.com/@my.charms.br?refer=embed\">@my.charms.br</a> Recebidos da melhor loja de prata!😍💗 todos as peças disponíveis na MyCharms.com.br  Cupom: 🏷️VSARAIVAX <a title=\"swarovski\" target=\"_blank\" href=\"https://www.tiktok.com/tag/swarovski?refer=embed\">#Swarovski</a> <a title=\"pandora\" target=\"_blank\" href=\"https://www.tiktok.com/tag/pandora?refer=embed\">#pandora</a> <a title=\"following\" target=\"_blank\" href=\"https://www.tiktok.com/tag/following?refer=embed\">#following</a> <a target=\"_blank\" title=\"♬ som original - My Charms 🩷\" href=\"https://www.tiktok.com/music/som-original-7630882691874163464?refer=embed\">♬ som original - My Charms 🩷</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
-            "caption": ""
-          }
-        },
-        "embed_3m49R7": {
-          "type": "embed",
-          "settings": {
-            "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7629395324787821842\" data-video-id=\"7629395324787821842\" style=\"max-width: 605px;min-width: 325px;\"> <section></section>\n</blockquote>",
-            "caption": ""
-          }
-        },
-        "embed_FbLggc": {
-          "type": "embed",
-          "settings": {
-            "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7626109466601114897\" data-video-id=\"7626109466601114897\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@my.charms.br\" href=\"https://www.tiktok.com/@my.charms.br?refer=embed\">@my.charms.br</a> <p>Lizx Macedo Experimentou Nossas Peças: Garanta já você também!</p> <a target=\"_blank\" title=\"♬ som original  - My Charms 🩷\" href=\"https://www.tiktok.com/music/som-original-My-Charms-%F0%9F%A9%B7-7626109548272651009?refer=embed\">♬ som original  - My Charms 🩷</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
-            "caption": ""
-          }
-        }
-      },
-      "block_order": [
-        "embed_d7z8xi",
-        "embed_DjHCgt",
-        "embed_WhdAp6",
-        "embed_3m49R7",
-        "embed_FbLggc"
-      ],
-      "name": "TikTok Carousel",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "kicker": "Feedbacks reais",
-        "title": "Feedbacks - MyCharms",
-        "subtitle": "Conteúdo criado por clientes",
-        "heading_align": "center",
-        "brand_color": "#ff9ccd",
-        "show_arrows": true,
-        "gap": 8,
-        "radius": 24,
-        "item_w_mobile": 60,
-        "item_w_desktop": 40
-      }
-    },
     "tiktok_feed_hmdTUU": {
       "type": "tiktok-feed",
       "blocks": {
@@ -714,7 +653,6 @@
     "featured_collections_zGtrXM",
     "custom_liquid_axGYf8",
     "shop_the_look_TVaLVR",
-    "tiktok_feed_kaBWXT",
     "tiktok_feed_hmdTUU",
     "featured_collections_aVbznB",
     "text_with_icons_jgYnYM",
