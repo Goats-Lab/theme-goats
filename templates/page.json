@@ -55,14 +55,26 @@
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
+        "show_next_section_button": false,
+        "media_size": "xs",
         "show_initial_transition": false,
         "autoplay": false,
         "autoplay_pause_on_video": false,
         "cycle_speed": 7,
-        "background": "#ffffff",
+        "background": "#000000",
         "controls_color": "#ffffff"
+      }
+    },
+    "custom_liquid_qMLngi": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<section id=\"shopify-section-template--21524277231870__rich_text_qMbJGD\" class=\"shopify-section\">\n  <div class=\"section pt-min sec__rich-text rich-text-template--21524277231870__rich_text_qMbJGD color-scheme-4faf0e4d-27f4-4d02-bc51-617383bab1a9 gradient remove_spacing\" style=\"--section-pt: 0; --section-pb: 43;--max-width: 70%;\">\n    \n    <div class=\"container\">\n      <div class=\"sec__content-inner max-w-custom overflow-hidden mx-auto text-left\">\n\n        <motion-element data-motion=\"fade-up-lg\" hold=\"\" data-motion-delay=\"0\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 1;\">\n          <h2 class=\"mt-0 sec__content-heading heading-letter-spacing mb-custom fs-big heading_weight\" style=\"--font-size: 50; --space-bottom: 22;\">\n            Sobre nós\n          </h2>\n        </motion-element>\n\n        <motion-element data-motion=\"fade-up\" hold=\"\" data-motion-delay=\"100\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 2;\">\n          <div class=\"sec__content-des rich__text-m0 mb-custom fs-custom body_weight\" style=\"--font-size: 14; --space-bottom: 10;\">\n            \n            <p>\n              A MyCharms nasceu com um propósito simples: transformar acessórios em símbolos de estilo, personalidade e significado. \n              Cada peça é pensada para acompanhar momentos especiais e fazer parte da sua história.\n            </p>\n\n          </div>\n        </motion-element>\n\n        <motion-element data-motion=\"fade-up\" hold=\"\" data-motion-delay=\"200\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 3;\">\n          <div class=\"sec__content-des rich__text-m0 mb-custom fs-custom body_weight\" style=\"--font-size: 14; --space-bottom: 10;\">\n            \n            <p>\n              Trabalhamos com joias em prata S925 e peças selecionadas com acabamento premium, unindo elegância, qualidade e autenticidade em cada detalhe. \n              Nossa missão é oferecer uma experiência única, desde o atendimento até o momento em que sua MyCharms chega até você.\n            </p>\n\n          </div>\n        </motion-element>\n\n      </div>\n    </div>\n\n  </div>\n</section>",
+        "text_alignment": "start"
       }
     },
     "rich_text_9RAW9Q": {
@@ -101,24 +113,12 @@
         "text_position": "center",
         "remove_vertical_spacing": false
       }
-    },
-    "custom_liquid_qMLngi": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
-      "settings": {
-        "color_scheme": "scheme-3",
-        "separate_section_with_border": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<section id=\"shopify-section-template--21524277231870__rich_text_qMbJGD\" class=\"shopify-section\">\n  <div class=\"section pt-min sec__rich-text rich-text-template--21524277231870__rich_text_qMbJGD color-scheme-4faf0e4d-27f4-4d02-bc51-617383bab1a9 gradient remove_spacing\" style=\"--section-pt: 0; --section-pb: 43;--max-width: 70%;\">\n    \n    <div class=\"container\">\n      <div class=\"sec__content-inner max-w-custom overflow-hidden mx-auto text-left\">\n\n        <motion-element data-motion=\"fade-up-lg\" hold=\"\" data-motion-delay=\"0\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 1;\">\n          <h2 class=\"mt-0 sec__content-heading heading-letter-spacing mb-custom fs-big heading_weight\" style=\"--font-size: 50; --space-bottom: 22;\">\n            Sobre nós\n          </h2>\n        </motion-element>\n\n        <motion-element data-motion=\"fade-up\" hold=\"\" data-motion-delay=\"100\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 2;\">\n          <div class=\"sec__content-des rich__text-m0 mb-custom fs-custom body_weight\" style=\"--font-size: 14; --space-bottom: 10;\">\n            \n            <p>\n              A MyCharms nasceu com um propósito simples: transformar acessórios em símbolos de estilo, personalidade e significado. \n              Cada peça é pensada para acompanhar momentos especiais e fazer parte da sua história.\n            </p>\n\n          </div>\n        </motion-element>\n\n        <motion-element data-motion=\"fade-up\" hold=\"\" data-motion-delay=\"200\" class=\"block scroll-trigger fade_in\" style=\"--animation-order: 3;\">\n          <div class=\"sec__content-des rich__text-m0 mb-custom fs-custom body_weight\" style=\"--font-size: 14; --space-bottom: 10;\">\n            \n            <p>\n              Trabalhamos com joias em prata S925 e peças selecionadas com acabamento premium, unindo elegância, qualidade e autenticidade em cada detalhe. \n              Nossa missão é oferecer uma experiência única, desde o atendimento até o momento em que sua MyCharms chega até você.\n            </p>\n\n          </div>\n        </motion-element>\n\n      </div>\n    </div>\n\n  </div>\n</section>",
-        "text_alignment": "start"
-      }
     }
   },
   "order": [
     "main",
     "slideshow_EaAz6U",
-    "rich_text_9RAW9Q",
-    "custom_liquid_qMLngi"
+    "custom_liquid_qMLngi",
+    "rich_text_9RAW9Q"
   ]
 }
