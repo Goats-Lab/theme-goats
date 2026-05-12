@@ -252,70 +252,6 @@
         "scroll_step": 85
       }
     },
-    "faq_WLWmgy": {
-      "type": "faq",
-      "blocks": {
-        "question_dweVVJ": {
-          "type": "question",
-          "settings": {
-            "question": "É GOLPE",
-            "answer": ""
-          }
-        },
-        "question_hDhD98": {
-          "type": "question",
-          "settings": {
-            "question": "É OURO?",
-            "answer": "<p><br/>Temos peças em Ouro 750 banhado e também em Prata 925 legítima. Cada produto possui a especificação correta na descrição para você saber exatamente o acabamento da sua peça.<br/><br/></p>"
-          }
-        },
-        "question_YmPH8L": {
-          "type": "question",
-          "settings": {
-            "question": "É PRATA",
-            "answer": "<p><br/>Sim! Grande parte das nossas peças são produzidas em Prata 925 legítima, conhecida pela qualidade, brilho intenso e excelente durabilidade.<br/><br/></p>"
-          }
-        },
-        "question_BAi7Jb": {
-          "type": "question",
-          "settings": {
-            "question": "OQUE É ENCOMENDA?",
-            "answer": "<p><br/>Peças por encomenda são produzidas especialmente para você após a confirmação do pedido. Por isso, possuem um prazo maior de produção antes do envio.<br/><br/></p>"
-          }
-        },
-        "question_ip7DYw": {
-          "type": "question",
-          "settings": {
-            "question": "",
-            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
-          }
-        },
-        "question_FtM7Y3": {
-          "type": "question",
-          "settings": {
-            "question": "EMBALAGEM ORIGINAL?",
-            "answer": "<p><br/><br/>A embalagem original MyCharms pode ser adicionada separadamente ao pedido. Verifique a disponibilidade no momento da compra.<br/><br/><br/></p>"
-          }
-        }
-      },
-      "block_order": [
-        "question_dweVVJ",
-        "question_hDhD98",
-        "question_YmPH8L",
-        "question_BAi7Jb",
-        "question_ip7DYw",
-        "question_FtM7Y3"
-      ],
-      "name": "t:sections.faq.presets.faq.name",
-      "settings": {
-        "color_scheme": "scheme-9fd2f508-0e58-4780-aa25-7b903dcdde2a",
-        "separate_section_with_border": true,
-        "show_categories": false,
-        "subheading": "",
-        "title": "perguntas frequentementes",
-        "content": ""
-      }
-    },
     "image_with_text_6zgD6X": {
       "type": "image-with-text",
       "blocks": {
@@ -645,11 +581,10 @@
     "scrolling_content_6CAnJm",
     "slideshow_AF8imh",
     "best_sellers_carousel_w6ic8a",
-    "best_sellers_carousel_QCTYGq",
-    "faq_WLWmgy",
+    "best_sellers_carousel_rMXcKh",
     "image_with_text_6zgD6X",
     "custom_liquid_bUpbnA",
-    "best_sellers_carousel_rMXcKh",
+    "best_sellers_carousel_QCTYGq",
     "featured_collections_zGtrXM",
     "custom_liquid_axGYf8",
     "shop_the_look_TVaLVR",
