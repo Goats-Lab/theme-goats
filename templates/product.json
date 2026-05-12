@@ -322,6 +322,21 @@
         "subheading": ""
       }
     },
+    "custom_liquid_wFXrVR": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "@media (min-width: 769px) {.mycharms-banner-content {justify-content: center; align-items: center; padding: 60px; } .mycharms-content-box {width: 100%; max-width: 1100px; padding: 60px; border-radius: 28px; background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(4px); } .mycharms-content-box h2 {font-size: 54px; margin-bottom: 35px; } .mycharms-text p {font-size: 18px; line-height: 2.1; max-width: 1000px; } .mycharms-btn {margin-top: 25px; width: 210px; height: 64px; font-size: 17px; }}"
+      ],
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<link href=\"{{ 'banner.css' | asset_url }}\" rel=\"stylesheet\" type=\"text/css\" media=\"all\">\n\n<section class=\"mycharms-about-banner\">\n\n  <div class=\"mycharms-banner-media\">\n    <img \n      src=\"https://cdn.shopify.com/s/files/1/0675/3661/7653/files/WhatsApp_Image_2026-05-12_at_16.55.06_c2b2b93e-66e2-4a23-892d-bcf0222c1058.jpg?v=1778618994\"\n      alt=\"Sobre a MyCharms\"\n      loading=\"lazy\"\n    >\n    <div class=\"mycharms-overlay\"></div>\n  </div>\n\n  <div class=\"mycharms-banner-content\">\n\n    <div class=\"mycharms-content-box\">\n\n      <h2>Sobre a MyCharms</h2>\n\n      <div class=\"mycharms-text\">\n\n        <p>\n          Desde 2024 no mercado, a MyCharms vem conquistando espaço através da qualidade, delicadeza e exclusividade de suas peças.\n        </p>\n\n        <p>\n          Trabalhamos com joias em prata S925 e acessórios selecionados para oferecer estilo, elegância e significado em cada detalhe.\n        </p>\n\n        <p>\n          Nossa prioridade é proporcionar uma experiência única para cada cliente, com atendimento próximo, transparência e segurança em todas as compras realizadas em nosso site.\n        </p>\n\n        <p>\n          Estamos em constante evolução, sempre buscando novas coleções, tendências e melhorias para entregar produtos cada vez mais especiais.\n        </p>\n\n      </div>\n\n      <a \n        href=\"https://www.mycharms.com.br/pages/quem-somos\"\n        class=\"mycharms-btn\"\n      >\n        Saiba mais\n      </a>\n\n    </div>\n\n  </div>\n\n</section>\n\n<style>\n.mycharms-about-banner{\n  position:relative;\n  width:100%;\n  height:700px;\n  overflow:hidden;\n}\n\n.mycharms-banner-media{\n  position:absolute;\n  inset:0;\n}\n\n.mycharms-banner-media img{\n  width:100%;\n  height:100%;\n  object-fit:cover;\n}\n\n.mycharms-overlay{\n  position:absolute;\n  inset:0;\n  background:rgba(0,0,0,.50);\n}\n\n.mycharms-banner-content{\n  position:relative;\n  z-index:2;\n  display:flex;\n  align-items:center;\n  height:100%;\n  width:100%;\n  padding:60px;\n}\n\n.mycharms-content-box{\n  max-width:560px;\n  background:rgba(0,0,0,.45);\n  backdrop-filter:blur(3px);\n  padding:45px;\n  border-radius:24px;\n}\n\n.mycharms-content-box h2{\n  color:#fff;\n  font-size:42px;\n  font-weight:500;\n  margin-bottom:28px;\n  line-height:1.1;\n  letter-spacing:-1px;\n}\n\n.mycharms-text p{\n  color:#f5f5f5;\n  font-size:15px;\n  line-height:2;\n  margin-bottom:20px;\n  font-weight:300;\n}\n\n.mycharms-btn{\n  display:inline-flex;\n  align-items:center;\n  justify-content:center;\n  width:170px;\n  height:58px;\n  background:#fff;\n  color:#000;\n  border-radius:100px;\n  text-decoration:none;\n  font-size:15px;\n  font-weight:500;\n  transition:.3s ease;\n  margin-top:10px;\n}\n\n.mycharms-btn:hover{\n  transform:translateY(-2px);\n  opacity:.9;\n}\n\n/* MOBILE */\n@media(max-width:768px){\n\n  .mycharms-about-banner{\n    height:860px;\n  }\n\n  .mycharms-banner-content{\n    padding:20px;\n    align-items:flex-start;\n    padding-top:70px;\n  }\n\n  .mycharms-content-box{\n    max-width:100%;\n    padding:30px 24px;\n    border-radius:22px;\n  }\n\n  .mycharms-content-box h2{\n    font-size:34px;\n    margin-bottom:22px;\n  }\n\n  .mycharms-text p{\n    font-size:14px;\n    line-height:2;\n    margin-bottom:18px;\n  }\n\n  .mycharms-btn{\n    width:160px;\n    height:54px;\n    font-size:14px;\n  }\n}\n</style>",
+        "text_alignment": "start"
+      }
+    },
     "image_with_text_pXa4rn": {
       "type": "image-with-text",
       "blocks": {
@@ -375,6 +390,7 @@
     "main",
     "tiktok_feed_DKzipR",
     "related_products_YeJtHg",
+    "custom_liquid_wFXrVR",
     "featured_collections_yByfCc",
     "image_with_text_pXa4rn"
   ]
