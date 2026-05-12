@@ -431,28 +431,57 @@
     "tiktok_feed_kaBWXT": {
       "type": "tiktok-feed",
       "blocks": {
-        "embed_Aeyhcy": {
+        "embed_FbLggc": {
+          "type": "embed",
+          "settings": {
+            "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7626109466601114897\" data-video-id=\"7626109466601114897\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@my.charms.br\" href=\"https://www.tiktok.com/@my.charms.br?refer=embed\">@my.charms.br</a> <p>Lizx Macedo Experimentou Nossas Peças: Garanta já você também!</p> <a target=\"_blank\" title=\"♬ som original  - My Charms 🩷\" href=\"https://www.tiktok.com/music/som-original-My-Charms-%F0%9F%A9%B7-7626109548272651009?refer=embed\">♬ som original  - My Charms 🩷</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "embed_FbLggc"
+      ],
+      "name": "TikTok Carousel",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "kicker": "Feedbacks reais",
+        "title": "Voces no TikTok & Instagram",
+        "subtitle": "Conteúdo criado por clientes e pela nossa equipe.",
+        "heading_align": "center",
+        "brand_color": "#ff9ccd",
+        "show_arrows": true,
+        "gap": 8,
+        "radius": 24,
+        "item_w_mobile": 60,
+        "item_w_desktop": 40
+      }
+    },
+    "tiktok_feed_hmdTUU": {
+      "type": "tiktok-feed",
+      "blocks": {
+        "embed_RNjiV3": {
           "type": "embed",
           "settings": {
             "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@gabbizie/video/7509523765559053573\" data-video-id=\"7509523765559053573\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@gabbizie\" href=\"https://www.tiktok.com/@gabbizie?refer=embed\">@gabbizie</a> muito mais acessível e maravilhosa igual 🩵✨ 🏷️GABBI10 @My Charms 🩷  <a title=\"acessorios\" target=\"_blank\" href=\"https://www.tiktok.com/tag/acessorios?refer=embed\">#acessorios</a> <a title=\"prata925\" target=\"_blank\" href=\"https://www.tiktok.com/tag/prata925?refer=embed\">#prata925</a> <a title=\"tiffany\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tiffany?refer=embed\">#tiffany</a> <a title=\"pulseira\" target=\"_blank\" href=\"https://www.tiktok.com/tag/pulseira?refer=embed\">#pulseira</a> <a title=\"berloques\" target=\"_blank\" href=\"https://www.tiktok.com/tag/berloques?refer=embed\">#berloques</a> <a title=\"girls\" target=\"_blank\" href=\"https://www.tiktok.com/tag/girls?refer=embed\">#girls</a> <a title=\"joia\" target=\"_blank\" href=\"https://www.tiktok.com/tag/joia?refer=embed\">#joia</a> <a title=\"bracelete\" target=\"_blank\" href=\"https://www.tiktok.com/tag/bracelete?refer=embed\">#bracelete</a> <a title=\"fyp\" target=\"_blank\" href=\"https://www.tiktok.com/tag/fyp?refer=embed\">#fyp</a> <a title=\"coracao\" target=\"_blank\" href=\"https://www.tiktok.com/tag/coracao?refer=embed\">#coracao</a> <a target=\"_blank\" title=\"♬ som original - Gabbi 🌟\" href=\"https://www.tiktok.com/music/som-original-7509523763994725126?refer=embed\">♬ som original - Gabbi 🌟</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
             "caption": ""
           }
         },
-        "embed_pjJQAf": {
+        "embed_zDwUE7": {
           "type": "embed",
           "settings": {
             "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7545957401040620805\" data-video-id=\"7545957401040620805\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@my.charms.br\" href=\"https://www.tiktok.com/@my.charms.br?refer=embed\">@my.charms.br</a> <a title=\"tiffany\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tiffany?refer=embed\">#tiffany</a> <a title=\"pandora\" target=\"_blank\" href=\"https://www.tiktok.com/tag/pandora?refer=embed\">#pandora</a> <a title=\"swarovski\" target=\"_blank\" href=\"https://www.tiktok.com/tag/swarovski?refer=embed\">#swarovski</a> | @Zabetta Macarini <a target=\"_blank\" title=\"♬ som original - My Charms 🩷\" href=\"https://www.tiktok.com/music/som-original-7545957468195539718?refer=embed\">♬ som original - My Charms 🩷</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
             "caption": ""
           }
         },
-        "embed_cGnUex": {
+        "embed_gaziet": {
           "type": "embed",
           "settings": {
             "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@brunapallazon/video/7512254866467605765\" data-video-id=\"7512254866467605765\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@brunapallazon\" href=\"https://www.tiktok.com/@brunapallazon?refer=embed\">@brunapallazon</a> O presente perfeito para o dia dos namorados Colar - Gemas, Multicolor SWAROWSKI. . . . 🏷️ Pallazon @My Charms 🩷  . <a title=\"mycharms\" target=\"_blank\" href=\"https://www.tiktok.com/tag/mycharms?refer=embed\">#mycharms</a> <a title=\"picnic\" target=\"_blank\" href=\"https://www.tiktok.com/tag/picnic?refer=embed\">#picnic</a> <a target=\"_blank\" title=\"♬ A Summer Place - Hollywood Strings Orchestra\" href=\"https://www.tiktok.com/music/A-Summer-Place-7062752064783026178?refer=embed\">♬ A Summer Place - Hollywood Strings Orchestra</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
             "caption": ""
           }
         },
-        "embed_xXRzDX": {
+        "embed_BPCyVe": {
           "type": "embed",
           "settings": {
             "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@dailythatafreitas/video/7532260619475537158\" data-video-id=\"7532260619475537158\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@dailythatafreitas\" href=\"https://www.tiktok.com/@dailythatafreitas?refer=embed\">@dailythatafreitas</a> @My Charms 🩷 <a target=\"_blank\" title=\"♬ som original - dailythatafreitas\" href=\"https://www.tiktok.com/music/som-original-7532260623687289605?refer=embed\">♬ som original - dailythatafreitas</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
@@ -461,10 +490,10 @@
         }
       },
       "block_order": [
-        "embed_Aeyhcy",
-        "embed_pjJQAf",
-        "embed_cGnUex",
-        "embed_xXRzDX"
+        "embed_RNjiV3",
+        "embed_zDwUE7",
+        "embed_gaziet",
+        "embed_BPCyVe"
       ],
       "name": "TikTok Carousel",
       "settings": {
@@ -589,6 +618,7 @@
     "custom_liquid_axGYf8",
     "shop_the_look_TVaLVR",
     "tiktok_feed_kaBWXT",
+    "tiktok_feed_hmdTUU",
     "featured_collections_aVbznB",
     "text_with_icons_jgYnYM",
     "custom_liquid_nL4PjV"
