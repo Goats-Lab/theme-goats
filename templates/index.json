@@ -208,28 +208,6 @@
         "controls_color": "#ffffff"
       }
     },
-    "best_sellers_carousel_w6ic8a": {
-      "type": "best-sellers-carousel",
-      "custom_css": [
-        "/* Some com qualquer bloco de preço dentro dos cards */.price,.price__container,.price-item,.price-item--regular,.price-item--sale,.money,.card__information .price,.card__information .price__container,.card__content .price,.card__content .price__container {display: none !important;}",
-        " /* Reforço: esconde qualquer elemento que contenha \"price\" no class */[class*=\"price\"] {display: none !important;}"
-      ],
-      "name": "Mais vendidos (Carrossel) — MyCharms",
-      "settings": {
-        "subtitle": "Acessórios Extras",
-        "title": "Acessórios  & Embalagens",
-        "collection": "embalagens-1",
-        "limit": 12,
-        "show_arrows": true,
-        "show_dots": true,
-        "show_quick_add": false,
-        "show_view_all": true,
-        "force_best_selling_link": false,
-        "autoplay": false,
-        "autoplay_ms": "4000",
-        "scroll_step": 85
-      }
-    },
     "best_sellers_carousel_rMXcKh": {
       "type": "best-sellers-carousel",
       "custom_css": [
@@ -339,60 +317,6 @@
         "text_alignment": "start"
       }
     },
-    "tiktok_feed_hmdTUU": {
-      "type": "tiktok-feed",
-      "blocks": {
-        "embed_RNjiV3": {
-          "type": "embed",
-          "settings": {
-            "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@gabbizie/video/7509523765559053573\" data-video-id=\"7509523765559053573\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@gabbizie\" href=\"https://www.tiktok.com/@gabbizie?refer=embed\">@gabbizie</a> muito mais acessível e maravilhosa igual 🩵✨ 🏷️GABBI10 @My Charms 🩷  <a title=\"acessorios\" target=\"_blank\" href=\"https://www.tiktok.com/tag/acessorios?refer=embed\">#acessorios</a> <a title=\"prata925\" target=\"_blank\" href=\"https://www.tiktok.com/tag/prata925?refer=embed\">#prata925</a> <a title=\"tiffany\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tiffany?refer=embed\">#tiffany</a> <a title=\"pulseira\" target=\"_blank\" href=\"https://www.tiktok.com/tag/pulseira?refer=embed\">#pulseira</a> <a title=\"berloques\" target=\"_blank\" href=\"https://www.tiktok.com/tag/berloques?refer=embed\">#berloques</a> <a title=\"girls\" target=\"_blank\" href=\"https://www.tiktok.com/tag/girls?refer=embed\">#girls</a> <a title=\"joia\" target=\"_blank\" href=\"https://www.tiktok.com/tag/joia?refer=embed\">#joia</a> <a title=\"bracelete\" target=\"_blank\" href=\"https://www.tiktok.com/tag/bracelete?refer=embed\">#bracelete</a> <a title=\"fyp\" target=\"_blank\" href=\"https://www.tiktok.com/tag/fyp?refer=embed\">#fyp</a> <a title=\"coracao\" target=\"_blank\" href=\"https://www.tiktok.com/tag/coracao?refer=embed\">#coracao</a> <a target=\"_blank\" title=\"♬ som original - Gabbi 🌟\" href=\"https://www.tiktok.com/music/som-original-7509523763994725126?refer=embed\">♬ som original - Gabbi 🌟</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
-            "caption": ""
-          }
-        },
-        "embed_zDwUE7": {
-          "type": "embed",
-          "settings": {
-            "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@my.charms.br/video/7545957401040620805\" data-video-id=\"7545957401040620805\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@my.charms.br\" href=\"https://www.tiktok.com/@my.charms.br?refer=embed\">@my.charms.br</a> <a title=\"tiffany\" target=\"_blank\" href=\"https://www.tiktok.com/tag/tiffany?refer=embed\">#tiffany</a> <a title=\"pandora\" target=\"_blank\" href=\"https://www.tiktok.com/tag/pandora?refer=embed\">#pandora</a> <a title=\"swarovski\" target=\"_blank\" href=\"https://www.tiktok.com/tag/swarovski?refer=embed\">#swarovski</a> | @Zabetta Macarini <a target=\"_blank\" title=\"♬ som original - My Charms 🩷\" href=\"https://www.tiktok.com/music/som-original-7545957468195539718?refer=embed\">♬ som original - My Charms 🩷</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
-            "caption": ""
-          }
-        },
-        "embed_gaziet": {
-          "type": "embed",
-          "settings": {
-            "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@brunapallazon/video/7512254866467605765\" data-video-id=\"7512254866467605765\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@brunapallazon\" href=\"https://www.tiktok.com/@brunapallazon?refer=embed\">@brunapallazon</a> O presente perfeito para o dia dos namorados Colar - Gemas, Multicolor SWAROWSKI. . . . 🏷️ Pallazon @My Charms 🩷  . <a title=\"mycharms\" target=\"_blank\" href=\"https://www.tiktok.com/tag/mycharms?refer=embed\">#mycharms</a> <a title=\"picnic\" target=\"_blank\" href=\"https://www.tiktok.com/tag/picnic?refer=embed\">#picnic</a> <a target=\"_blank\" title=\"♬ A Summer Place - Hollywood Strings Orchestra\" href=\"https://www.tiktok.com/music/A-Summer-Place-7062752064783026178?refer=embed\">♬ A Summer Place - Hollywood Strings Orchestra</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
-            "caption": ""
-          }
-        },
-        "embed_BPCyVe": {
-          "type": "embed",
-          "settings": {
-            "embed_code": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@dailythatafreitas/video/7532260619475537158\" data-video-id=\"7532260619475537158\" style=\"max-width: 605px;min-width: 325px;\"> <section> <a target=\"_blank\" title=\"@dailythatafreitas\" href=\"https://www.tiktok.com/@dailythatafreitas?refer=embed\">@dailythatafreitas</a> @My Charms 🩷 <a target=\"_blank\" title=\"♬ som original - dailythatafreitas\" href=\"https://www.tiktok.com/music/som-original-7532260623687289605?refer=embed\">♬ som original - dailythatafreitas</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>",
-            "caption": ""
-          }
-        }
-      },
-      "block_order": [
-        "embed_RNjiV3",
-        "embed_zDwUE7",
-        "embed_gaziet",
-        "embed_BPCyVe"
-      ],
-      "disabled": true,
-      "name": "TikTok Carousel",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "kicker": "Feedbacks reais",
-        "title": "Voces no TikTok & Instagram",
-        "subtitle": "Conteúdo criado por clientes e pela nossa equipe.",
-        "heading_align": "center",
-        "brand_color": "#ff9ccd",
-        "show_arrows": true,
-        "gap": 8,
-        "radius": 24,
-        "item_w_mobile": 100,
-        "item_w_desktop": 40
-      }
-    },
     "best_sellers_carousel_QCTYGq": {
       "type": "best-sellers-carousel",
       "custom_css": [
@@ -413,62 +337,6 @@
         "autoplay": false,
         "autoplay_ms": "4000",
         "scroll_step": 85
-      }
-    },
-    "image_with_text_6zgD6X": {
-      "type": "image-with-text",
-      "blocks": {
-        "subheading_hRYzhH": {
-          "type": "subheading",
-          "settings": {
-            "text": ""
-          }
-        },
-        "heading_bQKfcn": {
-          "type": "heading",
-          "settings": {
-            "text": "<strong>STRANGER THINGS COM ATÉ 10% OFF</strong>",
-            "heading_tag": "h1"
-          }
-        },
-        "richtext_98njYH": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Descubra joias inspiradas no Mundo Invertido. Entre no clima para novas aventuras.</p>"
-          }
-        },
-        "button_gRkCRp": {
-          "type": "button",
-          "settings": {
-            "style": "solid",
-            "text": "COMPRAR AGORA",
-            "url": "shopify://collections/stranger-things",
-            "background": "#cb2b2b",
-            "text_color": ""
-          }
-        }
-      },
-      "block_order": [
-        "subheading_hRYzhH",
-        "heading_bQKfcn",
-        "richtext_98njYH",
-        "button_gRkCRp"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "img {border-radius: 20px !important;}",
-        ".button {border-radius: 20px !important;}"
-      ],
-      "name": "t:sections.image_with_text.presets.image_with_text.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "image": "shopify://shop_images/81630bd0-f937-4f68-ba7c-ae71e7bc7048___f49daf4255781100b2a484597c7b0e2a.gif",
-        "mobile_image": "shopify://shop_images/81630bd0-f937-4f68-ba7c-ae71e7bc7048___f49daf4255781100b2a484597c7b0e2a.gif",
-        "reveal_on_scroll": true,
-        "image_position": "start",
-        "content_width": "sm",
-        "remove_vertical_spacing": true
       }
     },
     "1778619842c6ab4257": {
@@ -650,14 +518,11 @@
   "order": [
     "scrolling_content_6CAnJm",
     "slideshow_AF8imh",
-    "best_sellers_carousel_w6ic8a",
     "best_sellers_carousel_rMXcKh",
     "tiktok_feed_dN44TP",
     "custom_liquid_bUpbnA",
     "custom_liquid_axGYf8",
-    "tiktok_feed_hmdTUU",
     "best_sellers_carousel_QCTYGq",
-    "image_with_text_6zgD6X",
     "1778619842c6ab4257",
     "featured_collections_zGtrXM",
     "custom_liquid_tizAkL",
